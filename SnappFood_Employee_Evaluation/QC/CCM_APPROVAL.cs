@@ -293,7 +293,11 @@ namespace SnappFood_Employee_Evaluation.QC
                 this.errorProvider.SetError(this.label1, "توضیحات وارد نشده است.");
                 error = true;
             }
-                       
+            if (QC_ID.Text == "")
+            {
+                //this.errorProvider.SetError(this.label1, "توضیحات وارد نشده است.");
+                error = true;
+            }
             if (error)
             {
                 return false;
@@ -732,6 +736,59 @@ namespace SnappFood_Employee_Evaluation.QC
         private void radMenuItem5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Inv_link_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.A)
+            {
+                Inv_link.SelectAll();
+            }
+        }
+
+        private void radMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            if (operator_ext.Text != "")
+            {
+                ///////////////////////////////////////////////////////// Total remaining
+                DataTable dt33 = new DataTable();
+                OleDbDataAdapter adp33 = new OleDbDataAdapter();
+                adp33.SelectCommand = new OleDbCommand();
+                adp33.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand33 = "SELECT ROW_NUMBER() OVER(ORDER BY SEL1.[QC_ID] ASC) AS 'ردیف', SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
+                                  "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی' FROM ( " +
+                                  "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_M_Approval] = 1 and [CC_M_Approval] is null) SEL1 " +
+                                  "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name],[Coordinator] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
+                                  "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
+                                  "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) where SEL2.[Coordinator] = N'" + user + "'";
+                adp33.SelectCommand.CommandText = lcommand33;
+                adp33.Fill(dt33);
+                if (dt33.Rows.Count != 0)
+                {
+                    clear();
+                    QC_ID.Text = dt33.Rows[0][1].ToString();
+                    search();
+                    aprv_button.Enabled = true;
+                    rejct_button.Enabled = true;
+                }
+                else
+                {
+                    RadMessageBox.Show(this, " لاگ دیگری از این کارشناس یافت نشد. " + "\n" + " برای بررسی لاگ کارشناس دیگر، به کارتابل مراجعه نمائید. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                }
+            }
+        }
+
+        private void aprv_button_EnabledChanged(object sender, EventArgs e)
+        {
+            if (!aprv_button.Enabled)
+            {
+                radMenuItem1.Enabled = true;
+            }
+            else
+            {
+                radMenuItem1.Enabled = false;
+            }
         }
     }
 }

@@ -62,7 +62,7 @@
             this.Exit});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(731, 59);
+            this.radMenu1.Size = new System.Drawing.Size(731, 56);
             this.radMenu1.TabIndex = 67;
             this.radMenu1.ThemeName = "Office2010Silver";
             // 
@@ -117,6 +117,7 @@
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox1.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox1.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(0))).SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
             // dt_to
@@ -212,7 +213,7 @@
             // 
             this.oleDbCommand1.Connection = this.oleDbConnection1;
             // 
-            // RPT_QC_COORDINATOR
+            // RPT_QC_LEADER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,7 +223,7 @@
             this.Controls.Add(this.radMenu1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.KeyPreview = true;
-            this.Name = "RPT_QC_COORDINATOR";
+            this.Name = "RPT_QC_LEADER";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
@@ -231,7 +232,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "گزارش عملکرد سرگروه ها";
+            this.Text = "گزارش عملکرد رهبرها";
             this.ThemeName = "Office2010Silver";
             this.Load += new System.EventHandler(this.QC_GENERAL_REPORT_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QC_GENERAL_REPORT_KeyDown);

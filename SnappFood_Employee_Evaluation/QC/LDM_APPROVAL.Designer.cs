@@ -621,9 +621,11 @@
             this.Inv_link.Location = new System.Drawing.Point(17, 110);
             this.Inv_link.Name = "Inv_link";
             this.Inv_link.ReadOnly = true;
+            this.Inv_link.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Inv_link.Size = new System.Drawing.Size(346, 19);
             this.Inv_link.TabIndex = 9;
             this.Inv_link.ThemeName = "Office2010Silver";
+            this.Inv_link.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inv_link_KeyDown);
             this.Inv_link.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.operator_ext_PreviewKeyDown);
             // 
             // label14

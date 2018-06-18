@@ -752,6 +752,7 @@
             this.Inv_link.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Inv_link.Location = new System.Drawing.Point(17, 110);
             this.Inv_link.Name = "Inv_link";
+            this.Inv_link.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Inv_link.Size = new System.Drawing.Size(346, 19);
             this.Inv_link.TabIndex = 9;
             this.Inv_link.ThemeName = "Office2010Silver";

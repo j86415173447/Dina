@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mw1P6W85HJvJUtOoFfWWE78zxSb8v0uvC6MhQ7mtfOE=</dsig:DigestValue>
+        <dsig:DigestValue>IKpvKhTuO0fazzvqsMeQFJf5ZyIk6EL2DBD3umG5R40=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UGCkTvxtyKMCOs0aHVoHiUzRBRI0KFqZNfmOQ3KxsWc=</dsig:DigestValue>
+        <dsig:DigestValue>zDn0L0KdaOq2h65aFXnduzVwrcM/nqepF6mAhDcTfxI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2149376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2476544">
       <assemblyIdentity name="SnappFood_Employee_Evaluation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RF0/UjMWZmOJbaiOO4EWSQtpPoPN8cEx5OrXrpXgtbg=</dsig:DigestValue>
+        <dsig:DigestValue>P2fF6i6noWTLCS5M/idHWaE/h8zlpfFDkX0344DXG8k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

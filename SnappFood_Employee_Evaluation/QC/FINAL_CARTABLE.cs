@@ -118,10 +118,10 @@ namespace SnappFood_Employee_Evaluation.QC
             {
                 conditions.Add("SEL2.[Per_Name] = N'" + Agent.Text + "'");
             }
-            if (true)
-            {
-                conditions.Add("SEL2.[Manager] = N'" + user + "'");
-            }
+            //if (true)
+            //{
+            //    conditions.Add("SEL2.[Manager] = N'" + user + "'");
+            //}
             if (dt_from.Text != "")
             {
                 conditions.Add("SEL1.[Insrt_dt_per] >= '" + dt_from.Text + "'");

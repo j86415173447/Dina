@@ -549,30 +549,30 @@ namespace SnappFood_Employee_Evaluation.QC
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
                         if (int.Parse(Call_Score_Final.Text) > 17)
                         {
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
-                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
+                            oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
                         }
                         //else if (int.Parse(Call_Score_Final.Text) >= 15 && int.Parse(Call_Score_Final.Text) <= 17)
                         //{
                         //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                        //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک کیفی");
+                        //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق کیفی");
                         //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
                         //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
                         //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
@@ -835,6 +835,11 @@ namespace SnappFood_Employee_Evaluation.QC
             Qry1.Checked = false;
             Cls1.Checked = false;
             Cls2.Checked = false;
+
+            No_swt.Checked = false;
+            Bad_swt.Checked = false;
+            Call_Type.SelectedIndex = 0;
+
             Remarks.Text = "";
             Inv_link.Text = "";
             //sound_add.Text = "";

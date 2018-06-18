@@ -49,6 +49,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             Score_Total.TextAlignment = ContentAlignment.MiddleLeft;
             Job_Level.TextAlignment = ContentAlignment.MiddleLeft;
             Doc_status.TextAlignment = ContentAlignment.MiddleCenter;
+            Base_Salary.TextAlignment = ContentAlignment.MiddleLeft;
             Per_Cd.Select();
         }
 
@@ -1234,6 +1235,8 @@ namespace SnappFood_Employee_Evaluation.Personel
                 adpsc333.SelectCommand.CommandText = lcommandsc333;
                 adpsc333.Fill(dtsc333);
                 Job_Level.Text = dtsc333.Rows[0][2].ToString();
+                string salary = dtsc333.Rows[0][4].ToString();
+                Base_Salary.Text = Int64.Parse(salary).ToString("#,##0") + " ریال";
                 //////////////////////////////////////////////// Update station
                 DataTable dtsc4445 = new DataTable();
                 OleDbDataAdapter adpsc4445 = new OleDbDataAdapter();

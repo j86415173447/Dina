@@ -34,22 +34,22 @@
             this.Print = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Taboo = new System.Windows.Forms.CheckBox();
             this.Per_Dep = new System.Windows.Forms.ComboBox();
+            this.QC_Agent = new System.Windows.Forms.ComboBox();
             this.dt_to = new Telerik.WinControls.UI.RadDateTimePicker();
             this.dt_from = new Telerik.WinControls.UI.RadDateTimePicker();
             this.Call_Type = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
-            this.label22 = new System.Windows.Forms.Label();
-            this.QC_Agent = new System.Windows.Forms.ComboBox();
+            this.Log_Status = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -70,7 +70,7 @@
             this.Exit});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1191, 59);
+            this.radMenu1.Size = new System.Drawing.Size(1230, 59);
             this.radMenu1.TabIndex = 67;
             this.radMenu1.ThemeName = "Office2010Silver";
             // 
@@ -109,8 +109,8 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGroupBox1.Controls.Add(this.Log_Status);
             this.radGroupBox1.Controls.Add(this.label5);
-            this.radGroupBox1.Controls.Add(this.comboBox1);
             this.radGroupBox1.Controls.Add(this.Taboo);
             this.radGroupBox1.Controls.Add(this.Per_Dep);
             this.radGroupBox1.Controls.Add(this.QC_Agent);
@@ -126,7 +126,7 @@
             this.radGroupBox1.HeaderText = "     پنل جستجو     ";
             this.radGroupBox1.Location = new System.Drawing.Point(12, 65);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(1167, 60);
+            this.radGroupBox1.Size = new System.Drawing.Size(1206, 97);
             this.radGroupBox1.TabIndex = 68;
             this.radGroupBox1.Text = "     پنل جستجو     ";
             this.radGroupBox1.ThemeName = "Office2010Silver";
@@ -135,50 +135,12 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(1090, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "وضعیت لاگ:";
-            this.label5.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
-            "منتظر تائید تیم کیفی",
-            "تائید شده توسط سیستم",
-            "تائید شده توسط تیم کیفی",
-            "رد شده توسط تیم کیفی",
-            "منتظر تائید سرگروه مربوطه",
-            "تائید شده توسط سرگروه مربوطه",
-            "رد شده توسط سرگروه مربوطه",
-            "منتظر تائید رهبر مربوطه",
-            "تائید شده توسط رهبر مربوطه",
-            "رد شده توسط رهبر مربوطه"});
-            this.comboBox1.Location = new System.Drawing.Point(853, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 21);
-            this.comboBox1.TabIndex = 31;
-            this.comboBox1.Visible = false;
-            // 
             // Taboo
             // 
             this.Taboo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Taboo.AutoSize = true;
             this.Taboo.BackColor = System.Drawing.Color.MistyRose;
-            this.Taboo.Location = new System.Drawing.Point(292, 30);
+            this.Taboo.Location = new System.Drawing.Point(25, 29);
             this.Taboo.Name = "Taboo";
             this.Taboo.Size = new System.Drawing.Size(99, 17);
             this.Taboo.TabIndex = 24;
@@ -193,10 +155,23 @@
             this.Per_Dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Per_Dep.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Per_Dep.FormattingEnabled = true;
-            this.Per_Dep.Location = new System.Drawing.Point(958, 27);
+            this.Per_Dep.Location = new System.Drawing.Point(997, 27);
             this.Per_Dep.Name = "Per_Dep";
             this.Per_Dep.Size = new System.Drawing.Size(115, 21);
             this.Per_Dep.TabIndex = 30;
+            // 
+            // QC_Agent
+            // 
+            this.QC_Agent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.QC_Agent.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.QC_Agent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.QC_Agent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QC_Agent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.QC_Agent.FormattingEnabled = true;
+            this.QC_Agent.Location = new System.Drawing.Point(156, 27);
+            this.QC_Agent.Name = "QC_Agent";
+            this.QC_Agent.Size = new System.Drawing.Size(169, 21);
+            this.QC_Agent.TabIndex = 29;
             // 
             // dt_to
             // 
@@ -206,7 +181,7 @@
             this.dt_to.Culture = new System.Globalization.CultureInfo("fa-IR");
             this.dt_to.CustomFormat = "yyyy/MM/dd";
             this.dt_to.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_to.Location = new System.Drawing.Point(397, 26);
+            this.dt_to.Location = new System.Drawing.Point(436, 26);
             this.dt_to.Name = "dt_to";
             this.dt_to.Size = new System.Drawing.Size(115, 21);
             this.dt_to.TabIndex = 28;
@@ -222,7 +197,7 @@
             this.dt_from.Culture = new System.Globalization.CultureInfo("fa-IR");
             this.dt_from.CustomFormat = "yyyy/MM/dd";
             this.dt_from.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_from.Location = new System.Drawing.Point(541, 26);
+            this.dt_from.Location = new System.Drawing.Point(580, 26);
             this.dt_from.Name = "dt_from";
             this.dt_from.Size = new System.Drawing.Size(115, 21);
             this.dt_from.TabIndex = 27;
@@ -238,7 +213,7 @@
             this.Call_Type.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Call_Type.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Call_Type.FormattingEnabled = true;
-            this.Call_Type.Location = new System.Drawing.Point(767, 26);
+            this.Call_Type.Location = new System.Drawing.Point(806, 26);
             this.Call_Type.Name = "Call_Type";
             this.Call_Type.Size = new System.Drawing.Size(124, 21);
             this.Call_Type.TabIndex = 26;
@@ -248,7 +223,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(518, 30);
+            this.label4.Location = new System.Drawing.Point(557, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 13);
             this.label4.TabIndex = 25;
@@ -259,7 +234,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(662, 30);
+            this.label2.Location = new System.Drawing.Point(701, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 24;
@@ -270,18 +245,29 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(897, 30);
+            this.label1.Location = new System.Drawing.Point(936, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "نوع تماس:";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label22.Location = new System.Drawing.Point(331, 31);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(99, 13);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "نام کارشناس کیفی:";
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(1079, 31);
+            this.label3.Location = new System.Drawing.Point(1118, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 8;
@@ -293,7 +279,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radGridView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radGridView1.Location = new System.Drawing.Point(12, 131);
+            this.radGridView1.Location = new System.Drawing.Point(12, 168);
             // 
             // 
             // 
@@ -306,51 +292,50 @@
             this.radGridView1.ShowGroupPanel = false;
             this.radGridView1.ShowGroupPanelScrollbars = false;
             this.radGridView1.ShowNoDataText = false;
-            this.radGridView1.Size = new System.Drawing.Size(1167, 549);
+            this.radGridView1.Size = new System.Drawing.Size(1206, 512);
             this.radGridView1.TabIndex = 69;
             this.radGridView1.ThemeName = "Office2010Silver";
+            this.radGridView1.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridView1_CellDoubleClick);
             // 
             // oleDbCommand1
             // 
             this.oleDbCommand1.Connection = this.oleDbConnection1;
             // 
-            // label22
+            // Log_Status
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label22.Location = new System.Drawing.Point(748, 63);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(99, 13);
-            this.label22.TabIndex = 12;
-            this.label22.Text = "نام کارشناس کیفی:";
-            this.label22.Visible = false;
+            this.Log_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Log_Status.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Log_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Log_Status.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Log_Status.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Log_Status.FormattingEnabled = true;
+            this.Log_Status.Location = new System.Drawing.Point(954, 62);
+            this.Log_Status.Name = "Log_Status";
+            this.Log_Status.Size = new System.Drawing.Size(169, 21);
+            this.Log_Status.TabIndex = 32;
             // 
-            // QC_Agent
+            // label5
             // 
-            this.QC_Agent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.QC_Agent.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.QC_Agent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.QC_Agent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QC_Agent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.QC_Agent.FormattingEnabled = true;
-            this.QC_Agent.Location = new System.Drawing.Point(573, 59);
-            this.QC_Agent.Name = "QC_Agent";
-            this.QC_Agent.Size = new System.Drawing.Size(169, 21);
-            this.QC_Agent.TabIndex = 29;
-            this.QC_Agent.Visible = false;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Location = new System.Drawing.Point(1129, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "وضعیت لاگ:";
             // 
-            // QC_GENERAL_REPORT
+            // RPT_QC_GENERAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 692);
+            this.ClientSize = new System.Drawing.Size(1230, 692);
             this.Controls.Add(this.radGridView1);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.radMenu1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.KeyPreview = true;
-            this.Name = "QC_GENERAL_REPORT";
+            this.Name = "RPT_QC_GENERAL";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
@@ -396,9 +381,9 @@
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private System.Data.OleDb.OleDbCommand oleDbCommand1;
         private System.Data.OleDb.OleDbConnection oleDbConnection1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox QC_Agent;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox Log_Status;
+        private System.Windows.Forms.Label label5;
     }
 }

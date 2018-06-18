@@ -50,7 +50,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             Doc_Cd.TextAlignment = ContentAlignment.MiddleLeft;
             Score_Total.TextAlignment = ContentAlignment.MiddleLeft;
             Job_Level.TextAlignment = ContentAlignment.MiddleLeft;
-
+            this.radMenuItem4.Click += new System.EventHandler(this.DEL_CLICK);
             Per_Cd.Select();
         }
 
@@ -222,8 +222,8 @@ namespace SnappFood_Employee_Evaluation.Personel
                 ////////////////////////////////////////////// INSERT INTO PER_DOCUMENTS TBL
                 oleDbCommand1.Parameters.Clear();
                 oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] ([Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift],[Per_Name]," +
-                                            "[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic],[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status],[Insert_dt],[Insert_tm],[Insert_User],[Mentor],[Sex],[Termination]) " +
-                                            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?)";
+                                            "[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic],[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status],[Insert_dt],[Insert_tm],[Insert_User],[Mentor],[Sex],[Termination],[English_Score]) " +
+                                            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?)";
                 oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
                 oleDbCommand1.Parameters.AddWithValue("@System_Id", System_Id.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Per_Cd.Text);
@@ -248,6 +248,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                 oleDbCommand1.Parameters.AddWithValue("@Mentor", Mentor.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Sex", Sex.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Termination", "0");
+                oleDbCommand1.Parameters.AddWithValue("@English_score", english_score.Text);
                 oleDbConnection1.Open();
                 oleDbCommand1.ExecuteNonQuery();
                 oleDbConnection1.Close();
@@ -319,7 +320,17 @@ namespace SnappFood_Employee_Evaluation.Personel
 
                 if (int.Parse(english_score.Text) != 0)
                 {
-                    score2 = int.Parse(english_score.Text);
+                    //score2 = int.Parse(english_score.Text);
+                    /////////////////////////////////////////// get ENG score
+                    DataTable dtsc1111 = new DataTable();
+                    OleDbDataAdapter adpsc1111 = new OleDbDataAdapter();
+                    adpsc1111.SelectCommand = new OleDbCommand();
+                    adpsc1111.SelectCommand.Connection = oleDbConnection1;
+                    oleDbCommand1.Parameters.Clear();
+                    string lcommandsc1111 = "SELECT [ENG_SCR] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_SCORE_ENG] where  [ENG_PNT] = '" + english_score.Text + "'";
+                    adpsc1.SelectCommand.CommandText = lcommandsc1111;
+                    adpsc1.Fill(dtsc1111);
+                    score2 = int.Parse(dtsc1111.Rows[0][0].ToString());
                     /////////////////////////////////////////// UPDATE SCORE TABLE
                     oleDbCommand1.Parameters.Clear();
                     oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] ([Doc_No],[Sc_Item_Cd],[Sc_Item_Sub_Cd],[Sc_Item_Nm],[Sc_Description],[Sc_Score],[Sc_Eff_DT],[Sc_Actv],[Insert_DT],[Insert_Tm],[Insert_User]) VALUES (?,?,?,?,?,?,?,?,getdate(),getdate(),?)";
@@ -327,8 +338,8 @@ namespace SnappFood_Employee_Evaluation.Personel
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Item_Cd", "SC00");
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Item_Sub_Cd", "EN00");
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Item_Nm", "امتیاز آزمون زبان انگلیسی");
-                    oleDbCommand1.Parameters.AddWithValue("@Sc_Description", "درصد پاسخگوئی: " + score2.ToString() + "%");
-                    oleDbCommand1.Parameters.AddWithValue("@Sc_Score", score2.ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Sc_Description", "درصد پاسخگوئی: " + english_score.Text + "%");
+                    oleDbCommand1.Parameters.AddWithValue("@Sc_Score", dtsc1111.Rows[0][0].ToString());
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Eff_DT", DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Actv", "1");
                     oleDbCommand1.Parameters.AddWithValue("@Insert_User", "محاسبه اتوماتیک - تشکیل پرونده");
@@ -844,6 +855,25 @@ namespace SnappFood_Employee_Evaluation.Personel
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void Training_grid_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right && Doc_Cd.Text == "")
+            {
+                Training_grid.ClipboardCopyMode = GridViewClipboardCopyMode.Disable;
+                Point p = (sender as Control).PointToScreen(e.Location);
+                radContextMenu1.Show(p.X, p.Y);
+            }
+        }
+
+        public void DEL_CLICK(object sender, EventArgs e)
+        {
+            if (Training_grid.Rows.Count != 0)
+            {
+                int selected = Training_grid.SelectedRows[0].Index;
+                Training_grid.Rows[selected].Delete();
             }
         }
     }

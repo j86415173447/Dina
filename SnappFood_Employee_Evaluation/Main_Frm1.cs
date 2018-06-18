@@ -854,5 +854,103 @@ namespace SnappFood_Employee_Evaluation
             new_staff.MdiParent = this;
             new_staff.Show();
         }
+
+        private void radButtonElement38_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_MANAGER))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_MANAGER();
+            new_staff.constr = constr;
+            new_staff.user = username;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement41_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_GENERAL_MG))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_GENERAL_MG();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement39_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_M))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_M();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement40_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_Final))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_Final();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement42_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_PERFORMANCE))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_PERFORMANCE();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement43_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_COOR_4LEADER))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_COOR_4LEADER();
+            new_staff.constr = constr;
+            new_staff.user = username;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
     }
 }

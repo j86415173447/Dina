@@ -250,6 +250,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="QC\LOG_FULL_DETAILS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\LOG_FULL_DETAILS.Designer.cs">
+      <DependentUpon>LOG_FULL_DETAILS.cs</DependentUpon>
+    </Compile>
     <Compile Include="QC\FINAL_APPROVAL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +327,42 @@
     </Compile>
     <Compile Include="QC\QC_CALL_TYPE.Designer.cs">
       <DependentUpon>QC_CALL_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_COOR_4LEADER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_COOR_4LEADER.Designer.cs">
+      <DependentUpon>RPT_QC_COOR_4LEADER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_GENERAL_MG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_GENERAL_MG.Designer.cs">
+      <DependentUpon>RPT_QC_GENERAL_MG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_Final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_Final.Designer.cs">
+      <DependentUpon>RPT_QC_Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_M.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_M.Designer.cs">
+      <DependentUpon>RPT_QC_M.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_PERFORMANCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_PERFORMANCE.Designer.cs">
+      <DependentUpon>RPT_QC_PERFORMANCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_MANAGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_MANAGER.Designer.cs">
+      <DependentUpon>RPT_QC_MANAGER.cs</DependentUpon>
     </Compile>
     <Compile Include="QC\RPT_QC_LEADER.cs">
       <SubType>Form</SubType>
@@ -577,6 +619,9 @@
     <EmbeddedResource Include="Personel\New_Staff.resx">
       <DependentUpon>New_Staff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QC\LOG_FULL_DETAILS.resx">
+      <DependentUpon>LOG_FULL_DETAILS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QC\FINAL_APPROVAL.resx">
       <DependentUpon>FINAL_APPROVAL.cs</DependentUpon>
     </EmbeddedResource>
@@ -612,6 +657,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QC\QC_CALL_TYPE.resx">
       <DependentUpon>QC_CALL_TYPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_COOR_4LEADER.resx">
+      <DependentUpon>RPT_QC_COOR_4LEADER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_GENERAL_MG.resx">
+      <DependentUpon>RPT_QC_GENERAL_MG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_Final.resx">
+      <DependentUpon>RPT_QC_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_M.resx">
+      <DependentUpon>RPT_QC_M.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_PERFORMANCE.resx">
+      <DependentUpon>RPT_QC_PERFORMANCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_MANAGER.resx">
+      <DependentUpon>RPT_QC_MANAGER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QC\RPT_QC_LEADER.resx">
       <DependentUpon>RPT_QC_LEADER.cs</DependentUpon>
@@ -758,6 +821,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\Hide-right-icon.png" />
+    <None Include="Resources\log_entr.png" />
+    <None Include="Resources\inoutcall.png" />
+    <None Include="Resources\QC_plan.png" />
+    <None Include="Resources\gen_report2.png" />
+    <None Include="Resources\gen_report.png" />
+    <None Include="Resources\insp_ret.png" />
+    <None Include="Resources\insp_QC.png" />
+    <None Include="Resources\insp_M.png" />
+    <None Include="Resources\insp_L.png" />
+    <None Include="Resources\insp_c.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\Report_M.png" />
+    <None Include="Resources\Report_Lead.png" />
+    <None Include="Resources\Report_Cor.png" />
+    <None Include="Resources\Cor_Report2.png" />
+    <None Include="Resources\Cor_Report.png" />
+    <None Include="Resources\Manager.png" />
+    <None Include="Resources\Leader.png" />
+    <None Include="Resources\Coordinator.png" />
+    <None Include="Resources\App-lists-icon_Return.png" />
+    <None Include="Resources\reporting_return.png" />
+    <None Include="Resources\new_reporting3.png" />
+    <None Include="Resources\new_reporting2.png" />
+    <None Include="Resources\new_reporting.png" />
     <None Include="Resources\ajax_loader_red_481.gif" />
     <None Include="Resources\address-book-alt-icon.png" />
     <None Include="Resources\final_QC.png" />

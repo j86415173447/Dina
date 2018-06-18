@@ -238,7 +238,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
                 Get_Date();
 
-                if (CC_m_Remark.Text != "انتقال اتوماتیک به کارتابل مدیر مربوطه صورت گرفت.")
+                if (true)
                 {
                     ///////////////////////////////////////////////////// UPDATE DB - Agents Mode
                     oleDbCommand1.Parameters.Clear();
@@ -256,32 +256,32 @@ namespace SnappFood_Employee_Evaluation.QC
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();
                 }
-                else
-                {
-                    ///////////////////////////////////////////////////// UPDATE DB - Coordinators + Leaders
-                    oleDbCommand1.Parameters.Clear();
-                    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] Set " +
-                                                "[CC_M_Approval]=?,[CC_M_Aprv_Usr]=?,[CC_M_Aprv_Rmrk]=?,[CC_M_Aprv_Dt] = ?,[LD_M_Approval]=?,[LD_M_Aprv_Usr]=?,[LD_M_Aprv_Rmrk]=?,[LD_M_Aprv_Dt] = ? ,[MG_M_Approval] = ? ,[MG_M_Aprv_Usr] = ? ,[MG_M_Aprv_Rmrk] = ? ,[MG_M_Aprv_Dt] = ? ,[Final_Approval] = ? ,[Final_Aprv_Usr] = ? ,[Final_Aprv_Rmrk] = ? ,[Final_Aprv_DT] = ? where [QC_ID] = '" + QC_ID.Text + "'";
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", MNG_Remark.Text);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                    oleDbConnection1.Open();
-                    oleDbCommand1.ExecuteNonQuery();
-                    oleDbConnection1.Close();
-                }
+                //else
+                //{
+                //    ///////////////////////////////////////////////////// UPDATE DB - Coordinators + Leaders
+                //    oleDbCommand1.Parameters.Clear();
+                //    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] Set " +
+                //                                "[CC_M_Approval]=?,[CC_M_Aprv_Usr]=?,[CC_M_Aprv_Rmrk]=?,[CC_M_Aprv_Dt] = ?,[LD_M_Approval]=?,[LD_M_Aprv_Usr]=?,[LD_M_Aprv_Rmrk]=?,[LD_M_Aprv_Dt] = ? ,[MG_M_Approval] = ? ,[MG_M_Aprv_Usr] = ? ,[MG_M_Aprv_Rmrk] = ? ,[MG_M_Aprv_Dt] = ? ,[Final_Approval] = ? ,[Final_Aprv_Usr] = ? ,[Final_Aprv_Rmrk] = ? ,[Final_Aprv_DT] = ? where [QC_ID] = '" + QC_ID.Text + "'";
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", MNG_Remark.Text);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "تائید اتوماتیک");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
+                //    oleDbConnection1.Open();
+                //    oleDbCommand1.ExecuteNonQuery();
+                //    oleDbConnection1.Close();
+                //}
 
                 aprv_button.Enabled = false;
                 rejct_button.Enabled = false;
@@ -312,7 +312,11 @@ namespace SnappFood_Employee_Evaluation.QC
                 this.errorProvider.SetError(this.label7, "توضیحات وارد نشده است.");
                 error = true;
             }
-                       
+            if (QC_ID.Text == "")
+            {
+                //this.errorProvider.SetError(this.label1, "توضیحات وارد نشده است.");
+                error = true;
+            }
             if (error)
             {
                 return false;
@@ -745,7 +749,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 loading.Show();
 
                 Get_Date();
-                if (CC_m_Remark.Text != "انتقال اتوماتیک به کارتابل مدیر مربوطه صورت گرفت.")
+                if (true)
                 {
                     ///////////////////////////////////////////////////// UPDATE DB
                     oleDbCommand1.Parameters.Clear();
@@ -763,32 +767,32 @@ namespace SnappFood_Employee_Evaluation.QC
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();
                 }
-                else
-                {
-                    ///////////////////////////////////////////////////// UPDATE DB - Coordinators + Leaders
-                    oleDbCommand1.Parameters.Clear();
-                    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] Set " +
-                                                "[CC_M_Approval]=?,[CC_M_Aprv_Usr]=?,[CC_M_Aprv_Rmrk]=?,[CC_M_Aprv_Dt] = ?,[LD_M_Approval]=?,[LD_M_Aprv_Usr]=?,[LD_M_Aprv_Rmrk]=?,[LD_M_Aprv_Dt] = ? ,[MG_M_Approval] = ? ,[MG_M_Aprv_Usr] = ? ,[MG_M_Aprv_Rmrk] = ? ,[MG_M_Aprv_Dt] = ? ,[Final_Approval] = ? ,[Final_Aprv_Usr] = ? ,[Final_Aprv_Rmrk] = ? ,[Final_Aprv_DT] = ? where [QC_ID] = '" + QC_ID.Text + "'";
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", MNG_Remark.Text);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbConnection1.Open();
-                    oleDbCommand1.ExecuteNonQuery();
-                    oleDbConnection1.Close();
-                }
+                //else
+                //{
+                //    ///////////////////////////////////////////////////// UPDATE DB - Coordinators + Leaders
+                //    oleDbCommand1.Parameters.Clear();
+                //    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] Set " +
+                //                                "[CC_M_Approval]=?,[CC_M_Aprv_Usr]=?,[CC_M_Aprv_Rmrk]=?,[CC_M_Aprv_Dt] = ?,[LD_M_Approval]=?,[LD_M_Aprv_Usr]=?,[LD_M_Aprv_Rmrk]=?,[LD_M_Aprv_Dt] = ? ,[MG_M_Approval] = ? ,[MG_M_Aprv_Usr] = ? ,[MG_M_Aprv_Rmrk] = ? ,[MG_M_Aprv_Dt] = ? ,[Final_Approval] = ? ,[Final_Aprv_Usr] = ? ,[Final_Aprv_Rmrk] = ? ,[Final_Aprv_DT] = ? where [QC_ID] = '" + QC_ID.Text + "'";
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", MNG_Remark.Text);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                //    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                //    oleDbConnection1.Open();
+                //    oleDbCommand1.ExecuteNonQuery();
+                //    oleDbConnection1.Close();
+                //}
                 aprv_button.Enabled = false;
                 rejct_button.Enabled = false;
                 loading.Close();
@@ -804,6 +808,14 @@ namespace SnappFood_Employee_Evaluation.QC
         private void cc_aprv_dt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Inv_link_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.A)
+            {
+                Inv_link.SelectAll();
+            }
         }
     }
 }

@@ -89,19 +89,25 @@
             this.radButtonElement27 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement28 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement29 = new Telerik.WinControls.UI.RadButtonElement();
-            this.radButtonElement31 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement34 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement31 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement39 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement40 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement42 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup14 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement30 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup16 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement32 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement43 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup17 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement33 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement36 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement37 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement38 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement41 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radButtonElement37 = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -122,7 +128,7 @@
             this.radStatusStrip1.LayoutStyle = Telerik.WinControls.UI.RadStatusBarLayoutStyle.Overflow;
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 642);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1371, 29);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1605, 29);
             this.radStatusStrip1.SizingGrip = false;
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Office2010Silver";
@@ -240,7 +246,7 @@
             this.radRibbonBar1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radRibbonBar1.ShowExpandButton = false;
             this.radRibbonBar1.ShowItemToolTips = false;
-            this.radRibbonBar1.Size = new System.Drawing.Size(1371, 177);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1605, 177);
             this.radRibbonBar1.StartButtonImage = global::SnappFood_Employee_Evaluation.Properties.Resources.logo_btn;
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuItem1,
@@ -355,7 +361,7 @@
             // radButtonElement20
             // 
             this.radButtonElement20.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement20.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.table_lines_icon;
+            this.radButtonElement20.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.new_reporting3;
             this.radButtonElement20.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement20.Name = "radButtonElement20";
             this.radButtonElement20.Text = "گزارش عمومی پرسنل";
@@ -499,7 +505,7 @@
             // radButtonElement8
             // 
             this.radButtonElement8.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement8.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Actions_office_chart_line_stacked_icon2;
+            this.radButtonElement8.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.warning;
             this.radButtonElement8.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement8.Name = "radButtonElement8";
             this.radButtonElement8.Padding = new System.Windows.Forms.Padding(0);
@@ -702,7 +708,7 @@
             // radButtonElement26
             // 
             this.radButtonElement26.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement26.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Test_paper_icon;
+            this.radButtonElement26.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.log_entr;
             this.radButtonElement26.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement26.Name = "radButtonElement26";
             this.radButtonElement26.Padding = new System.Windows.Forms.Padding(0);
@@ -716,15 +722,18 @@
             this.radButtonElement27,
             this.radButtonElement28,
             this.radButtonElement29,
+            this.radButtonElement34,
             this.radButtonElement31,
-            this.radButtonElement34});
+            this.radButtonElement39,
+            this.radButtonElement40,
+            this.radButtonElement42});
             this.radRibbonBarGroup13.Name = "radRibbonBarGroup13";
             this.radRibbonBarGroup13.Text = "پنل مدیریت کنترل کیفی";
             // 
             // radButtonElement27
             // 
             this.radButtonElement27.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement27.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Arrows_Sync_icon;
+            this.radButtonElement27.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.inoutcall;
             this.radButtonElement27.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement27.Name = "radButtonElement27";
             this.radButtonElement27.Text = "تعریف نوع تماس";
@@ -734,7 +743,7 @@
             // radButtonElement28
             // 
             this.radButtonElement28.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement28.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Question_type_one_correct_icon;
+            this.radButtonElement28.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.QC_plan;
             this.radButtonElement28.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement28.Name = "radButtonElement28";
             this.radButtonElement28.Text = "پلن های کیفی";
@@ -744,17 +753,27 @@
             // radButtonElement29
             // 
             this.radButtonElement29.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement29.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.App_lists_icon;
+            this.radButtonElement29.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.insp_QC;
             this.radButtonElement29.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement29.Name = "radButtonElement29";
             this.radButtonElement29.Text = "بررسی مجدد لاگ";
             this.radButtonElement29.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement29.Click += new System.EventHandler(this.radButtonElement29_Click);
             // 
+            // radButtonElement34
+            // 
+            this.radButtonElement34.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement34.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.insp_ret;
+            this.radButtonElement34.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement34.Name = "radButtonElement34";
+            this.radButtonElement34.Text = "بررسی لاگ برگشتی";
+            this.radButtonElement34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement34.Click += new System.EventHandler(this.radButtonElement34_Click);
+            // 
             // radButtonElement31
             // 
             this.radButtonElement31.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement31.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.table_lines_icon;
+            this.radButtonElement31.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.gen_report2;
             this.radButtonElement31.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement31.Name = "radButtonElement31";
             this.radButtonElement31.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -762,15 +781,35 @@
             this.radButtonElement31.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement31.Click += new System.EventHandler(this.radButtonElement31_Click);
             // 
-            // radButtonElement34
+            // radButtonElement39
             // 
-            this.radButtonElement34.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement34.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.final_QC;
-            this.radButtonElement34.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radButtonElement34.Name = "radButtonElement34";
-            this.radButtonElement34.Text = "بررسی لاگ برگشتی";
-            this.radButtonElement34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radButtonElement34.Click += new System.EventHandler(this.radButtonElement34_Click);
+            this.radButtonElement39.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement39.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.new_reporting3;
+            this.radButtonElement39.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement39.Name = "radButtonElement39";
+            this.radButtonElement39.Text = "عملکرد بررسی مجدد";
+            this.radButtonElement39.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement39.Click += new System.EventHandler(this.radButtonElement39_Click);
+            // 
+            // radButtonElement40
+            // 
+            this.radButtonElement40.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement40.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.reporting_return;
+            this.radButtonElement40.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement40.Name = "radButtonElement40";
+            this.radButtonElement40.Text = "عملکرد برگشتی";
+            this.radButtonElement40.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement40.Click += new System.EventHandler(this.radButtonElement40_Click);
+            // 
+            // radButtonElement42
+            // 
+            this.radButtonElement42.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement42.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.File_Presentation_icon;
+            this.radButtonElement42.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement42.Name = "radButtonElement42";
+            this.radButtonElement42.Text = "عملکرد کارشناسان کیفی";
+            this.radButtonElement42.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement42.Click += new System.EventHandler(this.radButtonElement42_Click);
             // 
             // radRibbonBarGroup14
             // 
@@ -782,7 +821,7 @@
             // radButtonElement30
             // 
             this.radButtonElement30.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement30.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.App_lists_icon;
+            this.radButtonElement30.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.insp_c;
             this.radButtonElement30.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement30.Name = "radButtonElement30";
             this.radButtonElement30.Text = "بررسی لاگ";
@@ -792,33 +831,46 @@
             // radRibbonBarGroup16
             // 
             this.radRibbonBarGroup16.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radButtonElement32});
+            this.radButtonElement32,
+            this.radButtonElement43});
             this.radRibbonBarGroup16.Name = "radRibbonBarGroup16";
             this.radRibbonBarGroup16.Text = "پنل رهبر";
             // 
             // radButtonElement32
             // 
             this.radButtonElement32.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement32.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.App_lists_icon;
+            this.radButtonElement32.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.insp_L;
             this.radButtonElement32.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement32.Name = "radButtonElement32";
             this.radButtonElement32.Text = "بررسی لاگ";
             this.radButtonElement32.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement32.Click += new System.EventHandler(this.radButtonElement32_Click);
             // 
+            // radButtonElement43
+            // 
+            this.radButtonElement43.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement43.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Report_Cor;
+            this.radButtonElement43.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement43.Name = "radButtonElement43";
+            this.radButtonElement43.Text = "عملکرد سرگروه";
+            this.radButtonElement43.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement43.Click += new System.EventHandler(this.radButtonElement43_Click);
+            // 
             // radRibbonBarGroup17
             // 
             this.radRibbonBarGroup17.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radButtonElement33,
             this.radButtonElement36,
-            this.radButtonElement37});
+            this.radButtonElement37,
+            this.radButtonElement38,
+            this.radButtonElement41});
             this.radRibbonBarGroup17.Name = "radRibbonBarGroup17";
             this.radRibbonBarGroup17.Text = "پنل مدیریت";
             // 
             // radButtonElement33
             // 
             this.radButtonElement33.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement33.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.App_lists_icon;
+            this.radButtonElement33.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.insp_M;
             this.radButtonElement33.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement33.Name = "radButtonElement33";
             this.radButtonElement33.Text = "بررسی لاگ";
@@ -828,12 +880,42 @@
             // radButtonElement36
             // 
             this.radButtonElement36.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement36.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.table_lines_icon;
+            this.radButtonElement36.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Report_Cor;
             this.radButtonElement36.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement36.Name = "radButtonElement36";
             this.radButtonElement36.Text = "عملکرد سرگروه";
             this.radButtonElement36.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement36.Click += new System.EventHandler(this.radButtonElement36_Click);
+            // 
+            // radButtonElement37
+            // 
+            this.radButtonElement37.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement37.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Report_Lead;
+            this.radButtonElement37.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement37.Name = "radButtonElement37";
+            this.radButtonElement37.Text = "عملکرد رهبر";
+            this.radButtonElement37.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement37.Click += new System.EventHandler(this.radButtonElement37_Click);
+            // 
+            // radButtonElement38
+            // 
+            this.radButtonElement38.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement38.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Report_M;
+            this.radButtonElement38.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement38.Name = "radButtonElement38";
+            this.radButtonElement38.Text = "عملکرد مدیر";
+            this.radButtonElement38.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement38.Click += new System.EventHandler(this.radButtonElement38_Click);
+            // 
+            // radButtonElement41
+            // 
+            this.radButtonElement41.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement41.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.gen_report2;
+            this.radButtonElement41.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement41.Name = "radButtonElement41";
+            this.radButtonElement41.Text = "گزارش جامع کیفی";
+            this.radButtonElement41.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement41.Click += new System.EventHandler(this.radButtonElement41_Click);
             // 
             // radButtonElement1
             // 
@@ -863,16 +945,6 @@
             this.radMenuItem2.Text = "  خروج از برنامه  ";
             this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
             // 
-            // radButtonElement37
-            // 
-            this.radButtonElement37.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement37.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.table_lines_icon;
-            this.radButtonElement37.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radButtonElement37.Name = "radButtonElement37";
-            this.radButtonElement37.Text = "عملکرد رهبر";
-            this.radButtonElement37.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radButtonElement37.Click += new System.EventHandler(this.radButtonElement37_Click);
-            // 
             // Main_Frm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -880,7 +952,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::SnappFood_Employee_Evaluation.Properties.Resources.Logo_BG1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1371, 671);
+            this.ClientSize = new System.Drawing.Size(1605, 671);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radRibbonBar1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -979,5 +1051,11 @@
         private Telerik.WinControls.UI.RadButtonElement radButtonElement35;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement36;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement37;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement38;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement39;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement40;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement41;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement42;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement43;
     }
 }

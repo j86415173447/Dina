@@ -68,6 +68,18 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.Fill(dt);
             Per_Dep.DataSource = dt;
             Per_Dep.DisplayMember = "Department_Nm";
+
+            ///////////////////////////////////////////////////////// initializing Log State combo
+            DataTable dt6 = new DataTable();
+            OleDbDataAdapter adp6 = new OleDbDataAdapter();
+            adp6.SelectCommand = new OleDbCommand();
+            adp6.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommand6 = "SELECT '' 'Status' union SELECT distinct iif([QC_M_Approval] is null,N'منتظر تائید کیفی',iif([QC_M_Approval] = 1 and [CC_M_Approval] is null, N'منتظر تائید سرگروه',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] is null, N'منتظر تائید رهبر',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] is null, N'منتظر تائید مدیر',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] = 0 and [Final_Approval] is null, N'منتظر تائید برگشتی', iif([QC_M_Approval] = 0, [CC_M_Aprv_Usr],iif([Final_Approval] = 1, N'تائید نهایی', N'عدم تائید نهائی'))))))) as 'Status' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] order by [Status] asc";
+            adp6.SelectCommand.CommandText = lcommand6;
+            adp6.Fill(dt6);
+            Log_Status.DataSource = dt6;
+            Log_Status.DisplayMember = "Status";
         }
 
         public string search_query()
@@ -77,6 +89,10 @@ namespace SnappFood_Employee_Evaluation.QC
             if (Call_Type.SelectedIndex != 0)
             {
                 conditions.Add("SEL3.[Call_Type_nm] = N'" + Call_Type.Text + "'");
+            }
+            if (Log_Status.SelectedIndex != 0)
+            {
+                conditions.Add("Sel1.[Status] = N'" + Log_Status.Text + "'");
             }
             if (QC_Agent.SelectedIndex != 0)
             {
@@ -113,8 +129,11 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT ROW_NUMBER() OVER(ORDER BY SEL1.[QC_ID] ASC) AS 'ردیف', SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
-                              "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی', Sel1.[call_dt] 'تاریخ مکالمه', sel1.[call_tm] 'ساعت مکالمه', sel1.[bad_Switch] 'سوئیچ بد', Sel1.[No_Switch] 'عدم سوئیچ' FROM ( " +
-                              "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent],[call_dt],[call_tm],[bad_switch],[No_switch] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) SEL1 " +
+                              "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی', Sel1.[call_dt] 'تاریخ مکالمه', Sel1.[call_tm] 'ساعت مکالمه', Sel1.[bad_Switch] 'سوئیچ بد', Sel1.[No_Switch] 'عدم سوئیچ', Sel1.[QC_Agent] 'نام کارشناس کیفی', Sel1.[Status] 'وضعیت لاگ' " +
+                              "FROM ( " +
+                              "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent],[call_dt],[call_tm],[bad_switch],[No_switch], " +
+                              "iif([QC_M_Approval] is null,N'منتظر تائید کیفی',iif([QC_M_Approval] = 1 and [CC_M_Approval] is null, N'منتظر تائید سرگروه',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] is null, N'منتظر تائید رهبر',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] is null, N'منتظر تائید مدیر',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] = 0 and [Final_Approval] is null, N'منتظر تائید برگشتی', iif([QC_M_Approval] = 0, [CC_M_Aprv_Usr],iif([Final_Approval] = 1, N'تائید نهایی', N'عدم تائید نهائی'))))))) as [Status] " +
+                              " FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) SEL1 " +
                               "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
                               "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
                               "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) ";
@@ -170,6 +189,16 @@ namespace SnappFood_Employee_Evaluation.QC
             {
                 update_grid();
             }
+        }
+
+        private void radGridView1_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            var log_detail = new QC.LOG_FULL_DETAILS();
+            log_detail.constr = constr;
+            log_detail.QC_ID.Text = radGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            log_detail.start();
+            log_detail.search();
+            log_detail.ShowDialog();
         }
     }
 }

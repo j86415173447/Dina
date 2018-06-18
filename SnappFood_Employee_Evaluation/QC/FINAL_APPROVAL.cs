@@ -283,7 +283,11 @@ namespace SnappFood_Employee_Evaluation.QC
                 this.errorProvider.SetError(this.label12, "توضیحات وارد نشده است.");
                 error = true;
             }
-                       
+            if (QC_ID.Text == "")
+            {
+                //this.errorProvider.SetError(this.label1, "توضیحات وارد نشده است.");
+                error = true;
+            }
             if (error)
             {
                 return false;
@@ -747,6 +751,14 @@ namespace SnappFood_Employee_Evaluation.QC
         private void cc_aprv_dt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Inv_link_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.A)
+            {
+                Inv_link.SelectAll();
+            }
         }
     }
 }

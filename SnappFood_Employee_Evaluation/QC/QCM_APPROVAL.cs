@@ -30,6 +30,7 @@ namespace SnappFood_Employee_Evaluation.QC
         WaveOutEvent WaveOut = new WaveOutEvent();
         MemoryStream ms = new MemoryStream();
         public DataTable voice_dt = new DataTable();
+        public bool coordinator;
 
 
         public QCM_APPROVAL()
@@ -113,7 +114,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 adp4.SelectCommand = new OleDbCommand();
                 adp4.SelectCommand.Connection = oleDbConnection1;
                 oleDbCommand1.Parameters.Clear();
-                string lcommand4 = "SELECT [Department],[Per_Name],[termination] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [System_Id] = '" + operator_ext.Text + "'";
+                string lcommand4 = "SELECT [Department],[Per_Name],[termination],[Coordinator] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [System_Id] = '" + operator_ext.Text + "'";
                 adp4.SelectCommand.CommandText = lcommand4;
                 adp4.Fill(dt4);
                 if (dt4.Rows.Count != 0)
@@ -122,7 +123,16 @@ namespace SnappFood_Employee_Evaluation.QC
                     {
                         operator_nm.Text = dt4.Rows[0][1].ToString();
                         Department.Text = dt4.Rows[0][0].ToString();
+                        if (dt4.Rows[0][3].ToString() == "نامشخص")
+                        {
+                            coordinator = true;
+                        }
+                        else
+                        {
+                            coordinator = false;
+                        }
                     }
+
                    
                 }
                 else
@@ -130,6 +140,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     this.errorProvider.SetError(this.operator_ext, "همکاری با شماره داخلی وارد شده یافت نشد.");
                     operator_nm.Text = "";
                     Department.Text = "";
+                    coordinator = false;
                 }
             }
             else
@@ -137,6 +148,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 errorProvider.Clear();
                 operator_nm.Text = "";
                 Department.Text = "";
+                coordinator = false;
             }
         }
 
@@ -360,22 +372,44 @@ namespace SnappFood_Employee_Evaluation.QC
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
                 if (int.Parse(Call_Score_Final.Text) <= 17)
                 {
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                    if (coordinator)
+                    {
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                    }
+                    else
+                    {
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                    }
 
                 }
                 else
@@ -479,6 +513,11 @@ namespace SnappFood_Employee_Evaluation.QC
             if (Log_Type.SelectedIndex == 0)
             {
                 this.errorProvider.SetError(this.label1, "پلن کیفی انتخاب نشده است.");
+                error = true;
+            }
+            if (QC_ID.Text == "")
+            {
+                //this.errorProvider.SetError(this.label1, "توضیحات وارد نشده است.");
                 error = true;
             }
             //if (call_dt.Text == "" || !call_tm.MaskFull)
@@ -894,6 +933,14 @@ namespace SnappFood_Employee_Evaluation.QC
                         ms.CopyTo(fs);
                     }
                 }
+            }
+        }
+
+        private void Inv_link_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.A)
+            {
+                Inv_link.SelectAll();
             }
         }
     }

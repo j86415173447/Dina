@@ -83,16 +83,17 @@
             this.btnStop = new Telerik.WinControls.UI.RadButton();
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
+            this.CC_m_Remark = new Telerik.WinControls.UI.RadTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.radMenu2 = new Telerik.WinControls.UI.RadMenu();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.aprv_button = new Telerik.WinControls.UI.RadMenuItem();
+            this.rejct_button = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
             this.Save = new Telerik.WinControls.UI.RadMenuItem();
             this.New = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenu2 = new Telerik.WinControls.UI.RadMenu();
-            this.rejct_button = new Telerik.WinControls.UI.RadMenuItem();
-            this.CC_m_Remark = new Telerik.WinControls.UI.RadTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
@@ -117,8 +118,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CC_m_Remark)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -618,9 +619,11 @@
             this.Inv_link.Location = new System.Drawing.Point(17, 110);
             this.Inv_link.Name = "Inv_link";
             this.Inv_link.ReadOnly = true;
+            this.Inv_link.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Inv_link.Size = new System.Drawing.Size(346, 19);
             this.Inv_link.TabIndex = 9;
             this.Inv_link.ThemeName = "Office2010Silver";
+            this.Inv_link.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inv_link_KeyDown);
             this.Inv_link.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.operator_ext_PreviewKeyDown);
             // 
             // label14
@@ -789,6 +792,41 @@
             this.radMenuItem4.RightToLeft = false;
             this.radMenuItem4.Text = "حذف فایل";
             // 
+            // CC_m_Remark
+            // 
+            this.CC_m_Remark.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.CC_m_Remark.Location = new System.Drawing.Point(12, 501);
+            this.CC_m_Remark.Name = "CC_m_Remark";
+            this.CC_m_Remark.Size = new System.Drawing.Size(822, 19);
+            this.CC_m_Remark.TabIndex = 25;
+            this.CC_m_Remark.ThemeName = "Office2010Silver";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(840, 503);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "توضیحات سرگروه:";
+            // 
+            // radMenu2
+            // 
+            this.radMenu2.BackColor = System.Drawing.Color.Pink;
+            this.radMenu2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radMenu2.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem2,
+            this.aprv_button,
+            this.rejct_button,
+            this.radMenuItem1,
+            this.radMenuItem5});
+            this.radMenu2.Location = new System.Drawing.Point(0, 0);
+            this.radMenu2.Name = "radMenu2";
+            this.radMenu2.Size = new System.Drawing.Size(942, 54);
+            this.radMenu2.TabIndex = 4;
+            this.radMenu2.ThemeName = "Office2010Silver";
+            // 
             // radMenuItem2
             // 
             this.radMenuItem2.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.clipboard_icon;
@@ -806,6 +844,25 @@
             this.aprv_button.Text = "تائید لاگ";
             this.aprv_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.aprv_button.Click += new System.EventHandler(this.radMenuItem1_Click);
+            this.aprv_button.EnabledChanged += new System.EventHandler(this.aprv_button_EnabledChanged);
+            // 
+            // rejct_button
+            // 
+            this.rejct_button.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.qc_aprv;
+            this.rejct_button.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rejct_button.Name = "rejct_button";
+            this.rejct_button.Text = "عدم تائید لاگ";
+            this.rejct_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.rejct_button.Click += new System.EventHandler(this.rejct_button_Click);
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Hide_right_icon;
+            this.radMenuItem1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "لاگ بعدی";
+            this.radMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radMenuItem1.Click += new System.EventHandler(this.radMenuItem1_Click_1);
             // 
             // radMenuItem5
             // 
@@ -841,49 +898,6 @@
             this.Exit.Text = "   خروج   ";
             this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exit.UseCompatibleTextRendering = false;
-            // 
-            // radMenu2
-            // 
-            this.radMenu2.BackColor = System.Drawing.Color.Pink;
-            this.radMenu2.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radMenu2.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem2,
-            this.aprv_button,
-            this.rejct_button,
-            this.radMenuItem5});
-            this.radMenu2.Location = new System.Drawing.Point(0, 0);
-            this.radMenu2.Name = "radMenu2";
-            this.radMenu2.Size = new System.Drawing.Size(942, 54);
-            this.radMenu2.TabIndex = 4;
-            this.radMenu2.ThemeName = "Office2010Silver";
-            // 
-            // rejct_button
-            // 
-            this.rejct_button.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.qc_aprv;
-            this.rejct_button.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rejct_button.Name = "rejct_button";
-            this.rejct_button.Text = "عدم تائید لاگ";
-            this.rejct_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.rejct_button.Click += new System.EventHandler(this.rejct_button_Click);
-            // 
-            // CC_m_Remark
-            // 
-            this.CC_m_Remark.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.CC_m_Remark.Location = new System.Drawing.Point(12, 501);
-            this.CC_m_Remark.Name = "CC_m_Remark";
-            this.CC_m_Remark.Size = new System.Drawing.Size(822, 19);
-            this.CC_m_Remark.TabIndex = 25;
-            this.CC_m_Remark.ThemeName = "Office2010Silver";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(840, 503);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "توضیحات سرگروه:";
             // 
             // CCM_APPROVAL
             // 
@@ -956,8 +970,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnStop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CC_m_Remark)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radMenu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1029,5 +1043,6 @@
         private System.Windows.Forms.Label label1;
         public Telerik.WinControls.UI.RadMenuItem aprv_button;
         public Telerik.WinControls.UI.RadMenuItem rejct_button;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
     }
 }
