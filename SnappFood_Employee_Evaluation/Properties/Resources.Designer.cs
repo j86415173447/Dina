@@ -563,6 +563,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashboard_icon {
+            get {
+                object obj = ResourceManager.GetObject("dashboard-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap data_info_icon {
             get {
                 object obj = ResourceManager.GetObject("data-info-icon", resourceCulture);
@@ -1316,6 +1326,26 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap qc_aprv2 {
             get {
                 object obj = ResourceManager.GetObject("qc_aprv2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QC_Dashboard {
+            get {
+                object obj = ResourceManager.GetObject("QC_Dashboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QC_Dashboard_2 {
+            get {
+                object obj = ResourceManager.GetObject("QC_Dashboard_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

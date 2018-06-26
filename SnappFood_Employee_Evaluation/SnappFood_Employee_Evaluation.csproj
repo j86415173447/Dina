@@ -352,6 +352,12 @@
     <Compile Include="QC\RPT_QC_M.Designer.cs">
       <DependentUpon>RPT_QC_M.cs</DependentUpon>
     </Compile>
+    <Compile Include="QC\RPT_QC_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DASHBOARD.Designer.cs">
+      <DependentUpon>RPT_QC_DASHBOARD.cs</DependentUpon>
+    </Compile>
     <Compile Include="QC\RPT_QC_PERFORMANCE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -670,6 +676,9 @@
     <EmbeddedResource Include="QC\RPT_QC_M.resx">
       <DependentUpon>RPT_QC_M.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_DASHBOARD.resx">
+      <DependentUpon>RPT_QC_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QC\RPT_QC_PERFORMANCE.resx">
       <DependentUpon>RPT_QC_PERFORMANCE.cs</DependentUpon>
     </EmbeddedResource>
@@ -821,6 +830,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\dashboard-icon.png" />
+    <None Include="Resources\QC_Dashboard_2.png" />
+    <None Include="Resources\QC_Dashboard.png" />
     <None Include="Resources\Market_Analysis_icon1.png" />
     <None Include="Resources\Market_Analysis_icon.png" />
     <None Include="Resources\Time-Machine-icon2.png" />

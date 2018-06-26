@@ -43,15 +43,12 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT BSEL1.*,BSEL2.[AMW] from ((SELECT [QC_Agent] 'نام کارشناس',COUNT([QC_ID]) 'لاگ مانیتور شده',SUM(CASE WHEN [QC_Score]<=17 then 1 else 0 end) 'لاگ ناموفق',SUM(CASE WHEN [QC_Score]>17 then 1 else 0 end) 'لاگ موفق' " +
-                             ", SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'تابو',SUM(CASE WHEN[QC_M_Approval] != [Final_Approval] and[Final_Approval] is not null then 1 else 0 end) 'تغییر تائید',AVG([Handling_tm]) 'AHT' " +
-                             ",SUM(CASE WHEN[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'عدم تائید کیفی',SUM([Handling_tm]) 'SHT' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + "  group by[QC_Agent]) BSEL1 " +
-                             "left join(select Sel10.[QC_Agent], AVG(ABS(Sel10.[Handling_tm] - Sel20.[Len])) 'AMW' from((SELECT[QC_ID],[Handling_tm],[QC_Agent] FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + " ) Sel10 " +
-                             "left join(SELECT[QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by[QC_ID]) Sel20 " +
-                             "on Sel10.[QC_ID] = Sel20.[QC_ID]) group by Sel10.[QC_Agent]) BSEL2 on BSEL1.[نام کارشناس] = BSEL2.[QC_Agent])";
-            //string lcommand = "SELECT [QC_Agent] 'نام کارشناس',count([QC_ID]) 'لاگ مانیتور شده', sum(CASE WHEN [QC_Score]<=17 then 1 else 0 end) 'لاگ ناموفق',sum(CASE WHEN [QC_Score]>17 then 1 else 0 end) 'لاگ موفق' " +
-            //                  ",sum(CASE WHEN [taboo] = 1 then 1 else 0 end) 'تابو', sum(CASE WHEN [QC_M_Approval] != [Final_Approval] and [Final_Approval] is not null then 1 else 0 end) 'تغییر تائید' " +
-            //                  ",AVG([Handling_tm]) 'AHT',sum(CASE WHEN [CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'عدم تائید کیفی',SUM([Handling_tm]) 'SHT' " +
-            //                  "  FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] " + "WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + " group by [QC_Agent] ";
+                              ",SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'تابو',SUM(CASE WHEN[QC_M_Approval] != [Final_Approval] and[Final_Approval] is not null then 1 else 0 end) 'تغییر تائید',AVG([Handling_tm]) 'AHT' " +
+                              ",SUM(CASE WHEN[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'عدم تائید کیفی',SUM([Handling_tm]) 'SHT' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + "  group by[QC_Agent]) BSEL1 " +
+                              "left join(select Sel10.[QC_Agent], AVG(ABS(Sel10.[Handling_tm] - Sel20.[Len])) 'AMW' from((SELECT[QC_ID],[Handling_tm],[QC_Agent] FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + " ) Sel10 " +
+                              "left join(SELECT[QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by[QC_ID]) Sel20 " +
+                              "on Sel10.[QC_ID] = Sel20.[QC_ID]) group by Sel10.[QC_Agent]) BSEL2 on BSEL1.[نام کارشناس] = BSEL2.[QC_Agent])";
+
             adp.SelectCommand.CommandText = lcommand;
             dt22.Clear();
             adp.Fill(dt22);
