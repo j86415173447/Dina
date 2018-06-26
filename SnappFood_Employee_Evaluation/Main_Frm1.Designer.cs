@@ -804,7 +804,7 @@
             // radButtonElement42
             // 
             this.radButtonElement42.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.radButtonElement42.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.File_Presentation_icon;
+            this.radButtonElement42.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Market_Analysis_icon1;
             this.radButtonElement42.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement42.Name = "radButtonElement42";
             this.radButtonElement42.Text = "عملکرد کارشناسان کیفی";

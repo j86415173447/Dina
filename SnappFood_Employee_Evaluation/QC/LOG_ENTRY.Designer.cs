@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -401,6 +401,7 @@
             this.Log_Type.Name = "Log_Type";
             this.Log_Type.Size = new System.Drawing.Size(171, 21);
             this.Log_Type.TabIndex = 3;
+            this.Log_Type.SelectedIndexChanged += new System.EventHandler(this.Log_Type_SelectedIndexChanged);
             this.Log_Type.Click += new System.EventHandler(this.operator_ext_Click);
             this.Log_Type.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.operator_ext_KeyPress);
             this.Log_Type.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.operator_ext_PreviewKeyDown);
@@ -1008,7 +1009,7 @@
             this.radGridView1.MasterTemplate.AllowRowResize = false;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.radGridView1.MasterTemplate.ShowFilteringRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;

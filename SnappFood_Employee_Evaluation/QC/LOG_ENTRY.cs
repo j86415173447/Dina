@@ -31,6 +31,7 @@ namespace SnappFood_Employee_Evaluation.QC
         WaveOutEvent WaveOut = new WaveOutEvent();
         MemoryStream ms = new MemoryStream();
         public DataTable voice_dt = new DataTable();
+        public int amw_sec;
 
 
         public LOG_ENTRY()
@@ -705,9 +706,9 @@ namespace SnappFood_Employee_Evaluation.QC
             {
                 return false;
             }
-            else if (handling_time < calculate_log_duration())
+            else if (amw_sec == 0 || handling_time < calculate_log_duration() + amw_sec)
             {
-                RadMessageBox.Show(this, "مجاز به ثبت لاگ نمی باشید." + "/n/n" + " خطای محدودیت AMW. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                RadMessageBox.Show(this, "مجاز به ثبت لاگ نمی باشید." + "\n\n" + " خطای محدودیت AMW. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                 return false;
             }
             else
@@ -1029,6 +1030,26 @@ namespace SnappFood_Employee_Evaluation.QC
             }
             //MessageBox.Show(tot_duration.ToString());
             return tot_duration;
+        }
+
+        private void Log_Type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Log_Type.Text != "")
+            {
+                DataTable dt5 = new DataTable();
+                OleDbDataAdapter adp5 = new OleDbDataAdapter();
+                adp5.SelectCommand = new OleDbCommand();
+                adp5.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand5 = "SELECT [AMW] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN] where [plan_id] = '" + Log_Type.SelectedValue.ToString() + "'";
+                adp5.SelectCommand.CommandText = lcommand5;
+                adp5.Fill(dt5);
+                amw_sec = int.Parse(dt5.Rows[0][0].ToString());
+            }
+            else
+            {
+                amw_sec = 0;
+            }
         }
     }
 }

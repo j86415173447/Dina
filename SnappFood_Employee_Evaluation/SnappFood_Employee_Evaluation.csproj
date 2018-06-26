@@ -821,6 +821,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\Market_Analysis_icon1.png" />
+    <None Include="Resources\Market_Analysis_icon.png" />
+    <None Include="Resources\Time-Machine-icon2.png" />
+    <None Include="Resources\Time-Machine-icon1.png" />
+    <None Include="Resources\Time-Machine-icon.png" />
     <None Include="Resources\Hide-right-icon.png" />
     <None Include="Resources\log_entr.png" />
     <None Include="Resources\inoutcall.png" />

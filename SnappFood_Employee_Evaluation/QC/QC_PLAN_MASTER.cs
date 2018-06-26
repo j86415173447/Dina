@@ -39,7 +39,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp1.SelectCommand = new OleDbCommand();
             adp1.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand1 = "SELECT [Plan_id] 'کد پلن',[Plan_nm] 'نام پلن',[Plan_actv] 'فعال؟',[Insrt_Usr] 'ایجاد کننده' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]";
+            string lcommand1 = "SELECT [Plan_id] 'کد پلن',[Plan_nm] 'نام پلن', [AMW],[Plan_actv] 'فعال؟',[Insrt_Usr] 'ایجاد کننده' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]";
             adp1.SelectCommand.CommandText = lcommand1;
             adp1.Fill(dt1);
             grid.DataSource = dt1;
@@ -53,7 +53,8 @@ namespace SnappFood_Employee_Evaluation.QC
         {
             CRS_CD.Text = grid.SelectedRows[0].Cells[0].Value.ToString();
             CRS_NM.Text = grid.SelectedRows[0].Cells[1].Value.ToString();
-            if (grid.SelectedRows[0].Cells[2].Value.ToString() == "True")
+            AMW.Text = grid.SelectedRows[0].Cells[2].Value.ToString();
+            if (grid.SelectedRows[0].Cells[3].Value.ToString() == "True")
             {
                 ACTV.Checked = true;
             }
@@ -76,11 +77,11 @@ namespace SnappFood_Employee_Evaluation.QC
                 else
                 {
                     oleDbCommand1.Parameters.Clear();
-                    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN] SET [Plan_nm] = ?,[Plan_actv] = ?, [Insrt_usr] = ?  WHERE [plan_id] = '" + CRS_CD.Text + "'";
+                    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN] SET [Plan_nm] = ?,[Plan_actv] = ?, [Insrt_usr] = ?, [AMW] = ? WHERE [plan_id] = '" + CRS_CD.Text + "'";
                     oleDbCommand1.Parameters.AddWithValue("@Doc_No", CRS_NM.Text);
                     oleDbCommand1.Parameters.AddWithValue("@System_Id", ACTV.Checked == true ? "1" : "0");
                     oleDbCommand1.Parameters.AddWithValue("@System_Id", user);
-                    //oleDbCommand1.Parameters.AddWithValue("@System_Id", CRS_Type.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@System_Id", AMW.Text);
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();
@@ -130,10 +131,11 @@ namespace SnappFood_Employee_Evaluation.QC
                     }
                     CRS_CD.Text = "QCP" + CD_result;
                     oleDbCommand1.Parameters.Clear();
-                    oleDbCommand1.CommandText = "Insert INTO [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN] ([Plan_id],[Plan_nm],[Plan_actv],[Insrt_Usr]) Values (?,?,?,?)";
+                    oleDbCommand1.CommandText = "Insert INTO [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN] ([Plan_id],[Plan_nm],[Plan_actv],[AMW],[Insrt_Usr]) Values (?,?,?,?,?)";
                     oleDbCommand1.Parameters.AddWithValue("@Doc_No", CRS_CD.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Doc_No", CRS_NM.Text);
                     oleDbCommand1.Parameters.AddWithValue("@System_Id", ACTV.Checked == true ? "1" : "0");
+                    oleDbCommand1.Parameters.AddWithValue("@System_Id", AMW.Text);
                     oleDbCommand1.Parameters.AddWithValue("@System_Id", user);
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
@@ -150,10 +152,15 @@ namespace SnappFood_Employee_Evaluation.QC
             data_error = false;
             if (CRS_NM.Text == "")
             {
-                this.errorProvider.SetError(this.CRS_NM, "نام پلن وارد نشده است");
+                this.errorProvider.SetError(this.CRS_NM, "نام پلن وارد نشده است.");
                 data_error = true;
             }
-            
+            if (AMW.Text == "")
+            {
+                this.errorProvider.SetError(this.CRS_NM, "AMW وارد نشده است.");
+                data_error = true;
+            }
+
             if (data_error == false)
             {
                 return true;

@@ -1063,6 +1063,26 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Market_Analysis_icon {
+            get {
+                object obj = ResourceManager.GetObject("Market_Analysis_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Market_Analysis_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Market_Analysis_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Media_Controls_Fast_Forward_icon {
             get {
                 object obj = ResourceManager.GetObject("Media-Controls-Fast-Forward-icon", resourceCulture);
@@ -1566,6 +1586,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap Tick_Mark_128 {
             get {
                 object obj = ResourceManager.GetObject("Tick_Mark-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Time_Machine_icon {
+            get {
+                object obj = ResourceManager.GetObject("Time-Machine-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
