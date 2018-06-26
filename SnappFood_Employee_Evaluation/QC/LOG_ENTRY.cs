@@ -113,7 +113,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void operator_ext_Click(object sender, EventArgs e)
         {
-            if (timer1.Enabled != true)
+            if (timer1.Enabled != true && QC_ID.Text == "")
             {
                 timer1.Interval = 1000;
                 timer1.Start();
@@ -267,6 +267,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void radMenuItem1_Click(object sender, EventArgs e)
         {
+            calculate_log_duration();
             if (QC_ID.Text == "")
             {
                 if (required_field_check())
@@ -664,6 +665,7 @@ namespace SnappFood_Employee_Evaluation.QC
         {
             bool error = false;
             errorProvider.Clear();
+
             if (operator_nm.Text == "")
             {
                 this.errorProvider.SetError(this.label2, "شماره داخلی بررسی شود.");
@@ -701,6 +703,11 @@ namespace SnappFood_Employee_Evaluation.QC
             }
             if (error)
             {
+                return false;
+            }
+            else if (handling_time < calculate_log_duration())
+            {
+                RadMessageBox.Show(this, "مجاز به ثبت لاگ نمی باشید." + "/n/n" + " خطای محدودیت AMW. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                 return false;
             }
             else
@@ -862,6 +869,9 @@ namespace SnappFood_Employee_Evaluation.QC
             radGridView1.DataSource = null;
             radGridView1.DataSource = voice_dt;
             errorProvider.Clear();
+            timer1.Stop();
+            handling_time = 0;
+            handle_TM.Text = "";
         }
 
         private void radMenuItem3_Click(object sender, EventArgs e)
@@ -900,7 +910,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void radButton1_Click_1(object sender, EventArgs e)
         {
-            if (timer1.Enabled != true)
+            if (timer1.Enabled != true && QC_ID.Text == "")
             {
                 timer1.Interval = 1000;
                 timer1.Start();
@@ -942,7 +952,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     voice_dt.Rows.Add(newrow);
                     radGridView1.Columns[4].IsVisible = false;
                     radGridView1.BestFitColumns();
-
+                    Total_Vce_Duration.Text = TimeSpan.FromSeconds(calculate_log_duration()).ToString(@"mm\:ss");
                     loading.Close();
                 }
             }
@@ -1008,6 +1018,17 @@ namespace SnappFood_Employee_Evaluation.QC
                 voice_dt.AcceptChanges();
                 voice_DT_reorder();
             }
+        }
+
+        public int calculate_log_duration()
+        {
+            int tot_duration = 0;
+            for (int i=0; i<voice_dt.Rows.Count; i++)
+            {
+                tot_duration = tot_duration + int.Parse(TimeSpan.Parse("00:" + voice_dt.Rows[i][2].ToString()).TotalSeconds.ToString());
+            }
+            //MessageBox.Show(tot_duration.ToString());
+            return tot_duration;
         }
     }
 }

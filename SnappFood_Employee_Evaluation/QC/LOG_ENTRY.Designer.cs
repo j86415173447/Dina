@@ -102,6 +102,8 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
+            this.Total_Vce_Duration = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.operator_ext)).BeginInit();
@@ -966,6 +968,8 @@
             // radGroupBox9
             // 
             this.radGroupBox9.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox9.Controls.Add(this.Total_Vce_Duration);
+            this.radGroupBox9.Controls.Add(this.label8);
             this.radGroupBox9.Controls.Add(this.radGridView1);
             this.radGroupBox9.Controls.Add(this.radButton1);
             this.radGroupBox9.Controls.Add(this.btnPlay);
@@ -1032,6 +1036,25 @@
             this.radMenuItem4.PopupDirection = Telerik.WinControls.UI.RadDirection.Right;
             this.radMenuItem4.RightToLeft = false;
             this.radMenuItem4.Text = "حذف فایل";
+            // 
+            // Total_Vce_Duration
+            // 
+            this.Total_Vce_Duration.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Total_Vce_Duration.ForeColor = System.Drawing.Color.DarkBlue;
+            this.Total_Vce_Duration.Location = new System.Drawing.Point(195, 22);
+            this.Total_Vce_Duration.Name = "Total_Vce_Duration";
+            this.Total_Vce_Duration.Size = new System.Drawing.Size(139, 17);
+            this.Total_Vce_Duration.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label8.Location = new System.Drawing.Point(340, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "مجموع مدت مکالمات:";
             // 
             // LOG_ENTRY
             // 
@@ -1110,6 +1133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox9)).EndInit();
             this.radGroupBox9.ResumeLayout(false);
+            this.radGroupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -1192,5 +1216,7 @@
         private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
         private System.Windows.Forms.CheckBox No_swt;
         private System.Windows.Forms.CheckBox Bad_swt;
+        private System.Windows.Forms.Label Total_Vce_Duration;
+        private System.Windows.Forms.Label label8;
     }
 }
