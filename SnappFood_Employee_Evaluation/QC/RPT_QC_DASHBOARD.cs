@@ -38,6 +38,7 @@ namespace SnappFood_Employee_Evaluation.QC
             //dt_to.NullableValue = null;
             //dt_to.SetToNullValue();
             update_grid();
+            update_gauge();
 
             
             //////////////////////////////////////// Get Date Persian
@@ -59,7 +60,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
             Header.Text = Header.Text + "     " + DT_Yr + "/" + DT_Mth + "/" + DT_Day;
 
-            timer1.Interval = 10000;
+            timer1.Interval = 3000;
             timer1.Start();
 
 
@@ -76,14 +77,14 @@ namespace SnappFood_Employee_Evaluation.QC
             //                  ",SUM(CASE WHEN[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'عدم تائید کیفی',SUM([Handling_tm]) 'SHT' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1 AND [insrt_dt] = convert(date, getdate(), 111) group by[QC_Agent]) BSEL1 " +
             //                  "left join(select Sel10.[QC_Agent], AVG(ABS(Sel10.[Handling_tm] - Sel20.[Len])) 'AMW' from((SELECT[QC_ID],[Handling_tm],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1 AND [insrt_dt] = convert(date, getdate(), 111) ) Sel10 " +
             //                  "left join(SELECT[QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by[QC_ID]) Sel20 " +
-            //                  "on Sel10.[QC_ID] = Sel20.[QC_ID]) group by Sel10.[QC_Agent]) BSEL2 on BSEL1.[نام کارشناس] = BSEL2.[QC_Agent])";
+            //                  "on Sel10.[QC_ID] = Sel20.[QC_ID]) group by Sel10.[QC_Agent]) BSEL2 on BSEL1.[نام کارشناس] = BSEL2.[QC_Agent]) order by BSEL1.[لاگ مانیتور شده] desc";
 
             string lcommand = "SELECT BSEL1.*,BSEL2.[AMW] from ((SELECT [QC_Agent] 'نام کارشناس',COUNT([QC_ID]) 'لاگ مانیتور شده',SUM(CASE WHEN [QC_Score]<=17 then 1 else 0 end) 'لاگ ناموفق',SUM(CASE WHEN [QC_Score]>17 then 1 else 0 end) 'لاگ موفق' " +
                               ",SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'تابو' " +
                               ",SUM(CASE WHEN[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'عدم تائید کیفی',AVG([Handling_tm]) 'AHT' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1 AND [insrt_dt] = convert(date, getdate(), 111) group by[QC_Agent]) BSEL1 " +
                               "left join(select Sel10.[QC_Agent], AVG(ABS(Sel10.[Handling_tm] - Sel20.[Len])) 'AMW' from((SELECT[QC_ID],[Handling_tm],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1 AND [insrt_dt] = convert(date, getdate(), 111) ) Sel10 " +
                               "left join(SELECT[QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by[QC_ID]) Sel20 " +
-                              "on Sel10.[QC_ID] = Sel20.[QC_ID]) group by Sel10.[QC_Agent]) BSEL2 on BSEL1.[نام کارشناس] = BSEL2.[QC_Agent])";
+                              "on Sel10.[QC_ID] = Sel20.[QC_ID]) group by Sel10.[QC_Agent]) BSEL2 on BSEL1.[نام کارشناس] = BSEL2.[QC_Agent]) order by BSEL1.[لاگ مانیتور شده] desc";
 
             adp.SelectCommand.CommandText = lcommand;
             dt22.Clear();
@@ -112,6 +113,91 @@ namespace SnappFood_Employee_Evaluation.QC
             else
             {
                 //RadMessageBox.Show(this, "مطابق با شرایط جستجو، موردی یافت نشد." + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
+        }
+
+        public void update_gauge()
+        {
+            /////////////////////////////////// Parameter Calculations
+            float tot_monitored = 0;
+            float tot_aht = 0;
+            float tot_amw = 0;
+
+            for (int i = 0; i < dt22.Rows.Count; i++)
+            {
+                tot_monitored = tot_monitored + int.Parse(dt22.Rows[i][1].ToString());
+                tot_aht = tot_aht + int.Parse(dt22.Rows[i][6].ToString());
+                tot_amw = tot_amw + int.Parse(dt22.Rows[i][7].ToString());
+            }
+
+            tot_aht = tot_aht / dt22.Rows.Count;
+            tot_amw = tot_amw / dt22.Rows.Count;
+
+            lbl_tot_monitored.Text = tot_monitored.ToString();
+            lbl_tot_aht.Text = tot_aht.ToString();
+            lbl_tot_amw.Text = tot_amw.ToString();
+
+            ////////////////////////////////////// config gauges
+            total_gauge.Value = (tot_monitored/350)*100;
+            amw_gauge.Value = (tot_amw/60)*100;
+            aht_gauge.Value = (tot_aht/250)*100;
+
+            //total_gauge.RangeStart = 0;
+            //total_gauge.RangeEnd = 350;
+
+
+            //amw_gauge.RangeStart = 5;
+            //amw_gauge.RangeEnd = 60;
+
+            //aht_gauge.RangeStart = 100;
+            //aht_gauge.RangeEnd = 250;
+            //////////////////////////////////////////////////// Total Monitoring
+            if (total_gauge.Value <= 30)
+            {
+                radialGaugeArc5.BackColor = Color.Red;
+                radialGaugeArc5.BackColor2 = Color.Red;
+            }
+            else if (total_gauge.Value <= 60)
+            {
+                radialGaugeArc5.BackColor = Color.Yellow;
+                radialGaugeArc5.BackColor2 = Color.Yellow;
+            }
+            else
+            {
+                radialGaugeArc5.BackColor = Color.Green;
+                radialGaugeArc5.BackColor2 = Color.Green;
+            }
+            /////////////////////////////////////////////////// AMW Coloring
+            if (amw_gauge.Value <= 30)
+            {
+                radialGaugeArc1.BackColor = Color.Green;
+                radialGaugeArc1.BackColor2 = Color.Green;
+            }
+            else if (amw_gauge.Value <= 50)
+            {
+                radialGaugeArc1.BackColor = Color.Yellow;
+                radialGaugeArc1.BackColor2 = Color.Yellow;
+            }
+            else
+            {
+                radialGaugeArc1.BackColor = Color.Red;
+                radialGaugeArc1.BackColor2 = Color.Red;
+            }
+            //////////////////////////////////////////////////// AHT Coloring
+            if (aht_gauge.Value <= 40)
+            {
+                radialGaugeArc3.BackColor = Color.Green;
+                radialGaugeArc3.BackColor2 = Color.Green;
+            }
+            else if (aht_gauge.Value <= 60)
+            {
+                radialGaugeArc3.BackColor = Color.Yellow;
+                radialGaugeArc3.BackColor2 = Color.Yellow;
+            }
+            else
+            {
+                radialGaugeArc3.BackColor = Color.Red;
+                radialGaugeArc3.BackColor2 = Color.Red;
             }
         }
 
@@ -158,6 +244,7 @@ namespace SnappFood_Employee_Evaluation.QC
         private void timer1_Tick(object sender, EventArgs e)
         {
             update_grid();
+            update_gauge();
         }
     }
 }
