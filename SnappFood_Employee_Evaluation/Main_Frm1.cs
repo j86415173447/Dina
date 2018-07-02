@@ -969,5 +969,21 @@ namespace SnappFood_Employee_Evaluation
             //new_staff.MdiParent = this;
             new_staff.Show();
         }
+
+        private void radButtonElement45_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_DISPATCH))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_DISPATCH();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
     }
 }

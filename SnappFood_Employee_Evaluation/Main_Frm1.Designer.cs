@@ -95,6 +95,7 @@
             this.radButtonElement40 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement42 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement44 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement45 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup14 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement30 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup16 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -728,7 +729,8 @@
             this.radButtonElement39,
             this.radButtonElement40,
             this.radButtonElement42,
-            this.radButtonElement44});
+            this.radButtonElement44,
+            this.radButtonElement45});
             this.radRibbonBarGroup13.Name = "radRibbonBarGroup13";
             this.radRibbonBarGroup13.Text = "پنل مدیریت کنترل کیفی";
             // 
@@ -817,11 +819,21 @@
             // 
             this.radButtonElement44.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radButtonElement44.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.dashboard_icon;
-            this.radButtonElement44.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement44.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.radButtonElement44.Name = "radButtonElement44";
             this.radButtonElement44.Text = "پنل مانیتورینگ";
             this.radButtonElement44.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement44.Click += new System.EventHandler(this.radButtonElement44_Click);
+            // 
+            // radButtonElement45
+            // 
+            this.radButtonElement45.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement45.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Pie_chart_icon;
+            this.radButtonElement45.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement45.Name = "radButtonElement45";
+            this.radButtonElement45.Text = "توزیع شنود";
+            this.radButtonElement45.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement45.Click += new System.EventHandler(this.radButtonElement45_Click);
             // 
             // radRibbonBarGroup14
             // 
@@ -1070,5 +1082,6 @@
         private Telerik.WinControls.UI.RadButtonElement radButtonElement42;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement43;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement44;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement45;
     }
 }
