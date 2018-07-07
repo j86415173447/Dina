@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.Save = new Telerik.WinControls.UI.RadMenuItem();
             this.Print = new Telerik.WinControls.UI.RadMenuItem();
@@ -41,23 +41,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.amw_gauge = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
+            this.lbl_tot_amw = new System.Windows.Forms.Label();
             this.radialGaugeArc1 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeArc2 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeNeedle1 = new Telerik.WinControls.UI.Gauges.RadialGaugeNeedle();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.aht_gauge = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
+            this.lbl_tot_aht = new System.Windows.Forms.Label();
             this.radialGaugeArc3 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeArc4 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeNeedle2 = new Telerik.WinControls.UI.Gauges.RadialGaugeNeedle();
             this.label5 = new System.Windows.Forms.Label();
             this.total_gauge = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
+            this.lbl_tot_monitored = new System.Windows.Forms.Label();
             this.radialGaugeArc5 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeArc6 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeNeedle3 = new Telerik.WinControls.UI.Gauges.RadialGaugeNeedle();
-            this.lbl_tot_monitored = new System.Windows.Forms.Label();
-            this.lbl_tot_aht = new System.Windows.Forms.Label();
-            this.lbl_tot_amw = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
@@ -121,7 +121,7 @@
             // 
             this.radGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radGridView1.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.radGridView1.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Bold);
             this.radGridView1.Location = new System.Drawing.Point(0, 173);
             // 
             // 
@@ -129,8 +129,9 @@
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
             this.radGridView1.MasterTemplate.AllowColumnReorder = false;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.radGridView1.MasterTemplate.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect;
             this.radGridView1.MasterTemplate.ShowFilteringRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.ShowGroupPanel = false;
@@ -139,6 +140,7 @@
             this.radGridView1.Size = new System.Drawing.Size(1113, 517);
             this.radGridView1.TabIndex = 69;
             this.radGridView1.ThemeName = "Office2010Silver";
+            this.radGridView1.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridView1_CellFormatting);
             // 
             // oleDbCommand1
             // 
@@ -192,7 +194,19 @@
             this.amw_gauge.TabIndex = 6;
             this.amw_gauge.Text = "radRadialGauge1";
             this.amw_gauge.ThemeName = "Office2010Silver";
-            this.amw_gauge.Value = 80F;
+            this.amw_gauge.Value = 0F;
+            // 
+            // lbl_tot_amw
+            // 
+            this.lbl_tot_amw.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tot_amw.ForeColor = System.Drawing.Color.Black;
+            this.lbl_tot_amw.Location = new System.Drawing.Point(0, 145);
+            this.lbl_tot_amw.Name = "lbl_tot_amw";
+            this.lbl_tot_amw.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_tot_amw.Size = new System.Drawing.Size(223, 58);
+            this.lbl_tot_amw.TabIndex = 79;
+            this.lbl_tot_amw.Text = "No Data!";
+            this.lbl_tot_amw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radialGaugeArc1
             // 
@@ -200,7 +214,7 @@
             this.radialGaugeArc1.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(84)))), ((int)(((byte)(190)))));
             this.radialGaugeArc1.BindEndRange = true;
             this.radialGaugeArc1.Name = "radialGaugeArc1";
-            this.radialGaugeArc1.RangeEnd = 80D;
+            this.radialGaugeArc1.RangeEnd = 0D;
             this.radialGaugeArc1.Width = 40D;
             // 
             // radialGaugeArc2
@@ -210,7 +224,6 @@
             this.radialGaugeArc2.BindStartRange = true;
             this.radialGaugeArc2.Name = "radialGaugeArc2";
             this.radialGaugeArc2.RangeEnd = 100D;
-            this.radialGaugeArc2.RangeStart = 80D;
             this.radialGaugeArc2.Width = 40D;
             // 
             // radialGaugeNeedle1
@@ -223,7 +236,7 @@
             this.radialGaugeNeedle1.LenghtPercentage = 94D;
             this.radialGaugeNeedle1.Name = "radialGaugeNeedle1";
             this.radialGaugeNeedle1.Thickness = 5D;
-            this.radialGaugeNeedle1.Value = 80F;
+            this.radialGaugeNeedle1.Value = 0F;
             // 
             // label1
             // 
@@ -270,7 +283,21 @@
             this.aht_gauge.TabIndex = 73;
             this.aht_gauge.Text = "radRadialGauge2";
             this.aht_gauge.ThemeName = "Office2010Silver";
-            this.aht_gauge.Value = 80F;
+            this.aht_gauge.Value = 0F;
+            // 
+            // lbl_tot_aht
+            // 
+            this.lbl_tot_aht.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_tot_aht.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tot_aht.ForeColor = System.Drawing.Color.Black;
+            this.lbl_tot_aht.Location = new System.Drawing.Point(0, 145);
+            this.lbl_tot_aht.Name = "lbl_tot_aht";
+            this.lbl_tot_aht.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_tot_aht.Size = new System.Drawing.Size(223, 58);
+            this.lbl_tot_aht.TabIndex = 78;
+            this.lbl_tot_aht.Text = "No Data!";
+            this.lbl_tot_aht.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radialGaugeArc3
             // 
@@ -279,7 +306,7 @@
             this.radialGaugeArc3.BindEndRange = true;
             this.radialGaugeArc3.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc3.Name = "radialGaugeArc3";
-            this.radialGaugeArc3.RangeEnd = 80D;
+            this.radialGaugeArc3.RangeEnd = 0D;
             this.radialGaugeArc3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc3.UseCompatibleTextRendering = false;
             this.radialGaugeArc3.Width = 40D;
@@ -292,7 +319,6 @@
             this.radialGaugeArc4.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc4.Name = "radialGaugeArc4";
             this.radialGaugeArc4.RangeEnd = 100D;
-            this.radialGaugeArc4.RangeStart = 80D;
             this.radialGaugeArc4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc4.UseCompatibleTextRendering = false;
             this.radialGaugeArc4.Width = 40D;
@@ -310,7 +336,7 @@
             this.radialGaugeNeedle2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeNeedle2.Thickness = 5D;
             this.radialGaugeNeedle2.UseCompatibleTextRendering = false;
-            this.radialGaugeNeedle2.Value = 80F;
+            this.radialGaugeNeedle2.Value = 0F;
             // 
             // label5
             // 
@@ -342,7 +368,19 @@
             this.total_gauge.TabIndex = 75;
             this.total_gauge.Text = "radRadialGauge3";
             this.total_gauge.ThemeName = "Office2010Silver";
-            this.total_gauge.Value = 80F;
+            this.total_gauge.Value = 0F;
+            // 
+            // lbl_tot_monitored
+            // 
+            this.lbl_tot_monitored.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tot_monitored.ForeColor = System.Drawing.Color.Black;
+            this.lbl_tot_monitored.Location = new System.Drawing.Point(0, 145);
+            this.lbl_tot_monitored.Name = "lbl_tot_monitored";
+            this.lbl_tot_monitored.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_tot_monitored.Size = new System.Drawing.Size(223, 58);
+            this.lbl_tot_monitored.TabIndex = 77;
+            this.lbl_tot_monitored.Text = "No Data!";
+            this.lbl_tot_monitored.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radialGaugeArc5
             // 
@@ -351,7 +389,7 @@
             this.radialGaugeArc5.BindEndRange = true;
             this.radialGaugeArc5.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc5.Name = "radialGaugeArc5";
-            this.radialGaugeArc5.RangeEnd = 80D;
+            this.radialGaugeArc5.RangeEnd = 0D;
             this.radialGaugeArc5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc5.UseCompatibleTextRendering = false;
             this.radialGaugeArc5.Width = 40D;
@@ -364,7 +402,6 @@
             this.radialGaugeArc6.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc6.Name = "radialGaugeArc6";
             this.radialGaugeArc6.RangeEnd = 100D;
-            this.radialGaugeArc6.RangeStart = 80D;
             this.radialGaugeArc6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeArc6.UseCompatibleTextRendering = false;
             this.radialGaugeArc6.Width = 40D;
@@ -382,39 +419,7 @@
             this.radialGaugeNeedle3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.radialGaugeNeedle3.Thickness = 5D;
             this.radialGaugeNeedle3.UseCompatibleTextRendering = false;
-            this.radialGaugeNeedle3.Value = 80F;
-            // 
-            // lbl_tot_monitored
-            // 
-            this.lbl_tot_monitored.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tot_monitored.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot_monitored.Location = new System.Drawing.Point(0, 145);
-            this.lbl_tot_monitored.Name = "lbl_tot_monitored";
-            this.lbl_tot_monitored.Size = new System.Drawing.Size(223, 58);
-            this.lbl_tot_monitored.TabIndex = 77;
-            this.lbl_tot_monitored.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_tot_aht
-            // 
-            this.lbl_tot_aht.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_tot_aht.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tot_aht.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot_aht.Location = new System.Drawing.Point(0, 145);
-            this.lbl_tot_aht.Name = "lbl_tot_aht";
-            this.lbl_tot_aht.Size = new System.Drawing.Size(223, 58);
-            this.lbl_tot_aht.TabIndex = 78;
-            this.lbl_tot_aht.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_tot_amw
-            // 
-            this.lbl_tot_amw.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tot_amw.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot_amw.Location = new System.Drawing.Point(0, 145);
-            this.lbl_tot_amw.Name = "lbl_tot_amw";
-            this.lbl_tot_amw.Size = new System.Drawing.Size(223, 58);
-            this.lbl_tot_amw.TabIndex = 79;
-            this.lbl_tot_amw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radialGaugeNeedle3.Value = 0F;
             // 
             // RPT_QC_DASHBOARD
             // 

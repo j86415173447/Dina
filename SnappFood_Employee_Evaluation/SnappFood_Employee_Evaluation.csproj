@@ -334,6 +334,12 @@
     <Compile Include="QC\RPT_QC_COOR_4LEADER.Designer.cs">
       <DependentUpon>RPT_QC_COOR_4LEADER.cs</DependentUpon>
     </Compile>
+    <Compile Include="QC\RPT_QC_DETAILS_MG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DETAILS_MG.Designer.cs">
+      <DependentUpon>RPT_QC_DETAILS_MG.cs</DependentUpon>
+    </Compile>
     <Compile Include="QC\RPT_QC_GENERAL_MG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -673,6 +679,9 @@
     <EmbeddedResource Include="QC\RPT_QC_COOR_4LEADER.resx">
       <DependentUpon>RPT_QC_COOR_4LEADER.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_DETAILS_MG.resx">
+      <DependentUpon>RPT_QC_DETAILS_MG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QC\RPT_QC_GENERAL_MG.resx">
       <DependentUpon>RPT_QC_GENERAL_MG.cs</DependentUpon>
     </EmbeddedResource>
@@ -839,6 +848,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\dashboard_icon2.png" />
+    <None Include="Resources\gauge.png" />
     <None Include="Resources\Pie-chart-icon.png" />
     <None Include="Resources\dashboard-icon.png" />
     <None Include="Resources\QC_Dashboard_2.png" />

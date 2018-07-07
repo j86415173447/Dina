@@ -966,7 +966,6 @@ namespace SnappFood_Employee_Evaluation
             var new_staff = new QC.RPT_QC_DASHBOARD();
             new_staff.constr = constr;
             new_staff.user = username;
-            //new_staff.MdiParent = this;
             new_staff.Show();
         }
 
@@ -981,6 +980,38 @@ namespace SnappFood_Employee_Evaluation
                 }
             }
             var new_staff = new QC.RPT_QC_DISPATCH();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement46_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_DASHBOARD))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_DASHBOARD();
+            new_staff.constr = constr;
+            new_staff.user = username;
+            new_staff.Show();
+        }
+
+        private void radButtonElement47_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(QC.RPT_QC_DETAILS_MG))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new QC.RPT_QC_DETAILS_MG();
             new_staff.constr = constr;
             new_staff.MdiParent = this;
             new_staff.Show();
