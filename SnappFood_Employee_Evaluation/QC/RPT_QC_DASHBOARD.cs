@@ -10,6 +10,7 @@ using System.Data.OleDb;
 using OpenXmlPackaging;
 using System.Globalization;
 using Telerik.WinControls.UI;
+using System.Linq;
 
 namespace SnappFood_Employee_Evaluation.QC
 {
@@ -22,6 +23,19 @@ namespace SnappFood_Employee_Evaluation.QC
         public string DT_Mth;
         public string DT_Yr;
         public string DT_TM;
+        ///////////////////////////////// Warning Caps
+        public int cap_0_30 = 5;
+        public int cap_30_60 = 37;
+        public int cap_60_90 = 33;
+        public int cap_ov_90 = 25;
+        public int timer2_count = 0;
+        ///////////////////////////////// SMS Variations
+        public SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
+        public string token = null;
+        public string token_key;
+        public string token_security;
+        public string sms_line;
+
 
         public RPT_QC_DASHBOARD()
         {
@@ -56,9 +70,9 @@ namespace SnappFood_Employee_Evaluation.QC
             Header.Text = Header.Text + "     " + DT_Yr + "/" + DT_Mth + "/" + DT_Day;
 
             timer1.Interval = 5000;
+            timer2.Interval = 30000;
             timer1.Start();
-
-
+            timer2.Start();
         }
 
         public void update_grid()
@@ -110,7 +124,7 @@ namespace SnappFood_Employee_Evaluation.QC
         {
             if (dt22.Rows.Count != 0)
             {
-                /////////////////////////////////// Parameter Calculations
+                /////////////////////////////////// Gauge Parameter Calculations
                 float tot_monitored = 0;
                 float tot_aht = 0;
                 float tot_amw = 0;
@@ -244,53 +258,53 @@ namespace SnappFood_Employee_Evaluation.QC
         {
             if (e.CellElement.ColumnInfo.Name == "0 ~ 30" || e.CellElement.ColumnInfo.Name == "60 ~ 90" || e.CellElement.ColumnInfo.Name == "30 ~ 60" || e.CellElement.ColumnInfo.Name == "Over 90")
             {
-                ////////////////////////////////////////// >90 Style
-                if (e.CellElement.ColumnInfo.Name == "0 ~ 30" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= 10)
+                ////////////////////////////////////////// >30 Style
+                if (e.CellElement.ColumnInfo.Name == "0 ~ 30" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_0_30 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.LightGreen;
                     e.CellElement.NumberOfColors = 1;
                 }
-                else if (e.CellElement.ColumnInfo.Name == "0 ~ 30" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > 10)
+                else if (e.CellElement.ColumnInfo.Name == "0 ~ 30" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_0_30 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.OrangeRed;
                     e.CellElement.NumberOfColors = 1;
                 }
                 ////////////////////////////////////////// 60-90 Style
-                if (e.CellElement.ColumnInfo.Name == "60 ~ 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= 30)
+                if (e.CellElement.ColumnInfo.Name == "60 ~ 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_60_90 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.LightGreen;
                     e.CellElement.NumberOfColors = 1;
                 }
-                else if (e.CellElement.ColumnInfo.Name == "60 ~ 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > 30)
+                else if (e.CellElement.ColumnInfo.Name == "60 ~ 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_60_90 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.OrangeRed;
                     e.CellElement.NumberOfColors = 1;
                 }
                 ////////////////////////////////////////// 30-60 Style
-                if (e.CellElement.ColumnInfo.Name == "30 ~ 60" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= 35)
+                if (e.CellElement.ColumnInfo.Name == "30 ~ 60" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_30_60 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.LightGreen;
                     e.CellElement.NumberOfColors = 1;
                 }
-                else if (e.CellElement.ColumnInfo.Name == "30 ~ 60" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > 35)
+                else if (e.CellElement.ColumnInfo.Name == "30 ~ 60" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_30_60 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.OrangeRed;
                     e.CellElement.NumberOfColors = 1;
                 }
-                ////////////////////////////////////////// <30 Style
-                if (e.CellElement.ColumnInfo.Name == "Over 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= 25)
+                ////////////////////////////////////////// >90 Style
+                if (e.CellElement.ColumnInfo.Name == "Over 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_ov_90 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.LightGreen;
                     e.CellElement.NumberOfColors = 1;
                 }
-                else if (e.CellElement.ColumnInfo.Name == "Over 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > 25)
+                else if (e.CellElement.ColumnInfo.Name == "Over 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_ov_90 + 1)
                 {
                     e.CellElement.DrawFill = true;
                     e.CellElement.BackColor = Color.OrangeRed;
@@ -300,6 +314,96 @@ namespace SnappFood_Employee_Evaluation.QC
             else
             {
                 e.CellElement.ResetValue(LightVisualElement.BackColorProperty, ValueResetFlags.Local);
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2_count++;
+            List<string> conditions = new List<string>();
+            for (int i = 0; i < dt22.Rows.Count; i++)
+            {
+                if (int.Parse(dt22.Rows[i][1].ToString()) > 30)
+                {
+                    if (float.Parse(dt22.Rows[i][8].ToString().Replace("%","")) > cap_0_30 + 1)
+                    {
+                        float[] set = {cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")) , cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
+                        int max_index = Array.IndexOf(set, set.Max());
+                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "30~60" : (max_index == 1 ? "60~90" : ">90")));
+                        continue;
+                        
+                    }
+                    if (float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")) > cap_30_60 + 1)
+                    {
+                        float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
+                        int max_index = Array.IndexOf(set, set.Max());
+                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "60~90" : ">90")));
+                        continue;
+                    }
+                    if (float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) > cap_60_90 + 1)
+                    {
+                        float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
+                        int max_index = Array.IndexOf(set, set.Max());
+                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : ">90")));
+                        continue;
+                    }
+                    if (float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) > cap_ov_90 + 1)
+                    {
+                        float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) };
+                        int max_index = Array.IndexOf(set, set.Max());
+                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : "60~60")));
+                        continue;
+                    }
+                }
+            }
+            if (conditions.Count != 0)
+            {
+                test_label.Text = "\n" + string.Join(" \n\n ", conditions.ToArray());
+            }
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////// SMS Warning Section
+            if (timer2_count % 30 == 0)
+            {
+                List<string> conditions2 = new List<string>();
+                for (int i = 0; i < dt22.Rows.Count; i++)
+                {
+                    if (int.Parse(dt22.Rows[i][1].ToString()) > 30)
+                    {
+                        if (float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")) > cap_0_30 + 5)
+                        {
+                            conditions2.Add(dt22.Rows[i][0].ToString() + "   0~30   " + dt22.Rows[i][8].ToString());
+                        }
+                        if (float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")) > cap_30_60 + 5)
+                        {
+                            conditions2.Add(dt22.Rows[i][0].ToString() + "   30~60   " + dt22.Rows[i][9].ToString());
+                        }
+                        if (float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) > cap_60_90 + 5)
+                        {
+                            conditions2.Add(dt22.Rows[i][0].ToString() + "   60~90   " + dt22.Rows[i][10].ToString());
+                        }
+                        if (float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) > cap_ov_90 + 5)
+                        {
+                            conditions2.Add(dt22.Rows[i][0].ToString() + "   >90   " + dt22.Rows[i][11].ToString());
+                        }
+                    }
+                }
+                if (conditions2.Count != 0)
+                {
+                    ////////////////////////////////////////////////////////// Send SMS
+                    SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
+                    var token = token_instance.GetToken(token_key, token_security);
+
+                    SmsIrRestful.MessageSend message_instance = new SmsIrRestful.MessageSend();
+                    var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
+                    {
+                        MobileNumbers = new List<string>() { "09122144498" }.ToArray(),
+                        Messages = new List<string>() { string.Join(" \n ", conditions2.ToArray()) }.ToArray(),
+                        LineNumber = sms_line,
+                        SendDateTime = null,
+                        CanContinueInCaseOfError = false
+                    });
+                }
             }
         }
     }

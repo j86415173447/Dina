@@ -955,7 +955,7 @@ namespace SnappFood_Employee_Evaluation
 
         private void radButtonElement44_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
+            foreach (Form form in Application.OpenForms) ///////////////////////////////////////////Dash Board
             {
                 if (form.GetType() == typeof(QC.RPT_QC_DASHBOARD))
                 {
@@ -966,6 +966,10 @@ namespace SnappFood_Employee_Evaluation
             var new_staff = new QC.RPT_QC_DASHBOARD();
             new_staff.constr = constr;
             new_staff.user = username;
+            new_staff.token_key = token_key;
+            new_staff.token_security = token_security;
+            new_staff.sms_line = sms_line;
+            //new_staff.MdiParent = this;
             new_staff.Show();
         }
 
