@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition14 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -99,11 +99,13 @@
             this.btnPlay = new Telerik.WinControls.UI.RadButton();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radGroupBox9 = new Telerik.WinControls.UI.RadGroupBox();
+            this.Total_Vce_Duration = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
-            this.Total_Vce_Duration = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.radDesktopAlert1 = new Telerik.WinControls.UI.RadDesktopAlert(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.operator_ext)).BeginInit();
@@ -988,6 +990,25 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox9.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox9.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
+            // Total_Vce_Duration
+            // 
+            this.Total_Vce_Duration.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Total_Vce_Duration.ForeColor = System.Drawing.Color.DarkBlue;
+            this.Total_Vce_Duration.Location = new System.Drawing.Point(195, 22);
+            this.Total_Vce_Duration.Name = "Total_Vce_Duration";
+            this.Total_Vce_Duration.Size = new System.Drawing.Size(139, 17);
+            this.Total_Vce_Duration.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label8.Location = new System.Drawing.Point(340, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 13);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "مجموع مدت مکالمات:";
+            // 
             // radGridView1
             // 
             this.radGridView1.AutoSizeRows = true;
@@ -1009,7 +1030,7 @@
             this.radGridView1.MasterTemplate.AllowRowResize = false;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.radGridView1.MasterTemplate.ShowFilteringRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition14;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1038,24 +1059,22 @@
             this.radMenuItem4.RightToLeft = false;
             this.radMenuItem4.Text = "حذف فایل";
             // 
-            // Total_Vce_Duration
+            // timer2
             // 
-            this.Total_Vce_Duration.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Total_Vce_Duration.ForeColor = System.Drawing.Color.DarkBlue;
-            this.Total_Vce_Duration.Location = new System.Drawing.Point(195, 22);
-            this.Total_Vce_Duration.Name = "Total_Vce_Duration";
-            this.Total_Vce_Duration.Size = new System.Drawing.Size(139, 17);
-            this.Total_Vce_Duration.TabIndex = 32;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // label8
+            // radDesktopAlert1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label8.Location = new System.Drawing.Point(340, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 13);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "مجموع مدت مکالمات:";
+            this.radDesktopAlert1.AutoSize = true;
+            this.radDesktopAlert1.FadeAnimationFrames = 40;
+            this.radDesktopAlert1.Opacity = 0.85F;
+            this.radDesktopAlert1.PopupAnimationDirection = Telerik.WinControls.UI.RadDirection.Right;
+            this.radDesktopAlert1.PopupAnimationFrames = 10;
+            this.radDesktopAlert1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radDesktopAlert1.ShowOptionsButton = false;
+            this.radDesktopAlert1.ShowPinButton = false;
+            this.radDesktopAlert1.ThemeName = "Office2010Silver";
             // 
             // LOG_ENTRY
             // 
@@ -1219,5 +1238,7 @@
         private System.Windows.Forms.CheckBox Bad_swt;
         private System.Windows.Forms.Label Total_Vce_Duration;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Timer timer2;
+        private Telerik.WinControls.UI.RadDesktopAlert radDesktopAlert1;
     }
 }

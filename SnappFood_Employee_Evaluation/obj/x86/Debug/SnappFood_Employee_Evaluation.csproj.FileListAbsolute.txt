@@ -226,3 +226,4 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\o
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DASHBOARD.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DISPATCH.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DETAILS_MG.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PENALTY.resources

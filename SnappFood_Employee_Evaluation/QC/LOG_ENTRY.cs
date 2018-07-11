@@ -12,6 +12,7 @@ using NAudio;
 using NAudio.Wave;
 using System.Media;
 using System.Globalization;
+using System.Linq;
 
 namespace SnappFood_Employee_Evaluation.QC
 {
@@ -32,6 +33,13 @@ namespace SnappFood_Employee_Evaluation.QC
         MemoryStream ms = new MemoryStream();
         public DataTable voice_dt = new DataTable();
         public int amw_sec;
+        ///////////////////////////////// Warning Caps
+        public int cap_0_30 = 5;
+        public int cap_30_60 = 37;
+        public int cap_60_90 = 33;
+        public int cap_ov_90 = 25;
+        public DataTable dt22 = new DataTable();
+        Point p = Point.Empty;
 
 
         public LOG_ENTRY()
@@ -110,6 +118,10 @@ namespace SnappFood_Employee_Evaluation.QC
             radGridView1.DataSource = voice_dt;
             radGridView1.Columns[4].IsVisible = false;
             radGridView1.Columns[5].IsVisible = false;
+
+            timer2.Interval = 120000;
+            timer2.Start();
+            radDesktopAlert1.AutoCloseDelay = 15;
         }
 
         private void operator_ext_Click(object sender, EventArgs e)
@@ -869,10 +881,14 @@ namespace SnappFood_Employee_Evaluation.QC
             voice_dt.Clear();
             radGridView1.DataSource = null;
             radGridView1.DataSource = voice_dt;
+            radGridView1.Columns[4].IsVisible = false;
+            radGridView1.Columns[5].IsVisible = false;
             errorProvider.Clear();
             timer1.Stop();
             handling_time = 0;
             handle_TM.Text = "";
+
+
         }
 
         private void radMenuItem3_Click(object sender, EventArgs e)
@@ -1018,6 +1034,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 radGridView1.Rows[selected].Delete();
                 voice_dt.AcceptChanges();
                 voice_DT_reorder();
+                calculate_log_duration();
             }
         }
 
@@ -1029,6 +1046,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 tot_duration = tot_duration + int.Parse(TimeSpan.Parse("00:" + voice_dt.Rows[i][2].ToString()).TotalSeconds.ToString());
             }
             //MessageBox.Show(tot_duration.ToString());
+            Total_Vce_Duration.Text = TimeSpan.FromSeconds(tot_duration).ToString(@"mm\:ss");
             return tot_duration;
         }
 
@@ -1049,6 +1067,89 @@ namespace SnappFood_Employee_Evaluation.QC
             else
             {
                 amw_sec = 0;
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            OleDbDataAdapter adp = new OleDbDataAdapter();
+            adp.SelectCommand = new OleDbCommand();
+            adp.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommand = " Select Sel1.[QC_Agent] 'کارشناس', COUNT(sel1.[QC_ID]) 'کل لاگ ها',SUM(sel3.[LOG_QTY]) 'کل فایل ها',SUM(CASE WHEN sel1.[QC_Score]<=17 then 1 else 0 end) 'ناموفق',SUM(CASE WHEN sel1.[QC_Score] >17 then 1 else 0 end) 'موفق' ,SUM(CASE WHEN sel1.[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'رد کیفی', AVG(sel1.[Handling_tm]) 'AHT', AVG(Sel1.[Handling_tm] - Sel2.[Len]) 'AMW' " +
+                              " ,CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '0 ~ 30', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 60 and sel2.[Len] > 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '30 ~ 60', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 90 and sel2.[Len] > 60   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '60 ~ 90', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] > 90   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' 'Over 90'   from ( " +
+                              " (SELECT [QC_ID],[Handling_tm],[taboo],[QC_M_Approval],[QC_Agent],[QC_Score],[CC_M_Aprv_Usr],[insrt_dt] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) Sel1 " +
+                              " left join (SELECT [QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel2 " +
+                              " on Sel1.[QC_ID] = Sel2.[QC_ID] " +
+                              "left join (SELECT [QC_ID], count([QC_ID]) 'LOG_QTY' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel3 on Sel1.[QC_ID] = Sel3.[QC_ID] " +
+                              ") WHERE Sel1.[insrt_dt] = convert(date, getdate(), 111) and sel1.[QC_Agent] = N'" + user + "' group by Sel1.[QC_Agent] ";
+            adp.SelectCommand.CommandText = lcommand;
+            dt22.Clear();
+            adp.Fill(dt22);
+            if (dt22.Rows.Count == 1)
+            {
+                List<string> conditions = new List<string>();
+                for (int i = 0; i < dt22.Rows.Count; i++)
+                {
+                    if (int.Parse(dt22.Rows[i][1].ToString()) > 30)
+                    {
+                        if (float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")) > cap_0_30 + 1)
+                        {
+                            float[] set = { cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
+                            int max_index = Array.IndexOf(set, set.Max());
+                            conditions.Add((max_index == 0 ? "30~60" : (max_index == 1 ? "60~90" : ">90")));
+                            continue;
+
+                        }
+                        if (float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")) > cap_30_60 + 1)
+                        {
+                            float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
+                            int max_index = Array.IndexOf(set, set.Max());
+                            conditions.Add((max_index == 0 ? "0~30" : (max_index == 1 ? "60~90" : ">90")));
+                            continue;
+                        }
+                        if (float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) > cap_60_90 + 1)
+                        {
+                            float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
+                            int max_index = Array.IndexOf(set, set.Max());
+                            conditions.Add((max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : ">90")));
+                            continue;
+                        }
+                        if (float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) > cap_ov_90 + 1)
+                        {
+                            float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) };
+                            int max_index = Array.IndexOf(set, set.Max());
+                            conditions.Add((max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : "60~90")));
+                            continue;
+                        }
+                    }
+                }
+                if (conditions.Count != 0)
+                {
+                    string test_label = string.Join("", conditions.ToArray());
+                    radDesktopAlert1.CaptionText = "<html><span><color=Red><b>" + "سامانه هوشمند هدایت مانیتورینگ کارشناسان کیفی" + "</b></span></html>";
+                    radDesktopAlert1.ContentText = user + " عزیز" + "\n" + "خسته نباشید." + "\n\n" + "بهترین لاگ برای شما جهت ادامه مانیتورینگ، گروه " + test_label + " می باشد." + "\n\n";
+                    this.radDesktopAlert1.Popup.AlertElement.ContentElement.Font = new Font("Tahoma" , 9);
+                    this.radDesktopAlert1.Popup.AlertElement.CaptionElement.TextAndButtonsElement.TextElement.Font = new Font("Tahoma", 9);
+
+                    radDesktopAlert1.Popup.LocationChanged += Popup_LocationChanged;
+                    radDesktopAlert1.Show();
+                }
+            }
+        }
+
+        private void Popup_LocationChanged(object sender, EventArgs e)
+        {
+            Telerik.WinControls.UI.DesktopAlertPopup popup = sender as Telerik.WinControls.UI.DesktopAlertPopup;
+            if (p == Point.Empty)
+            {
+                p = popup.Location;
+            }
+            else
+            {
+                radDesktopAlert1.Popup.LocationChanged -= Popup_LocationChanged;
+                radDesktopAlert1.Popup.Location = p;
+                radDesktopAlert1.Popup.LocationChanged += Popup_LocationChanged;
             }
         }
     }

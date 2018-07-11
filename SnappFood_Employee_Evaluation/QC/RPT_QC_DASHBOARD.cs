@@ -139,9 +139,9 @@ namespace SnappFood_Employee_Evaluation.QC
                 tot_aht = tot_aht / dt22.Rows.Count;
                 tot_amw = tot_amw / dt22.Rows.Count;
 
-                lbl_tot_monitored.Text = tot_monitored.ToString();
-                lbl_tot_aht.Text = tot_aht.ToString();
-                lbl_tot_amw.Text = tot_amw.ToString();
+                lbl_tot_monitored.Text = Math.Truncate(tot_monitored).ToString();
+                lbl_tot_aht.Text = Math.Truncate(tot_aht).ToString();
+                lbl_tot_amw.Text = Math.Truncate(tot_amw).ToString();
 
                 ////////////////////////////////////// config gauges
                 total_gauge.Value = (tot_monitored / 350) * 100;
@@ -160,50 +160,59 @@ namespace SnappFood_Employee_Evaluation.QC
                 //////////////////////////////////////////////////// Total Monitoring
                 if (total_gauge.Value <= 30)
                 {
-                    radialGaugeArc5.BackColor = Color.Red;
-                    radialGaugeArc5.BackColor2 = Color.Red;
+                    radialGaugeArc5.BackColor = Color.OrangeRed;
+                    radialGaugeArc5.BackColor2 = Color.OrangeRed;
+                    lbl_tot_monitored.ForeColor = Color.Red;
                 }
                 else if (total_gauge.Value <= 60)
                 {
                     radialGaugeArc5.BackColor = Color.Yellow;
                     radialGaugeArc5.BackColor2 = Color.Yellow;
+                    lbl_tot_monitored.ForeColor = Color.Gold;
                 }
                 else
                 {
-                    radialGaugeArc5.BackColor = Color.Green;
-                    radialGaugeArc5.BackColor2 = Color.Green;
+                    radialGaugeArc5.BackColor = Color.LightGreen;
+                    radialGaugeArc5.BackColor2 = Color.LightGreen;
+                    lbl_tot_monitored.ForeColor = Color.Green;
                 }
                 /////////////////////////////////////////////////// AMW Coloring
                 if (amw_gauge.Value <= 30)
                 {
-                    radialGaugeArc1.BackColor = Color.Green;
-                    radialGaugeArc1.BackColor2 = Color.Green;
+                    radialGaugeArc1.BackColor = Color.LightGreen;
+                    radialGaugeArc1.BackColor2 = Color.LightGreen;
+                    lbl_tot_amw.ForeColor = Color.Green;
                 }
                 else if (amw_gauge.Value <= 50)
                 {
                     radialGaugeArc1.BackColor = Color.Yellow;
                     radialGaugeArc1.BackColor2 = Color.Yellow;
+                    lbl_tot_amw.ForeColor = Color.Gold;
                 }
                 else
                 {
-                    radialGaugeArc1.BackColor = Color.Red;
-                    radialGaugeArc1.BackColor2 = Color.Red;
+                    radialGaugeArc1.BackColor = Color.OrangeRed;
+                    radialGaugeArc1.BackColor2 = Color.OrangeRed;
+                    lbl_tot_amw.ForeColor = Color.Red;
                 }
                 //////////////////////////////////////////////////// AHT Coloring
                 if (aht_gauge.Value <= 40)
                 {
-                    radialGaugeArc3.BackColor = Color.Green;
-                    radialGaugeArc3.BackColor2 = Color.Green;
+                    radialGaugeArc3.BackColor = Color.LightGreen;
+                    radialGaugeArc3.BackColor2 = Color.LightGreen;
+                    lbl_tot_aht.ForeColor = Color.Green;
                 }
                 else if (aht_gauge.Value <= 60)
                 {
                     radialGaugeArc3.BackColor = Color.Yellow;
                     radialGaugeArc3.BackColor2 = Color.Yellow;
+                    lbl_tot_aht.ForeColor = Color.Gold;
                 }
                 else
                 {
-                    radialGaugeArc3.BackColor = Color.Red;
-                    radialGaugeArc3.BackColor2 = Color.Red;
+                    radialGaugeArc3.BackColor = Color.OrangeRed;
+                    radialGaugeArc3.BackColor2 = Color.OrangeRed;
+                    lbl_tot_aht.ForeColor = Color.Red;
                 }
             }
         }
@@ -351,14 +360,29 @@ namespace SnappFood_Employee_Evaluation.QC
                     {
                         float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) };
                         int max_index = Array.IndexOf(set, set.Max());
-                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : "60~60")));
+                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : "60~90")));
                         continue;
                     }
                 }
             }
             if (conditions.Count != 0)
             {
-                test_label.Text = "\n" + string.Join(" \n\n ", conditions.ToArray());
+                
+                if (conditions.Count <= 3)
+                {
+                    test_label.Text = "* " + string.Join("\n\n* ", conditions.ToArray());
+                    test_label.Font = new System.Drawing.Font("Tahoma", 23, FontStyle.Bold);
+                }
+                else if (conditions.Count > 3 && conditions.Count <= 5)
+                {
+                    test_label.Text = "* " + string.Join("\n* ", conditions.ToArray());
+                    test_label.Font = new System.Drawing.Font("Tahoma", 20, FontStyle.Bold);
+                }
+                else
+                {
+                    test_label.Text = "* " + string.Join("\n* ", conditions.ToArray());
+                    test_label.Font = new System.Drawing.Font("Tahoma", 17, FontStyle.Bold);
+                }
             }
 
 
