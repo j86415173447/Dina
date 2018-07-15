@@ -16,6 +16,7 @@ namespace SnappFood_Employee_Evaluation
         public string username;
         private ErrorProvider errorProvider;
         public bool data_error = false;
+        public bool frm_login = false;
 
         public Pass_Change()
         {
@@ -39,9 +40,9 @@ namespace SnappFood_Employee_Evaluation
         {
             errorProvider.Clear();
             data_error = false;
-            if (NEW_PASS.Text.Length < 3)
+            if (NEW_PASS.Text.Length < 6)
             {
-                this.errorProvider.SetError(this.NEW_PASS, "رمز عبور جدید باید بیش از 3 کاراکتر داشته باشد");
+                this.errorProvider.SetError(this.NEW_PASS, "رمز عبور جدید باید بیش از 6 کاراکتر داشته باشد");
                 data_error = true;
                 //RadMessageBox.Show(this, "رمز عبور جدید باید بیش از 3 کاراکتر داشته باشد", "اخطار", MessageBoxButtons.OK, RadMessageIcon.Error);
             }
@@ -71,13 +72,23 @@ namespace SnappFood_Employee_Evaluation
                 else
                 {
                     oleDbCommand1.Parameters.Clear();
-                    oleDbCommand1.CommandText = "Update [SNAPP_CC_EVALUATION].[dbo].[Users] Set [USR_Pass] = ? where [usr_name] = N'" + username + "'";
+                    oleDbCommand1.CommandText = "Update [SNAPP_CC_EVALUATION].[dbo].[Users] Set [USR_Pass] = ? , [USR_first_login] = ? where [usr_name] = N'" + username + "'";
                     oleDbCommand1.Parameters.AddWithValue("@newpass", NEW_PASS_2.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@newpass", "0");
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();
-                    RadMessageBox.Show(this,"تغییر رمز با موفقیت انجام شد","پیغام",MessageBoxButtons.OK,RadMessageIcon.Info,MessageBoxDefaultButton.Button1,RightToLeft.Yes);
-                    this.Close();
+                    
+                    if (frm_login)
+                    {
+                        RadMessageBox.Show(this, "تغییر رمز با موفقیت انجام شد" + "\n\n" + "لطفاً سامانه را مجدداً راه اندازی نمائید.", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        RadMessageBox.Show(this, "تغییر رمز با موفقیت انجام شد", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                        this.Close();
+                    }
                 }
             }
 

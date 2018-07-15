@@ -307,7 +307,7 @@ namespace SnappFood_Employee_Evaluation.QC
                                                     "[QC_ID],[QC_Year],[QC_Month],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[Call_Tm],[Call_Dt],[QC_Param_1],[QC_Param_2] " +
                                                     ",[QC_Param_3],[QC_Param_4],[QC_Param_5],[QC_Param_6],[QC_Param_7],[QC_Param_8],[QC_Param_9],[QC_Param_10],[QC_Param_11],[QC_Param_12] " +
                                                     ",[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[insrt_dt],[QC_M_Approval],[QC_M_Aprv_Usr],[QC_M_Aprv_DT],[CC_M_Approval],[CC_M_Aprv_Usr],[CC_M_Aprv_Rmrk],[CC_M_Aprv_DT]" +
-                                                     " ,[QC_Agent],[No_switch],[Bad_switch]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?)";
+                                                     " ,[QC_Agent],[No_switch],[Bad_switch],[Active_Status]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?)";
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_ID.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Mth);
@@ -434,6 +434,7 @@ namespace SnappFood_Employee_Evaluation.QC
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_Agent.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_swt.Checked ? "1" : "0");
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_swt.Checked ? "1" : "0");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();
@@ -446,7 +447,7 @@ namespace SnappFood_Employee_Evaluation.QC
                                                     "[QC_ID],[QC_Year],[QC_Month],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[Call_Tm],[Call_Dt],[QC_Param_1],[QC_Param_2] " + //11
                                                     ",[QC_Param_3],[QC_Param_4],[QC_Param_5],[QC_Param_6],[QC_Param_7],[QC_Param_8],[QC_Param_9],[QC_Param_10],[QC_Param_11],[QC_Param_12] " + //10
                                                     ",[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[insrt_dt],[QC_M_Approval],[QC_M_Aprv_Usr],[QC_M_Aprv_DT],[CC_M_Approval],[CC_M_Aprv_Usr],[CC_M_Aprv_Rmrk],[CC_M_Aprv_DT],[LD_M_Approval],[LD_M_Aprv_Usr],[LD_M_Aprv_Rmrk],[LD_M_Aprv_DT],[MG_M_Approval],[MG_M_Aprv_Usr],[MG_M_Aprv_Rmrk],[MG_M_Aprv_Dt],[Final_Approval],[Final_Aprv_Usr],[Final_Aprv_Rmrk],[Final_Aprv_DT]" + //17
-                                                    " ,[QC_Agent],[No_switch],[Bad_switch]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                                                    " ,[QC_Agent],[No_switch],[Bad_switch],[Active_Status]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_ID.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Mth);
@@ -622,6 +623,7 @@ namespace SnappFood_Employee_Evaluation.QC
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_Agent.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_swt.Checked ? "1" : "0");
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_swt.Checked ? "1" : "0");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();

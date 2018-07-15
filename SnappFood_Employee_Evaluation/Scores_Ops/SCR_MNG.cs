@@ -155,7 +155,7 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
             adpsc55.SelectCommand = new OleDbCommand();
             adpsc55.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommandsc55 = "SELECT [Sc_Item_Sub_Cd]'کد زیرگروه',[Sc_Item_Nm]'عنوان امتیاز',[Sc_Eff_DT] 'تاریخ موثر',[Sc_Description]'توضیحات',[Sc_Score]'مقدار امتیاز', [Insert_User] 'ثبت کننده' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + doc_cd + "' and [Sc_Item_Cd] = 'SC07' ";
+            string lcommandsc55 = "SELECT [Sc_Item_Sub_Cd]'کد زیرگروه',[Sc_Item_Nm]'عنوان امتیاز',[Sc_Eff_DT] 'تاریخ موثر',[Sc_Description]'توضیحات',[Sc_Score]'مقدار امتیاز', [Insert_User] 'ثبت کننده' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + doc_cd + "' and [Sc_Item_Cd] = 'SC07' order by [Sc_Eff_DT] asc ";
             adpsc55.SelectCommand.CommandText = lcommandsc55;
             dtsc55.Clear();
             adpsc55.Fill(dtsc55);

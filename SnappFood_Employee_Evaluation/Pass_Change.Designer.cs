@@ -111,7 +111,6 @@
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(304, 53);
             this.radMenu1.TabIndex = 61;
-            this.radMenu1.Text = "radMenu1";
             this.radMenu1.ThemeName = "Office2010Silver";
             // 
             // oleDbCommand1
@@ -132,7 +131,7 @@
             this.NEW_PASS_2.Name = "NEW_PASS_2";
             this.NEW_PASS_2.PasswordChar = '*';
             this.NEW_PASS_2.Size = new System.Drawing.Size(157, 20);
-            this.NEW_PASS_2.TabIndex = 63;
+            this.NEW_PASS_2.TabIndex = 2;
             // 
             // CUR_PASS
             // 
@@ -140,7 +139,7 @@
             this.CUR_PASS.Name = "CUR_PASS";
             this.CUR_PASS.PasswordChar = '*';
             this.CUR_PASS.Size = new System.Drawing.Size(157, 20);
-            this.CUR_PASS.TabIndex = 64;
+            this.CUR_PASS.TabIndex = 3;
             // 
             // Pass_Change
             // 
@@ -190,6 +189,6 @@
         private System.Data.OleDb.OleDbCommand oleDbCommand1;
         private System.Windows.Forms.MaskedTextBox NEW_PASS;
         private System.Windows.Forms.MaskedTextBox NEW_PASS_2;
-        private System.Windows.Forms.MaskedTextBox CUR_PASS;
+        public System.Windows.Forms.MaskedTextBox CUR_PASS;
     }
 }

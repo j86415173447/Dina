@@ -66,9 +66,9 @@
             // 
             this.user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.user.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.user.Location = new System.Drawing.Point(135, 125);
+            this.user.Location = new System.Drawing.Point(137, 124);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(252, 18);
+            this.user.Size = new System.Drawing.Size(240, 18);
             this.user.TabIndex = 2;
             this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.user.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.user_KeyPress);
@@ -77,10 +77,10 @@
             // 
             this.pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pass.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
-            this.pass.Location = new System.Drawing.Point(135, 194);
+            this.pass.Location = new System.Drawing.Point(137, 189);
             this.pass.Name = "pass";
             this.pass.PasswordChar = '*';
-            this.pass.Size = new System.Drawing.Size(252, 18);
+            this.pass.Size = new System.Drawing.Size(240, 18);
             this.pass.TabIndex = 3;
             this.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pass_KeyPress);
@@ -95,7 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(642, 341);
+            this.ClientSize = new System.Drawing.Size(632, 334);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.user);
             this.Controls.Add(this.button2);
