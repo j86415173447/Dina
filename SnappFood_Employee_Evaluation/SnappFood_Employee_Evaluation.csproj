@@ -857,6 +857,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\Agent_Panel3.png" />
+    <None Include="Resources\Agent_Panel2.png" />
+    <None Include="Resources\Agent_Panel.png" />
     <None Include="Resources\Decrease_icon.png" />
     <None Include="Resources\dashboard_icon2.png" />
     <None Include="Resources\gauge.png" />
@@ -1042,6 +1045,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Agents_Panel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

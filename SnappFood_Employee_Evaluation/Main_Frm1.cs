@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using Telerik.WinControls.UI;
 using Telerik.WinControls;
+using System.Threading;
 
 namespace SnappFood_Employee_Evaluation
 {
@@ -19,6 +20,7 @@ namespace SnappFood_Employee_Evaluation
         public string token_key;
         public string token_security;
         public string sms_line;
+        public string doc_number;
 
         public Main_Frm1()
         {
@@ -126,6 +128,7 @@ namespace SnappFood_Employee_Evaluation
 
         public void Pre_load ()
         {
+
             oleDbConnection1.ConnectionString = constr;
             /////////////////////////////////////////// Checking user access
             DataTable roles = new DataTable();
@@ -304,6 +307,14 @@ namespace SnappFood_Employee_Evaluation
             }
             var new_staff = new Personel.Score_Detail_Report();
             new_staff.constr = constr;
+            if (doc_number != "")
+            {
+                new_staff.doc_number = doc_number;
+            }
+            else
+            {
+                new_staff.doc_number = "";
+            }
             new_staff.MdiParent = this;
             new_staff.Show();
         }
@@ -1033,6 +1044,54 @@ namespace SnappFood_Employee_Evaluation
             }
             var new_staff = new QC.RPT_QC_PENALTY();
             new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement49_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Personel.Score_Detail_Report))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new Personel.Score_Detail_Report();
+            new_staff.constr = constr;
+            if (doc_number != "")
+            {
+                new_staff.doc_number = doc_number;
+            }
+            else
+            {
+                new_staff.doc_number = "";
+            }
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement50_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Training.TRN_DOC_STAFF))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new Training.TRN_DOC_STAFF();
+            new_staff.constr = constr;
+            if (doc_number != "")
+            {
+                new_staff.doc_number = doc_number;
+            }
+            else
+            {
+                new_staff.doc_number = "";
+            }
             new_staff.MdiParent = this;
             new_staff.Show();
         }

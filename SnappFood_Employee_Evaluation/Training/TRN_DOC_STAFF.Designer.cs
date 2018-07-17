@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TRN_DOC_STAFF));
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
@@ -287,7 +287,7 @@
             this.radPageView1.Size = new System.Drawing.Size(808, 367);
             this.radPageView1.TabIndex = 104;
             this.radPageView1.ThemeName = "Office2010Silver";
-            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.Scroll;
+            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).BackColor2 = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).BackColor3 = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).BackColor4 = System.Drawing.Color.LavenderBlush;
@@ -304,11 +304,11 @@
             // radPageViewPage1
             // 
             this.radPageViewPage1.Controls.Add(this.grid);
-            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(132F, 29F);
+            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(131F, 29F);
             this.radPageViewPage1.Location = new System.Drawing.Point(12, 39);
             this.radPageViewPage1.Name = "radPageViewPage1";
             this.radPageViewPage1.Size = new System.Drawing.Size(784, 316);
-            this.radPageViewPage1.Text = "دوره های شرکت کرده";
+            this.radPageViewPage1.Text = "دوره های سپری شده";
             // 
             // grid
             // 
@@ -325,7 +325,7 @@
             this.grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.grid.MasterTemplate.EnableSorting = false;
             this.grid.MasterTemplate.ShowFilteringRow = false;
-            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.ShowGroupPanel = false;

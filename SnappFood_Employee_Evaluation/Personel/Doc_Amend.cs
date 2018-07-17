@@ -955,7 +955,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                                ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
                                ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
                                ",[Mentor],[sex],[Insert_User],[Termination],[English_Score],[Coordinator],[Leader]" + 
-                               ",[Manager] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd.Text + "'";
+                               ",[Manager],[Termination_DT] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd.Text + "'";
             adp1.SelectCommand.CommandText = lcommand1;
             adp1.Fill(dt1);
             System_Id.Text = dt1.Rows[0][1].ToString();
@@ -1005,6 +1005,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             else
             {
                 Doc_status.Text = "قطع همکاری";
+                termin_dt.Text =  dt1.Rows[0][28].ToString();
             }
             ///////////////////////////////////////////////// Update Thirs Tab
             DataTable dt2 = new DataTable();
@@ -1296,11 +1297,16 @@ namespace SnappFood_Employee_Evaluation.Personel
             if (Doc_status.Text == "در حال کار")
             {
                 Doc_status.ForeColor = Color.Green;
+                termin_dt.Visible = false;
+                Doc_status.Dock = DockStyle.Fill;
             }
             else
             {
                 Doc_status.ForeColor = Color.Red;
                 Save.Enabled = false;
+                Doc_status.Dock = DockStyle.Top;
+                termin_dt.Dock = DockStyle.Bottom;
+                termin_dt.Visible = true;
             }
         }
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.Doc_Cd = new Telerik.WinControls.UI.RadLabel();
@@ -137,6 +137,12 @@
             this.radRadioButton7 = new Telerik.WinControls.UI.RadRadioButton();
             this.radRadioButton8 = new Telerik.WinControls.UI.RadRadioButton();
             this.radPageViewPage4 = new Telerik.WinControls.UI.RadPageViewPage();
+            this.Base_Salary = new Telerik.WinControls.UI.RadLabel();
+            this.Job_Level = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
+            this.Score_Total = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
             this.Manager = new System.Windows.Forms.ComboBox();
             this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
             this.Leader = new System.Windows.Forms.ComboBox();
@@ -149,12 +155,7 @@
             this.radLabel41 = new Telerik.WinControls.UI.RadLabel();
             this.Mentor = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel37 = new Telerik.WinControls.UI.RadLabel();
-            this.Job_Level = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
-            this.Score_Total = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
-            this.Base_Salary = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
+            this.termin_dt = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Doc_Cd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.System_Id)).BeginInit();
@@ -260,6 +261,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton8)).BeginInit();
             this.radPageViewPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Base_Salary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Job_Level)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Score_Total)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
@@ -268,23 +275,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mentor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Job_Level)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Score_Total)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Base_Salary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.termin_dt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(740, 69);
+            this.radLabel1.Location = new System.Drawing.Point(746, 69);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(94, 18);
+            this.radLabel1.Size = new System.Drawing.Size(88, 18);
             this.radLabel1.TabIndex = 1;
-            this.radLabel1.Text = "شماره پرورنده:";
+            this.radLabel1.Text = "شماره پرونده:";
             this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // Doc_Cd
@@ -388,7 +390,7 @@
             this.radPageView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radPageView1.Location = new System.Drawing.Point(0, 102);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage4;
+            this.radPageView1.SelectedPage = this.radPageViewPage1;
             this.radPageView1.Size = new System.Drawing.Size(846, 345);
             this.radPageView1.TabIndex = 8;
             this.radPageView1.ThemeName = "Office2010Silver";
@@ -512,6 +514,7 @@
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.radGroupBox1.Controls.Add(this.termin_dt);
             this.radGroupBox1.Controls.Add(this.Doc_status);
             this.radGroupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radGroupBox1.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office;
@@ -553,13 +556,13 @@
             // Doc_status
             // 
             this.Doc_status.AutoSize = false;
-            this.Doc_status.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Doc_status.Dock = System.Windows.Forms.DockStyle.Top;
             this.Doc_status.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Doc_status.Location = new System.Drawing.Point(2, 18);
             this.Doc_status.Name = "Doc_status";
-            this.Doc_status.Size = new System.Drawing.Size(133, 56);
+            this.Doc_status.Size = new System.Drawing.Size(133, 39);
             this.Doc_status.TabIndex = 62;
-            this.Doc_status.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Doc_status.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.Doc_status.ThemeName = "Office2010Silver";
             this.Doc_status.TextChanged += new System.EventHandler(this.Doc_status_TextChanged);
             // 
@@ -1028,7 +1031,7 @@
             this.Training_grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.Training_grid.MasterTemplate.EnableSorting = false;
             this.Training_grid.MasterTemplate.ShowFilteringRow = false;
-            this.Training_grid.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.Training_grid.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.Training_grid.Name = "Training_grid";
             this.Training_grid.ReadOnly = true;
             this.Training_grid.ShowGroupPanel = false;
@@ -1624,6 +1627,71 @@
             this.radPageViewPage4.Size = new System.Drawing.Size(822, 294);
             this.radPageViewPage4.Text = "اطلاعات سازمانی";
             // 
+            // Base_Salary
+            // 
+            this.Base_Salary.AutoSize = false;
+            this.Base_Salary.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Base_Salary.ForeColor = System.Drawing.Color.Crimson;
+            this.Base_Salary.Location = new System.Drawing.Point(149, 117);
+            this.Base_Salary.Name = "Base_Salary";
+            this.Base_Salary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Base_Salary.Size = new System.Drawing.Size(163, 30);
+            this.Base_Salary.TabIndex = 132;
+            this.Base_Salary.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // Job_Level
+            // 
+            this.Job_Level.AutoSize = false;
+            this.Job_Level.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Job_Level.ForeColor = System.Drawing.Color.Crimson;
+            this.Job_Level.Location = new System.Drawing.Point(133, 72);
+            this.Job_Level.Name = "Job_Level";
+            this.Job_Level.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Job_Level.Size = new System.Drawing.Size(166, 30);
+            this.Job_Level.TabIndex = 132;
+            // 
+            // radLabel18
+            // 
+            this.radLabel18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel18.Location = new System.Drawing.Point(318, 123);
+            this.radLabel18.Name = "radLabel18";
+            this.radLabel18.Size = new System.Drawing.Size(71, 18);
+            this.radLabel18.TabIndex = 131;
+            this.radLabel18.Text = "حقوق پایه:";
+            this.radLabel18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // radLabel14
+            // 
+            this.radLabel14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel14.Location = new System.Drawing.Point(305, 78);
+            this.radLabel14.Name = "radLabel14";
+            this.radLabel14.Size = new System.Drawing.Size(84, 18);
+            this.radLabel14.TabIndex = 131;
+            this.radLabel14.Text = "طبقه شغلی:";
+            this.radLabel14.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // Score_Total
+            // 
+            this.Score_Total.AutoSize = false;
+            this.Score_Total.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Score_Total.ForeColor = System.Drawing.Color.Crimson;
+            this.Score_Total.Location = new System.Drawing.Point(168, 27);
+            this.Score_Total.Name = "Score_Total";
+            this.Score_Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Score_Total.Size = new System.Drawing.Size(131, 30);
+            this.Score_Total.TabIndex = 130;
+            this.Score_Total.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // radLabel36
+            // 
+            this.radLabel36.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel36.Location = new System.Drawing.Point(305, 33);
+            this.radLabel36.Name = "radLabel36";
+            this.radLabel36.Size = new System.Drawing.Size(84, 18);
+            this.radLabel36.TabIndex = 129;
+            this.radLabel36.Text = "امتیاز شغلی:";
+            this.radLabel36.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
             // Manager
             // 
             this.Manager.BackColor = System.Drawing.Color.LavenderBlush;
@@ -1757,70 +1825,18 @@
             this.radLabel37.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel37.ThemeName = "Office2010Silver";
             // 
-            // Job_Level
+            // termin_dt
             // 
-            this.Job_Level.AutoSize = false;
-            this.Job_Level.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Job_Level.ForeColor = System.Drawing.Color.Crimson;
-            this.Job_Level.Location = new System.Drawing.Point(133, 72);
-            this.Job_Level.Name = "Job_Level";
-            this.Job_Level.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Job_Level.Size = new System.Drawing.Size(166, 30);
-            this.Job_Level.TabIndex = 132;
-            // 
-            // radLabel14
-            // 
-            this.radLabel14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel14.Location = new System.Drawing.Point(305, 78);
-            this.radLabel14.Name = "radLabel14";
-            this.radLabel14.Size = new System.Drawing.Size(84, 18);
-            this.radLabel14.TabIndex = 131;
-            this.radLabel14.Text = "طبقه شغلی:";
-            this.radLabel14.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // Score_Total
-            // 
-            this.Score_Total.AutoSize = false;
-            this.Score_Total.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Score_Total.ForeColor = System.Drawing.Color.Crimson;
-            this.Score_Total.Location = new System.Drawing.Point(168, 27);
-            this.Score_Total.Name = "Score_Total";
-            this.Score_Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Score_Total.Size = new System.Drawing.Size(131, 30);
-            this.Score_Total.TabIndex = 130;
-            this.Score_Total.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // radLabel36
-            // 
-            this.radLabel36.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel36.Location = new System.Drawing.Point(305, 33);
-            this.radLabel36.Name = "radLabel36";
-            this.radLabel36.Size = new System.Drawing.Size(84, 18);
-            this.radLabel36.TabIndex = 129;
-            this.radLabel36.Text = "امتیاز شغلی:";
-            this.radLabel36.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // Base_Salary
-            // 
-            this.Base_Salary.AutoSize = false;
-            this.Base_Salary.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Base_Salary.ForeColor = System.Drawing.Color.Crimson;
-            this.Base_Salary.Location = new System.Drawing.Point(149, 117);
-            this.Base_Salary.Name = "Base_Salary";
-            this.Base_Salary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Base_Salary.Size = new System.Drawing.Size(163, 30);
-            this.Base_Salary.TabIndex = 132;
-            this.Base_Salary.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // radLabel18
-            // 
-            this.radLabel18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel18.Location = new System.Drawing.Point(318, 123);
-            this.radLabel18.Name = "radLabel18";
-            this.radLabel18.Size = new System.Drawing.Size(71, 18);
-            this.radLabel18.TabIndex = 131;
-            this.radLabel18.Text = "حقوق پایه:";
-            this.radLabel18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.termin_dt.AutoSize = false;
+            this.termin_dt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.termin_dt.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.termin_dt.ForeColor = System.Drawing.Color.Maroon;
+            this.termin_dt.Location = new System.Drawing.Point(2, 54);
+            this.termin_dt.Name = "termin_dt";
+            this.termin_dt.Size = new System.Drawing.Size(133, 20);
+            this.termin_dt.TabIndex = 63;
+            this.termin_dt.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.termin_dt.ThemeName = "Office2010Silver";
             // 
             // Doc_Amend
             // 
@@ -1962,6 +1978,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton8)).EndInit();
             this.radPageViewPage4.ResumeLayout(false);
             this.radPageViewPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Base_Salary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Job_Level)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Score_Total)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
@@ -1970,12 +1992,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mentor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Job_Level)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Score_Total)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Base_Salary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.termin_dt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2110,5 +2127,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel14;
         private Telerik.WinControls.UI.RadLabel Score_Total;
         private Telerik.WinControls.UI.RadLabel radLabel36;
+        private Telerik.WinControls.UI.RadLabel termin_dt;
     }
 }

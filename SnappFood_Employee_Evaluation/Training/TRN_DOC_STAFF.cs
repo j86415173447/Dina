@@ -15,6 +15,7 @@ namespace SnappFood_Employee_Evaluation.Training
     {
         public string constr;
         public string Doc_Cd;
+        public string doc_number ="";
 
         public TRN_DOC_STAFF()
         {
@@ -30,6 +31,11 @@ namespace SnappFood_Employee_Evaluation.Training
         private void TRN_DOC_STAFF_Load(object sender, EventArgs e)
         {
             oleDbConnection1.ConnectionString = constr;
+            if (doc_number != "")
+            {
+                Search.Visibility = ElementVisibility.Collapsed;
+                searching();
+            }
         }
 
         public void searching()
@@ -41,10 +47,21 @@ namespace SnappFood_Employee_Evaluation.Training
             adp1.SelectCommand = new OleDbCommand();
             adp1.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
+            string lcommand1;
+            if (doc_number != "")
+            {
+                lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
+                               ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
+                               ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
+                               ",[Mentor],[sex],[Insert_User] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + doc_number + "'";
+            }
+            else
+            {
+                lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
                                ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
                                ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
                                ",[Mentor],[sex],[Insert_User] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd + "'";
+            }
             adp1.SelectCommand.CommandText = lcommand1;
             adp1.Fill(dt1);
             Per_Dep.Text = dt1.Rows[0][4].ToString();
@@ -73,7 +90,15 @@ namespace SnappFood_Employee_Evaluation.Training
             adpsc4.SelectCommand = new OleDbCommand();
             adpsc4.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommandsc4 = "SELECT [Doc_No],sum([Sc_Score]) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_Cd + "' group by [Doc_No]";
+            string lcommandsc4;
+            if (doc_number != "")
+            {
+                lcommandsc4 = "SELECT [Doc_No],sum([Sc_Score]) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + doc_number + "' group by [Doc_No]";
+            }
+            else
+            {
+                lcommandsc4 = "SELECT [Doc_No],sum([Sc_Score]) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_Cd + "' group by [Doc_No]";
+            }
             adpsc4.SelectCommand.CommandText = lcommandsc4;
             adpsc4.Fill(dtsc4);
 
@@ -103,12 +128,25 @@ namespace SnappFood_Employee_Evaluation.Training
             adpsc55.SelectCommand = new OleDbCommand();
             adpsc55.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommandsc55 = "SELECT sel1.CLS_Cd 'کد کلاس', sel2.CLS_Course_Nm 'نام دوره',Sel2.CLS_Trainer 'مدرس', Sel3.[CRS_Type] 'نوع دوره', Sel2.[Period] 'مدت دوره', iif(Sel2.[CLS_ACTV] = 1, N'درحال برگزاری', N'اتمام دوره') 'وضعیت کلاس' " +
-                                  " ,iif(Sel1.[Per_Score] is NULL, N'گزارش نشده', Sel1.[Per_Score]) 'نمره/امتیاز',iif(Sel1.[Per_Result] = 1, N'قبول', iif(Sel1.[Per_Result] = 0, N'مردود', N'گزارش نشده')) 'نتیجه ارزیابی' " +
+            string lcommandsc55;
+            if (doc_number != "")
+            {
+                lcommandsc55 = "SELECT sel1.CLS_Cd 'کد کلاس', sel2.CLS_Course_Nm 'نام دوره',Sel2.CLS_Trainer 'مدرس', Sel3.[CRS_Type] 'نوع دوره', Sel2.[Period] 'مدت دوره', iif(Sel2.[CLS_ACTV] = 1, N'درحال برگزاری', N'اتمام دوره') 'وضعیت کلاس' " +
+                                  " ,iif(Sel1.[Per_Score] is NULL, N'گزارش نشده', Sel1.[Per_Score]) 'نمره',iif(Sel1.[Per_Result] = 1, N'قبول', iif(Sel1.[Per_Result] = 0, N'مردود', N'گزارش نشده')) 'نتیجه ارزیابی' " +
                                   " ,iif(Sel1.[Per_Result] = 1, Convert(nvarchar(255), Sel2.[CLS_Period] * 5), '-') 'امتیاز شغلی' from( " +
                                   " (SELECT[Doc_No],[CLS_Cd],[CRS_CD],[Per_Result],[Per_Score] FROM[SNAPP_CC_EVALUATION].[dbo].[TRN_CLASS_REGISTRATION]) Sel1 " +
                                   " left join(SELECT[CLS_CD],[CLS_Course_Nm],[CLS_Trainer],[CLS_Period], CONVERT(nvarchar(255),[CLS_Period]) + N' ساعت' AS Period,[CLS_Date],[CLS_ACTV] FROM[SNAPP_CC_EVALUATION].[dbo].[TRN_CLASSES]) Sel2 " +
-                                  " on sel1.CLS_Cd = Sel2.CLS_CD left join (SELECT [CRS_CD],[CRS_Type] FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_COURSE_MASTER]) Sel3 on Sel1.[CRS_CD] = Sel3.[CRS_CD]) where Sel1.[Doc_No] = '" + Doc_Cd + "' order by Sel1.[CLS_Cd] asc";
+                                  " on sel1.CLS_Cd = Sel2.CLS_CD left join (SELECT [CRS_CD],[CRS_Type] FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_COURSE_MASTER]) Sel3 on Sel1.[CRS_CD] = Sel3.[CRS_CD]) where Sel1.[Doc_No] = '" + doc_number + "' order by Sel1.[CLS_Cd] asc";
+            }
+            else
+            {
+                lcommandsc55 = "SELECT sel1.CLS_Cd 'کد کلاس', sel2.CLS_Course_Nm 'نام دوره',Sel2.CLS_Trainer 'مدرس', Sel3.[CRS_Type] 'نوع دوره', Sel2.[Period] 'مدت دوره', iif(Sel2.[CLS_ACTV] = 1, N'درحال برگزاری', N'اتمام دوره') 'وضعیت کلاس' " +
+                                 " ,iif(Sel1.[Per_Score] is NULL, N'گزارش نشده', Sel1.[Per_Score]) 'نمره',iif(Sel1.[Per_Result] = 1, N'قبول', iif(Sel1.[Per_Result] = 0, N'مردود', N'گزارش نشده')) 'نتیجه ارزیابی' " +
+                                 " ,iif(Sel1.[Per_Result] = 1, Convert(nvarchar(255), Sel2.[CLS_Period] * 5), '-') 'امتیاز شغلی' from( " +
+                                 " (SELECT[Doc_No],[CLS_Cd],[CRS_CD],[Per_Result],[Per_Score] FROM[SNAPP_CC_EVALUATION].[dbo].[TRN_CLASS_REGISTRATION]) Sel1 " +
+                                 " left join(SELECT[CLS_CD],[CLS_Course_Nm],[CLS_Trainer],[CLS_Period], CONVERT(nvarchar(255),[CLS_Period]) + N' ساعت' AS Period,[CLS_Date],[CLS_ACTV] FROM[SNAPP_CC_EVALUATION].[dbo].[TRN_CLASSES]) Sel2 " +
+                                 " on sel1.CLS_Cd = Sel2.CLS_CD left join (SELECT [CRS_CD],[CRS_Type] FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_COURSE_MASTER]) Sel3 on Sel1.[CRS_CD] = Sel3.[CRS_CD]) where Sel1.[Doc_No] = '" + Doc_Cd + "' order by Sel1.[CLS_Cd] asc";
+            }
             adpsc55.SelectCommand.CommandText = lcommandsc55;
             dtsc55.Clear();
             adpsc55.Fill(dtsc55);
@@ -130,8 +168,17 @@ namespace SnappFood_Employee_Evaluation.Training
             adpsc42.SelectCommand = new OleDbCommand();
             adpsc42.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommandsc42 = "SELECT Sel1.[Doc_No] , sum(convert(int,Sel2.[CLS_Period])) FROM ((SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_CLASS_REGISTRATION]) Sel1 left join (SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_CLASSES]) Sel2" +
+            string lcommandsc42;
+            if (doc_number != "")
+            {
+                lcommandsc42 = "SELECT Sel1.[Doc_No] , sum(convert(int,Sel2.[CLS_Period])) FROM ((SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_CLASS_REGISTRATION]) Sel1 left join (SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_CLASSES]) Sel2" +
+                                  " on sel1.[CLS_CD] = Sel2.[CLS_CD]) where Sel1.[Doc_No] = '" + doc_number + "' and sel1.[Per_Result] = 1 group by Sel1.[Doc_No]";
+            }
+            else
+            {
+                lcommandsc42 = "SELECT Sel1.[Doc_No] , sum(convert(int,Sel2.[CLS_Period])) FROM ((SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_CLASS_REGISTRATION]) Sel1 left join (SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[TRN_CLASSES]) Sel2" +
                                   " on sel1.[CLS_CD] = Sel2.[CLS_CD]) where Sel1.[Doc_No] = '" + Doc_Cd + "' and sel1.[Per_Result] = 1 group by Sel1.[Doc_No]";
+            }
             adpsc4.SelectCommand.CommandText = lcommandsc42;
             adpsc4.Fill(dtsc42);
 

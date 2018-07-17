@@ -15,6 +15,7 @@ namespace SnappFood_Employee_Evaluation.Personel
     {
         public string constr;
         public string Doc_Cd;
+        public string doc_number;
         
         public Score_Detail_Report()
         {
@@ -30,6 +31,11 @@ namespace SnappFood_Employee_Evaluation.Personel
         private void Points_Detail_Report_Load(object sender, EventArgs e)
         {
             oleDbConnection1.ConnectionString = constr;
+            if (doc_number != "")
+            {
+                Search.Visibility = ElementVisibility.Collapsed;
+                searching();
+            }
         }
 
         private void Print_Click(object sender, EventArgs e)
@@ -48,10 +54,21 @@ namespace SnappFood_Employee_Evaluation.Personel
             adp1.SelectCommand = new OleDbCommand();
             adp1.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
-                               ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
-                               ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
-                               ",[Mentor],[sex],[Insert_User] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd + "'";
+            string lcommand1;
+            if (doc_number != "")
+            {
+               lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
+                           ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
+                           ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
+                           ",[Mentor],[sex],[Insert_User] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + doc_number + "'";
+            }
+            else
+            {
+                lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
+                            ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
+                            ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
+                            ",[Mentor],[sex],[Insert_User] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd + "'";
+            }
             adp1.SelectCommand.CommandText = lcommand1;
             adp1.Fill(dt1);
             Per_Dep.Text = dt1.Rows[0][4].ToString();
@@ -80,7 +97,15 @@ namespace SnappFood_Employee_Evaluation.Personel
             adpsc4.SelectCommand = new OleDbCommand();
             adpsc4.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommandsc4 = "SELECT [Doc_No],sum([Sc_Score]) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_Cd + "' group by [Doc_No]";
+            string lcommandsc4;
+            if (doc_number != "")
+            {
+                lcommandsc4 = "SELECT [Doc_No],sum([Sc_Score]) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + doc_number + "' group by [Doc_No]";
+            }
+            else
+            {
+                lcommandsc4 = "SELECT [Doc_No],sum([Sc_Score]) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_Cd + "' group by [Doc_No]";
+            }
             adpsc4.SelectCommand.CommandText = lcommandsc4;
             adpsc4.Fill(dtsc4);
 
@@ -110,7 +135,15 @@ namespace SnappFood_Employee_Evaluation.Personel
             adpsc55.SelectCommand = new OleDbCommand();
             adpsc55.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommandsc55 = "SELECT [Sc_Item_Sub_Cd]'کد زیرگروه',[Sc_Item_Nm]'عنوان امتیاز',[Sc_Eff_DT] 'تاریخ موثر',[Sc_Description]'توضیحات',[Sc_Score]'مقدار امتیاز' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_Cd + "' order by [Sc_Eff_DT],[Sc_Item_Sub_Cd] asc";
+            string lcommandsc55;
+            if (doc_number != "")
+            {
+                lcommandsc55 = "SELECT [Sc_Item_Sub_Cd]'کد زیرگروه',[Sc_Item_Nm]'عنوان امتیاز',[Sc_Eff_DT] 'تاریخ موثر',[Sc_Description]'توضیحات',[Sc_Score]'مقدار امتیاز' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + doc_number + "' order by [Sc_Eff_DT],[Sc_Item_Sub_Cd] asc";
+            }
+            else
+            {
+                lcommandsc55 = "SELECT [Sc_Item_Sub_Cd]'کد زیرگروه',[Sc_Item_Nm]'عنوان امتیاز',[Sc_Eff_DT] 'تاریخ موثر',[Sc_Description]'توضیحات',[Sc_Score]'مقدار امتیاز' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_Cd + "' order by [Sc_Eff_DT],[Sc_Item_Sub_Cd] asc";
+            }
             adpsc55.SelectCommand.CommandText = lcommandsc55;
             dtsc55.Clear();
             adpsc55.Fill(dtsc55);

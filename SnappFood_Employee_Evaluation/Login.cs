@@ -80,11 +80,23 @@ namespace SnappFood_Employee_Evaluation
                         mainfrm.User_Role.Text = ds.Tables[0].Rows[0][3].ToString();
                         mainfrm.user_acc_name = user.Text;
                         mainfrm.Access.Text = ds.Tables[0].Rows[0][5].ToString();
+                        if (ds.Tables[0].Rows[0][8].ToString() != "")
+                        {
+                            mainfrm.doc_number = ds.Tables[0].Rows[0][8].ToString();
+                            mainfrm.radLabelElement6.Text = ds.Tables[0].Rows[0][8].ToString();
+                        }
+                        else
+                        {
+                            mainfrm.doc_number = "";
+                            mainfrm.radLabelElement5.Visibility = ElementVisibility.Collapsed;
+                            mainfrm.radLabelElement6.Visibility = ElementVisibility.Collapsed;
+                            mainfrm.commandBarSeparator2.Visibility = ElementVisibility.Collapsed;
+                        }
                         mainfrm.token_key = token_key;
                         mainfrm.token_security = token_security;
                         mainfrm.sms_line = sms_line;
                         mainfrm.Pre_load();
-                        Thread.Sleep(1000);
+                        //Thread.Sleep(3000);
                         //////////////////////////////////////////////////////// Login Log table updation
                         oleDbCommand1.Parameters.Clear();
                         oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[Login_Log] ([Usr_ID],[Usr_Station],[Login_Dt],[Login_Tm]) " +
@@ -148,7 +160,7 @@ namespace SnappFood_Employee_Evaluation
                     }
                     else
                     {
-                        RadMessageBox.Show(this, "کاربر عزیز" + "\n\n" + "بنا به دلایل امنیتی، لطفا نسبت به تغییر کلمه عبور خود اقدام نمائید." + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                        RadMessageBox.Show(this, ds.Tables[0].Rows[0][2].ToString() + " عزیز " + "\n\n" + "بنا به دلایل امنیتی، لطفا نسبت به تغییر کلمه عبور خود اقدام نمائید." + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                         var new_staff = new Pass_Change();
                         new_staff.constr = constr;
                         new_staff.username = user.Text;
