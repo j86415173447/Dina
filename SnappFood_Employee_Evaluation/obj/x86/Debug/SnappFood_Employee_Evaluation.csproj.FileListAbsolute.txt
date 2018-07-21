@@ -138,9 +138,6 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\b
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.xml
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.pdb
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.xml
-C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.xml
-C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.xml
-C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.xml
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.pdb
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.xml
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.pdb

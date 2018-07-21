@@ -314,7 +314,7 @@
             this.lbl_cur_scr.AutoSize = false;
             this.lbl_cur_scr.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cur_scr.ForeColor = System.Drawing.Color.Green;
-            this.lbl_cur_scr.Location = new System.Drawing.Point(439, 247);
+            this.lbl_cur_scr.Location = new System.Drawing.Point(439, 237);
             this.lbl_cur_scr.Name = "lbl_cur_scr";
             this.lbl_cur_scr.Size = new System.Drawing.Size(90, 18);
             this.lbl_cur_scr.TabIndex = 70;
@@ -324,7 +324,7 @@
             // radLabel15
             // 
             this.radLabel15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel15.Location = new System.Drawing.Point(535, 246);
+            this.radLabel15.Location = new System.Drawing.Point(535, 237);
             this.radLabel15.Name = "radLabel15";
             this.radLabel15.Size = new System.Drawing.Size(121, 18);
             this.radLabel15.TabIndex = 69;
@@ -348,7 +348,7 @@
             // radLabel7
             // 
             this.radLabel7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel7.Location = new System.Drawing.Point(278, 247);
+            this.radLabel7.Location = new System.Drawing.Point(278, 237);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.Size = new System.Drawing.Size(155, 18);
             this.radLabel7.TabIndex = 89;
@@ -361,7 +361,7 @@
             this.lbl_scr_after.AutoSize = false;
             this.lbl_scr_after.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_scr_after.ForeColor = System.Drawing.Color.Red;
-            this.lbl_scr_after.Location = new System.Drawing.Point(153, 247);
+            this.lbl_scr_after.Location = new System.Drawing.Point(153, 237);
             this.lbl_scr_after.Name = "lbl_scr_after";
             this.lbl_scr_after.Size = new System.Drawing.Size(119, 18);
             this.lbl_scr_after.TabIndex = 90;
@@ -429,9 +429,10 @@
             // remarks
             // 
             this.remarks.BackColor = System.Drawing.Color.LavenderBlush;
+            this.remarks.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.remarks.Location = new System.Drawing.Point(12, 271);
             this.remarks.Name = "remarks";
-            this.remarks.Size = new System.Drawing.Size(582, 20);
+            this.remarks.Size = new System.Drawing.Size(582, 19);
             this.remarks.TabIndex = 91;
             this.remarks.ThemeName = "Office2010Silver";
             // 

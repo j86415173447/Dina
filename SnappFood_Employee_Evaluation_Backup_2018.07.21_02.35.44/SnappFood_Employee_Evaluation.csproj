@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE3D9B8E-D3B1-4927-A4BF-08F461028EA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SnappFood_Employee_Evaluation</RootNamespace>
+    <AssemblyName>SnappFood_Employee_Evaluation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>Y:\</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_HQ.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8B9830AF7FAC0AF556E665CE541C6E472F425A73</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SnappFood_Employee_Evaluation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Excel.4.5">
+      <HintPath>F:\Projects\OMS - Revised - Copy - Final\OMS\bin\Debug\Excel.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.4\lib\net35\NAudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenXmlPackaging">
+      <HintPath>F:\Projects\OMS - Revised - Copy - Final\OMS\bin\Debug\OpenXmlPackaging.dll</HintPath>
+    </Reference>
+    <Reference Include="SmsIrRestful, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SmsIrRestful.1.1.0\lib\net40\SmsIrRestful.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Stimulsoft Reports .NET 2017.1.10 Full\Crack\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Themes.Office2007Silver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents_Panel\AGENT_QC_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agents_Panel\AGENT_QC_DETAIL.Designer.cs">
+      <DependentUpon>AGENT_QC_DETAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intro.Designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pass_Change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pass_Change.Designer.cs">
+      <DependentUpon>Pass_Change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Birthday_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Birthday_Report.Designer.cs">
+      <DependentUpon>Birthday_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Doc_Amend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Doc_Amend.Designer.cs">
+      <DependentUpon>Doc_Amend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\New_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\New_Staff.Designer.cs">
+      <DependentUpon>New_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PER_TEL_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PER_TEL_INFO.Designer.cs">
+      <DependentUpon>PER_TEL_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PER_TERMINATION_REPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PER_TERMINATION_REPORT.Designer.cs">
+      <DependentUpon>PER_TERMINATION_REPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PER_GENERAL_REPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PER_GENERAL_REPORT.Designer.cs">
+      <DependentUpon>PER_GENERAL_REPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Invitation_SMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Invitation_SMS.Designer.cs">
+      <DependentUpon>Invitation_SMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Score_SMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Score_SMS.Designer.cs">
+      <DependentUpon>Score_SMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Search_Staff_Termination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Search_Staff_Termination.Designer.cs">
+      <DependentUpon>Search_Staff_Termination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Termination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Termination.Designer.cs">
+      <DependentUpon>Termination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PER_SCORE_DTL_MAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PER_SCORE_DTL_MAIL.Designer.cs">
+      <DependentUpon>PER_SCORE_DTL_MAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PER_MAGAZINE_EMAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PER_MAGAZINE_EMAIL.Designer.cs">
+      <DependentUpon>PER_MAGAZINE_EMAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QC\LOG_FULL_DETAILS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\LOG_FULL_DETAILS.Designer.cs">
+      <DependentUpon>LOG_FULL_DETAILS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\FINAL_APPROVAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\FINAL_APPROVAL.Designer.cs">
+      <DependentUpon>FINAL_APPROVAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\FINAL_CARTABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\FINAL_CARTABLE.Designer.cs">
+      <DependentUpon>FINAL_CARTABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\MNG_CARTABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\MNG_CARTABLE.Designer.cs">
+      <DependentUpon>MNG_CARTABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\MNG_APPROVAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\MNG_APPROVAL.Designer.cs">
+      <DependentUpon>MNG_APPROVAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\LDM_CARTABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\LDM_CARTABLE.Designer.cs">
+      <DependentUpon>LDM_CARTABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\LDM_APPROVAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\LDM_APPROVAL.Designer.cs">
+      <DependentUpon>LDM_APPROVAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\CCM_APPROVAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\CCM_APPROVAL.Designer.cs">
+      <DependentUpon>CCM_APPROVAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\QCM_APPROVAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QCM_APPROVAL.Designer.cs">
+      <DependentUpon>QCM_APPROVAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\LOG_ENTRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\LOG_ENTRY.Designer.cs">
+      <DependentUpon>LOG_ENTRY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\CCM_CARTABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\CCM_CARTABLE.Designer.cs">
+      <DependentUpon>CCM_CARTABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\QCM_CARTABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QCM_CARTABLE.Designer.cs">
+      <DependentUpon>QCM_CARTABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\QC_CALL_TYPE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QC_CALL_TYPE.Designer.cs">
+      <DependentUpon>QC_CALL_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_COOR_4LEADER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_COOR_4LEADER.Designer.cs">
+      <DependentUpon>RPT_QC_COOR_4LEADER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DETAILS_MG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DETAILS_MG.Designer.cs">
+      <DependentUpon>RPT_QC_DETAILS_MG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_GENERAL_MG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_GENERAL_MG.Designer.cs">
+      <DependentUpon>RPT_QC_GENERAL_MG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_Final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_Final.Designer.cs">
+      <DependentUpon>RPT_QC_Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_M.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_M.Designer.cs">
+      <DependentUpon>RPT_QC_M.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DASHBOARD.Designer.cs">
+      <DependentUpon>RPT_QC_DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DISPATCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_DISPATCH.Designer.cs">
+      <DependentUpon>RPT_QC_DISPATCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_PENALTY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_PENALTY.Designer.cs">
+      <DependentUpon>RPT_QC_PENALTY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_PERFORMANCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_PERFORMANCE.Designer.cs">
+      <DependentUpon>RPT_QC_PERFORMANCE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_MANAGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_MANAGER.Designer.cs">
+      <DependentUpon>RPT_QC_MANAGER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_LEADER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_LEADER.Designer.cs">
+      <DependentUpon>RPT_QC_LEADER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_COORDINATOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_COORDINATOR.Designer.cs">
+      <DependentUpon>RPT_QC_COORDINATOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\RPT_QC_GENERAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\RPT_QC_GENERAL.Designer.cs">
+      <DependentUpon>RPT_QC_GENERAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC\QC_PLAN_MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC\QC_PLAN_MASTER.Designer.cs">
+      <DependentUpon>QC_PLAN_MASTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\History_Auto_Calc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\History_Auto_Calc.Designer.cs">
+      <DependentUpon>History_Auto_Calc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\SCR_WRNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\SCR_WRNG.Designer.cs">
+      <DependentUpon>SCR_WRNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\SCR_MNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\SCR_MNG.Designer.cs">
+      <DependentUpon>SCR_MNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\SCR_PRFMC_EVL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\SCR_PRFMC_EVL.Designer.cs">
+      <DependentUpon>SCR_PRFMC_EVL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\Search_Staff_WRNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\Search_Staff_WRNG.Designer.cs">
+      <DependentUpon>Search_Staff_WRNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\Search_Staff_PRFMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\Search_Staff_PRFMC.Designer.cs">
+      <DependentUpon>Search_Staff_PRFMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scores_Ops\Search_Staff_MNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores_Ops\Search_Staff_MNG.Designer.cs">
+      <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Classes_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\Classes_Report.Designer.cs">
+      <DependentUpon>Classes_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\CLS_PRESENT_ABSENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\CLS_PRESENT_ABSENT.Designer.cs">
+      <DependentUpon>CLS_PRESENT_ABSENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\CLS_Results.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\CLS_Results.Designer.cs">
+      <DependentUpon>CLS_Results.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\ExportToExcelML.cs" />
+    <Compile Include="Training\Search_Class_Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\Search_Class_Result.Designer.cs">
+      <DependentUpon>Search_Class_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Search_Class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\Search_Class.Designer.cs">
+      <DependentUpon>Search_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Search_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\Search_Course.Designer.cs">
+      <DependentUpon>Search_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Search_Staff_TRN_Doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\Search_Staff_TRN_Doc.Designer.cs">
+      <DependentUpon>Search_Staff_TRN_Doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Search_Staff_Reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\Search_Staff_Reg.Designer.cs">
+      <DependentUpon>Search_Staff_Reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_CLASSES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_CLASSES.Designer.cs">
+      <DependentUpon>TRN_CLASSES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_CLASS_DOC_ANNOUNCEMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_CLASS_DOC_ANNOUNCEMENT.Designer.cs">
+      <DependentUpon>TRN_CLASS_DOC_ANNOUNCEMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_CLS_ANNOUNCEMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_CLS_ANNOUNCEMENT.Designer.cs">
+      <DependentUpon>TRN_CLS_ANNOUNCEMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_CLS_EXAM_REPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_CLS_EXAM_REPORT.Designer.cs">
+      <DependentUpon>TRN_CLS_EXAM_REPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_COURSE_MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_COURSE_MASTER.Designer.cs">
+      <DependentUpon>TRN_COURSE_MASTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_DOC_STAFF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_DOC_STAFF.Designer.cs">
+      <DependentUpon>TRN_DOC_STAFF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Training\TRN_REGISTRATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Training\TRN_REGISTRATION.Designer.cs">
+      <DependentUpon>TRN_REGISTRATION.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Agents_Panel\AGENT_QC_DETAIL.resx">
+      <DependentUpon>AGENT_QC_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Frm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Frm1.Designer.cs">
+      <DependentUpon>Main_Frm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Score_Detail_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Score_Detail_Report.Designer.cs">
+      <DependentUpon>Score_Detail_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Search_Staff_Points.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Search_Staff_Points.Designer.cs">
+      <DependentUpon>Search_Staff_Points.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Search_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Search_Staff.Designer.cs">
+      <DependentUpon>Search_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Frm1.resx">
+      <DependentUpon>Main_Frm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pass_Change.resx">
+      <DependentUpon>Pass_Change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Birthday_Report.resx">
+      <DependentUpon>Birthday_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Doc_Amend.resx">
+      <DependentUpon>Doc_Amend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PER_TEL_INFO.resx">
+      <DependentUpon>PER_TEL_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PER_TERMINATION_REPORT.resx">
+      <DependentUpon>PER_TERMINATION_REPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PER_GENERAL_REPORT.resx">
+      <DependentUpon>PER_GENERAL_REPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Score_Detail_Report.resx">
+      <DependentUpon>Score_Detail_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Invitation_SMS.resx">
+      <DependentUpon>Invitation_SMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Score_SMS.resx">
+      <DependentUpon>Score_SMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Search_Staff_Termination.resx">
+      <DependentUpon>Search_Staff_Termination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Search_Staff_Points.resx">
+      <DependentUpon>Search_Staff_Points.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Search_Staff.resx">
+      <DependentUpon>Search_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Termination.resx">
+      <DependentUpon>Termination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PER_SCORE_DTL_MAIL.resx">
+      <DependentUpon>PER_SCORE_DTL_MAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PER_MAGAZINE_EMAIL.resx">
+      <DependentUpon>PER_MAGAZINE_EMAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\New_Staff.resx">
+      <DependentUpon>New_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\LOG_FULL_DETAILS.resx">
+      <DependentUpon>LOG_FULL_DETAILS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\FINAL_APPROVAL.resx">
+      <DependentUpon>FINAL_APPROVAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\FINAL_CARTABLE.resx">
+      <DependentUpon>FINAL_CARTABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\MNG_CARTABLE.resx">
+      <DependentUpon>MNG_CARTABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\MNG_APPROVAL.resx">
+      <DependentUpon>MNG_APPROVAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\LDM_CARTABLE.resx">
+      <DependentUpon>LDM_CARTABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\LDM_APPROVAL.resx">
+      <DependentUpon>LDM_APPROVAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\CCM_APPROVAL.resx">
+      <DependentUpon>CCM_APPROVAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\QCM_APPROVAL.resx">
+      <DependentUpon>QCM_APPROVAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\LOG_ENTRY.resx">
+      <DependentUpon>LOG_ENTRY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\CCM_CARTABLE.resx">
+      <DependentUpon>CCM_CARTABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\QCM_CARTABLE.resx">
+      <DependentUpon>QCM_CARTABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\QC_CALL_TYPE.resx">
+      <DependentUpon>QC_CALL_TYPE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_COOR_4LEADER.resx">
+      <DependentUpon>RPT_QC_COOR_4LEADER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_DETAILS_MG.resx">
+      <DependentUpon>RPT_QC_DETAILS_MG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_GENERAL_MG.resx">
+      <DependentUpon>RPT_QC_GENERAL_MG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_Final.resx">
+      <DependentUpon>RPT_QC_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_M.resx">
+      <DependentUpon>RPT_QC_M.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_DASHBOARD.resx">
+      <DependentUpon>RPT_QC_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_DISPATCH.resx">
+      <DependentUpon>RPT_QC_DISPATCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_PENALTY.resx">
+      <DependentUpon>RPT_QC_PENALTY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_PERFORMANCE.resx">
+      <DependentUpon>RPT_QC_PERFORMANCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_MANAGER.resx">
+      <DependentUpon>RPT_QC_MANAGER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_LEADER.resx">
+      <DependentUpon>RPT_QC_LEADER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_COORDINATOR.resx">
+      <DependentUpon>RPT_QC_COORDINATOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\RPT_QC_GENERAL.resx">
+      <DependentUpon>RPT_QC_GENERAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC\QC_PLAN_MASTER.resx">
+      <DependentUpon>QC_PLAN_MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\History_Auto_Calc.resx">
+      <DependentUpon>History_Auto_Calc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\SCR_WRNG.resx">
+      <DependentUpon>SCR_WRNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\SCR_MNG.resx">
+      <DependentUpon>SCR_MNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\SCR_PRFMC_EVL.resx">
+      <DependentUpon>SCR_PRFMC_EVL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\Search_Staff_WRNG.resx">
+      <DependentUpon>Search_Staff_WRNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\Search_Staff_PRFMC.resx">
+      <DependentUpon>Search_Staff_PRFMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores_Ops\Search_Staff_MNG.resx">
+      <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\Classes_Report.resx">
+      <DependentUpon>Classes_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\CLS_PRESENT_ABSENT.resx">
+      <DependentUpon>CLS_PRESENT_ABSENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\CLS_Results.resx">
+      <DependentUpon>CLS_Results.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\Search_Class_Result.resx">
+      <DependentUpon>Search_Class_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\Search_Class.resx">
+      <DependentUpon>Search_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\Search_Course.resx">
+      <DependentUpon>Search_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\Search_Staff_TRN_Doc.resx">
+      <DependentUpon>Search_Staff_TRN_Doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\Search_Staff_Reg.resx">
+      <DependentUpon>Search_Staff_Reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_CLASSES.resx">
+      <DependentUpon>TRN_CLASSES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_CLASS_DOC_ANNOUNCEMENT.resx">
+      <DependentUpon>TRN_CLASS_DOC_ANNOUNCEMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_CLS_ANNOUNCEMENT.resx">
+      <DependentUpon>TRN_CLS_ANNOUNCEMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_CLS_EXAM_REPORT.resx">
+      <DependentUpon>TRN_CLS_EXAM_REPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_COURSE_MASTER.resx">
+      <DependentUpon>TRN_COURSE_MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_DOC_STAFF.resx">
+      <DependentUpon>TRN_DOC_STAFF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Training\TRN_REGISTRATION.resx">
+      <DependentUpon>TRN_REGISTRATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SnappFood_Employee_Evaluation_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--sirinie -->
+    <None Include="Resources\Tick_Mark-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Male-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_HQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\positive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_HQ.ico" />
+    <None Include="Resources\app_reset.png" />
+    <None Include="Resources\Pass_reset.png" />
+    <None Include="Resources\Agent_Panel3.png" />
+    <None Include="Resources\Agent_Panel2.png" />
+    <None Include="Resources\Agent_Panel.png" />
+    <None Include="Resources\Decrease_icon.png" />
+    <None Include="Resources\dashboard_icon2.png" />
+    <None Include="Resources\gauge.png" />
+    <None Include="Resources\Pie-chart-icon.png" />
+    <None Include="Resources\dashboard-icon.png" />
+    <None Include="Resources\QC_Dashboard_2.png" />
+    <None Include="Resources\QC_Dashboard.png" />
+    <None Include="Resources\Market_Analysis_icon1.png" />
+    <None Include="Resources\Market_Analysis_icon.png" />
+    <None Include="Resources\Time-Machine-icon2.png" />
+    <None Include="Resources\Time-Machine-icon1.png" />
+    <None Include="Resources\Time-Machine-icon.png" />
+    <None Include="Resources\Hide-right-icon.png" />
+    <None Include="Resources\log_entr.png" />
+    <None Include="Resources\inoutcall.png" />
+    <None Include="Resources\QC_plan.png" />
+    <None Include="Resources\gen_report2.png" />
+    <None Include="Resources\gen_report.png" />
+    <None Include="Resources\insp_ret.png" />
+    <None Include="Resources\insp_QC.png" />
+    <None Include="Resources\insp_M.png" />
+    <None Include="Resources\insp_L.png" />
+    <None Include="Resources\insp_c.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\Report_M.png" />
+    <None Include="Resources\Report_Lead.png" />
+    <None Include="Resources\Report_Cor.png" />
+    <None Include="Resources\Cor_Report2.png" />
+    <None Include="Resources\Cor_Report.png" />
+    <None Include="Resources\Manager.png" />
+    <None Include="Resources\Leader.png" />
+    <None Include="Resources\Coordinator.png" />
+    <None Include="Resources\App-lists-icon_Return.png" />
+    <None Include="Resources\reporting_return.png" />
+    <None Include="Resources\new_reporting3.png" />
+    <None Include="Resources\new_reporting2.png" />
+    <None Include="Resources\new_reporting.png" />
+    <None Include="Resources\ajax_loader_red_481.gif" />
+    <None Include="Resources\address-book-alt-icon.png" />
+    <None Include="Resources\final_QC.png" />
+    <None Include="Resources\mail-open-envelope-1-icon1.png" />
+    <None Include="Resources\Arrows-Down-icon.png" />
+    <None Include="Resources\Arrows-Down-4-icon.png" />
+    <None Include="Resources\clipboard-icon.png" />
+    <None Include="Resources\qc_aprv.png" />
+    <None Include="Resources\qc_aprv2.png" />
+    <None Include="Resources\Box-icon.png" />
+    <None Include="Resources\2-Hot-Paper-Box-icon.png" />
+    <None Include="Resources\App-lists-icon.png" />
+    <None Include="Resources\waiting.gif" />
+    <None Include="Resources\ajax_loader_red_48.gif" />
+    <None Include="Resources\small_tick.png" />
+    <None Include="Resources\check-icon2.png" />
+    <None Include="Resources\danger-icon.png" />
+    <None Include="Resources\alert22-icon.png" />
+    <None Include="Resources\Alert-icon.png" />
+    <None Include="Resources\Media-Controls-Fast-Forward-icon.png" />
+    <None Include="Resources\Media-Controls-Rewind-icon.png" />
+    <None Include="Resources\Next-22icon.png" />
+    <None Include="Resources\Back22-icon.png" />
+    <None Include="Resources\Back-icon.png" />
+    <None Include="Resources\Media-Controls-Stop-icon.png" />
+    <None Include="Resources\Media-Controls-Pause-icon.png" />
+    <None Include="Resources\Media-Controls-Play-icon.png" />
+    <None Include="Resources\Question-type-one-correct-icon.png" />
+    <None Include="Resources\Arrows-Sync-icon.png" />
+    <None Include="Resources\delete-icon2223.png" />
+    <None Include="Resources\delete-icon.png" />
+    <None Include="Resources\check-icon1.png" />
+    <None Include="Resources\Gmail-icon2.png" />
+    <None Include="Resources\Birthday.png" />
+    <None Include="Resources\Open-folder-full-icon.png" />
+    <None Include="Resources\table-remove-icon.png" />
+    <None Include="Resources\table-lines-icon.png" />
+    <None Include="Resources\cake-icon.png" />
+    <None Include="Resources\Presentation-icon.png" />
+    <None Include="Resources\custom-reports-icon.png" />
+    <None Include="Resources\Product-documentation-icon.png" />
+    <None Include="Resources\Remove-Male-User-icon.png" />
+    <None Include="Resources\korganizer-icon.png" />
+    <None Include="Resources\mail-envelope-icon.png" />
+    <None Include="Resources\mail-open-envelope-1-icon.png" />
+    <None Include="Resources\Folder-Open-icon1.png" />
+    <None Include="Resources\Folder-Open-icon.png" />
+    <None Include="Resources\File-Presentation-icon.png" />
+    <None Include="Resources\Gmail-icon1.png" />
+    <None Include="Resources\Gmail-icon.png" />
+    <None Include="Resources\Mail-icon.png" />
+    <None Include="Resources\App-phone-icon.png" />
+    <None Include="Resources\termin_report.png" />
+    <None Include="Resources\Logo_BG1.png" />
+    <None Include="Resources\Logo_BG.png" />
+    <None Include="Resources\LOGO_TRAINING.png" />
+    <None Include="Resources\Excel-icon1.png" />
+    <None Include="Resources\Excel-icon.png" />
+    <None Include="Resources\email-send-icon.png" />
+    <None Include="Resources\Sms-icon.png" />
+    <None Include="Resources\Test-paper-icon.png" />
+    <None Include="Resources\Generate-tables-icon1.png" />
+    <None Include="Resources\document-scroll-icon.png" />
+    <None Include="Resources\report-icon3.png" />
+    <None Include="Resources\Checklist-icon2.png" />
+    <None Include="Resources\report-icon2.png" />
+    <None Include="Resources\party-hat-candles-icon.png" />
+    <None Include="Resources\Courses-icon2.png" />
+    <None Include="Resources\Books-icon2.png" />
+    <None Include="Resources\Graduate-male-icon2.png" />
+    <None Include="Resources\Sign-Refresh-icon1.png" />
+    <None Include="Resources\Warning-icon1.png" />
+    <None Include="Resources\Graduate-male-icon1.png" />
+    <None Include="Resources\Actions-office-chart-line-stacked-icon2.png" />
+    <None Include="Resources\Business-Leave-icon2.png" />
+    <None Include="Resources\Star-icon1.png" />
+    <None Include="Resources\Business-Leave-icon1.png" />
+    <None Include="Resources\Business-Leave-icon.png" />
+    <None Include="Resources\Action-remove-icon2.png" />
+    <None Include="Resources\Action-remove-icon1.png" />
+    <None Include="Resources\Action-remove-icon.png" />
+    <None Include="Resources\Warning-icon.png" />
+    <None Include="Resources\report-icon1.png" />
+    <None Include="Resources\Checklist-icon1.png" />
+    <None Include="Resources\Courses-icon1.png" />
+    <None Include="Resources\Graduate-academic-cap-icon1.png" />
+    <None Include="Resources\Graduate-academic-cap-icon.png" />
+    <None Include="Resources\report-icon.png" />
+    <None Include="Resources\Checklist-icon.png" />
+    <None Include="Resources\Courses-icon.png" />
+    <None Include="Resources\Books-icon1.png" />
+    <None Include="Resources\Books-icon.png" />
+    <None Include="Resources\data-info-icon.png" />
+    <None Include="Resources\Sign-Refresh-icon.png" />
+    <None Include="Resources\ModernXP-36-Folder-Refresh-icon1.png" />
+    <None Include="Resources\ModernXP-36-Folder-Refresh-icon.png" />
+    <None Include="Resources\Star-icon.png" />
+    <None Include="Resources\License-manager-icon.png" />
+    <None Include="Resources\chart2.png" />
+    <None Include="Resources\Graduate-male-icon.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\Actions-office-chart-line-stacked-icon1.png" />
+    <None Include="Resources\Actions-office-chart-line-stacked-icon.png" />
+    <None Include="Resources\Misc-Stats-icon.png" />
+    <None Include="Resources\database-up-icon.png" />
+    <None Include="Resources\Refresh-icon.png" />
+    <None Include="Resources\Abacus-icon.png" />
+    <None Include="Resources\Folder-URL-History-icon.png" />
+    <None Include="Resources\Generate-tables-icon.png" />
+    <None Include="Resources\contact-icon.png" />
+    <None Include="Resources\birth1.png" />
+    <None Include="Resources\birth.png" />
+    <None Include="Resources\logo_btn.png" />
+    <None Include="Resources\LOGOPNG.png" />
+    <None Include="Resources\Misc-Settings-icon1.png" />
+    <None Include="Resources\users-icon.png" />
+    <None Include="Resources\plusplus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

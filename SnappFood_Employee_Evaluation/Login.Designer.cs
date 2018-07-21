@@ -65,10 +65,10 @@
             // user
             // 
             this.user.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.user.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.user.Location = new System.Drawing.Point(137, 128);
+            this.user.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.user.Location = new System.Drawing.Point(137, 124);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(250, 20);
+            this.user.Size = new System.Drawing.Size(250, 21);
             this.user.TabIndex = 2;
             this.user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.user.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.user_KeyPress);
@@ -76,11 +76,11 @@
             // pass
             // 
             this.pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.pass.Location = new System.Drawing.Point(137, 199);
+            this.pass.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.pass.Location = new System.Drawing.Point(137, 193);
             this.pass.Name = "pass";
             this.pass.PasswordChar = '*';
-            this.pass.Size = new System.Drawing.Size(250, 20);
+            this.pass.Size = new System.Drawing.Size(250, 21);
             this.pass.TabIndex = 3;
             this.pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pass_KeyPress);
@@ -93,10 +93,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(639, 341);
+            this.ClientSize = new System.Drawing.Size(642, 341);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.user);
             this.Controls.Add(this.button2);

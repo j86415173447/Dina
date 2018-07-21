@@ -47,7 +47,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(204, 288);
+            this.label1.Location = new System.Drawing.Point(205, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(307, 17);
             this.label1.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Sms_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(557, 275);
+            this.pictureBox1.Location = new System.Drawing.Point(558, 274);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -68,7 +68,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Gmail_icon2;
-            this.pictureBox2.Location = new System.Drawing.Point(517, 275);
+            this.pictureBox2.Location = new System.Drawing.Point(518, 274);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,7 +79,7 @@
             // 
             this.radProgressBar1.Dash = true;
             this.radProgressBar1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.radProgressBar1.Location = new System.Drawing.Point(4, 238);
+            this.radProgressBar1.Location = new System.Drawing.Point(4, 240);
             this.radProgressBar1.Name = "radProgressBar1";
             this.radProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.Pink;
@@ -88,7 +88,7 @@
             this.radProgressBar1.SeparatorColor4 = System.Drawing.Color.DeepPink;
             this.radProgressBar1.SeparatorNumberOfColors = 4;
             this.radProgressBar1.SeparatorWidth = 8;
-            this.radProgressBar1.Size = new System.Drawing.Size(588, 37);
+            this.radProgressBar1.Size = new System.Drawing.Size(588, 28);
             this.radProgressBar1.StepWidth = 1;
             this.radProgressBar1.SweepAngle = 210;
             this.radProgressBar1.TabIndex = 4;
@@ -104,10 +104,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(639, 341);
+            this.ClientSize = new System.Drawing.Size(642, 341);
             this.Controls.Add(this.radProgressBar1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

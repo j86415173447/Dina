@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2867200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2833408">
       <assemblyIdentity name="SnappFood_Employee_Evaluation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kEPIi4LHI94pIUJgyzgiWwLw3Q4/Y4b9AUO7GaE1owE=</dsig:DigestValue>
+        <dsig:DigestValue>M9VUu1CKZlDf0+cdJPUczDGCfmWWpL2N+N/jkSZ3tqU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -199,86 +199,86 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.dll" size="3688960">
-      <assemblyIdentity name="Telerik.WinControls" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.dll" size="3685888">
+      <assemblyIdentity name="Telerik.WinControls" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hvhaYUpv5Xub4UBTaKw6f8WUpt0rBWqValDxQ6jPia0=</dsig:DigestValue>
+        <dsig:DigestValue>QZ82QrX60j0Ji11AUDDD8WJ0jV3qdtrrSZi0NtVeN8A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.GridView.dll" size="1664512">
-      <assemblyIdentity name="Telerik.WinControls.GridView" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.GridView.dll" size="1660416">
+      <assemblyIdentity name="Telerik.WinControls.GridView" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fGjK86YvfJ5BzoQruOeWEv4FVpDeXV+Hnk2wMTMKbM8=</dsig:DigestValue>
+        <dsig:DigestValue>J9wBGAL1RizZE31wMe1ZjRvkO6ccCOlxRkJoKHRpTaE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.Themes.Office2007Silver.dll" size="641024">
-      <assemblyIdentity name="Telerik.WinControls.Themes.Office2007Silver" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.Themes.Office2007Silver.dll" size="637952">
+      <assemblyIdentity name="Telerik.WinControls.Themes.Office2007Silver" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qk9x4fRZxE0SZ4GultoroKEZp5dg059JiPSbZ3eAw4o=</dsig:DigestValue>
+        <dsig:DigestValue>3U8UCjK3mT82W7DTJS4pZqH95f0TZfRcyOeoyUViop0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.Themes.Office2010Silver.dll" size="834560">
-      <assemblyIdentity name="Telerik.WinControls.Themes.Office2010Silver" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.Themes.Office2010Silver.dll" size="831488">
+      <assemblyIdentity name="Telerik.WinControls.Themes.Office2010Silver" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sp121RpNw+MxJaWgQt5SvmRZk44HacDJTms56Y8+zOA=</dsig:DigestValue>
+        <dsig:DigestValue>s4VmJFpuVfoV1VQhoKLOP6mUZgRZF+zUSy6t5Ftzba0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.Themes.TelerikMetroTouch.dll" size="603648">
-      <assemblyIdentity name="Telerik.WinControls.Themes.TelerikMetroTouch" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.Themes.TelerikMetroTouch.dll" size="601088">
+      <assemblyIdentity name="Telerik.WinControls.Themes.TelerikMetroTouch" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NXn3qSRsDojmBPSOGaE7Ygd8aDzNtDHNWYJYKKasKVA=</dsig:DigestValue>
+        <dsig:DigestValue>EoSJG0i+qVs9n14iqDn0gvXxUz6ErZHmJBk1SBUCdxY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.UI.dll" size="5598208">
-      <assemblyIdentity name="Telerik.WinControls.UI" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Telerik.WinControls.UI.dll" size="5301760">
+      <assemblyIdentity name="Telerik.WinControls.UI" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FRLgRs0S4rIHi7F+XKUC830fqgXTrgdGqH4Ie7K+bgc=</dsig:DigestValue>
+        <dsig:DigestValue>izb1JIzZ9aaPMHAictUn4eq7jI53ZoG8AryjFH8QYpo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TelerikCommon.dll" size="344064">
-      <assemblyIdentity name="TelerikCommon" version="2018.2.515.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="TelerikCommon" version="2018.1.116.40" publicKeyToken="5BB2A467CBEC794E" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Vu3qovyt5pNT84AluAMlrauY5kBuJ32QcJa9oMEqa90=</dsig:DigestValue>
+        <dsig:DigestValue>dCvuYBoFT2dIkhB17FKIDq57FrAJ+Lc/cEZvk1CdVYQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
