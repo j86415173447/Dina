@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -60,6 +60,8 @@
             this.lbl_Wrng_Cd = new Telerik.WinControls.UI.RadLabel();
             this.lbl_Red_Amt = new Telerik.WinControls.UI.RadLabel();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.remarks = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
@@ -86,6 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbl_Wrng_Cd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_Red_Amt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.remarks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,7 +291,7 @@
             // grid
             // 
             this.grid.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.grid.Location = new System.Drawing.Point(12, 271);
+            this.grid.Location = new System.Drawing.Point(12, 300);
             // 
             // 
             // 
@@ -296,12 +300,12 @@
             this.grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.grid.MasterTemplate.EnableSorting = false;
             this.grid.MasterTemplate.ShowFilteringRow = false;
-            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.ShowGroupPanel = false;
             this.grid.ShowNoDataText = false;
-            this.grid.Size = new System.Drawing.Size(644, 316);
+            this.grid.Size = new System.Drawing.Size(644, 287);
             this.grid.TabIndex = 86;
             this.grid.ThemeName = "Office2010Silver";
             // 
@@ -422,11 +426,33 @@
             this.radLabel10.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel10.ThemeName = "Office2010Silver";
             // 
+            // remarks
+            // 
+            this.remarks.BackColor = System.Drawing.Color.LavenderBlush;
+            this.remarks.Location = new System.Drawing.Point(12, 271);
+            this.remarks.Name = "remarks";
+            this.remarks.Size = new System.Drawing.Size(582, 20);
+            this.remarks.TabIndex = 91;
+            this.remarks.ThemeName = "Office2010Silver";
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Location = new System.Drawing.Point(600, 272);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(56, 18);
+            this.radLabel2.TabIndex = 70;
+            this.radLabel2.Text = "توضیحات:";
+            this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel2.ThemeName = "Office2010Silver";
+            // 
             // SCR_WRNG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 599);
+            this.Controls.Add(this.radLabel2);
+            this.Controls.Add(this.remarks);
             this.Controls.Add(this.lbl_Red_Amt);
             this.Controls.Add(this.lbl_Wrng_Cd);
             this.Controls.Add(this.radLabel10);
@@ -491,6 +517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbl_Wrng_Cd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_Red_Amt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.remarks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -530,5 +558,7 @@
         private Telerik.WinControls.UI.RadLabel lbl_Wrng_Cd;
         private Telerik.WinControls.UI.RadLabel lbl_Red_Amt;
         private Telerik.WinControls.UI.RadLabel radLabel10;
+        private Telerik.WinControls.UI.RadTextBox remarks;
+        private Telerik.WinControls.UI.RadLabel radLabel2;
     }
 }

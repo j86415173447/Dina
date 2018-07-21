@@ -38,6 +38,9 @@
             this.commandBarSeparator3 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.radLabelElement2 = new Telerik.WinControls.UI.RadLabelElement();
             this.Access = new Telerik.WinControls.UI.RadLabelElement();
+            this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.radLabelElement5 = new Telerik.WinControls.UI.RadLabelElement();
+            this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -119,9 +122,6 @@
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
-            this.commandBarSeparator2 = new Telerik.WinControls.UI.CommandBarSeparator();
-            this.radLabelElement5 = new Telerik.WinControls.UI.RadLabelElement();
-            this.radLabelElement6 = new Telerik.WinControls.UI.RadLabelElement();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -222,6 +222,28 @@
             this.radStatusStrip1.SetSpring(this.Access, false);
             this.Access.Text = "access";
             this.Access.TextWrap = true;
+            // 
+            // commandBarSeparator2
+            // 
+            this.commandBarSeparator2.Name = "commandBarSeparator2";
+            this.radStatusStrip1.SetSpring(this.commandBarSeparator2, false);
+            this.commandBarSeparator2.VisibleInOverflowMenu = false;
+            // 
+            // radLabelElement5
+            // 
+            this.radLabelElement5.Name = "radLabelElement5";
+            this.radStatusStrip1.SetSpring(this.radLabelElement5, false);
+            this.radLabelElement5.Text = "شماره پرونده:";
+            this.radLabelElement5.TextWrap = true;
+            // 
+            // radLabelElement6
+            // 
+            this.radLabelElement6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radLabelElement6.ForeColor = System.Drawing.Color.DarkBlue;
+            this.radLabelElement6.Name = "radLabelElement6";
+            this.radStatusStrip1.SetSpring(this.radLabelElement6, false);
+            this.radLabelElement6.Text = "doc_lbl";
+            this.radLabelElement6.TextWrap = true;
             // 
             // oleDbCommand1
             // 
@@ -1002,7 +1024,7 @@
             // 
             this.ribbonTab5.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ribbonTab5.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Agent_Panel3;
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup18});
             this.ribbonTab5.Name = "ribbonTab5";
@@ -1042,13 +1064,13 @@
             // 
             // radButtonElement51
             // 
-            this.radButtonElement51.Enabled = false;
             this.radButtonElement51.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radButtonElement51.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.insp_QC;
             this.radButtonElement51.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement51.Name = "radButtonElement51";
             this.radButtonElement51.Text = "جزئیات عملکرد کیفی";
             this.radButtonElement51.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement51.Click += new System.EventHandler(this.radButtonElement51_Click);
             // 
             // radButtonElement1
             // 
@@ -1077,29 +1099,6 @@
             this.radMenuItem2.RightToLeft = false;
             this.radMenuItem2.Text = "  خروج از برنامه  ";
             this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
-            // 
-            // commandBarSeparator2
-            // 
-            this.commandBarSeparator2.Name = "commandBarSeparator2";
-            this.radStatusStrip1.SetSpring(this.commandBarSeparator2, false);
-            this.commandBarSeparator2.Text = "";
-            this.commandBarSeparator2.VisibleInOverflowMenu = false;
-            // 
-            // radLabelElement5
-            // 
-            this.radLabelElement5.Name = "radLabelElement5";
-            this.radStatusStrip1.SetSpring(this.radLabelElement5, false);
-            this.radLabelElement5.Text = "شماره پرونده:";
-            this.radLabelElement5.TextWrap = true;
-            // 
-            // radLabelElement6
-            // 
-            this.radLabelElement6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.radLabelElement6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.radLabelElement6.Name = "radLabelElement6";
-            this.radStatusStrip1.SetSpring(this.radLabelElement6, false);
-            this.radLabelElement6.Text = "doc_lbl";
-            this.radLabelElement6.TextWrap = true;
             // 
             // Main_Frm1
             // 

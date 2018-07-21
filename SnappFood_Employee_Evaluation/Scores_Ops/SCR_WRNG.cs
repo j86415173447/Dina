@@ -314,6 +314,11 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
                 RadMessageBox.ThemeName = "Office2010Silver";
                 RadMessageBox.Show(this, " نوع اخطار انتخاب نشده است. ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
             }
+            else if (Wrng_Type.SelectedIndex == 0)
+            {
+                RadMessageBox.ThemeName = "Office2010Silver";
+                RadMessageBox.Show(this, " توضیحات وارد نشده است. ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
             else
             {
                 update_scr_data();
@@ -342,7 +347,7 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Item_Cd", "SC06");
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Item_Sub_Cd", Wrng_Type.SelectedValue.ToString());
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Item_Nm", "کسر امتیاز اخطار");
-                    oleDbCommand1.Parameters.AddWithValue("@Sc_Description", Wrng_Type.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@Sc_Description", Wrng_Type.Text + " - " + remarks);
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Score", lbl_Red_Amt.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Eff_DT", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
                     oleDbCommand1.Parameters.AddWithValue("@Sc_Actv", "1");

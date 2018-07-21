@@ -30,7 +30,7 @@ namespace SnappFood_Employee_Evaluation
         private void Intro_Load(object sender, EventArgs e)
         {
             timer1.Interval = 25;
-            label1.Text = "ورژن:2.0.1 - متصل به پنل پیامک و ایمیل";
+            label1.Text = "ورژن:3.4.2 - متصل به پنل پیامک و ایمیل";
             label1.TextAlign = ContentAlignment.MiddleRight;
         }
 
