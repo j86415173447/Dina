@@ -9,6 +9,7 @@ using Telerik.WinControls;
 using System.Data.OleDb;
 using System.IO;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace SnappFood_Employee_Evaluation
 {
@@ -40,8 +41,9 @@ namespace SnappFood_Employee_Evaluation
             this.user.Select();
             //////////////////////////////////////////////////// Check .ini file
             //string con_str_exist = File.Exists(Application.StartupPath + "\\CONSTR.ini").ToString();
-            System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + "\\CONSTR.ini");
-            constr = file.ReadLine();
+            ////System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + "\\CONSTR.ini");
+            //constr = file.ReadLine();
+            constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
             oleDbConnection1.ConnectionString = constr;
         }
 
@@ -53,7 +55,7 @@ namespace SnappFood_Employee_Evaluation
             adp2.SelectCommand = new OleDbCommand();
             adp2.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[Users] where [usr_name] = N'" + user.Text + "'";
+            string lcommand = "SELECT *,iif([usr_pass] = HashBytes('MD5', convert(nvarchar(max),'" + pass.Text + "')),'1','0') FROM [SNAPP_CC_EVALUATION].[dbo].[Users] where [usr_name] = N'" + user.Text + "'";
             adp2.SelectCommand.CommandText = lcommand;
             adp2.Fill(ds);
             Int32 check = ds.Tables[0].Rows.Count;
@@ -67,8 +69,9 @@ namespace SnappFood_Employee_Evaluation
             }
             else
             {
-                string currectpass = ds.Tables[0].Rows[0][1].ToString().Trim();
-                if (currectpass == pass.Text)
+                string currectpass = ds.Tables[0].Rows[0][1].ToString();
+                string usr_pass = ds.Tables[0].Rows[0][9].ToString();
+                if (ds.Tables[0].Rows[0][9].ToString() == "1")
                 {
                     if (ds.Tables[0].Rows[0][7].ToString() == "False")
                     {

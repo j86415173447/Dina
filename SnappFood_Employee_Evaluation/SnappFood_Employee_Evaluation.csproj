@@ -149,6 +149,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agents_Panel\MONTHLY_PERFORMANCE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agents_Panel\MONTHLY_PERFORMANCE.Designer.cs">
+      <DependentUpon>MONTHLY_PERFORMANCE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agents_Panel\AGENT_QC_DETAIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -545,6 +551,9 @@
     <Compile Include="Training\TRN_REGISTRATION.Designer.cs">
       <DependentUpon>TRN_REGISTRATION.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agents_Panel\MONTHLY_PERFORMANCE.resx">
+      <DependentUpon>MONTHLY_PERFORMANCE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agents_Panel\AGENT_QC_DETAIL.resx">
       <DependentUpon>AGENT_QC_DETAIL.cs</DependentUpon>
     </EmbeddedResource>

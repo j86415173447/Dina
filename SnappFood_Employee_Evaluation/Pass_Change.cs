@@ -59,11 +59,11 @@ namespace SnappFood_Employee_Evaluation
                 adp2.SelectCommand = new OleDbCommand();
                 adp2.SelectCommand.Connection = oleDbConnection1;
                 oleDbCommand1.Parameters.Clear();
-                string lcommand2 = "SELECT [usr_name],[usr_pass] FROM [SNAPP_CC_EVALUATION].[dbo].[Users] where [usr_name] = N'" + username + "'";
+                string lcommand2 = "SELECT [usr_pass],iif([usr_pass] = HashBytes('MD5', convert(nvarchar(max),'" + CUR_PASS.Text + "')),'1','0') FROM [SNAPP_CC_EVALUATION].[dbo].[Users] where [usr_name] = N'" + username + "'";
                 adp2.SelectCommand.CommandText = lcommand2;
                 dt.Clear();
                 adp2.Fill(dt);
-                if (CUR_PASS.Text != dt.Rows[0][1].ToString())
+                if (dt.Rows[0][1].ToString() == "0")
                 {
                     this.errorProvider.SetError(this.CUR_PASS, "رمز عبور فعلی وارد شده صحیح نیست");
                     data_error = true;
@@ -72,9 +72,8 @@ namespace SnappFood_Employee_Evaluation
                 else
                 {
                     oleDbCommand1.Parameters.Clear();
-                    oleDbCommand1.CommandText = "Update [SNAPP_CC_EVALUATION].[dbo].[Users] Set [USR_Pass] = ? , [USR_first_login] = ? where [usr_name] = N'" + username + "'";
-                    oleDbCommand1.Parameters.AddWithValue("@newpass", NEW_PASS_2.Text);
-                    oleDbCommand1.Parameters.AddWithValue("@newpass", "0");
+                    oleDbCommand1.CommandText = "Update [SNAPP_CC_EVALUATION].[dbo].[Users] Set [USR_Pass] = HashBytes('MD5', convert(nvarchar(max),'" + NEW_PASS.Text + "')) , [USR_first_login] = 0 where [usr_name] = N'" + username + "'";
+
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();

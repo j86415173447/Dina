@@ -1131,5 +1131,22 @@ namespace SnappFood_Employee_Evaluation
             new_staff.MdiParent = this;
             new_staff.Show();
         }
+
+        private void radButtonElement53_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Agents_Panel.MONTHLY_PERFORMANCE))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new Agents_Panel.MONTHLY_PERFORMANCE();
+            new_staff.constr = constr;
+            new_staff.doc_number = doc_number;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
     }
 }

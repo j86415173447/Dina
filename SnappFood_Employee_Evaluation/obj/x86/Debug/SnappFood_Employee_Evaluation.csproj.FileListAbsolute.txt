@@ -124,9 +124,7 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\b
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.dll
-C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.Themes.Office2007Silver.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.Themes.Office2010Silver.dll
-C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.Themes.TelerikMetroTouch.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\TelerikCommon.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\ICSharpCode.SharpZipLib.dll
@@ -225,3 +223,4 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\o
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DETAILS_MG.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PENALTY.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_QC_DETAIL.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.MONTHLY_PERFORMANCE.resources

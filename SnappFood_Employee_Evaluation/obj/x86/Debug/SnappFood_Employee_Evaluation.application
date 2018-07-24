@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SnappFood_Employee_Evaluation.exe.manifest" size="17210">
+    <dependentAssembly dependencyType="install" codebase="SnappFood_Employee_Evaluation.exe.manifest" size="15718">
       <assemblyIdentity name="SnappFood_Employee_Evaluation.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LIr7PyyMuWzB0prFmwn7rAKYe7Fa4BroufI6S8j7rXc=</dsig:DigestValue>
+        <dsig:DigestValue>0rKePqXC6kIGCuDYTYR9EBLQTHXlegX4WHrHVeExHW0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
