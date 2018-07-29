@@ -84,8 +84,20 @@ namespace SnappFood_Employee_Evaluation.Personel
             string lcommand5 = "Select N'' 'Job_Level', '100000000' 'SALARY' union SELECT Job_Level,Min(Job_Salary_Base) AS 'SALARY' FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_JOB_LEVELING] group by [Job_Level] order by SALARY desc";
             adp5.SelectCommand.CommandText = lcommand5;
             adp5.Fill(dt5);
-            job_level.DataSource = dt5;
-            job_level.DisplayMember = "Job_Level";
+            Pay_level.DataSource = dt5;
+            Pay_level.DisplayMember = "Job_Level";
+
+            ///////////////////////////////////////////////////////// initializing Doc State Combo
+            DataTable dt50 = new DataTable();
+            OleDbDataAdapter adp50 = new OleDbDataAdapter();
+            adp50.SelectCommand = new OleDbCommand();
+            adp50.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommand50 = "SELECT '' 'Pos_Name', '0' 'POS_Priority' union SELECT [Pos_Name], [POS_Priority] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_POSITIONS_MASTER] where [Pos_Actv] = 1 order by [Pos_Priority] asc";
+            adp50.SelectCommand.CommandText = lcommand50;
+            adp50.Fill(dt50);
+            job_Level.DataSource = dt50;
+            job_Level.DisplayMember = "Pos_Name";
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -107,9 +119,13 @@ namespace SnappFood_Employee_Evaluation.Personel
             {
                 conditions.Add("Sel1.[Termination] = '" + (Doc_State.SelectedIndex.ToString() == "1" ? "0'" : "1'"));
             }
-            if (job_level.SelectedIndex != 0)
+            if (Pay_level.SelectedIndex != 0)
             {
-                conditions.Add("Sel3.Job_Level = N'" + job_level.Text + "'");
+                conditions.Add("Sel3.Job_Level = N'" + Pay_level.Text + "'");
+            }
+            if (job_Level.SelectedIndex != 0)
+            {
+                conditions.Add("Sel1.Position = N'" + job_Level.Text + "'");
             }
             if (emp_from_dt.MaskFull)
             {
@@ -125,7 +141,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT ROW_NUMBER() OVER(ORDER BY Sel1.[Doc_No] ASC) AS 'ردیف',Sel1.[Doc_No] 'شماره پرونده', Sel1.[System_Id] 'شناسه سیستم', Sel1.[Chargoon_Id] 'شناسه شرکت', Sel1.[Per_National_Cd] 'کد ملی',Sel1.[Sex] 'عنوان' , Sel1.[Per_Name]'نام و نام خانوادگی', " +
                               "Sel1.[Per_Fa_Name] 'نام پدر', Sel1.[Per_Nk_Name] 'نام مستعار', Sel1.[Per_Tel] 'تلفن', Sel1.[Per_Mob] 'موبایل', Sel1.[Per_Add] 'آدرس', Sel1.[Department]'واحد سازمانی', Sel1.[Main_Shift]'شیفت اصلی',Sel1.[Birth_Dt]'تاریخ تولد', " +
-                              "Sel1.[Employment_Dt] 'تاریخ استخدام', Sel1.[history] 'سابقه کار', Sel1.[Email] 'ایمیل', Sel1.[Degree] 'تحصیلات', sel2.[Scores] 'امتیاز شغلی', Sel3.[Job_Grade] 'رتبه شغلی',sel3.[Job_Level] 'طبقه شغلی',replace(convert(varchar,convert(Money, Sel3.[Job_Salary_Base]),1),'.00','') 'حقوق پایه' , Sel1.[Coordinator] 'نام سرگروه', Sel1.[Leader] 'نام رهبر', Sel1.[Manager] 'نام مدیر', " +
+                              "Sel1.[Employment_Dt] 'تاریخ استخدام', Sel1.[history] 'سابقه کار', Sel1.[Email] 'ایمیل', Sel1.[Degree] 'تحصیلات', Sel1.[Position] 'طبقه شغلی' , sel2.[Scores] 'امتیاز شغلی', Sel3.[Job_Grade] 'رتبه شغلی',sel3.[Job_Level] 'طبقه پرداختی',replace(convert(varchar,convert(Money, Sel3.[Job_Salary_Base]),1),'.00','') 'حقوق پایه' , Sel1.[Coordinator] 'نام سرگروه', Sel1.[Leader] 'نام رهبر', Sel1.[Manager] 'نام مدیر', " +
                               "IIF([Termination] = 0, N'در حال کار', N'قطع همکاری' ) 'وضعیت پرونده', [Termination_DT] 'تاریخ قطع همکاری'  FROM ( (Select * from [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel1 " +
                               "left join (SELECT [Doc_No],sum([Sc_Score]) AS Scores FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] group by [Doc_No]) Sel2 on sel1.[Doc_No] = Sel2.[Doc_No] " +
                               "left join (SELECT [Job_Score],[Job_Grade],[Job_Level],[Job_Department],[Job_Salary_Base] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_JOB_LEVELING]) Sel3 on sel1.[Department] = sel3.[Job_Department] and sel2.[Scores] = Sel3.[Job_Score]) ";

@@ -224,3 +224,8 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\o
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PENALTY.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_QC_DETAIL.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.MONTHLY_PERFORMANCE.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_POSITIONING.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.xml
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.Search_Positioning.resources

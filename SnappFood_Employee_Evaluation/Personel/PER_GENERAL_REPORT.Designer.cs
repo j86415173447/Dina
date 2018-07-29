@@ -33,6 +33,12 @@
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.emp_to_dt = new System.Windows.Forms.MaskedTextBox();
+            this.emp_from_dt = new System.Windows.Forms.MaskedTextBox();
+            this.Pay_level = new System.Windows.Forms.ComboBox();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.Doc_State = new System.Windows.Forms.ComboBox();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -46,14 +52,13 @@
             this.Save = new Telerik.WinControls.UI.RadMenuItem();
             this.Print = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.job_level = new System.Windows.Forms.ComboBox();
-            this.emp_from_dt = new System.Windows.Forms.MaskedTextBox();
-            this.emp_to_dt = new System.Windows.Forms.MaskedTextBox();
+            this.job_Level = new System.Windows.Forms.ComboBox();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).BeginInit();
@@ -61,9 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,9 +79,11 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGroupBox1.Controls.Add(this.job_Level);
             this.radGroupBox1.Controls.Add(this.emp_to_dt);
+            this.radGroupBox1.Controls.Add(this.radLabel6);
             this.radGroupBox1.Controls.Add(this.emp_from_dt);
-            this.radGroupBox1.Controls.Add(this.job_level);
+            this.radGroupBox1.Controls.Add(this.Pay_level);
             this.radGroupBox1.Controls.Add(this.radLabel5);
             this.radGroupBox1.Controls.Add(this.radLabel4);
             this.radGroupBox1.Controls.Add(this.radLabel3);
@@ -98,6 +103,81 @@
             this.radGroupBox1.TabIndex = 3;
             this.radGroupBox1.Text = "محدوده گزارش";
             this.radGroupBox1.ThemeName = "Office2010Silver";
+            // 
+            // emp_to_dt
+            // 
+            this.emp_to_dt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.emp_to_dt.BackColor = System.Drawing.Color.LavenderBlush;
+            this.emp_to_dt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emp_to_dt.Location = new System.Drawing.Point(659, 61);
+            this.emp_to_dt.Mask = "0000/00/00";
+            this.emp_to_dt.Name = "emp_to_dt";
+            this.emp_to_dt.Size = new System.Drawing.Size(81, 20);
+            this.emp_to_dt.TabIndex = 103;
+            // 
+            // emp_from_dt
+            // 
+            this.emp_from_dt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.emp_from_dt.BackColor = System.Drawing.Color.LavenderBlush;
+            this.emp_from_dt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emp_from_dt.Location = new System.Drawing.Point(774, 61);
+            this.emp_from_dt.Mask = "0000/00/00";
+            this.emp_from_dt.Name = "emp_from_dt";
+            this.emp_from_dt.Size = new System.Drawing.Size(81, 20);
+            this.emp_from_dt.TabIndex = 102;
+            // 
+            // Pay_level
+            // 
+            this.Pay_level.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pay_level.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Pay_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pay_level.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pay_level.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pay_level.FormattingEnabled = true;
+            this.Pay_level.Items.AddRange(new object[] {
+            "",
+            "روز",
+            "شب"});
+            this.Pay_level.Location = new System.Drawing.Point(417, 61);
+            this.Pay_level.Name = "Pay_level";
+            this.Pay_level.Size = new System.Drawing.Size(147, 22);
+            this.Pay_level.TabIndex = 69;
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(570, 64);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(83, 18);
+            this.radLabel5.TabIndex = 60;
+            this.radLabel5.Text = "طبقه پرداختی:";
+            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel5.ThemeName = "Office2010Silver";
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Location = new System.Drawing.Point(746, 64);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(19, 18);
+            this.radLabel4.TabIndex = 60;
+            this.radLabel4.Text = " - ";
+            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel4.ThemeName = "Office2010Silver";
+            // 
+            // radLabel3
+            // 
+            this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(861, 64);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(83, 18);
+            this.radLabel3.TabIndex = 59;
+            this.radLabel3.Text = "تاریخ استخدام:";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel3.ThemeName = "Office2010Silver";
             // 
             // radLabel2
             // 
@@ -236,7 +316,6 @@
             this.grid.ShowNoDataText = false;
             this.grid.Size = new System.Drawing.Size(963, 444);
             this.grid.TabIndex = 65;
-            this.grid.Text = "radGridView1";
             this.grid.ThemeName = "Office2010Silver";
             // 
             // radMenu1
@@ -251,7 +330,6 @@
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(987, 59);
             this.radMenu1.TabIndex = 66;
-            this.radMenu1.Text = "radMenu1";
             this.radMenu1.ThemeName = "Office2010Silver";
             // 
             // Save
@@ -284,80 +362,34 @@
             this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exit.UseCompatibleTextRendering = false;
             // 
-            // radLabel3
+            // job_Level
             // 
-            this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(861, 64);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(83, 18);
-            this.radLabel3.TabIndex = 59;
-            this.radLabel3.Text = "تاریخ استخدام:";
-            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel3.ThemeName = "Office2010Silver";
-            // 
-            // radLabel4
-            // 
-            this.radLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(746, 64);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(19, 18);
-            this.radLabel4.TabIndex = 60;
-            this.radLabel4.Text = " - ";
-            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel4.ThemeName = "Office2010Silver";
-            // 
-            // radLabel5
-            // 
-            this.radLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(575, 64);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(75, 18);
-            this.radLabel5.TabIndex = 60;
-            this.radLabel5.Text = "طبقه شغلی:";
-            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel5.ThemeName = "Office2010Silver";
-            // 
-            // job_level
-            // 
-            this.job_level.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.job_level.BackColor = System.Drawing.Color.LavenderBlush;
-            this.job_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.job_level.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.job_level.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.job_level.FormattingEnabled = true;
-            this.job_level.Items.AddRange(new object[] {
+            this.job_Level.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.job_Level.BackColor = System.Drawing.Color.LavenderBlush;
+            this.job_Level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.job_Level.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.job_Level.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_Level.FormattingEnabled = true;
+            this.job_Level.Items.AddRange(new object[] {
             "",
             "روز",
             "شب"});
-            this.job_level.Location = new System.Drawing.Point(422, 61);
-            this.job_level.Name = "job_level";
-            this.job_level.Size = new System.Drawing.Size(147, 22);
-            this.job_level.TabIndex = 69;
+            this.job_Level.Location = new System.Drawing.Point(183, 60);
+            this.job_Level.Name = "job_Level";
+            this.job_Level.Size = new System.Drawing.Size(147, 22);
+            this.job_Level.TabIndex = 71;
             // 
-            // emp_from_dt
+            // radLabel6
             // 
-            this.emp_from_dt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.emp_from_dt.BackColor = System.Drawing.Color.LavenderBlush;
-            this.emp_from_dt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emp_from_dt.Location = new System.Drawing.Point(774, 61);
-            this.emp_from_dt.Mask = "0000/00/00";
-            this.emp_from_dt.Name = "emp_from_dt";
-            this.emp_from_dt.Size = new System.Drawing.Size(81, 20);
-            this.emp_from_dt.TabIndex = 102;
-            // 
-            // emp_to_dt
-            // 
-            this.emp_to_dt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.emp_to_dt.BackColor = System.Drawing.Color.LavenderBlush;
-            this.emp_to_dt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emp_to_dt.Location = new System.Drawing.Point(659, 61);
-            this.emp_to_dt.Mask = "0000/00/00";
-            this.emp_to_dt.Name = "emp_to_dt";
-            this.emp_to_dt.Size = new System.Drawing.Size(81, 20);
-            this.emp_to_dt.TabIndex = 103;
+            this.radLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel6.Location = new System.Drawing.Point(336, 63);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(75, 18);
+            this.radLabel6.TabIndex = 70;
+            this.radLabel6.Text = "طبقه شغلی:";
+            this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel6.ThemeName = "Office2010Silver";
             // 
             // PER_GENERAL_REPORT
             // 
@@ -383,6 +415,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).EndInit();
@@ -390,9 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -418,11 +451,13 @@
         private Telerik.WinControls.UI.RadMenuItem Save;
         private Telerik.WinControls.UI.RadMenuItem Print;
         private Telerik.WinControls.UI.RadMenuItem Exit;
-        private System.Windows.Forms.ComboBox job_level;
+        private System.Windows.Forms.ComboBox Pay_level;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private System.Windows.Forms.MaskedTextBox emp_to_dt;
         private System.Windows.Forms.MaskedTextBox emp_from_dt;
+        private System.Windows.Forms.ComboBox job_Level;
+        private Telerik.WinControls.UI.RadLabel radLabel6;
     }
 }

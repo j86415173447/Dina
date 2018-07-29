@@ -122,6 +122,12 @@
             this.radButtonElement50 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement51 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement53 = new Telerik.WinControls.UI.RadButtonElement();
+            this.ribbonTab6 = new Telerik.WinControls.UI.RibbonTab();
+            this.radRibbonBarGroup20 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement55 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement54 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement56 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup21 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
@@ -267,7 +273,8 @@
             this.ribbonTab2,
             this.ribbonTab3,
             this.ribbonTab4,
-            this.ribbonTab5});
+            this.ribbonTab5,
+            this.ribbonTab6});
             // 
             // 
             // 
@@ -1046,7 +1053,7 @@
             // 
             this.ribbonTab5.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ribbonTab5.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Agent_Panel3;
-            this.ribbonTab5.IsSelected = true;
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup18});
             this.ribbonTab5.Name = "ribbonTab5";
@@ -1104,6 +1111,61 @@
             this.radButtonElement53.Text = "عملکرد کمی ماهانه";
             this.radButtonElement53.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement53.Click += new System.EventHandler(this.radButtonElement53_Click);
+            // 
+            // ribbonTab6
+            // 
+            this.ribbonTab6.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ribbonTab6.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Control_Panel_icon;
+            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radRibbonBarGroup20,
+            this.radRibbonBarGroup21});
+            this.ribbonTab6.Name = "ribbonTab6";
+            this.ribbonTab6.Text = "مدیریت سیستم";
+            this.ribbonTab6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ribbonTab6.UseMnemonic = false;
+            // 
+            // radRibbonBarGroup20
+            // 
+            this.radRibbonBarGroup20.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement55,
+            this.radButtonElement54,
+            this.radButtonElement56});
+            this.radRibbonBarGroup20.Name = "radRibbonBarGroup20";
+            this.radRibbonBarGroup20.Text = "تنظیمات عمومی";
+            // 
+            // radButtonElement55
+            // 
+            this.radButtonElement55.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement55.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.manager_icon;
+            this.radButtonElement55.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement55.Name = "radButtonElement55";
+            this.radButtonElement55.Text = "انتصاب سطوح شغلی";
+            this.radButtonElement55.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement55.Click += new System.EventHandler(this.radButtonElement55_Click);
+            // 
+            // radButtonElement54
+            // 
+            this.radButtonElement54.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement54.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.QC_plan;
+            this.radButtonElement54.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement54.Name = "radButtonElement54";
+            this.radButtonElement54.Text = "گروه های شغلی";
+            this.radButtonElement54.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // radButtonElement56
+            // 
+            this.radButtonElement56.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement56.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Utilities_tasks_icon;
+            this.radButtonElement56.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement56.Name = "radButtonElement56";
+            this.radButtonElement56.Text = "مدیریت تسک ها";
+            this.radButtonElement56.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // radRibbonBarGroup21
+            // 
+            this.radRibbonBarGroup21.Name = "radRibbonBarGroup21";
+            this.radRibbonBarGroup21.Text = "تنظیمات پیشرفته";
             // 
             // radButtonElement1
             // 
@@ -1263,5 +1325,11 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup19;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement52;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement53;
+        private Telerik.WinControls.UI.RibbonTab ribbonTab6;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup20;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement55;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement54;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup21;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement56;
     }
 }

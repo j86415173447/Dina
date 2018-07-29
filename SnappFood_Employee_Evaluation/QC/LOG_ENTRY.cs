@@ -35,8 +35,8 @@ namespace SnappFood_Employee_Evaluation.QC
         public int amw_sec;
         ///////////////////////////////// Warning Caps
         public int cap_0_30 = 5;
-        public int cap_30_60 = 37;
-        public int cap_60_90 = 33;
+        public int cap_30_60 = 33;
+        public int cap_60_90 = 37;
         public int cap_ov_90 = 25;
         public DataTable dt22 = new DataTable();
         Point p = Point.Empty;

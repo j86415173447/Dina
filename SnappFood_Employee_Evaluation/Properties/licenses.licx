@@ -29,7 +29,7 @@ Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2017.3.10
 Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadMaskedEditBox, Telerik.WinControls.UI, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadTrackBar, Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
-Telerik.WinControls.Themes.FluentTheme, Telerik.WinControls.Themes.Fluent, Version=2018.2.515.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+
 Telerik.WinControls.UI.RadMaskedEditBox, Telerik.WinControls.UI, Version=2016.2.503.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2017.3.1017.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e

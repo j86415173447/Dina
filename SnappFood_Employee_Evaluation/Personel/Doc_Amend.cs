@@ -1334,11 +1334,11 @@ namespace SnappFood_Employee_Evaluation.Personel
             {
                 //////////////////////////////////////////////// remove previuos station
                 oleDbCommand1.Parameters.Clear();
-                oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[Users] SET [usr_pass] = HashBytes('MD5', convert(nvarchar(max),'" + System_Id.Text + "')) ,[usr_per_name] = ? ,[usr_role] = ? ,[usr_role_nm] = ? ,[usr_actv] = ? ,[usr_first_login] = ? ,[Doc_No] = ? WHERE  [usr_name] = '" + Per_Ntl_ID.Text + "'";
+                oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[Users] SET [usr_pass] = HashBytes('MD5', convert(nvarchar(max),'" + System_Id.Text + "')) ,[usr_per_name] = ? ,[usr_actv] = ? ,[usr_first_login] = ? ,[Doc_No] = ? WHERE  [usr_name] = '" + Per_Ntl_ID.Text + "'";
                 //oleDbCommand1.Parameters.AddWithValue("@usr_pass", System_Id.Text);
                 oleDbCommand1.Parameters.AddWithValue("@usr_per_name", Per_Name.Text);
-                oleDbCommand1.Parameters.AddWithValue("@usr_role", "کارشناس " + Per_Dep.Text);
-                oleDbCommand1.Parameters.AddWithValue("@usr_role_nm", "کارشناس " + Per_Dep.Text);
+                //oleDbCommand1.Parameters.AddWithValue("@usr_role", "کارشناس " + Per_Dep.Text);
+                //oleDbCommand1.Parameters.AddWithValue("@usr_role_nm", "کارشناس " + Per_Dep.Text);
                 oleDbCommand1.Parameters.AddWithValue("@usr_actv", 1);
                 oleDbCommand1.Parameters.AddWithValue("@usr_first_login", 1);
                 oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);

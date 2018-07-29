@@ -523,6 +523,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Control_Panel_icon {
+            get {
+                object obj = ResourceManager.GetObject("Control_Panel_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Coordinator {
             get {
                 object obj = ResourceManager.GetObject("Coordinator", resourceCulture);
@@ -1143,6 +1153,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap manager_icon {
+            get {
+                object obj = ResourceManager.GetObject("manager_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Market_Analysis_icon {
             get {
                 object obj = ResourceManager.GetObject("Market_Analysis_icon", resourceCulture);
@@ -1726,6 +1746,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap users_icon {
             get {
                 object obj = ResourceManager.GetObject("users-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Utilities_tasks_icon {
+            get {
+                object obj = ResourceManager.GetObject("Utilities_tasks_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
