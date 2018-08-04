@@ -10,14 +10,14 @@ using System.Data.OleDb;
 
 namespace SnappFood_Employee_Evaluation.System_Managment
 {
-    public partial class Search_Positioning : Telerik.WinControls.UI.RadForm
+    public partial class SRCH_POSITIONING : Telerik.WinControls.UI.RadForm
     {
         System_Managment.GEN_POSITIONING ob = null;
         public string constr;
         public List<string> conditions = new List<string>();
         public DataTable dt = new DataTable();
 
-        public Search_Positioning(System_Managment.GEN_POSITIONING ob)
+        public SRCH_POSITIONING(System_Managment.GEN_POSITIONING ob)
         {
             InitializeComponent();
             this.ob = ob;

@@ -154,7 +154,7 @@
             this.radStatusStrip1.LayoutStyle = Telerik.WinControls.UI.RadStatusBarLayoutStyle.Overflow;
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 642);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(2429, 29);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1932, 29);
             this.radStatusStrip1.SizingGrip = false;
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.ThemeName = "Office2010Silver";
@@ -296,7 +296,7 @@
             this.radRibbonBar1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
             this.radRibbonBar1.ShowExpandButton = false;
             this.radRibbonBar1.ShowItemToolTips = false;
-            this.radRibbonBar1.Size = new System.Drawing.Size(2429, 177);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1932, 177);
             this.radRibbonBar1.StartButtonImage = global::SnappFood_Employee_Evaluation.Properties.Resources.logo_btn;
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuItem1,
@@ -1152,6 +1152,7 @@
             this.radButtonElement54.Name = "radButtonElement54";
             this.radButtonElement54.Text = "گروه های شغلی";
             this.radButtonElement54.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement54.Click += new System.EventHandler(this.radButtonElement54_Click);
             // 
             // radButtonElement56
             // 
@@ -1161,6 +1162,7 @@
             this.radButtonElement56.Name = "radButtonElement56";
             this.radButtonElement56.Text = "مدیریت تسک ها";
             this.radButtonElement56.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement56.Click += new System.EventHandler(this.radButtonElement56_Click);
             // 
             // radRibbonBarGroup21
             // 
@@ -1202,7 +1204,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::SnappFood_Employee_Evaluation.Properties.Resources.Logo_BG1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(2429, 671);
+            this.ClientSize = new System.Drawing.Size(1932, 671);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radRibbonBar1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

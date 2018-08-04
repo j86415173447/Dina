@@ -1,6 +1,6 @@
 ﻿namespace SnappFood_Employee_Evaluation.System_Managment
 {
-    partial class Search_Positioning
+    partial class SRCH_POSITIONING
     {
         /// <summary>
         /// Required designer variable.

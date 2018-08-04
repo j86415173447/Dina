@@ -50,6 +50,10 @@ namespace SnappFood_Employee_Evaluation.Personel
             Doc_Cd.TextAlignment = ContentAlignment.MiddleLeft;
             Score_Total.TextAlignment = ContentAlignment.MiddleLeft;
             Job_Level.TextAlignment = ContentAlignment.MiddleLeft;
+            Coordinator.TextAlignment = ContentAlignment.MiddleLeft;
+            Leader.TextAlignment = ContentAlignment.MiddleLeft;
+            Supervisor.TextAlignment = ContentAlignment.MiddleLeft;
+            Manager.TextAlignment = ContentAlignment.MiddleLeft;
             this.radMenuItem4.Click += new System.EventHandler(this.DEL_CLICK);
             Per_Cd.Select();
         }
@@ -108,6 +112,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             adp4.Fill(dt4);
             Trainer.DataSource = dt4;
             Trainer.DisplayMember = "Trainer_Name";
+            
             ///////////////////////////////////////////////////////// initializing Training DT
             DataColumn dc;
             dc = new DataColumn();
@@ -222,8 +227,9 @@ namespace SnappFood_Employee_Evaluation.Personel
                 ////////////////////////////////////////////// INSERT INTO PER_DOCUMENTS TBL
                 oleDbCommand1.Parameters.Clear();
                 oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] ([Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift],[Per_Name]," +
-                                            "[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic],[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status],[Insert_dt],[Insert_tm],[Insert_User],[Mentor],[Sex],[Termination],[English_Score]) " +
-                                            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?)";
+                                            "[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic],[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status],[Insert_dt],[Insert_tm]," +
+                                            "[Insert_User],[Mentor],[Sex],[Termination],[English_Score],[Coordinator],[Leader],[Supervisor],[Manager],[Position],[Main_Task],[Side_Task],[Dep_CD],[Team_Group]) " +
+                                            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
                 oleDbCommand1.Parameters.AddWithValue("@System_Id", System_Id.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Per_Cd.Text);
@@ -249,6 +255,15 @@ namespace SnappFood_Employee_Evaluation.Personel
                 oleDbCommand1.Parameters.AddWithValue("@Sex", Sex.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Termination", "0");
                 oleDbCommand1.Parameters.AddWithValue("@English_score", english_score.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Coordinator", Coordinator.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Leader", Leader.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Supervisor", Supervisor.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Manager", Manager.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Position", "کارشناس");
+                oleDbCommand1.Parameters.AddWithValue("@Main_Task", Main_tsk.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Side_Task", Scnd_tsk.Text);
+                oleDbCommand1.Parameters.AddWithValue("@Dep_CD", Per_Dep.SelectedValue.ToString());
+                oleDbCommand1.Parameters.AddWithValue("@Team_Group", job_Groups.Text);
                 oleDbConnection1.Open();
                 oleDbCommand1.ExecuteNonQuery();
                 oleDbConnection1.Close();
@@ -502,6 +517,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             bool tab1 = false;
             bool tab2 = false;
             bool tab3 = false;
+            bool tab4 = false;
             if (Per_Ntl_ID.Text.Length < 10)
             {
                 this.errorProvider.SetError(this.Per_Ntl_ID, "کد ملی صحیح وارد نشده است");
@@ -600,12 +616,27 @@ namespace SnappFood_Employee_Evaluation.Personel
             if (Station.Text == "")
             {
                 this.errorProvider.SetError(this.Station, "استیشن وارد نشده است");
-                data_error = true; tab1 = true;
+                data_error = true; tab4 = true;
             }
             if (Mentor.Text == "")
             {
                 this.errorProvider.SetError(this.Mentor, "نام مربی وارد نشده است");
-                data_error = true; tab1 = true;
+                data_error = true; tab4 = true;
+            }
+            if (Main_tsk.SelectedIndex == 0)
+            {
+                this.errorProvider.SetError(this.Main_tsk, "تسک انتخاب نشده است");
+                data_error = true; tab4 = true;
+            }
+            if (Scnd_tsk.SelectedIndex == 0)
+            {
+                this.errorProvider.SetError(this.Scnd_tsk, "تسک فرعی انتخاب نشده است");
+                data_error = true; tab4 = true;
+            }
+            if (job_Groups.SelectedIndex == 0)
+            {
+                this.errorProvider.SetError(this.job_Groups, "گروه شغلی انتخاب نشده است");
+                data_error = true; tab4 = true;
             }
             ////////////////////////////////////////////////// check duplicate
             DataTable dt1 = new DataTable();
@@ -667,6 +698,10 @@ namespace SnappFood_Employee_Evaluation.Personel
                 if (tab3 == true)
                 {
                     error_message = error_message + "ارزیابی اولیه" + "\n";
+                }
+                if (tab4 == true)
+                {
+                    error_message = error_message + "اطلاعات سازمانی" + "\n";
                 }
                 RadMessageBox.SetThemeName("Office2010Silver");
                 RadMessageBox.Show(this, error_message + "\n", "بروز خطا", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
@@ -751,17 +786,17 @@ namespace SnappFood_Employee_Evaluation.Personel
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControl1.SelectedIndex == 0)
+            if(radPageView1.SelectedPage == radPageViewPage1)
             {
                 Per_Cd.Select();
             }
-            if (tabControl1.SelectedIndex == 1)
+            if (radPageView1.SelectedPage == radPageViewPage2)
             {
                 Training_Item.Select();
             }
-            if (tabControl1.SelectedIndex == 2)
+            if (radPageView1.SelectedPage == radPageViewPage4)
             {
-                english_score.Select();
+                job_Groups.Select();
             }
         }
 
@@ -836,7 +871,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             var new_staff = new Personel.New_Staff();
             new_staff.constr = constr;
             new_staff.user = user;
-            new_staff.MdiParent = Application.OpenForms.OfType<Main_Frm1>().FirstOrDefault();
+            new_staff.MdiParent = this.ParentForm;
             this.Close();
             new_staff.Show();
         }
@@ -858,6 +893,9 @@ namespace SnappFood_Employee_Evaluation.Personel
                             "واحد سازمانی: <b>" + Per_Dep.Text + "</b><br>" +
                             "شیفت کاری: <b>" + Main_Shift.Text + "</b><br>" +
                             "شماره داخلی: <b>" + System_Id.Text + "</b><br>" +
+                            "تسک اصلی: <b>" + Main_tsk.Text + "</b><br>" +
+                            "تسک فرعی: <b>" + Scnd_tsk.Text + "</b><br>" +
+                            "گروه کاری: <b>" + job_Groups.Text + "</b><br>" +
                             "تاریخ استخدام: <b>" + DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text + "</b>" + "</font>" +
                             "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل اسنپ فود - SFES" + "</b></font>" +
                             "<br><br><br><font color='Red'>" + "این ایمیل به صورت اتوماتیک ارسال شده است. لطفا به آن پاسخ ندهید." + "</font>" +
@@ -891,6 +929,66 @@ namespace SnappFood_Employee_Evaluation.Personel
             {
                 int selected = Training_grid.SelectedRows[0].Index;
                 Training_grid.Rows[selected].Delete();
+            }
+        }
+
+        private void Per_Dep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Per_Dep.SelectedIndex != 0 && Main_Shift.SelectedIndex != 0)
+            {
+                ///////////////////////////////////////////////////////// initializing Job Groups
+                DataTable dt5 = new DataTable();
+                OleDbDataAdapter adp5 = new OleDbDataAdapter();
+                adp5.SelectCommand = new OleDbCommand();
+                adp5.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand5 = "SELECT '' 'Group_NM', '' 'DATA' union SELECT [Group_Nm],[Group_Coor]+'/'+[Group_LD]+'/'+[Group_SP]+'/'+[Group_MG] 'DATA' FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_GROUPS_MASTER] where [Group_ACTV] = 1 and [Group_Dep] = N'" + Per_Dep.Text + "' and [Group_Shift] = N'" + Main_Shift.Text + "'";
+                adp5.SelectCommand.CommandText = lcommand5;
+                adp5.Fill(dt5);
+                job_Groups.DataSource = dt5;
+                job_Groups.DisplayMember = "Group_NM";
+                job_Groups.ValueMember = "DATA";
+                ////////////////////////////////////////////////////////// Initializing Main Task Combos
+                DataTable dt4 = new DataTable();
+                OleDbDataAdapter adp4 = new OleDbDataAdapter();
+                adp4.SelectCommand = new OleDbCommand();
+                adp4.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand4 = "SELECT '' 'TASK_NM' union SELECT [TASK_NM] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_ACTV] = 1 and [MAIN_TASK] = 1  and [TASK_DEP] = N'" + Per_Dep.Text + "'";
+                adp4.SelectCommand.CommandText = lcommand4;
+                adp4.Fill(dt4);
+                Main_tsk.DataSource = dt4;
+                Main_tsk.DisplayMember = "TASK_NM";
+                ////////////////////////////////////////////////////////// Initializing Scnd Task Combos
+                DataTable dt3 = new DataTable();
+                OleDbDataAdapter adp3 = new OleDbDataAdapter();
+                adp3.SelectCommand = new OleDbCommand();
+                adp3.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand3 = "SELECT '' 'TASK_NM' union SELECT [TASK_NM] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_ACTV] = 1 and [Scnd_TASK] = 1  and [TASK_DEP] = N'" + Per_Dep.Text + "'";
+                adp3.SelectCommand.CommandText = lcommand3;
+                adp3.Fill(dt3);
+                Scnd_tsk.DataSource = dt3;
+                Scnd_tsk.DisplayMember = "TASK_NM";
+            }
+        }
+
+        private void job_Groups_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (job_Groups.SelectedIndex != 0)
+            {
+                string[] data = job_Groups.SelectedValue.ToString().Split('/');
+                Coordinator.Text = data[0];
+                Leader.Text = data[1];
+                Supervisor.Text = data[2];
+                Manager.Text = data[3];
+            }
+            else
+            {
+                Coordinator.Text = "";
+                Leader.Text = "";
+                Supervisor.Text = "";
+                Manager.Text = "";
             }
         }
     }

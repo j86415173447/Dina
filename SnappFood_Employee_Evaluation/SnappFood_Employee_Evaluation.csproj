@@ -460,17 +460,35 @@
     <Compile Include="Scores_Ops\Search_Staff_MNG.Designer.cs">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </Compile>
+    <Compile Include="System_Managment\GEN_TASKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_TASKS.Designer.cs">
+      <DependentUpon>GEN_TASKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\GEN_GROUPING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_GROUPING.Designer.cs">
+      <DependentUpon>GEN_GROUPING.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_Managment\GEN_POSITIONING.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="System_Managment\GEN_POSITIONING.Designer.cs">
       <DependentUpon>GEN_POSITIONING.cs</DependentUpon>
     </Compile>
-    <Compile Include="System_Managment\Search_Positioning.cs">
+    <Compile Include="System_Managment\SRCH_GROUPING.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="System_Managment\Search_Positioning.Designer.cs">
-      <DependentUpon>Search_Positioning.cs</DependentUpon>
+    <Compile Include="System_Managment\SRCH_GROUPING.Designer.cs">
+      <DependentUpon>SRCH_GROUPING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\SRCH_POSITIONING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\SRCH_POSITIONING.Designer.cs">
+      <DependentUpon>SRCH_POSITIONING.cs</DependentUpon>
     </Compile>
     <Compile Include="Training\Classes_Report.cs">
       <SubType>Form</SubType>
@@ -769,11 +787,20 @@
     <EmbeddedResource Include="Scores_Ops\Search_Staff_MNG.resx">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_TASKS.resx">
+      <DependentUpon>GEN_TASKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_GROUPING.resx">
+      <DependentUpon>GEN_GROUPING.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\GEN_POSITIONING.resx">
       <DependentUpon>GEN_POSITIONING.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="System_Managment\Search_Positioning.resx">
-      <DependentUpon>Search_Positioning.cs</DependentUpon>
+    <EmbeddedResource Include="System_Managment\SRCH_GROUPING.resx">
+      <DependentUpon>SRCH_GROUPING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\SRCH_POSITIONING.resx">
+      <DependentUpon>SRCH_POSITIONING.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Training\Classes_Report.resx">
       <DependentUpon>Classes_Report.cs</DependentUpon>

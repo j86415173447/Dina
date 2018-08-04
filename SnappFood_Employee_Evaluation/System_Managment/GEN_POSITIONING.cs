@@ -135,7 +135,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
 
         private void Print_Click(object sender, EventArgs e)
         {
-            System_Managment.Search_Positioning ob = new System_Managment.Search_Positioning(this);
+            System_Managment.SRCH_POSITIONING ob = new System_Managment.SRCH_POSITIONING(this);
             ob.constr = constr;
             ob.ShowDialog();
         }

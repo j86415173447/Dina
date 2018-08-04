@@ -114,7 +114,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 adp4.SelectCommand = new OleDbCommand();
                 adp4.SelectCommand.Connection = oleDbConnection1;
                 oleDbCommand1.Parameters.Clear();
-                string lcommand4 = "SELECT [Department],[Per_Name],[termination],[Coordinator] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [System_Id] = '" + operator_ext.Text + "'";
+                string lcommand4 = "SELECT [Department],[Per_Name],[termination],[Position] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [System_Id] = '" + operator_ext.Text + "'";
                 adp4.SelectCommand.CommandText = lcommand4;
                 adp4.Fill(dt4);
                 if (dt4.Rows.Count != 0)
@@ -123,7 +123,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     {
                         operator_nm.Text = dt4.Rows[0][1].ToString();
                         Department.Text = dt4.Rows[0][0].ToString();
-                        if (dt4.Rows[0][3].ToString() == "نامشخص")
+                        if (dt4.Rows[0][3].ToString() != "کارشناس")
                         {
                             coordinator = true;
                         }
@@ -360,7 +360,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Remarks.Text);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", taboo.Checked ? "1" : "0");
                 /////////////////////////////////////////////////////////////////////////////////////////////// Because of Taboo
-                if (int.Parse(Call_Score_Final.Text) <= 17)
+                if (int.Parse(Call_Score_Final.Text) <= 18)
                 {
                     oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
                 }
@@ -370,7 +370,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 }
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                if (int.Parse(Call_Score_Final.Text) <= 17)
+                if (int.Parse(Call_Score_Final.Text) <= 18)
                 {
                     if (coordinator)
                     {
@@ -466,7 +466,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 loading.Close();
                 //Insert_Date.Text = DT_Yr + "/" + DT_Mth + "/" + DT_Day;
                 //Insert_Time.Text = DT_TM;
-                if (int.Parse(Call_Score_Final.Text) <= 17)
+                if (int.Parse(Call_Score_Final.Text) <= 18)
                 {
                     RadMessageBox.Show(this, "لاگ به شناسه " + QC_ID.Text + " با موفقیت تائید شد." + "\n" + " لاگ به کارتابل مسئول مربوطه در " + Department.Text + " منتقل شد. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                 }

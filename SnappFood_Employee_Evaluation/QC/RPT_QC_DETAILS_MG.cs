@@ -53,7 +53,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT Sel2.[Per_Name] 'Agent Name', Sel2.[Department] 'Department',Sel2.[Main_Shift] 'Shift', Sel1.* from ( " +
-                              " (SELECT[Agent_Ext] 'Extension', count([QC_ID]) 'Total Logs' , SUM(CASE WHEN[QC_Score] <= 17 then 1 else 0 end) 'Failed Logs' , SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'Taboo Count' , SUM(CASE WHEN[QC_Param_1] = 0 then 1 else 0 end) 'Greeting' " +
+                              " (SELECT[Agent_Ext] 'Extension', count([QC_ID]) 'Total Logs' , SUM(CASE WHEN[QC_Score] <= 18 then 1 else 0 end) 'Failed Logs' , SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'Taboo Count' , SUM(CASE WHEN[QC_Param_1] = 0 then 1 else 0 end) 'Greeting' " +
                               " ,SUM(CASE WHEN[QC_Param_2] = 0 then 1 else 0 end) 'Opening Sen/Que' , SUM(CASE WHEN[QC_Param_3] = 0 then 1 else 0 end) 'Active Listening' , SUM(CASE WHEN[QC_Param_4] = 0 then 1 else 0 end) 'Call Holding' " +
                               " ,SUM(CASE WHEN[QC_Param_5] = 0 then 1 else 0 end) 'Interruption' , SUM(CASE WHEN[QC_Param_6] = 0 then 1 else 0 end) 'Summarizing' , SUM(CASE WHEN[QC_Param_7] = 0 then 1 else 0 end) 'Speaking Type' " +
                               " ,SUM(CASE WHEN[QC_Param_8] = 0 then 1 else 0 end) 'Speaking Tone' , SUM(CASE WHEN[QC_Param_9] = 0 then 1 else 0 end) 'Guide/Result' , SUM(CASE WHEN[QC_Param_10] = 0 then 1 else 0 end) 'Query' " +

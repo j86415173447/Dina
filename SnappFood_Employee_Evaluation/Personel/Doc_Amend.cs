@@ -53,6 +53,10 @@ namespace SnappFood_Employee_Evaluation.Personel
             termin_dt.TextAlignment = ContentAlignment.MiddleCenter;
             emp_dt.TextAlignment = ContentAlignment.MiddleLeft;
             birth_dt.TextAlignment = ContentAlignment.MiddleLeft;
+            Coordinator.TextAlignment = ContentAlignment.MiddleLeft;
+            Leader.TextAlignment = ContentAlignment.MiddleLeft;
+            Supervisor.TextAlignment = ContentAlignment.MiddleLeft;
+            Manager.TextAlignment = ContentAlignment.MiddleLeft;
             Per_Cd.Select();
         }
 
@@ -110,39 +114,39 @@ namespace SnappFood_Employee_Evaluation.Personel
             adp4.Fill(dt4);
             Trainer.DataSource = dt4;
             Trainer.DisplayMember = "Trainer_Name";
-            ///////////////////////////////////////////////////////// initializing Coordinator item
-            DataTable dt5 = new DataTable();
-            OleDbDataAdapter adp5 = new OleDbDataAdapter();
-            adp5.SelectCommand = new OleDbCommand();
-            adp5.SelectCommand.Connection = oleDbConnection1;
-            oleDbCommand1.Parameters.Clear();
-            string lcommand5 = "SELECT '1' 'row', '' 'Per_Nm' union SELECT '2' 'row' , N'نامشخص' 'Per_Nm' union SELECT '3' 'row', [Per_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TEAM_LEADERS_MASTER] WHERE [Level_Nm] = N'سرگروه' and [ACTV] = 1 ";
-            adp5.SelectCommand.CommandText = lcommand5;
-            adp5.Fill(dt5);
-            Coord.DataSource = dt5;
-            Coord.DisplayMember = "Per_Nm";
-            ///////////////////////////////////////////////////////// initializing Leader item
-            DataTable dt6 = new DataTable();
-            OleDbDataAdapter adp6 = new OleDbDataAdapter();
-            adp6.SelectCommand = new OleDbCommand();
-            adp6.SelectCommand.Connection = oleDbConnection1;
-            oleDbCommand1.Parameters.Clear();
-            string lcommand6 = "SELECT '1' 'row', '' 'Per_Nm' union SELECT '2' 'row' , N'نامشخص' 'Per_Nm' union SELECT '3' 'row', [Per_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TEAM_LEADERS_MASTER] WHERE [Level_Nm] = N'رهبر' and [ACTV] = 1 ";
-            adp6.SelectCommand.CommandText = lcommand6;
-            adp6.Fill(dt6);
-            Leader.DataSource = dt6;
-            Leader.DisplayMember = "Per_Nm";
-            ///////////////////////////////////////////////////////// initializing Leader item
-            DataTable dt7 = new DataTable();
-            OleDbDataAdapter adp7 = new OleDbDataAdapter();
-            adp7.SelectCommand = new OleDbCommand();
-            adp7.SelectCommand.Connection = oleDbConnection1;
-            oleDbCommand1.Parameters.Clear();
-            string lcommand7 = "SELECT '1' 'row', '' 'Per_Nm' union SELECT '2' 'row' , N'نامشخص' 'Per_Nm' union SELECT '3' 'row', [Per_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TEAM_LEADERS_MASTER] WHERE [Level_Nm] = N'رهبر' and [ACTV] = 1 ";
-            adp7.SelectCommand.CommandText = lcommand7;
-            adp7.Fill(dt7);
-            Manager.DataSource = dt7;
-            Manager.DisplayMember = "Per_Nm";
+            /////////////////////////////////////////////////////////// initializing Coordinator item
+            //DataTable dt5 = new DataTable();
+            //OleDbDataAdapter adp5 = new OleDbDataAdapter();
+            //adp5.SelectCommand = new OleDbCommand();
+            //adp5.SelectCommand.Connection = oleDbConnection1;
+            //oleDbCommand1.Parameters.Clear();
+            //string lcommand5 = "SELECT '1' 'row', '' 'Per_Nm' union SELECT '2' 'row' , N'نامشخص' 'Per_Nm' union SELECT '3' 'row', [Per_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TEAM_LEADERS_MASTER] WHERE [Level_Nm] = N'سرگروه' and [ACTV] = 1 ";
+            //adp5.SelectCommand.CommandText = lcommand5;
+            //adp5.Fill(dt5);
+            //Coord.DataSource = dt5;
+            //Coord.DisplayMember = "Per_Nm";
+            /////////////////////////////////////////////////////////// initializing Leader item
+            //DataTable dt6 = new DataTable();
+            //OleDbDataAdapter adp6 = new OleDbDataAdapter();
+            //adp6.SelectCommand = new OleDbCommand();
+            //adp6.SelectCommand.Connection = oleDbConnection1;
+            //oleDbCommand1.Parameters.Clear();
+            //string lcommand6 = "SELECT '1' 'row', '' 'Per_Nm' union SELECT '2' 'row' , N'نامشخص' 'Per_Nm' union SELECT '3' 'row', [Per_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TEAM_LEADERS_MASTER] WHERE [Level_Nm] = N'رهبر' and [ACTV] = 1 ";
+            //adp6.SelectCommand.CommandText = lcommand6;
+            //adp6.Fill(dt6);
+            //Leader.DataSource = dt6;
+            //Leader.DisplayMember = "Per_Nm";
+            /////////////////////////////////////////////////////////// initializing Leader item
+            //DataTable dt7 = new DataTable();
+            //OleDbDataAdapter adp7 = new OleDbDataAdapter();
+            //adp7.SelectCommand = new OleDbCommand();
+            //adp7.SelectCommand.Connection = oleDbConnection1;
+            //oleDbCommand1.Parameters.Clear();
+            //string lcommand7 = "SELECT '1' 'row', '' 'Per_Nm' union SELECT '2' 'row' , N'نامشخص' 'Per_Nm' union SELECT '3' 'row', [Per_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TEAM_LEADERS_MASTER] WHERE [Level_Nm] = N'رهبر' and [ACTV] = 1 ";
+            //adp7.SelectCommand.CommandText = lcommand7;
+            //adp7.Fill(dt7);
+            //Manager.DataSource = dt7;
+            //Manager.DisplayMember = "Per_Nm";
             ///////////////////////////////////////////////////////// initializing Training DT
             DataColumn dc;
             dc = new DataColumn();
@@ -269,8 +273,8 @@ namespace SnappFood_Employee_Evaluation.Personel
                         ////////////////////////////////////////////// INSERT INTO PER_DOCUMENTS TBL
                         oleDbCommand1.Parameters.Clear();
                         oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Doc_No] = ?,[System_Id] = ?,[Chargoon_Id] = ?,[Per_National_Cd] = ?,[Department] = ?,[Main_Shift] = ?,[Per_Name] = ?," +
-                                                    "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[Per_Pic] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ? " + 
-                                                    ", [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Manager] = ? WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
+                                                    "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[Per_Pic] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ? " +
+                                                    ", [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Supervisor] = ? , [Manager] = ? WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
                         oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
                         oleDbCommand1.Parameters.AddWithValue("@System_Id", System_Id.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Per_Cd.Text);
@@ -292,8 +296,9 @@ namespace SnappFood_Employee_Evaluation.Personel
                         oleDbCommand1.Parameters.AddWithValue("@Mentor", Mentor.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Sex", Sex.Text);
                         oleDbCommand1.Parameters.AddWithValue("@English_score", english_score.Text);
-                        oleDbCommand1.Parameters.AddWithValue("@Coordinator", Coord.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Coordinator", Coordinator.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Leader", Leader.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Supervisor", Supervisor.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Manager", Manager.Text);
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
@@ -304,7 +309,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                         ////////////////////////////////////////////// INSERT INTO PER_DOCUMENTS TBL
                         oleDbCommand1.Parameters.Clear();
                         oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Doc_No] = ?,[System_Id] = ?,[Chargoon_Id] = ?,[Per_National_Cd] = ?,[Department] = ?,[Main_Shift] = ?,[Per_Name] = ?," +
-                                                    "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ?, [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Manager] = ?  WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
+                                                    "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ?, [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Supervisor] = ? , [Manager] = ?  WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
                         oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
                         oleDbCommand1.Parameters.AddWithValue("@System_Id", System_Id.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Per_Cd.Text);
@@ -325,8 +330,9 @@ namespace SnappFood_Employee_Evaluation.Personel
                         oleDbCommand1.Parameters.AddWithValue("@Mentor", Mentor.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Sex", Sex.Text);
                         oleDbCommand1.Parameters.AddWithValue("@English_score", english_score.Text);
-                        oleDbCommand1.Parameters.AddWithValue("@Coordinator", Coord.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Coordinator", Coordinator.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Leader", Leader.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Supervisor", Supervisor.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Manager", Manager.Text);
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
@@ -672,19 +678,19 @@ namespace SnappFood_Employee_Evaluation.Personel
                 this.errorProvider.SetError(this.Station, "استیشن وارد نشده است");
                 data_error = true; tab4 = true;
             }
-            if (Coord.SelectedIndex == 0)
+            if (Main_tsk.SelectedIndex == 0)
             {
-                errorProvider.SetError(this.Coord, "سرگروه مرتبط انتخاب نشده است");
+                this.errorProvider.SetError(this.Main_tsk, "تسک انتخاب نشده است");
                 data_error = true; tab4 = true;
             }
-            if (Leader.SelectedIndex == 0)
+            if (Scnd_tsk.SelectedIndex == 0)
             {
-                this.errorProvider.SetError(this.Leader, "رهبر مرتبط انتخاب نشده است");
+                this.errorProvider.SetError(this.Scnd_tsk, "تسک فرعی انتخاب نشده است");
                 data_error = true; tab4 = true;
             }
-            if (Manager.SelectedIndex == 0)
+            if (job_Groups.SelectedIndex == 0)
             {
-                this.errorProvider.SetError(this.Manager, "مدیر مرتبط انتخاب نشده است");
+                this.errorProvider.SetError(this.job_Groups, "گروه شغلی انتخاب نشده است");
                 data_error = true; tab4 = true;
             }
             if (Per_mob.Text.Length != 11)
@@ -957,8 +963,8 @@ namespace SnappFood_Employee_Evaluation.Personel
             string lcommand1 = "SELECT [Doc_No],[System_Id],[Chargoon_Id],[Per_National_Cd],[Department],[Main_Shift]" +
                                ",[Per_Name],[Per_Fa_Name],[Per_Nk_Name],[Per_Tel],[Per_Mob],[Per_Add],[Per_Pic]" +
                                ",[History],[Employment_Dt],[Birth_Dt],[Email],[Degree],[Major],[Major_Status]" +
-                               ",[Mentor],[sex],[Insert_User],[Termination],[English_Score],[Coordinator],[Leader]" + 
-                               ",[Manager],[Termination_DT] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd.Text + "'";
+                               ",[Mentor],[sex],[Insert_User],[Termination],[English_Score],[Coordinator],[Leader]" +
+                               ",[Manager],[Termination_DT],[supervisor],[Team_Group],[Main_Task],[Side_Task] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [doc_no] = '" + Doc_Cd.Text + "'";
             adp1.SelectCommand.CommandText = lcommand1;
             adp1.Fill(dt1);
             System_Id.Text = dt1.Rows[0][1].ToString();
@@ -973,9 +979,13 @@ namespace SnappFood_Employee_Evaluation.Personel
             Per_mob.Text = dt1.Rows[0][10].ToString();
             Per_Add.Text = dt1.Rows[0][11].ToString();
             english_score.Text = dt1.Rows[0][24].ToString();
-            Coord.Text = dt1.Rows[0][25].ToString();
+            Coordinator.Text = dt1.Rows[0][25].ToString();
             Leader.Text = dt1.Rows[0][26].ToString();
             Manager.Text = dt1.Rows[0][27].ToString();
+            Supervisor.Text = dt1.Rows[0][29].ToString();
+            job_Groups.Text = dt1.Rows[0][30].ToString();
+            Main_tsk.Text = dt1.Rows[0][31].ToString();
+            Scnd_tsk.Text = dt1.Rows[0][32].ToString();
             if (dt1.Rows[0][12].ToString().Length != 0)
             {
                 byte[] imageData = (byte[])dt1.Rows[0][12];
@@ -1375,6 +1385,66 @@ namespace SnappFood_Employee_Evaluation.Personel
             else
             {
                 Password.Enabled = false;
+            }
+        }
+
+        private void Main_Shift_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Per_Dep.SelectedIndex != 0 && Main_Shift.SelectedIndex != 0)
+            {
+                ///////////////////////////////////////////////////////// initializing Job Groups
+                DataTable dt5 = new DataTable();
+                OleDbDataAdapter adp5 = new OleDbDataAdapter();
+                adp5.SelectCommand = new OleDbCommand();
+                adp5.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand5 = "SELECT '' 'Group_NM', '' 'DATA' union SELECT [Group_Nm],[Group_Coor]+'/'+[Group_LD]+'/'+[Group_SP]+'/'+[Group_MG] 'DATA' FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_GROUPS_MASTER] where [Group_ACTV] = 1 and [Group_Dep] = N'" + Per_Dep.Text + "' and [Group_Shift] = N'" + Main_Shift.Text + "'";
+                adp5.SelectCommand.CommandText = lcommand5;
+                adp5.Fill(dt5);
+                job_Groups.DataSource = dt5;
+                job_Groups.DisplayMember = "Group_NM";
+                job_Groups.ValueMember = "DATA";
+                ////////////////////////////////////////////////////////// Initializing Main Task Combos
+                DataTable dt4 = new DataTable();
+                OleDbDataAdapter adp4 = new OleDbDataAdapter();
+                adp4.SelectCommand = new OleDbCommand();
+                adp4.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand4 = "SELECT '' 'TASK_NM' union SELECT [TASK_NM] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_ACTV] = 1 and [MAIN_TASK] = 1  and [TASK_DEP] = N'" + Per_Dep.Text + "'";
+                adp4.SelectCommand.CommandText = lcommand4;
+                adp4.Fill(dt4);
+                Main_tsk.DataSource = dt4;
+                Main_tsk.DisplayMember = "TASK_NM";
+                ////////////////////////////////////////////////////////// Initializing Scnd Task Combos
+                DataTable dt3 = new DataTable();
+                OleDbDataAdapter adp3 = new OleDbDataAdapter();
+                adp3.SelectCommand = new OleDbCommand();
+                adp3.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand3 = "SELECT '' 'TASK_NM' union SELECT [TASK_NM] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_ACTV] = 1 and [Scnd_TASK] = 1  and [TASK_DEP] = N'" + Per_Dep.Text + "'";
+                adp3.SelectCommand.CommandText = lcommand3;
+                adp3.Fill(dt3);
+                Scnd_tsk.DataSource = dt3;
+                Scnd_tsk.DisplayMember = "TASK_NM";
+            }
+        }
+
+        private void job_Groups_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (job_Groups.SelectedIndex != 0)
+            {
+                string[] data = job_Groups.SelectedValue.ToString().Split('/');
+                Coordinator.Text = data[0];
+                Leader.Text = data[1];
+                Supervisor.Text = data[2];
+                Manager.Text = data[3];
+            }
+            else
+            {
+                Coordinator.Text = "";
+                Leader.Text = "";
+                Supervisor.Text = "";
+                Manager.Text = "";
             }
         }
     }
