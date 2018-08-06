@@ -274,7 +274,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                         oleDbCommand1.Parameters.Clear();
                         oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Doc_No] = ?,[System_Id] = ?,[Chargoon_Id] = ?,[Per_National_Cd] = ?,[Department] = ?,[Main_Shift] = ?,[Per_Name] = ?," +
                                                     "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[Per_Pic] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ? " +
-                                                    ", [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Supervisor] = ? , [Manager] = ? WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
+                                                    ", [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Supervisor] = ? , [Manager] = ?, [Team_Group] = ?, [Main_Task] = ?, [Side_Task] = ? WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
                         oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
                         oleDbCommand1.Parameters.AddWithValue("@System_Id", System_Id.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Per_Cd.Text);
@@ -300,6 +300,9 @@ namespace SnappFood_Employee_Evaluation.Personel
                         oleDbCommand1.Parameters.AddWithValue("@Leader", Leader.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Supervisor", Supervisor.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Manager", Manager.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Team_Group", job_Groups.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Main_Task", Main_tsk.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Side_Task", Scnd_tsk.Text);
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();
@@ -309,7 +312,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                         ////////////////////////////////////////////// INSERT INTO PER_DOCUMENTS TBL
                         oleDbCommand1.Parameters.Clear();
                         oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Doc_No] = ?,[System_Id] = ?,[Chargoon_Id] = ?,[Per_National_Cd] = ?,[Department] = ?,[Main_Shift] = ?,[Per_Name] = ?," +
-                                                    "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ?, [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Supervisor] = ? , [Manager] = ?  WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
+                                                    "[Per_Fa_Name] = ?,[Per_Nk_Name] = ?,[Per_Tel] = ?,[Per_Mob] = ?,[Per_Add] = ?,[History] = ?,[Email] = ?,[Degree] = ?,[Major] = ?,[Major_Status] = ?,[Mentor] = ?, [Sex] = ?, [English_Score] = ? , [Coordinator] = ? , [Leader] = ? , [Supervisor] = ? , [Manager] = ?, [Team_Group] = ?, [Main_Task] = ?, [Side_Task] = ?, [Dep_CD] = ?  WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
                         oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
                         oleDbCommand1.Parameters.AddWithValue("@System_Id", System_Id.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Per_Cd.Text);
@@ -334,6 +337,10 @@ namespace SnappFood_Employee_Evaluation.Personel
                         oleDbCommand1.Parameters.AddWithValue("@Leader", Leader.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Supervisor", Supervisor.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Manager", Manager.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Team_Group", job_Groups.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Main_Task", Main_tsk.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Side_Task", Scnd_tsk.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Dep_CD", Per_Dep.SelectedValue.ToString());
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();

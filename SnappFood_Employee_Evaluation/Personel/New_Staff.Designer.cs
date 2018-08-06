@@ -1992,7 +1992,7 @@
             // 
             this.Manager.AutoSize = false;
             this.Manager.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manager.ForeColor = System.Drawing.Color.Green;
+            this.Manager.ForeColor = System.Drawing.Color.Black;
             this.Manager.Location = new System.Drawing.Point(457, 245);
             this.Manager.Name = "Manager";
             this.Manager.Size = new System.Drawing.Size(156, 18);
@@ -2004,7 +2004,7 @@
             // 
             this.Leader.AutoSize = false;
             this.Leader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Leader.ForeColor = System.Drawing.Color.Green;
+            this.Leader.ForeColor = System.Drawing.Color.Black;
             this.Leader.Location = new System.Drawing.Point(457, 157);
             this.Leader.Name = "Leader";
             this.Leader.Size = new System.Drawing.Size(156, 18);
@@ -2016,7 +2016,7 @@
             // 
             this.Supervisor.AutoSize = false;
             this.Supervisor.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisor.ForeColor = System.Drawing.Color.Green;
+            this.Supervisor.ForeColor = System.Drawing.Color.Black;
             this.Supervisor.Location = new System.Drawing.Point(457, 201);
             this.Supervisor.Name = "Supervisor";
             this.Supervisor.Size = new System.Drawing.Size(156, 18);
@@ -2028,7 +2028,7 @@
             // 
             this.Coordinator.AutoSize = false;
             this.Coordinator.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Coordinator.ForeColor = System.Drawing.Color.Green;
+            this.Coordinator.ForeColor = System.Drawing.Color.Black;
             this.Coordinator.Location = new System.Drawing.Point(457, 113);
             this.Coordinator.Name = "Coordinator";
             this.Coordinator.Size = new System.Drawing.Size(156, 18);

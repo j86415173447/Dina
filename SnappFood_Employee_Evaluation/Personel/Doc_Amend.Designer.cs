@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.Doc_Cd = new Telerik.WinControls.UI.RadLabel();
@@ -133,6 +133,20 @@
             this.radRadioButton7 = new Telerik.WinControls.UI.RadRadioButton();
             this.radRadioButton8 = new Telerik.WinControls.UI.RadRadioButton();
             this.radPageViewPage4 = new Telerik.WinControls.UI.RadPageViewPage();
+            this.Scnd_tsk = new System.Windows.Forms.ComboBox();
+            this.Main_tsk = new System.Windows.Forms.ComboBox();
+            this.radLabel48 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel47 = new Telerik.WinControls.UI.RadLabel();
+            this.Manager = new Telerik.WinControls.UI.RadLabel();
+            this.Leader = new Telerik.WinControls.UI.RadLabel();
+            this.Supervisor = new Telerik.WinControls.UI.RadLabel();
+            this.Coordinator = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel46 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel43 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel44 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel45 = new Telerik.WinControls.UI.RadLabel();
+            this.job_Groups = new System.Windows.Forms.ComboBox();
+            this.radLabel42 = new Telerik.WinControls.UI.RadLabel();
             this.Base_Salary = new Telerik.WinControls.UI.RadLabel();
             this.Job_Level = new Telerik.WinControls.UI.RadLabel();
             this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
@@ -151,20 +165,6 @@
             this.Phone = new Telerik.WinControls.UI.RadMenuItem();
             this.Password = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
-            this.Manager = new Telerik.WinControls.UI.RadLabel();
-            this.Leader = new Telerik.WinControls.UI.RadLabel();
-            this.Supervisor = new Telerik.WinControls.UI.RadLabel();
-            this.Coordinator = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel46 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel43 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel44 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel45 = new Telerik.WinControls.UI.RadLabel();
-            this.job_Groups = new System.Windows.Forms.ComboBox();
-            this.radLabel42 = new Telerik.WinControls.UI.RadLabel();
-            this.Scnd_tsk = new System.Windows.Forms.ComboBox();
-            this.Main_tsk = new System.Windows.Forms.ComboBox();
-            this.radLabel48 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel47 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Doc_Cd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.System_Id)).BeginInit();
@@ -270,6 +270,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton8)).BeginInit();
             this.radPageViewPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Manager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Leader)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Supervisor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Coordinator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Base_Salary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Job_Level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
@@ -282,17 +293,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Mentor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Manager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Leader)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Supervisor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Coordinator)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -355,7 +355,7 @@
             this.radPageView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radPageView1.Location = new System.Drawing.Point(0, 102);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage4;
+            this.radPageView1.SelectedPage = this.radPageViewPage1;
             this.radPageView1.Size = new System.Drawing.Size(846, 345);
             this.radPageView1.TabIndex = 8;
             this.radPageView1.ThemeName = "Office2010Silver";
@@ -997,7 +997,7 @@
             this.Training_grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.Training_grid.MasterTemplate.EnableSorting = false;
             this.Training_grid.MasterTemplate.ShowFilteringRow = false;
-            this.Training_grid.MasterTemplate.ViewDefinition = tableViewDefinition7;
+            this.Training_grid.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.Training_grid.Name = "Training_grid";
             this.Training_grid.ReadOnly = true;
             this.Training_grid.ShowGroupPanel = false;
@@ -1662,6 +1662,168 @@
             this.radPageViewPage4.Size = new System.Drawing.Size(822, 294);
             this.radPageViewPage4.Text = "اطلاعات سازمانی";
             // 
+            // Scnd_tsk
+            // 
+            this.Scnd_tsk.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Scnd_tsk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Scnd_tsk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Scnd_tsk.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Scnd_tsk.FormattingEnabled = true;
+            this.Scnd_tsk.Location = new System.Drawing.Point(154, 104);
+            this.Scnd_tsk.Name = "Scnd_tsk";
+            this.Scnd_tsk.Size = new System.Drawing.Size(145, 22);
+            this.Scnd_tsk.TabIndex = 167;
+            // 
+            // Main_tsk
+            // 
+            this.Main_tsk.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Main_tsk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Main_tsk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_tsk.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_tsk.FormattingEnabled = true;
+            this.Main_tsk.Location = new System.Drawing.Point(155, 68);
+            this.Main_tsk.Name = "Main_tsk";
+            this.Main_tsk.Size = new System.Drawing.Size(144, 22);
+            this.Main_tsk.TabIndex = 166;
+            // 
+            // radLabel48
+            // 
+            this.radLabel48.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel48.Location = new System.Drawing.Point(316, 107);
+            this.radLabel48.Name = "radLabel48";
+            this.radLabel48.Size = new System.Drawing.Size(73, 18);
+            this.radLabel48.TabIndex = 165;
+            this.radLabel48.Text = "تسک فرعی:";
+            this.radLabel48.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel48.ThemeName = "Office2010Silver";
+            // 
+            // radLabel47
+            // 
+            this.radLabel47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel47.Location = new System.Drawing.Point(317, 71);
+            this.radLabel47.Name = "radLabel47";
+            this.radLabel47.Size = new System.Drawing.Size(72, 18);
+            this.radLabel47.TabIndex = 164;
+            this.radLabel47.Text = "تسک اصلی:";
+            this.radLabel47.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel47.ThemeName = "Office2010Silver";
+            // 
+            // Manager
+            // 
+            this.Manager.AutoSize = false;
+            this.Manager.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Manager.ForeColor = System.Drawing.Color.Black;
+            this.Manager.Location = new System.Drawing.Point(534, 251);
+            this.Manager.Name = "Manager";
+            this.Manager.Size = new System.Drawing.Size(163, 18);
+            this.Manager.TabIndex = 162;
+            this.Manager.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Manager.ThemeName = "Office2010Silver";
+            // 
+            // Leader
+            // 
+            this.Leader.AutoSize = false;
+            this.Leader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Leader.ForeColor = System.Drawing.Color.Black;
+            this.Leader.Location = new System.Drawing.Point(534, 179);
+            this.Leader.Name = "Leader";
+            this.Leader.Size = new System.Drawing.Size(163, 18);
+            this.Leader.TabIndex = 163;
+            this.Leader.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Leader.ThemeName = "Office2010Silver";
+            // 
+            // Supervisor
+            // 
+            this.Supervisor.AutoSize = false;
+            this.Supervisor.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Supervisor.ForeColor = System.Drawing.Color.Black;
+            this.Supervisor.Location = new System.Drawing.Point(534, 215);
+            this.Supervisor.Name = "Supervisor";
+            this.Supervisor.Size = new System.Drawing.Size(163, 18);
+            this.Supervisor.TabIndex = 161;
+            this.Supervisor.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Supervisor.ThemeName = "Office2010Silver";
+            // 
+            // Coordinator
+            // 
+            this.Coordinator.AutoSize = false;
+            this.Coordinator.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coordinator.ForeColor = System.Drawing.Color.Black;
+            this.Coordinator.Location = new System.Drawing.Point(534, 143);
+            this.Coordinator.Name = "Coordinator";
+            this.Coordinator.Size = new System.Drawing.Size(163, 18);
+            this.Coordinator.TabIndex = 160;
+            this.Coordinator.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.Coordinator.ThemeName = "Office2010Silver";
+            // 
+            // radLabel46
+            // 
+            this.radLabel46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel46.Location = new System.Drawing.Point(734, 251);
+            this.radLabel46.Name = "radLabel46";
+            this.radLabel46.Size = new System.Drawing.Size(72, 18);
+            this.radLabel46.TabIndex = 159;
+            this.radLabel46.Text = "مدیر مربوطه:";
+            this.radLabel46.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel46.ThemeName = "Office2010Silver";
+            // 
+            // radLabel43
+            // 
+            this.radLabel43.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel43.Location = new System.Drawing.Point(706, 215);
+            this.radLabel43.Name = "radLabel43";
+            this.radLabel43.Size = new System.Drawing.Size(100, 18);
+            this.radLabel43.TabIndex = 158;
+            this.radLabel43.Text = "سرپرست مربوطه:";
+            this.radLabel43.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel43.ThemeName = "Office2010Silver";
+            // 
+            // radLabel44
+            // 
+            this.radLabel44.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel44.Location = new System.Drawing.Point(733, 179);
+            this.radLabel44.Name = "radLabel44";
+            this.radLabel44.Size = new System.Drawing.Size(73, 18);
+            this.radLabel44.TabIndex = 157;
+            this.radLabel44.Text = "رهبر مربوطه:";
+            this.radLabel44.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel44.ThemeName = "Office2010Silver";
+            // 
+            // radLabel45
+            // 
+            this.radLabel45.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel45.Location = new System.Drawing.Point(716, 143);
+            this.radLabel45.Name = "radLabel45";
+            this.radLabel45.Size = new System.Drawing.Size(90, 18);
+            this.radLabel45.TabIndex = 156;
+            this.radLabel45.Text = "سرگروه مربوطه:";
+            this.radLabel45.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel45.ThemeName = "Office2010Silver";
+            // 
+            // job_Groups
+            // 
+            this.job_Groups.BackColor = System.Drawing.Color.LavenderBlush;
+            this.job_Groups.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.job_Groups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.job_Groups.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_Groups.FormattingEnabled = true;
+            this.job_Groups.Location = new System.Drawing.Point(534, 104);
+            this.job_Groups.Name = "job_Groups";
+            this.job_Groups.Size = new System.Drawing.Size(179, 22);
+            this.job_Groups.TabIndex = 154;
+            this.job_Groups.SelectedIndexChanged += new System.EventHandler(this.job_Groups_SelectedIndexChanged);
+            // 
+            // radLabel42
+            // 
+            this.radLabel42.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel42.Location = new System.Drawing.Point(734, 107);
+            this.radLabel42.Name = "radLabel42";
+            this.radLabel42.Size = new System.Drawing.Size(72, 18);
+            this.radLabel42.TabIndex = 155;
+            this.radLabel42.Text = "گروه شغلی:";
+            this.radLabel42.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel42.ThemeName = "Office2010Silver";
+            // 
             // Base_Salary
             // 
             this.Base_Salary.AutoSize = false;
@@ -1855,168 +2017,6 @@
             this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // Manager
-            // 
-            this.Manager.AutoSize = false;
-            this.Manager.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manager.ForeColor = System.Drawing.Color.Green;
-            this.Manager.Location = new System.Drawing.Point(534, 251);
-            this.Manager.Name = "Manager";
-            this.Manager.Size = new System.Drawing.Size(163, 18);
-            this.Manager.TabIndex = 162;
-            this.Manager.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.Manager.ThemeName = "Office2010Silver";
-            // 
-            // Leader
-            // 
-            this.Leader.AutoSize = false;
-            this.Leader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Leader.ForeColor = System.Drawing.Color.Green;
-            this.Leader.Location = new System.Drawing.Point(534, 179);
-            this.Leader.Name = "Leader";
-            this.Leader.Size = new System.Drawing.Size(163, 18);
-            this.Leader.TabIndex = 163;
-            this.Leader.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.Leader.ThemeName = "Office2010Silver";
-            // 
-            // Supervisor
-            // 
-            this.Supervisor.AutoSize = false;
-            this.Supervisor.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisor.ForeColor = System.Drawing.Color.Green;
-            this.Supervisor.Location = new System.Drawing.Point(534, 215);
-            this.Supervisor.Name = "Supervisor";
-            this.Supervisor.Size = new System.Drawing.Size(163, 18);
-            this.Supervisor.TabIndex = 161;
-            this.Supervisor.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.Supervisor.ThemeName = "Office2010Silver";
-            // 
-            // Coordinator
-            // 
-            this.Coordinator.AutoSize = false;
-            this.Coordinator.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Coordinator.ForeColor = System.Drawing.Color.Green;
-            this.Coordinator.Location = new System.Drawing.Point(534, 143);
-            this.Coordinator.Name = "Coordinator";
-            this.Coordinator.Size = new System.Drawing.Size(163, 18);
-            this.Coordinator.TabIndex = 160;
-            this.Coordinator.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.Coordinator.ThemeName = "Office2010Silver";
-            // 
-            // radLabel46
-            // 
-            this.radLabel46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel46.Location = new System.Drawing.Point(734, 251);
-            this.radLabel46.Name = "radLabel46";
-            this.radLabel46.Size = new System.Drawing.Size(72, 18);
-            this.radLabel46.TabIndex = 159;
-            this.radLabel46.Text = "مدیر مربوطه:";
-            this.radLabel46.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel46.ThemeName = "Office2010Silver";
-            // 
-            // radLabel43
-            // 
-            this.radLabel43.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel43.Location = new System.Drawing.Point(706, 215);
-            this.radLabel43.Name = "radLabel43";
-            this.radLabel43.Size = new System.Drawing.Size(100, 18);
-            this.radLabel43.TabIndex = 158;
-            this.radLabel43.Text = "سرپرست مربوطه:";
-            this.radLabel43.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel43.ThemeName = "Office2010Silver";
-            // 
-            // radLabel44
-            // 
-            this.radLabel44.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel44.Location = new System.Drawing.Point(733, 179);
-            this.radLabel44.Name = "radLabel44";
-            this.radLabel44.Size = new System.Drawing.Size(73, 18);
-            this.radLabel44.TabIndex = 157;
-            this.radLabel44.Text = "رهبر مربوطه:";
-            this.radLabel44.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel44.ThemeName = "Office2010Silver";
-            // 
-            // radLabel45
-            // 
-            this.radLabel45.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel45.Location = new System.Drawing.Point(716, 143);
-            this.radLabel45.Name = "radLabel45";
-            this.radLabel45.Size = new System.Drawing.Size(90, 18);
-            this.radLabel45.TabIndex = 156;
-            this.radLabel45.Text = "سرگروه مربوطه:";
-            this.radLabel45.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel45.ThemeName = "Office2010Silver";
-            // 
-            // job_Groups
-            // 
-            this.job_Groups.BackColor = System.Drawing.Color.LavenderBlush;
-            this.job_Groups.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.job_Groups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.job_Groups.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.job_Groups.FormattingEnabled = true;
-            this.job_Groups.Location = new System.Drawing.Point(534, 104);
-            this.job_Groups.Name = "job_Groups";
-            this.job_Groups.Size = new System.Drawing.Size(179, 22);
-            this.job_Groups.TabIndex = 154;
-            this.job_Groups.SelectedIndexChanged += new System.EventHandler(this.job_Groups_SelectedIndexChanged);
-            // 
-            // radLabel42
-            // 
-            this.radLabel42.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel42.Location = new System.Drawing.Point(734, 107);
-            this.radLabel42.Name = "radLabel42";
-            this.radLabel42.Size = new System.Drawing.Size(72, 18);
-            this.radLabel42.TabIndex = 155;
-            this.radLabel42.Text = "گروه شغلی:";
-            this.radLabel42.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel42.ThemeName = "Office2010Silver";
-            // 
-            // Scnd_tsk
-            // 
-            this.Scnd_tsk.BackColor = System.Drawing.Color.LavenderBlush;
-            this.Scnd_tsk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Scnd_tsk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Scnd_tsk.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Scnd_tsk.FormattingEnabled = true;
-            this.Scnd_tsk.Location = new System.Drawing.Point(154, 104);
-            this.Scnd_tsk.Name = "Scnd_tsk";
-            this.Scnd_tsk.Size = new System.Drawing.Size(145, 22);
-            this.Scnd_tsk.TabIndex = 167;
-            // 
-            // Main_tsk
-            // 
-            this.Main_tsk.BackColor = System.Drawing.Color.LavenderBlush;
-            this.Main_tsk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Main_tsk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_tsk.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Main_tsk.FormattingEnabled = true;
-            this.Main_tsk.Location = new System.Drawing.Point(155, 68);
-            this.Main_tsk.Name = "Main_tsk";
-            this.Main_tsk.Size = new System.Drawing.Size(144, 22);
-            this.Main_tsk.TabIndex = 166;
-            // 
-            // radLabel48
-            // 
-            this.radLabel48.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel48.Location = new System.Drawing.Point(316, 107);
-            this.radLabel48.Name = "radLabel48";
-            this.radLabel48.Size = new System.Drawing.Size(73, 18);
-            this.radLabel48.TabIndex = 165;
-            this.radLabel48.Text = "تسک فرعی:";
-            this.radLabel48.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel48.ThemeName = "Office2010Silver";
-            // 
-            // radLabel47
-            // 
-            this.radLabel47.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel47.Location = new System.Drawing.Point(317, 71);
-            this.radLabel47.Name = "radLabel47";
-            this.radLabel47.Size = new System.Drawing.Size(72, 18);
-            this.radLabel47.TabIndex = 164;
-            this.radLabel47.Text = "تسک اصلی:";
-            this.radLabel47.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel47.ThemeName = "Office2010Silver";
-            // 
             // Doc_Amend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2157,6 +2157,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton8)).EndInit();
             this.radPageViewPage4.ResumeLayout(false);
             this.radPageViewPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Manager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Leader)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Supervisor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Coordinator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Base_Salary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Job_Level)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
@@ -2169,17 +2180,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Mentor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Manager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Leader)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Supervisor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Coordinator)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
