@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
@@ -44,6 +44,8 @@
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.TSK_ACTV = new Telerik.WinControls.UI.RadCheckBox();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.TSK_ID = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TSK_Nm)).BeginInit();
@@ -51,14 +53,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TSK_ACTV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TSK_ID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(182, 68);
+            this.radLabel4.Location = new System.Drawing.Point(182, 102);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(58, 18);
             this.radLabel4.TabIndex = 90;
@@ -69,7 +73,7 @@
             // radLabel8
             // 
             this.radLabel8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel8.Location = new System.Drawing.Point(427, 69);
+            this.radLabel8.Location = new System.Drawing.Point(427, 102);
             this.radLabel8.Name = "radLabel8";
             this.radLabel8.Size = new System.Drawing.Size(84, 18);
             this.radLabel8.TabIndex = 85;
@@ -117,7 +121,7 @@
             this.dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dep.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dep.FormattingEnabled = true;
-            this.dep.Location = new System.Drawing.Point(246, 66);
+            this.dep.Location = new System.Drawing.Point(246, 99);
             this.dep.Name = "dep";
             this.dep.Size = new System.Drawing.Size(175, 22);
             this.dep.TabIndex = 99;
@@ -125,7 +129,7 @@
             // TSK_Nm
             // 
             this.TSK_Nm.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.TSK_Nm.Location = new System.Drawing.Point(12, 68);
+            this.TSK_Nm.Location = new System.Drawing.Point(12, 101);
             this.TSK_Nm.Name = "TSK_Nm";
             this.TSK_Nm.Size = new System.Drawing.Size(164, 19);
             this.TSK_Nm.TabIndex = 103;
@@ -134,7 +138,7 @@
             // grid
             // 
             this.grid.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.grid.Location = new System.Drawing.Point(12, 135);
+            this.grid.Location = new System.Drawing.Point(12, 170);
             // 
             // 
             // 
@@ -143,14 +147,15 @@
             this.grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.grid.MasterTemplate.EnableSorting = false;
             this.grid.MasterTemplate.ShowFilteringRow = false;
-            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.ShowGroupPanel = false;
             this.grid.ShowNoDataText = false;
-            this.grid.Size = new System.Drawing.Size(497, 260);
+            this.grid.Size = new System.Drawing.Size(497, 225);
             this.grid.TabIndex = 104;
             this.grid.ThemeName = "Office2010Silver";
+            this.grid.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.grid_CellDoubleClick);
             // 
             // TSK_Type
             // 
@@ -164,7 +169,7 @@
             "اصلی",
             "فرعی",
             "اصلی/فرعی"});
-            this.TSK_Type.Location = new System.Drawing.Point(246, 102);
+            this.TSK_Type.Location = new System.Drawing.Point(246, 133);
             this.TSK_Type.Name = "TSK_Type";
             this.TSK_Type.Size = new System.Drawing.Size(175, 22);
             this.TSK_Type.TabIndex = 101;
@@ -172,7 +177,7 @@
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(449, 105);
+            this.radLabel1.Location = new System.Drawing.Point(449, 136);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(60, 18);
             this.radLabel1.TabIndex = 100;
@@ -183,18 +188,12 @@
             // TSK_ACTV
             // 
             this.TSK_ACTV.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.TSK_ACTV.Location = new System.Drawing.Point(158, 106);
+            this.TSK_ACTV.Location = new System.Drawing.Point(158, 137);
             this.TSK_ACTV.Name = "TSK_ACTV";
             this.TSK_ACTV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TSK_ACTV.Size = new System.Drawing.Size(82, 17);
             this.TSK_ACTV.TabIndex = 105;
             this.TSK_ACTV.Text = "  :تسک فعال";
-            // 
-            // GEN_TASKS
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 407);
             // 
             // radMenu1
             // 
@@ -209,6 +208,36 @@
             this.radMenu1.Size = new System.Drawing.Size(521, 55);
             this.radMenu1.TabIndex = 2;
             this.radMenu1.ThemeName = "Office2010Silver";
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Location = new System.Drawing.Point(454, 68);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(56, 18);
+            this.radLabel2.TabIndex = 86;
+            this.radLabel2.Text = "کد تسک:";
+            this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel2.ThemeName = "Office2010Silver";
+            // 
+            // TSK_ID
+            // 
+            this.TSK_ID.AutoSize = false;
+            this.TSK_ID.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TSK_ID.Location = new System.Drawing.Point(412, 64);
+            this.TSK_ID.Name = "TSK_ID";
+            this.TSK_ID.Size = new System.Drawing.Size(36, 22);
+            this.TSK_ID.TabIndex = 87;
+            this.TSK_ID.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.TSK_ID.ThemeName = "Office2010Silver";
+            // 
+            // GEN_TASKS
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(521, 407);
+            this.Controls.Add(this.TSK_ID);
+            this.Controls.Add(this.radLabel2);
             this.Controls.Add(this.TSK_ACTV);
             this.Controls.Add(this.TSK_Type);
             this.Controls.Add(this.grid);
@@ -238,6 +267,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TSK_ACTV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TSK_ID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,5 +291,7 @@
         private System.Windows.Forms.ComboBox TSK_Type;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadCheckBox TSK_ACTV;
+        private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadLabel TSK_ID;
     }
 }

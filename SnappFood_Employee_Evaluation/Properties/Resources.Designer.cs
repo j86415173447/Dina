@@ -1333,6 +1333,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Org_Chart {
+            get {
+                object obj = ResourceManager.GetObject("Org_Chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap party_hat_candles_icon {
             get {
                 object obj = ResourceManager.GetObject("party-hat-candles-icon", resourceCulture);

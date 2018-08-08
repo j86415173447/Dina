@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using System.Data.OleDb;
 using System.IO;
-using System.Threading;
-using System.Security.Cryptography;
+using SmsIrRestful;
 
 namespace SnappFood_Employee_Evaluation
 {
@@ -20,6 +16,8 @@ namespace SnappFood_Employee_Evaluation
         public string token_key = "9b9230cfade4f36cc0b430cf";
         public string token_security = "wyqy8htyq4368";
         public string sms_line = "10007896";
+        public SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
+        public string token = null;
 
 
         public bool data_error = false;
@@ -39,6 +37,7 @@ namespace SnappFood_Employee_Evaluation
         private void Login_Load(object sender, EventArgs e)
         {
             this.user.Select();
+            //forget.Visible = false;
             //////////////////////////////////////////////////// Check .ini file
             //string con_str_exist = File.Exists(Application.StartupPath + "\\CONSTR.ini").ToString();
             ////System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + "\\CONSTR.ini");
@@ -194,6 +193,72 @@ namespace SnappFood_Employee_Evaluation
             if (e.KeyChar == (char)13)
             {
                 button1_Click(null, null);
+            }
+        }
+
+        private void radLabel1_Click(object sender, EventArgs e)
+        {
+            if (user.Text == "")
+            {
+                RadMessageBox.Show(this, "ابتدا نام کاربری را وارد نمائید.", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
+            else
+            {
+                DataTable dt222 = new DataTable();
+                OleDbDataAdapter adp222 = new OleDbDataAdapter();
+                adp222.SelectCommand = new OleDbCommand();
+                adp222.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand222 = "SELECT [sex] + ' ' + [Per_name],[Per_Mob] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [Per_National_Cd] = '" + user.Text + "' and [Termination] = 0";
+                adp222.SelectCommand.CommandText = lcommand222;
+                adp222.Fill(dt222);
+                if (dt222.Rows.Count == 0)
+                {
+                    RadMessageBox.Show(this, "  تلفن همراه شما در سامانه یافت نشد.  " + "\n\n" + "  لطفاً به واحد منابع انسانی مراجعه نمائید.  ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                }
+                else
+                {
+                    Random rndm = new Random();
+                    int otp = rndm.Next(13681, 99843);
+                    /////////////////////////////////////////// Send SMS
+                    var load = new Loading();
+                    if (true)
+                    {
+
+                        load.label1.Text = "در حال ارتباط با پنل پیامکی";
+                        load.Show();
+                        load.Refresh();
+                        ////////////////////////////////////////////////////////// Get token SMS
+                        token = token_instance.GetToken(token_key, token_security);
+                    }
+                    if (token == null)
+                    {
+                        RadMessageBox.Show(this, "دریافت توکن پیامک با مشکل مواجه گردید", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                        load.Close();
+                    }
+                    else
+                    {
+                        load.label1.Text = "در حال ارسال پیامک";
+                        load.Refresh();
+                        ////////////////////////////////////////////////////////// Send SMS
+                        var customerClubSend = new CustomerClubSend();
+                        customerClubSend.Messages = new List<string>() { dt222.Rows[0][0].ToString() + " عزیز " + "\n" + "رمز عبور موقت شما: " + otp.ToString() + "\n" + "(اسنپ فود)" }.ToArray();
+                        customerClubSend.MobileNumbers = new List<string>() { dt222.Rows[0][1].ToString() }.ToArray();
+                        customerClubSend.SendDateTime = null;
+                        customerClubSend.CanContinueInCaseOfError = false;
+                        var customerClubContactResponse = new CustomerClub().Send(token, customerClubSend);
+                        load.Close();
+                    }
+                    /////////////////////////////////////////// Amend OTP
+                    oleDbCommand1.Parameters.Clear();
+                    oleDbCommand1.CommandText = "Update [SNAPP_CC_EVALUATION].[dbo].[Users] Set [USR_Pass] = HashBytes('MD5', convert(nvarchar(max),'" + otp.ToString() + "')) , [USR_first_login] = 1 where [usr_name] = N'" + user.Text + "'";
+
+                    oleDbConnection1.Open();
+                    oleDbCommand1.ExecuteNonQuery();
+                    oleDbConnection1.Close();
+
+                    RadMessageBox.Show(this, "  رمز موقت با موفقیت برای شما پیامک شد.  " + "\n\n" + "  لطفا با استفاده از رمز موقت اقدام به ورود نمائید.  ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                }
             }
         }
     }

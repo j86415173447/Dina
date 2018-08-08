@@ -27,6 +27,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
         private void Search_Staff_Load(object sender, EventArgs e)
         {
             oleDbConnection1.ConnectionString = constr;
+            RadMessageBox.SetThemeName("Office2010Silver");
             Search_Btn_Click(null, null);
         }
 

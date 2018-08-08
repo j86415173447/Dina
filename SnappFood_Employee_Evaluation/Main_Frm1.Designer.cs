@@ -128,6 +128,7 @@
             this.radButtonElement54 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement56 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup21 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement57 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
@@ -1166,8 +1167,19 @@
             // 
             // radRibbonBarGroup21
             // 
+            this.radRibbonBarGroup21.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement57});
             this.radRibbonBarGroup21.Name = "radRibbonBarGroup21";
-            this.radRibbonBarGroup21.Text = "تنظیمات پیشرفته";
+            this.radRibbonBarGroup21.Text = "پنل مدیریت";
+            // 
+            // radButtonElement57
+            // 
+            this.radButtonElement57.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement57.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Org_Chart;
+            this.radButtonElement57.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement57.Name = "radButtonElement57";
+            this.radButtonElement57.Text = "داشبورد نیروی انسانی";
+            this.radButtonElement57.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // radButtonElement1
             // 
@@ -1331,7 +1343,8 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup20;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement55;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement54;
-        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup21;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement56;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup21;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement57;
     }
 }

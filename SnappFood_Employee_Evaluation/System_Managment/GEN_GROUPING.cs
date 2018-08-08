@@ -192,22 +192,8 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                         {
                             doc_no = int.Parse(dt22.Rows[0][0].ToString()) + 1;
                         }
-                        if (doc_no < 10)
-                        {
-                            doc_no_str = "000" + doc_no.ToString();
-                        }
-                        else if (doc_no > 9 && doc_no < 100)
-                        {
-                            doc_no_str = "00" + doc_no.ToString();
-                        }
-                        else if (doc_no > 99 && doc_no < 1000)
-                        {
-                            doc_no_str = "0" + doc_no.ToString();
-                        }
-                        else
-                        {
                             doc_no_str = doc_no.ToString();
-                        }
+                        
                         Grp_Id.Text = doc_no_str;
 
                         oleDbCommand1.Parameters.Clear();

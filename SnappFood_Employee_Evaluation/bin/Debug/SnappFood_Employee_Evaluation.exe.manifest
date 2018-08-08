@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2964480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2969088">
       <assemblyIdentity name="SnappFood_Employee_Evaluation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8zS//iXSSJb96bP7oLaJNDuanZMlTZfEMWxWlW8YMZI=</dsig:DigestValue>
+        <dsig:DigestValue>QEpzWmRYoBeHH3U15JECHxEjm5Fw68EIhORJ1aUjS7A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

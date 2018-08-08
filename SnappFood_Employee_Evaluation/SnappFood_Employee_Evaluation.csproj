@@ -914,6 +914,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\Org_Chart.png" />
     <None Include="Resources\Utilities_tasks_icon.png" />
     <None Include="Resources\manager_icon.png" />
     <None Include="Resources\Control_Panel_icon.png" />

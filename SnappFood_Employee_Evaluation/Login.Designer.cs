@@ -35,6 +35,8 @@
             this.pass = new System.Windows.Forms.TextBox();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
+            this.forget = new Telerik.WinControls.UI.RadLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.forget)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,9 +45,9 @@
             this.button1.BackColor = System.Drawing.Color.LavenderBlush;
             this.button1.BackgroundImage = global::SnappFood_Employee_Evaluation.Properties.Resources.Check_icon;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(264, 236);
+            this.button1.Location = new System.Drawing.Point(264, 230);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 69);
+            this.button1.Size = new System.Drawing.Size(123, 62);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -55,9 +57,9 @@
             this.button2.BackColor = System.Drawing.Color.LavenderBlush;
             this.button2.BackgroundImage = global::SnappFood_Employee_Evaluation.Properties.Resources.Delete2_icon;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Location = new System.Drawing.Point(135, 236);
+            this.button2.Location = new System.Drawing.Point(135, 230);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 69);
+            this.button2.Size = new System.Drawing.Size(123, 62);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -89,6 +91,20 @@
             // 
             this.oleDbCommand1.Connection = this.oleDbConnection1;
             // 
+            // forget
+            // 
+            this.forget.BackColor = System.Drawing.Color.White;
+            this.forget.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.forget.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.forget.ForeColor = System.Drawing.Color.Blue;
+            this.forget.Location = new System.Drawing.Point(160, 296);
+            this.forget.Name = "forget";
+            this.forget.Size = new System.Drawing.Size(203, 18);
+            this.forget.TabIndex = 4;
+            this.forget.Text = "رمز ورود خود را فراموش کرده اید؟";
+            this.forget.ThemeName = "Office2010Silver";
+            this.forget.Click += new System.EventHandler(this.radLabel1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +112,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(642, 341);
+            this.Controls.Add(this.forget);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.user);
             this.Controls.Add(this.button2);
@@ -111,6 +128,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.forget)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,5 +143,6 @@
         private System.Windows.Forms.TextBox pass;
         private System.Data.OleDb.OleDbCommand oleDbCommand1;
         private System.Data.OleDb.OleDbConnection oleDbConnection1;
+        private Telerik.WinControls.UI.RadLabel forget;
     }
 }

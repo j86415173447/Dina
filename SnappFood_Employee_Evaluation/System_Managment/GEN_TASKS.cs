@@ -27,12 +27,13 @@ namespace SnappFood_Employee_Evaluation.System_Managment
             InitializeComponent();
             this.errorProvider = new ErrorProvider();
             errorProvider.RightToLeft = true;
-            RadMessageBox.SetThemeName("Office2010Silver");
+
         }
 
         private void GEN_POSITIONING_Load(object sender, EventArgs e)
         {
             oleDbConnection1.ConnectionString = constr;
+            RadMessageBox.SetThemeName("Office2010Silver");
             update_grid();
             TSK_ACTV.Checked = true;
             ///////////////////////////////////////////////////////// initializing department combo
@@ -56,7 +57,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT [TASK_DEP] 'واحد سازمانی',[TASK_NM] 'نام تسک' ,iif([MAIN_TASK] = '1' and [SCND_TASK] = '1', N'اصلی/فرعی',(iif([MAIN_TASK] = '1' and [SCND_TASK] = '0', N'اصلی',N'فرعی'))) 'نوع تسک',[TASK_ACTV] 'فعال؟',[Insrt_usr] 'ثبت کننده' FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER]";
+            string lcommand = "SELECT [TASK_ID] 'کد تسک', [TASK_DEP] 'واحد سازمانی',[TASK_NM] 'نام تسک' ,iif([MAIN_TASK] = '1' and [SCND_TASK] = '1', N'اصلی/فرعی',(iif([MAIN_TASK] = '1' and [SCND_TASK] = '0', N'اصلی',N'فرعی'))) 'نوع تسک',[TASK_ACTV] 'فعال؟',[Insrt_usr] 'ثبت کننده' FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER]";
             adp.SelectCommand.CommandText = lcommand;
             adp.Fill(dt);
             grid.DataSource = dt;
@@ -70,22 +71,66 @@ namespace SnappFood_Employee_Evaluation.System_Managment
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (AreRequiredFieldsValid()) 
+            if (TSK_ID.Text == "") //////////////////////////////////////////// Insrt Mode
             {
-                oleDbCommand1.Parameters.Clear();
-                oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] ([TASK_DEP],[TASK_NM],[MAIN_TASK],[SCND_TASK],[TASK_ACTV],[Insrt_usr],[Insrt_DT],[Insrt_TM]) " +
-                                            "values (?,?,?,?,?,?,getdate(),getdate())";
-                oleDbCommand1.Parameters.AddWithValue("@TASK_DEP", dep.Text);
-                oleDbCommand1.Parameters.AddWithValue("@TASK_NM", TSK_Nm.Text);
-                oleDbCommand1.Parameters.AddWithValue("@MAIN_TASK", (TSK_Type.SelectedIndex == 1 || TSK_Type.SelectedIndex == 3) ? "1" : "0");
-                oleDbCommand1.Parameters.AddWithValue("@SCND_TASK", (TSK_Type.SelectedIndex == 2 || TSK_Type.SelectedIndex == 3) ? "1" : "0");
-                oleDbCommand1.Parameters.AddWithValue("@TASK_ACTV", (TSK_ACTV.Checked == true ? "1" : "0"));
-                oleDbCommand1.Parameters.AddWithValue("@Insrt_usr", user);
-                oleDbConnection1.Open();
-                oleDbCommand1.ExecuteNonQuery();
-                oleDbConnection1.Close();
-                RadMessageBox.Show(this, " تسک " + TSK_Nm.Text + " با موفقیت ثبت شد. " + "\n", "اعلان سیستم", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
-                update_grid();
+                if (AreRequiredFieldsValid())
+                {
+                    //////////////////////////////////////////// Get Doc_No
+                    int doc_no;
+                    string doc_no_str;
+                    DataTable dt22 = new DataTable();
+                    OleDbDataAdapter adp22 = new OleDbDataAdapter();
+                    adp22.SelectCommand = new OleDbCommand();
+                    adp22.SelectCommand.Connection = oleDbConnection1;
+                    oleDbCommand1.Parameters.Clear();
+                    string lcommand22 = "SELECT max([TASK_ID]) FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_GROUPS_MASTER]";
+                    adp22.SelectCommand.CommandText = lcommand22;
+                    adp22.Fill(dt22);
+                    if (dt22.Rows[0][0].ToString() == "")
+                    {
+                        doc_no = 1;
+                    }
+                    else
+                    {
+                        doc_no = int.Parse(dt22.Rows[0][0].ToString()) + 1;
+                    }
+                    doc_no_str = doc_no.ToString();
+
+                    TSK_ID.Text = doc_no_str;
+                    oleDbCommand1.Parameters.Clear();
+                    oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] ([TASK_ID],[TASK_DEP],[TASK_NM],[MAIN_TASK],[SCND_TASK],[TASK_ACTV],[Insrt_usr],[Insrt_DT],[Insrt_TM]) " +
+                                                "values (?,?,?,?,?,?,?,getdate(),getdate())";
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_ID", TSK_ID.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_DEP", dep.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_NM", TSK_Nm.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@MAIN_TASK", (TSK_Type.SelectedIndex == 1 || TSK_Type.SelectedIndex == 3) ? "1" : "0");
+                    oleDbCommand1.Parameters.AddWithValue("@SCND_TASK", (TSK_Type.SelectedIndex == 2 || TSK_Type.SelectedIndex == 3) ? "1" : "0");
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_ACTV", (TSK_ACTV.Checked == true ? "1" : "0"));
+                    oleDbCommand1.Parameters.AddWithValue("@Insrt_usr", user);
+                    oleDbConnection1.Open();
+                    oleDbCommand1.ExecuteNonQuery();
+                    oleDbConnection1.Close();
+                    RadMessageBox.Show(this, "   تسک " + TSK_Nm.Text + " با موفقیت ثبت شد. " + "\n", "اعلان سیستم", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                    update_grid();
+                }
+            }
+            else /////////////////////////////////////////////////// Update mode
+            {
+                if (AreRequiredFieldsValid())
+                {
+                    oleDbCommand1.Parameters.Clear();
+                    oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] SET [TASK_NM] = ?, [TASK_DEP] = ?, [MAIN_TASK] = ?, [SCND_TASK] = ?, [TASK_ACTV] = ?  WHERE [TASK_ID] = N'" + TSK_ID.Text + "'";
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_NM", TSK_Nm.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_DEP", dep.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@MAIN_TASK", (TSK_Type.SelectedIndex == 1 || TSK_Type.SelectedIndex == 3) ? "1" : "0");
+                    oleDbCommand1.Parameters.AddWithValue("@SCND_TASK", (TSK_Type.SelectedIndex == 2 || TSK_Type.SelectedIndex == 3) ? "1" : "0");
+                    oleDbCommand1.Parameters.AddWithValue("@TASK_ACTV", (TSK_ACTV.Checked == true ? "1" : "0"));
+                    oleDbConnection1.Open();
+                    oleDbCommand1.ExecuteNonQuery();
+                    oleDbConnection1.Close();
+                    RadMessageBox.Show(this, "   تسک " + TSK_Nm.Text + " با موفقیت ویرایش شد. " + "\n", "اعلان سیستم", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                    update_grid();
+                }
             }
         }
 
@@ -114,12 +159,12 @@ namespace SnappFood_Employee_Evaluation.System_Managment
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_NM] = N'" + TSK_Nm.Text + "'";
+            string lcommand = "SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_NM] = N'" + TSK_Nm.Text + "' and [TASK_DEP] = N'" + dep.Text + "'";
             adp.SelectCommand.CommandText = lcommand;
             adp.Fill(dt);
             if (dt.Rows.Count != 0)
             {
-                RadMessageBox.Show(this, " تسک " + TSK_Nm.Text + " قبلا ثبت شده است. " + "\n", "اخطار سیستم", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                RadMessageBox.Show(this, "   تسک " + TSK_Nm.Text + " برای واحد " + dep.Text + " قبلا ثبت شده است. " + "\n", "اخطار سیستم", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                 data_error = true;
             }
             if (data_error == false)
@@ -140,6 +185,28 @@ namespace SnappFood_Employee_Evaluation.System_Managment
             new_staff.MdiParent = this.ParentForm;
             this.Close();
             new_staff.Show();
+        }
+
+        private void grid_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            TSK_ID.Text = grid.SelectedRows[0].Cells[0].Value.ToString();
+            searching();
+        }
+
+        private void searching()
+        {
+            DataTable dt = new DataTable();
+            OleDbDataAdapter adp = new OleDbDataAdapter();
+            adp.SelectCommand = new OleDbCommand();
+            adp.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommand = "SELECT *,iif([MAIN_TASK] = '1' and [SCND_TASK] = '1', N'اصلی/فرعی',(iif([MAIN_TASK] = '1' and [SCND_TASK] = '0', N'اصلی',N'فرعی'))) 'نوع تسک' FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER] where [TASK_ID] = N'" + TSK_ID.Text + "'";
+            adp.SelectCommand.CommandText = lcommand;
+            adp.Fill(dt);
+            TSK_Nm.Text = dt.Rows[0][1].ToString();
+            dep.Text = dt.Rows[0][2].ToString();
+            TSK_Type.Text = dt.Rows[0][9].ToString();
+            TSK_ACTV.Checked = bool.Parse(dt.Rows[0][5].ToString());
         }
     }
 }
