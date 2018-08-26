@@ -93,6 +93,9 @@
     <Reference Include="Excel.4.5">
       <HintPath>F:\Projects\OMS - Revised - Copy - Final\OMS\bin\Debug\Excel.4.5.dll</HintPath>
     </Reference>
+    <Reference Include="JntNum2Text">
+      <HintPath>F:\Projects\Source-convert-numbers-to-letters-Sourceiran.com\bin\Debug\JntNum2Text.dll</HintPath>
+    </Reference>
     <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NAudio.1.8.4\lib\net35\NAudio.dll</HintPath>
       <Private>True</Private>
@@ -108,13 +111,21 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Stimulsoft Reports .NET 2017.1.10 Full\Crack\Stimulsoft.Base.dll</HintPath>
     </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
     <Reference Include="Stimulsoft.Report, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Report.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Report.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Win, Version=2017.1.10.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Report.Win.dll</HintPath>
+      <HintPath>..\..\..\..\Program Files (x86)\Stimulsoft\Stimulsoft Reports 2017.1.10\Libs\Net\Stimulsoft.Report.Win.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -149,6 +160,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agents_Panel\AGENT_SALARY_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agents_Panel\AGENT_SALARY_DETAIL.Designer.cs">
+      <DependentUpon>AGENT_SALARY_DETAIL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agents_Panel\MONTHLY_PERFORMANCE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -460,6 +477,18 @@
     <Compile Include="Scores_Ops\Search_Staff_MNG.Designer.cs">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </Compile>
+    <Compile Include="System_Managment\GEN_HCC_SETTING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_HCC_SETTING.Designer.cs">
+      <DependentUpon>GEN_HCC_SETTING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\GEN_HC_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_HC_DASHBOARD.Designer.cs">
+      <DependentUpon>GEN_HC_DASHBOARD.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_Managment\GEN_TASKS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -581,6 +610,9 @@
     <Compile Include="Training\TRN_REGISTRATION.Designer.cs">
       <DependentUpon>TRN_REGISTRATION.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agents_Panel\AGENT_SALARY_DETAIL.resx">
+      <DependentUpon>AGENT_SALARY_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agents_Panel\MONTHLY_PERFORMANCE.resx">
       <DependentUpon>MONTHLY_PERFORMANCE.cs</DependentUpon>
     </EmbeddedResource>
@@ -787,6 +819,12 @@
     <EmbeddedResource Include="Scores_Ops\Search_Staff_MNG.resx">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_HCC_SETTING.resx">
+      <DependentUpon>GEN_HCC_SETTING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_HC_DASHBOARD.resx">
+      <DependentUpon>GEN_HC_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\GEN_TASKS.resx">
       <DependentUpon>GEN_TASKS.cs</DependentUpon>
     </EmbeddedResource>
@@ -914,6 +952,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\Database-Table-icon.png" />
+    <None Include="Resources\Salary_Comming.png" />
+    <None Include="Resources\Salary_coming.png" />
     <None Include="Resources\Org_Chart.png" />
     <None Include="Resources\Utilities_tasks_icon.png" />
     <None Include="Resources\manager_icon.png" />

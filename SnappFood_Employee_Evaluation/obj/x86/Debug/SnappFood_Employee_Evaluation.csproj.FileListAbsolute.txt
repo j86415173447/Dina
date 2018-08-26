@@ -142,7 +142,6 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\b
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.xml
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Interop.WMPLib.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.csprojResolveAssemblyReference.cache
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Interop.WMPLib.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\AxInterop.WMPLib.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.csproj.ResolveComReference.cache
@@ -232,3 +231,8 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\o
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_GROUPING.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_POSITIONING.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_TASKS.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HC_DASHBOARD.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.csprojResolveAssemblyReference.cache
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HCC_SETTING.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_SALARY_DETAIL.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\JntNum2Text.dll

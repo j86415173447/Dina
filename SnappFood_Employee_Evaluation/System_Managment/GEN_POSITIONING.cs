@@ -10,6 +10,7 @@ using System.Data.OleDb;
 using System.IO;
 using System.Globalization;
 using Telerik.WinControls.UI;
+using SmsIrRestful;
 
 namespace SnappFood_Employee_Evaluation.System_Managment
 {
@@ -20,6 +21,10 @@ namespace SnappFood_Employee_Evaluation.System_Managment
         public string DT_Day;
         public string DT_Mth;
         public string DT_Yr;
+        public SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
+        public string token = null;
+        public string token_key;
+        public string token_security;
 
         public GEN_POSITIONING()
         {
@@ -220,6 +225,50 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     oleDbConnection1.Close();
 
                     ////////////////////////////////////////////// 4- Score Change Informing SMS
+                    if (given_scr.Text != "0")
+                    {
+                        var load = new Loading();
+                        load.label1.Text = "در حال ارتباط با پنل پیامکی";
+                        load.Show();
+                        load.Refresh();
+                        ////////////////////////////////////////////////////////// Get token SMS
+                        token = token_instance.GetToken(token_key, token_security);
+                        
+                        if (token == null)
+                        {
+                            RadMessageBox.Show(this, "دریافت توکن پیامک با مشکل مواجه گردید", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                            load.Close();
+                        }
+                        else
+                        {
+                            ////////////////////////////////////////// Get total Score
+                            string Score_Total;
+                            DataTable dtsc4 = new DataTable();
+                            OleDbDataAdapter adpsc4 = new OleDbDataAdapter();
+                            adpsc4.SelectCommand = new OleDbCommand();
+                            adpsc4.SelectCommand.Connection = oleDbConnection1;
+                            oleDbCommand1.Parameters.Clear();
+                            string lcommandsc4 = "Select Sel2.[Sex] + ' ' + Sel2.[Per_Name] , Sel1.SUMit , Sel2.[Per_Mob] from (" +
+                                                    "(SELECT [Doc_No],sum([Sc_Score]) AS 'SUMit' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SCORES] where [Doc_No] = '" + Doc_No.Text + "' group by [Doc_No]) Sel1 " +
+                                                    "left join (Select [Doc_No],[sex],[per_name],[Per_mob] from [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on sel1.Doc_No = Sel2.Doc_No)";
+                            adpsc4.SelectCommand.CommandText = lcommandsc4;
+                            adpsc4.Fill(dtsc4);
+                            Score_Total = dtsc4.Rows[0][1].ToString();
+                            string mobile = dtsc4.Rows[0][2].ToString();
+                            string name = dtsc4.Rows[0][0].ToString();
+
+                            load.label1.Text = "در حال ارسال پیامک";
+                            load.Refresh();
+                            ////////////////////////////////////////////////////////// Send SMS
+                            var customerClubSend = new CustomerClubSend();
+                            customerClubSend.Messages = new List<string>() { name + " عزیز \n" + given_scr.Text + " امتیاز بابت انتصاب شما به طبقه شغلی " + new_position.Text + " در پرونده ی شما ثبت گردید. " + "\n" + "مجموع امتیاز شغلی شما: " + Score_Total + "\n" + "(اسنپ فود)" }.ToArray();
+                            customerClubSend.MobileNumbers = new List<string>() { mobile }.ToArray();
+                            customerClubSend.SendDateTime = null;
+                            customerClubSend.CanContinueInCaseOfError = false;
+                            var customerClubContactResponse = new CustomerClub().Send(token, customerClubSend);
+                            load.Close();
+                        }
+                    }
                 }
                 RadMessageBox.Show(this, "انتصاب با موفقیت انجام شد." + "\n", "اعلان سیستم", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
             }

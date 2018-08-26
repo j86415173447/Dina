@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IKpvKhTuO0fazzvqsMeQFJf5ZyIk6EL2DBD3umG5R40=</dsig:DigestValue>
+        <dsig:DigestValue>bpokdk5wqm09K8AGLfLjQc87bf/mZBOdHhkYD6/KOqc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zDn0L0KdaOq2h65aFXnduzVwrcM/nqepF6mAhDcTfxI=</dsig:DigestValue>
+        <dsig:DigestValue>ZQvbDgJ81pHyoVljmkfeplFgzjdOV2KOvu9gS2W9z0o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="JntNum2Text.dll" size="14336">
+      <assemblyIdentity name="JntNum2Text" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Ij5eZalGGVtpPMBGJTv6GO5X3im9GV9o6oscy/DmGCU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="2969088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="3025920">
       <assemblyIdentity name="SnappFood_Employee_Evaluation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QEpzWmRYoBeHH3U15JECHxEjm5Fw68EIhORJ1aUjS7A=</dsig:DigestValue>
+        <dsig:DigestValue>stg+dSJ8PFpx7gcGkMkxqbHVWkClUxlB/2rIe/lnAj8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

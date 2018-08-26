@@ -42,7 +42,8 @@ namespace SnappFood_Employee_Evaluation
             //string con_str_exist = File.Exists(Application.StartupPath + "\\CONSTR.ini").ToString();
             ////System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + "\\CONSTR.ini");
             //constr = file.ReadLine();
-            constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
+            constr = "Provider=SQLOLEDB;Data Source=185.140.5.93;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
+            //constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
             oleDbConnection1.ConnectionString = constr;
         }
 
@@ -98,6 +99,10 @@ namespace SnappFood_Employee_Evaluation
                         mainfrm.token_security = token_security;
                         mainfrm.sms_line = sms_line;
                         mainfrm.Pre_load();
+                        if (ds.Tables[0].Rows[0][4].ToString().Substring(0, 2) != "QC")
+                        {
+                            mainfrm.radGridView1.Visible = false;
+                        }
                         //Thread.Sleep(3000);
                         //////////////////////////////////////////////////////// Login Log table updation
                         oleDbCommand1.Parameters.Clear();
@@ -167,7 +172,6 @@ namespace SnappFood_Employee_Evaluation
                         new_staff.constr = constr;
                         new_staff.username = user.Text;
                         new_staff.CUR_PASS.Text = pass.Text;
-
                         new_staff.frm_login = true;
                         new_staff.ShowDialog();
                     }

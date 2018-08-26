@@ -79,22 +79,30 @@
             // 
             this.radProgressBar1.Dash = true;
             this.radProgressBar1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.radProgressBar1.Location = new System.Drawing.Point(4, 240);
+            this.radProgressBar1.Location = new System.Drawing.Point(12, 240);
             this.radProgressBar1.Name = "radProgressBar1";
             this.radProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.Pink;
-            this.radProgressBar1.SeparatorColor2 = System.Drawing.Color.HotPink;
+            this.radProgressBar1.SeparatorColor1 = System.Drawing.Color.HotPink;
+            this.radProgressBar1.SeparatorColor2 = System.Drawing.Color.DeepPink;
             this.radProgressBar1.SeparatorColor3 = System.Drawing.Color.DeepPink;
-            this.radProgressBar1.SeparatorColor4 = System.Drawing.Color.DeepPink;
+            this.radProgressBar1.SeparatorColor4 = System.Drawing.Color.Red;
             this.radProgressBar1.SeparatorNumberOfColors = 4;
             this.radProgressBar1.SeparatorWidth = 8;
-            this.radProgressBar1.Size = new System.Drawing.Size(588, 28);
+            this.radProgressBar1.Size = new System.Drawing.Size(580, 28);
             this.radProgressBar1.StepWidth = 1;
             this.radProgressBar1.SweepAngle = 210;
             this.radProgressBar1.TabIndex = 4;
             this.radProgressBar1.ThemeName = "Office2010Silver";
             ((Telerik.WinControls.UI.RadProgressBarElement)(this.radProgressBar1.GetChildAt(0))).Dash = true;
             ((Telerik.WinControls.UI.RadProgressBarElement)(this.radProgressBar1.GetChildAt(0))).Text = "";
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).SeparatorWidth = 8;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).StepWidth = 1;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).SeparatorColor1 = System.Drawing.Color.HotPink;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).SeparatorColor2 = System.Drawing.Color.DeepPink;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).SeparatorColor3 = System.Drawing.Color.DeepPink;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).SeparatorColor4 = System.Drawing.Color.Red;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).NumberOfColors = 4;
+            ((Telerik.WinControls.UI.SeparatorsElement)(this.radProgressBar1.GetChildAt(0).GetChildAt(2))).SweepAngle = 210;
             // 
             // timer1
             // 

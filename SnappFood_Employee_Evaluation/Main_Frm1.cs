@@ -21,6 +21,13 @@ namespace SnappFood_Employee_Evaluation
         public string token_security;
         public string sms_line;
         public string doc_number;
+        public bool QC_GRID;
+        ///////////////////////////////// Warning Caps
+        public int cap_0_30 = 5;
+        public int cap_30_60 = 33;
+        public int cap_60_90 = 37;
+        public int cap_ov_90 = 25;
+        public int timer2_count = 0;
 
         public Main_Frm1()
         {
@@ -36,6 +43,16 @@ namespace SnappFood_Employee_Evaluation
             this.radRibbonBar1.OptionsButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             this.radRibbonBar1.ExitButton.Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             this.radRibbonBar1.RibbonBarElement.ApplicationButtonElement.ShowTwoColumnDropDownMenu = false;
+            if (radGridView1.Visible)
+            {
+                timer1.Interval = 30000;
+                timer1.Start();
+                timer1_Tick(null,null);
+            }
+            else
+            {
+                timer1.Stop();
+            }
             /////////////////////////////////////////// Checking user access
             //DataTable roles = new DataTable();
             //OleDbDataAdapter adp1 = new OleDbDataAdapter();
@@ -576,6 +593,7 @@ namespace SnappFood_Employee_Evaluation
             new_staff.token_key = token_key;
             new_staff.token_security = token_security;
             new_staff.user = username;
+            new_staff.doc_number = doc_number;
             new_staff.MdiParent = this;
             new_staff.Show();
         }
@@ -1128,6 +1146,7 @@ namespace SnappFood_Employee_Evaluation
             new_staff.token_key = token_key;
             new_staff.token_security = token_security;
             new_staff.user = username;
+            new_staff.doc_number = doc_number;
             new_staff.MdiParent = this;
             new_staff.Show();
         }
@@ -1162,6 +1181,8 @@ namespace SnappFood_Employee_Evaluation
             var new_staff = new System_Managment.GEN_POSITIONING();
             new_staff.constr = constr;
             new_staff.user = username;
+            new_staff.token_key = token_key;
+            new_staff.token_security = token_security;
             new_staff.MdiParent = this;
             new_staff.Show();
         }
@@ -1196,6 +1217,142 @@ namespace SnappFood_Employee_Evaluation
             var new_staff = new System_Managment.GEN_TASKS();
             new_staff.constr = constr;
             new_staff.user = username;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement57_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(System_Managment.GEN_HC_DASHBOARD))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new System_Managment.GEN_HC_DASHBOARD();
+            new_staff.constr = constr;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DataTable dt22 = new DataTable();
+            OleDbDataAdapter adp = new OleDbDataAdapter();
+            adp.SelectCommand = new OleDbCommand();
+            adp.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommand = " Select COUNT(sel1.[QC_ID]) 'کل لاگ ها',SUM(sel3.[LOG_QTY]) 'کل فایل ها',SUM(CASE WHEN sel1.[QC_Score]<=18 then 1 else 0 end) 'ناموفق',SUM(CASE WHEN sel1.[QC_Score] >18 then 1 else 0 end) 'موفق' ,SUM(CASE WHEN sel1.[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'رد کیفی', AVG(sel1.[Handling_tm]) 'AHT', AVG(Sel1.[Handling_tm] - Sel2.[Len]) 'AMW' " +
+                              " ,CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '0 ~ 30', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 60 and sel2.[Len] > 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '30 ~ 60', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 90 and sel2.[Len] > 60   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '60 ~ 90', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] > 90   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' 'Over 90'   from ( " +
+                              " (SELECT [QC_ID],[Handling_tm],[taboo],[QC_M_Approval],[QC_Agent],[QC_Score],[CC_M_Aprv_Usr],[insrt_dt] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) Sel1 " +
+                              " left join (SELECT [QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel2 " +
+                              " on Sel1.[QC_ID] = Sel2.[QC_ID] " +
+                              "left join (SELECT [QC_ID], count([QC_ID]) 'LOG_QTY' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel3 on Sel1.[QC_ID] = Sel3.[QC_ID] " +
+                              ") WHERE  Sel1.[QC_Agent] = N'" + username + "' and Sel1.[insrt_dt] = convert(date, getdate(), 111) group by Sel1.[QC_Agent] ";
+            adp.SelectCommand.CommandText = lcommand;
+            dt22.Clear();
+            adp.Fill(dt22);
+            if (dt22.Rows.Count != 0)
+            {
+                radGridView1.DataSource = dt22;
+                //radGridView1.BestFitColumns();
+
+                radGridView1.Columns[1].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[2].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[3].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[4].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[5].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[6].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[7].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[8].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[9].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[10].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[0].TextAlignment = ContentAlignment.MiddleCenter;
+                
+                radGridView1.TableElement.RowHeight = 25;
+                radGridView1.TableElement.TableHeaderHeight = 25;
+                //radGridView1.Columns[0].BestFit();
+            }
+        }
+
+        private void radGridView1_CellFormatting(object sender, Telerik.WinControls.UI.CellFormattingEventArgs e)
+        {
+            if (e.CellElement.ColumnInfo.Name == "0 ~ 30" || e.CellElement.ColumnInfo.Name == "60 ~ 90" || e.CellElement.ColumnInfo.Name == "30 ~ 60" || e.CellElement.ColumnInfo.Name == "Over 90")
+            {
+                ////////////////////////////////////////// >30 Style
+                if (e.CellElement.ColumnInfo.Name == "0 ~ 30" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_0_30 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.LightGreen;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                else if (e.CellElement.ColumnInfo.Name == "0 ~ 30" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_0_30 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.OrangeRed;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                ////////////////////////////////////////// 60-90 Style
+                if (e.CellElement.ColumnInfo.Name == "60 ~ 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_60_90 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.LightGreen;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                else if (e.CellElement.ColumnInfo.Name == "60 ~ 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_60_90 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.OrangeRed;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                ////////////////////////////////////////// 30-60 Style
+                if (e.CellElement.ColumnInfo.Name == "30 ~ 60" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_30_60 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.LightGreen;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                else if (e.CellElement.ColumnInfo.Name == "30 ~ 60" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_30_60 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.OrangeRed;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                ////////////////////////////////////////// >90 Style
+                if (e.CellElement.ColumnInfo.Name == "Over 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) <= cap_ov_90 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.LightGreen;
+                    e.CellElement.NumberOfColors = 1;
+                }
+                else if (e.CellElement.ColumnInfo.Name == "Over 90" && float.Parse(e.CellElement.Value.ToString().Replace("%", "")) > cap_ov_90 + 1)
+                {
+                    e.CellElement.DrawFill = true;
+                    e.CellElement.BackColor = Color.OrangeRed;
+                    e.CellElement.NumberOfColors = 1;
+                }
+            }
+            else
+            {
+                e.CellElement.ResetValue(LightVisualElement.BackColorProperty, ValueResetFlags.Local);
+            }
+        }
+
+        private void radButtonElement58_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Agents_Panel.AGENT_SALARY_DETAIL))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new Agents_Panel.AGENT_SALARY_DETAIL();
+            new_staff.constr = constr;
+            new_staff.doc_number = doc_number;
             new_staff.MdiParent = this;
             new_staff.Show();
         }

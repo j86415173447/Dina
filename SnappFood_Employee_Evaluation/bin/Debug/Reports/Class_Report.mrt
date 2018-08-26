@@ -71,7 +71,7 @@
               <Name>Text1</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
-              <Text>فراخوان شرکت در دوره های آموزشی</Text>
+              <Text>1فراخوان شرکت در دوره های آموزشی</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -671,10 +671,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/21/2018 1:17:58 PM</ReportChanged>
+  <ReportChanged>8/26/2018 6:04:32 AM</ReportChanged>
   <ReportCreated>11/17/2017 3:03:25 AM</ReportCreated>
-  <ReportFile>Z:\SW_Evaluation\Reports\Class_Report.mrt</ReportFile>
-  <ReportGuid>94807d7d04b945ca978321ed1689ce68</ReportGuid>
+  <ReportFile>C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Reports\Class_Report.mrt</ReportFile>
+  <ReportGuid>bff0a1d05e10406682e2b827752ccb05</ReportGuid>
   <ReportImage isNull="true" />
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>

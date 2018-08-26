@@ -206,7 +206,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                 adp23.SelectCommand = new OleDbCommand();
                 adp23.SelectCommand.Connection = oleDbConnection1;
                 oleDbCommand1.Parameters.Clear();
-                string lcommand23 = "SELECT max(right([system_id],3)) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [Department] = N'" + Per_Dep.Text + "'";
+                string lcommand23 = "SELECT max(right([system_id],3)) FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] where [Dep_CD] = N'" + Per_Dep.SelectedValue.ToString() + "'";
                 adp23.SelectCommand.CommandText = lcommand23;
                 adp23.Fill(dt23);
                 if (dt23.Rows[0][0].ToString() == "")

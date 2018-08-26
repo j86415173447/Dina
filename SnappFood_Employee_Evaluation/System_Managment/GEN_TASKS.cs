@@ -83,7 +83,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     adp22.SelectCommand = new OleDbCommand();
                     adp22.SelectCommand.Connection = oleDbConnection1;
                     oleDbCommand1.Parameters.Clear();
-                    string lcommand22 = "SELECT max([TASK_ID]) FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_GROUPS_MASTER]";
+                    string lcommand22 = "SELECT max([TASK_ID]) FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_TASKS_MASTER]";
                     adp22.SelectCommand.CommandText = lcommand22;
                     adp22.Fill(dt22);
                     if (dt22.Rows[0][0].ToString() == "")

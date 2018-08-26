@@ -25,6 +25,7 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
         public string token = null;
         public string token_key;
         public string token_security;
+        public string doc_number;
 
         public SCR_WRNG()
         {
@@ -182,7 +183,14 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
 
         private void SCR_MNG_Load(object sender, EventArgs e)
         {
-            
+            if (doc_number != "")
+            {
+                radLabel15.Visible = false;
+                lbl_cur_scr.Visible = false;
+                radLabel7.Visible = false;
+                lbl_scr_after.Visible = false;
+                //searching();
+            }
             oleDbConnection1.ConnectionString = constr;
             ///////////////////////////////////////////////////////// initializing scr_type combo
             DataTable dt = new DataTable();
@@ -190,7 +198,7 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT '' 'Sc_Sub_Cd','' 'Sc_sub_Nm' union SELECT [Sc_Sub_Cd],[Sc_sub_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_SCORE_WARNING] where Sc_Actv = 1";
+            string lcommand = "SELECT '' 'Sc_Sub_Cd','' 'Sc_sub_Nm' union SELECT [Sc_Sub_Cd],[Sc_sub_Nm] FROM [SNAPP_CC_EVALUATION].[dbo].[CONF_SCORE_WARNING] where Sc_Actv = 1 order by [sc_sub_nm] asc";
             adp.SelectCommand.CommandText = lcommand;
             adp.Fill(dt);
             Wrng_Type.DataSource = dt;

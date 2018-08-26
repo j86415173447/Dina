@@ -15,6 +15,7 @@ namespace SnappFood_Employee_Evaluation
     public partial class Intro : Telerik.WinControls.UI.RadForm
     {
         int ticks = 0;
+        int stop;
         public Intro()
         {
             InitializeComponent();
@@ -29,8 +30,11 @@ namespace SnappFood_Employee_Evaluation
 
         private void Intro_Load(object sender, EventArgs e)
         {
-            timer1.Interval = 25;
-            label1.Text = "ورژن:3.4.2 - متصل به پنل پیامک و ایمیل";
+            Random rnd = new Random();
+            stop = rnd.Next(19, 81);
+
+            timer1.Interval = 30;
+            label1.Text = "ورژن:5.1.8 - متصل به پنل پیامک و ایمیل";
             label1.TextAlign = ContentAlignment.MiddleRight;
         }
 
@@ -44,6 +48,13 @@ namespace SnappFood_Employee_Evaluation
                 this.Hide();
                 var intro = new Login();
                 intro.Show();
+            }
+            else if (ticks == stop)
+            {
+
+                Thread.Sleep(1000);
+                ticks++;
+
             }
             else
             {

@@ -643,6 +643,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Database_Table_icon {
+            get {
+                object obj = ResourceManager.GetObject("Database-Table-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_up_icon {
             get {
                 object obj = ResourceManager.GetObject("database-up-icon", resourceCulture);
@@ -1586,6 +1596,26 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap reporting_return {
             get {
                 object obj = ResourceManager.GetObject("reporting_return", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salary_coming {
+            get {
+                object obj = ResourceManager.GetObject("Salary_coming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salary_Comming {
+            get {
+                object obj = ResourceManager.GetObject("Salary_Comming", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
