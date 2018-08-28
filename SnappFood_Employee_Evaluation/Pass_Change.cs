@@ -67,7 +67,6 @@ namespace SnappFood_Employee_Evaluation
                 {
                     this.errorProvider.SetError(this.CUR_PASS, "رمز عبور فعلی وارد شده صحیح نیست");
                     data_error = true;
-                    //RadMessageBox.Show(this, "رمز عبور فعلی وارد شده صحیح نیست", "اخطار", MessageBoxButtons.OK, RadMessageIcon.Error);
                 }
                 else
                 {

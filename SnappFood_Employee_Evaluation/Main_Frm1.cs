@@ -564,18 +564,7 @@ namespace SnappFood_Employee_Evaluation
 
         private void radButtonElement10_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == typeof(Personel.PER_TERMINATION_REPORT))
-                {
-                    form.Activate();
-                    return;
-                }
-            }
-            var new_staff = new Personel.PER_TERMINATION_REPORT();
-            new_staff.constr = constr;
-            new_staff.MdiParent = this;
-            new_staff.Show();
+
         }
 
         private void radButtonElement15_Click(object sender, EventArgs e)

@@ -952,6 +952,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\Salary.png" />
     <None Include="Resources\Database-Table-icon.png" />
     <None Include="Resources\Salary_Comming.png" />
     <None Include="Resources\Salary_coming.png" />

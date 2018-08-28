@@ -48,7 +48,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>7.2,0.4,5.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,14,Bold</Font>
+          <Font>Tahoma,14,Bold</Font>
           <Guid>dbb12a7fdc5449ad8dffbedb91c5bf99</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -65,7 +65,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>10.6,1,2.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,10,Bold</Font>
+          <Font>Tahoma,10,Bold</Font>
           <Guid>306ec2198b884021ae13c5a594160b3a</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -82,7 +82,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>8.4,1,2.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,11,Bold</Font>
+          <Font>Tahoma,11,Bold</Font>
           <Guid>806d70d252b64d3b991f172e3ad6cd1c</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -99,7 +99,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>7.2,1,1.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,10,Bold</Font>
+          <Font>Tahoma,10,Bold</Font>
           <Guid>fd9909d2b0114e478712e530a8602c47</Guid>
           <HorAlignment>Right</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -116,7 +116,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>18,2.2,1.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>76c20cb89dd246b6ae95100d7d62c78d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text1</Name>
@@ -133,7 +133,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,2.2,4.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>efe094e528da4e7eb6792d7eec35d001</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text6</Name>
@@ -150,7 +150,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>11.6,2.2,1.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>fc40bbea6147466fa9adba140720f225</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text7</Name>
@@ -167,7 +167,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,2.2,4.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>415580b37f4846538dcb49f9f0b0f09a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text9</Name>
@@ -184,7 +184,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>4.6,2.2,1.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>5e2c01dbb5a84fd6a7b031ccf9ac9b58</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text10</Name>
@@ -201,7 +201,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>0.2,2.2,4.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>98dba2f02b5c47d1bb0112afe1685aff</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text11</Name>
@@ -218,7 +218,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>17.8,3,1.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>cbcb7d11441f4662b9188f4d20d0cc24</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text8</Name>
@@ -235,7 +235,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,3,4.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>cc4a155d50024d529e48d9596dd1747a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text12</Name>
@@ -252,7 +252,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>12.2,3,0.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>f6ed5af5543c4c269f24222797c73137</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text13</Name>
@@ -269,7 +269,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,3,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>285929031d994d95ab7dda9b349f471a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text14</Name>
@@ -286,7 +286,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>4.8,3,1.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>4a10b41b3ae84029a54540a30c28ae17</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text15</Name>
@@ -303,7 +303,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>0.2,3,4.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>9735bd949e904beeb3bdab357d888625</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text16</Name>
@@ -335,7 +335,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>13.4,4,6.4,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,10,Bold</Font>
+          <Font>Tahoma,10,Bold</Font>
           <Guid>af7460f7f0634eb98eff38ee0f730ea5</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -353,7 +353,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>6.8,4,6.4,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,10,Bold</Font>
+          <Font>Tahoma,10,Bold</Font>
           <Guid>0cf64fccc7ba4632b554c5484bbfbc53</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -371,7 +371,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>0.2,4,6.4,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,10,Bold</Font>
+          <Font>Tahoma,10,Bold</Font>
           <Guid>cba05d679b0440bd815afbd32229e0d8</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -389,7 +389,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>18,5,1.6,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>fd6294f818a540258705789f76b0d8ec</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text20</Name>
@@ -406,7 +406,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,5,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>d4c94a7943fe492ab7201e3cd0f898f2</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text21</Name>
@@ -423,7 +423,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>18.2,5.8,1.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>c5e2ad924839418cb2903237cd68aeb9</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text22</Name>
@@ -440,7 +440,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,5.8,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>8235b2ab630545538c491ed6136aa889</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text23</Name>
@@ -457,7 +457,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>18,6.6,1.6,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>7c138235eb34439ea8a658ca90967e69</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text24</Name>
@@ -474,7 +474,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,6.6,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>967c0ca8631b41b784b51b4e3921c1df</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text25</Name>
@@ -491,7 +491,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>17.8,7.4,1.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>dbf6e2457a0747f4892361ca460bd54d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text26</Name>
@@ -508,7 +508,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,7.4,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>c8200373af2f44abac5ee7a2ff3fc1b7</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text27</Name>
@@ -525,7 +525,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>17.6,8.2,2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>ae520de3ee014f98a01d48c53722f313</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text28</Name>
@@ -542,7 +542,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,8.2,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>a326c8ab5d594de38dc617cef352e6a9</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text29</Name>
@@ -559,7 +559,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>17,9,2.6,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>240cc22082e545df8bf48af6dbc25900</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text30</Name>
@@ -576,7 +576,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,9,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>09ea51f7134d42f2941b2f1f8b2513c5</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text31</Name>
@@ -593,7 +593,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>16.8,9.8,2.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>56422a5412e44fe69bb7eabd612440d5</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text32</Name>
@@ -610,7 +610,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>13.4,9.8,3.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>290ec603405d4bd1807363e9b4a4685d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text33</Name>
@@ -627,7 +627,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>10,5,3,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>1712643e92d34ac6ba0e8da17e27420c</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text34</Name>
@@ -644,7 +644,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,5,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>7de7e1dc143e4593a8fecd114514b8df</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text35</Name>
@@ -661,7 +661,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>11.8,5.8,1.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>9c34eb7b25fd43d2ab51be76cf79fabd</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text36</Name>
@@ -678,7 +678,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,5.8,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>78530401660d4021a87398fd55a87ccf</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text37</Name>
@@ -695,7 +695,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>10.6,6.6,2.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>308ff830702240f896c6a262942b3689</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text38</Name>
@@ -712,7 +712,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,6.6,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>bedea0cd984c4877859922cc69bd396d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text39</Name>
@@ -729,7 +729,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>11.2,7.4,1.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>d0108a61fca4454c96d68a7ab630d214</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text40</Name>
@@ -746,7 +746,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,7.4,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>c3cdc4776bc84ccaae37a53bed2a6f85</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text41</Name>
@@ -763,7 +763,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>10.4,8.2,2.6,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>8a1ecb2214564f4d99d93d7db19a5ef5</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text42</Name>
@@ -780,7 +780,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,8.2,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>3c340b3581fe4afd80dc750aa052815b</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text43</Name>
@@ -797,7 +797,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>11,9,2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>1c89d1c8c2494ceba59d2a25fe20afda</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text44</Name>
@@ -814,7 +814,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,9,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>5b76af4dfb324ee7aaad0cd495d8c0a3</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text45</Name>
@@ -831,7 +831,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>11.6,9.8,1.4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>6f8aaae884094a078cc2828386c13aa7</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text46</Name>
@@ -848,7 +848,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>6.8,9.8,3.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>c93fc63a7610489b8692cc24a36031a5</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text47</Name>
@@ -865,7 +865,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>18,10.4,1.6,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>e5ee6f66de944a35a8c5f49ef7ed23cb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text48</Name>
@@ -882,7 +882,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>11.2,10.4,1.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>0794c67a87da486c81bba2eb3e2f2f20</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text49</Name>
@@ -899,7 +899,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>13.4,10.4,3.4,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,11,Bold</Font>
+          <Font>Tahoma,11,Bold</Font>
           <Guid>026e79af793e45da8a3cbcfb51e8d4c4</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text51</Name>
@@ -916,7 +916,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>6.8,10.4,3.2,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,11,Bold</Font>
+          <Font>Tahoma,11,Bold</Font>
           <Guid>122b5fbc0a744952b8ef57517ca48d59</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text52</Name>
@@ -933,7 +933,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>4,10.4,2.4,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>cdfdfcf870ce4bada502d32066996360</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text50</Name>
@@ -950,7 +950,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>0.2,10.4,3.4,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,11,Bold</Font>
+          <Font>Tahoma,11,Bold</Font>
           <Guid>bdde5e52769448959c9fbc18234eca14</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text53</Name>
@@ -967,7 +967,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>4.2,5,2.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9</Font>
+          <Font>Tahoma,9</Font>
           <Guid>13d69a6fb0bd4b019dd1f1ad06b6d7ac</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text54</Name>
@@ -984,7 +984,7 @@
           <Brush>EmptyBrush</Brush>
           <ClientRectangle>0.2,5,4,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>a098c9bb6337428b9b48898e54a88ca1</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text55</Name>
@@ -1001,7 +1001,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>15.8,11.4,3.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,9,Bold</Font>
+          <Font>Tahoma,9,Bold</Font>
           <Guid>cd43baae38054217a9ec7f35f193e3fd</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text57</Name>
@@ -1018,7 +1018,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>0.2,11.4,15.6,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,11,Bold</Font>
+          <Font>Tahoma,11,Bold</Font>
           <Guid>9961f9377edc4386a4a46718eb92cc5b</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text58</Name>
@@ -1035,7 +1035,7 @@
           <Brush>Transparent</Brush>
           <ClientRectangle>0,13.4,20,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
-          <Font>B Roya,8,Bold</Font>
+          <Font>Tahoma,8,Bold</Font>
           <Guid>443166af02f24c12a9beee1ab9e6cf1b</Guid>
           <HorAlignment>Center</HorAlignment>
           <Margins>0,0,0,0</Margins>
@@ -1592,10 +1592,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>8/26/2018 7:42:05 AM</ReportChanged>
+  <ReportChanged>8/26/2018 12:46:36 PM</ReportChanged>
   <ReportCreated>11/17/2017 3:03:25 AM</ReportCreated>
   <ReportFile>C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Reports\Salary_Bill.mrt</ReportFile>
-  <ReportGuid>ddb810109f354311bdf64eba714c703b</ReportGuid>
+  <ReportGuid>5dd51fd6895445968bb2acf45ce89588</ReportGuid>
   <ReportImage isNull="true" />
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>

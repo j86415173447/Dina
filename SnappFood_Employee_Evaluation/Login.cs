@@ -42,8 +42,8 @@ namespace SnappFood_Employee_Evaluation
             //string con_str_exist = File.Exists(Application.StartupPath + "\\CONSTR.ini").ToString();
             ////System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + "\\CONSTR.ini");
             //constr = file.ReadLine();
-            constr = "Provider=SQLOLEDB;Data Source=185.140.5.93;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
-            //constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
+            //constr = "Provider=SQLOLEDB;Data Source=185.140.5.93;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
+            constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
             oleDbConnection1.ConnectionString = constr;
         }
 
