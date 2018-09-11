@@ -477,6 +477,18 @@
     <Compile Include="Scores_Ops\Search_Staff_MNG.Designer.cs">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </Compile>
+    <Compile Include="System_Managment\QC_CONTROL_PANEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\QC_CONTROL_PANEL.Designer.cs">
+      <DependentUpon>QC_CONTROL_PANEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\GEN_HCC_CC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_HCC_CC.Designer.cs">
+      <DependentUpon>GEN_HCC_CC.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_Managment\GEN_HCC_SETTING.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -819,6 +831,12 @@
     <EmbeddedResource Include="Scores_Ops\Search_Staff_MNG.resx">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\QC_CONTROL_PANEL.resx">
+      <DependentUpon>QC_CONTROL_PANEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_HCC_CC.resx">
+      <DependentUpon>GEN_HCC_CC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\GEN_HCC_SETTING.resx">
       <DependentUpon>GEN_HCC_SETTING.cs</DependentUpon>
     </EmbeddedResource>
@@ -886,6 +904,7 @@
       <DependentUpon>TRN_REGISTRATION.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -952,6 +971,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\QC_Setting.png" />
+    <None Include="Resources\Control-Panel-icon.png" />
+    <None Include="Resources\numbers-black-icon.png" />
+    <None Include="Resources\floppy-icon.png" />
+    <None Include="Resources\Download_icon.png" />
     <None Include="Resources\Salary.png" />
     <None Include="Resources\Database-Table-icon.png" />
     <None Include="Resources\Salary_Comming.png" />

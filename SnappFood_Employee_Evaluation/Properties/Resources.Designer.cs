@@ -723,6 +723,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Download_icon {
+            get {
+                object obj = ResourceManager.GetObject("Download_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap email_send_icon {
             get {
                 object obj = ResourceManager.GetObject("email-send-icon", resourceCulture);
@@ -766,6 +776,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap final_QC {
             get {
                 object obj = ResourceManager.GetObject("final_QC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap floppy_icon {
+            get {
+                object obj = ResourceManager.GetObject("floppy-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1333,6 +1353,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap numbers_black_icon {
+            get {
+                object obj = ResourceManager.GetObject("numbers-black-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Open_folder_full_icon {
             get {
                 object obj = ResourceManager.GetObject("Open-folder-full-icon", resourceCulture);
@@ -1486,6 +1516,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap QC_plan {
             get {
                 object obj = ResourceManager.GetObject("QC_plan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QC_Setting {
+            get {
+                object obj = ResourceManager.GetObject("QC_Setting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

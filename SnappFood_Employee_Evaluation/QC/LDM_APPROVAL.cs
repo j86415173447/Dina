@@ -345,14 +345,14 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void btnTaboo_Click(object sender, EventArgs e)
         {
-            if (taboo.Checked)
-            {
-                taboo.Checked = false;
-            }
-            else
-            {
-                taboo.Checked = true;
-            }
+            //if (taboo.Checked)
+            //{
+            //    taboo.Checked = false;
+            //}
+            //else
+            //{
+            //    taboo.Checked = true;
+            //}
         }
 
         private void Insert_Time_TextChanged(object sender, EventArgs e)
@@ -538,6 +538,8 @@ namespace SnappFood_Employee_Evaluation.QC
             //No_swt.Checked = false;
             //Bad_swt.Checked = false;
             taboo.Checked = false;
+            No_Followup.Checked = false;
+            Bad_Followup.Checked = false;
 
             Remarks.Text = "";
             Inv_link.Text = "";
@@ -570,7 +572,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT [QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[Call_Tm],[Call_Dt],[QC_Param_1],[QC_Param_2],[QC_Param_3],[QC_Param_4],[QC_Param_5],[QC_Param_6],[QC_Param_7],[QC_Param_8],[QC_Param_9],  " +
-                              "[QC_Param_10],[QC_Param_11],[QC_Param_12],[Bad_switch],[No_switch],[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[QC_Agent],[CC_M_Aprv_Rmrk]  FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [QC_ID] = '" + QC_ID.Text + "'";
+                              "[QC_Param_10],[QC_Param_11],[QC_Param_12],[Bad_switch],[No_switch],[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[QC_Agent],[CC_M_Aprv_Rmrk],[No_followup],[bad_followup]  FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [QC_ID] = '" + QC_ID.Text + "'";
             adp.SelectCommand.CommandText = lcommand;
             dt22.Clear();
             adp.Fill(dt22);
@@ -648,6 +650,14 @@ namespace SnappFood_Employee_Evaluation.QC
             {
                 taboo.Checked = true;
             }
+            if (dt22.Rows[0][28].ToString() == "True")
+            {
+                No_Followup.Checked = true;
+            }
+            if (dt22.Rows[0][29].ToString() == "True")
+            {
+                Bad_Followup.Checked = true;
+            }
 
             //////////////////////////////////////////// Update voice_DT
             DataTable dt44 = new DataTable();
@@ -655,7 +665,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp2.SelectCommand = new OleDbCommand();
             adp2.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "'";
+            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "' and [Voice] is not null";
             adp2.SelectCommand.CommandText = lcommand2;
             dt44.Clear();
             adp2.Fill(dt44);
@@ -747,6 +757,38 @@ namespace SnappFood_Employee_Evaluation.QC
             if (e.Control && e.KeyCode == Keys.A)
             {
                 Inv_link.SelectAll();
+            }
+        }
+
+        private void Bad_Followup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Bad_Followup.Checked)
+            {
+                BAD_FW_btn.BackColor = Color.Red;
+                BAD_FW_btn.ForeColor = Color.Yellow;
+                BAD_FW_btn.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                BAD_FW_btn.BackColor = Color.WhiteSmoke;
+                BAD_FW_btn.ForeColor = Color.Black;
+                BAD_FW_btn.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void No_Followup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (No_Followup.Checked)
+            {
+                NO_FW_btn.BackColor = Color.Red;
+                NO_FW_btn.ForeColor = Color.Yellow;
+                NO_FW_btn.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                NO_FW_btn.BackColor = Color.WhiteSmoke;
+                NO_FW_btn.ForeColor = Color.Black;
+                NO_FW_btn.Image = Properties.Resources.small_tick;
             }
         }
     }

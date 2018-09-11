@@ -493,7 +493,7 @@
             this.radPageView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radPageView1.Location = new System.Drawing.Point(0, 106);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage4;
+            this.radPageView1.SelectedPage = this.radPageViewPage2;
             this.radPageView1.Size = new System.Drawing.Size(846, 345);
             this.radPageView1.TabIndex = 16;
             this.radPageView1.ThemeName = "Office2010Silver";

@@ -277,13 +277,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
         private void Only_Digit(object sender, KeyPressEventArgs e)
         {
             //e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != '-');
-            if (!char.IsControl(e.KeyChar) && (!char.IsDigit(e.KeyChar))
-        && (e.KeyChar != '-'))
-                e.Handled = true;
-
-
-            // only allow minus sign at the beginning
-            if (e.KeyChar == '-' && (sender as RadTextBox).Text.Length > 0)
+            if (!char.IsControl(e.KeyChar) && (!char.IsDigit(e.KeyChar)))
                 e.Handled = true;
         }
 

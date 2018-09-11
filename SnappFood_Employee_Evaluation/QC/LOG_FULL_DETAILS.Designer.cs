@@ -65,16 +65,20 @@
             this.Cls2 = new System.Windows.Forms.CheckBox();
             this.Cls1 = new System.Windows.Forms.CheckBox();
             this.radGroupBox8 = new Telerik.WinControls.UI.RadGroupBox();
-            this.taboo = new System.Windows.Forms.CheckBox();
+            this.BAD_FW_btn = new Telerik.WinControls.UI.RadButton();
+            this.NO_FW_btn = new Telerik.WinControls.UI.RadButton();
             this.btnTaboo = new Telerik.WinControls.UI.RadButton();
             this.Inv_link = new Telerik.WinControls.UI.RadTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Remarks = new Telerik.WinControls.UI.RadTextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.taboo = new System.Windows.Forms.CheckBox();
             this.Call_Score_Final = new System.Windows.Forms.Label();
             this.QC_Score = new System.Windows.Forms.Label();
             this.customShape1 = new Telerik.WinControls.OldShapeEditor.CustomShape();
             this.radGroupBox9 = new Telerik.WinControls.UI.RadGroupBox();
+            this.Bad_Followup = new System.Windows.Forms.CheckBox();
+            this.No_Followup = new System.Windows.Forms.CheckBox();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.btnPlay = new Telerik.WinControls.UI.RadButton();
@@ -134,6 +138,8 @@
             this.radGroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox8)).BeginInit();
             this.radGroupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BAD_FW_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NO_FW_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTaboo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Inv_link)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Remarks)).BeginInit();
@@ -563,7 +569,8 @@
             // radGroupBox8
             // 
             this.radGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox8.Controls.Add(this.taboo);
+            this.radGroupBox8.Controls.Add(this.BAD_FW_btn);
+            this.radGroupBox8.Controls.Add(this.NO_FW_btn);
             this.radGroupBox8.Controls.Add(this.btnTaboo);
             this.radGroupBox8.Controls.Add(this.Inv_link);
             this.radGroupBox8.Controls.Add(this.label14);
@@ -582,31 +589,76 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
-            // taboo
+            // BAD_FW_btn
             // 
-            this.taboo.AutoSize = true;
-            this.taboo.Location = new System.Drawing.Point(353, 142);
-            this.taboo.Name = "taboo";
-            this.taboo.Size = new System.Drawing.Size(87, 17);
-            this.taboo.TabIndex = 0;
-            this.taboo.Text = "checkBox1";
-            this.taboo.UseVisualStyleBackColor = true;
-            this.taboo.Visible = false;
-            this.taboo.CheckedChanged += new System.EventHandler(this.taboo_CheckedChanged);
+            this.BAD_FW_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BAD_FW_btn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BAD_FW_btn.ForeColor = System.Drawing.Color.Black;
+            this.BAD_FW_btn.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.small_tick;
+            this.BAD_FW_btn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BAD_FW_btn.Location = new System.Drawing.Point(158, 139);
+            this.BAD_FW_btn.Name = "BAD_FW_btn";
+            this.BAD_FW_btn.Size = new System.Drawing.Size(137, 26);
+            this.BAD_FW_btn.TabIndex = 34;
+            this.BAD_FW_btn.Text = "پیگیری ناقص";
+            this.BAD_FW_btn.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BAD_FW_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BAD_FW_btn.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadButtonElement)(this.BAD_FW_btn.GetChildAt(0))).Image = global::SnappFood_Employee_Evaluation.Properties.Resources.small_tick;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.BAD_FW_btn.GetChildAt(0))).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.BAD_FW_btn.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.BAD_FW_btn.GetChildAt(0))).TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.BAD_FW_btn.GetChildAt(0))).Text = "پیگیری ناقص";
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor2 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor3 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor4 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor2 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor3 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor4 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.BAD_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor = System.Drawing.Color.Black;
+            // 
+            // NO_FW_btn
+            // 
+            this.NO_FW_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NO_FW_btn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NO_FW_btn.ForeColor = System.Drawing.Color.Black;
+            this.NO_FW_btn.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.small_tick;
+            this.NO_FW_btn.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NO_FW_btn.Location = new System.Drawing.Point(10, 139);
+            this.NO_FW_btn.Name = "NO_FW_btn";
+            this.NO_FW_btn.Size = new System.Drawing.Size(137, 26);
+            this.NO_FW_btn.TabIndex = 33;
+            this.NO_FW_btn.Text = "عدم پیگیری";
+            this.NO_FW_btn.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NO_FW_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.NO_FW_btn.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadButtonElement)(this.NO_FW_btn.GetChildAt(0))).Image = global::SnappFood_Employee_Evaluation.Properties.Resources.small_tick;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.NO_FW_btn.GetChildAt(0))).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.NO_FW_btn.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.NO_FW_btn.GetChildAt(0))).TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            ((Telerik.WinControls.UI.RadButtonElement)(this.NO_FW_btn.GetChildAt(0))).Text = "عدم پیگیری";
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor2 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor3 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor4 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor2 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor3 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).InnerColor4 = System.Drawing.Color.Black;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.NO_FW_btn.GetChildAt(0).GetChildAt(2))).ForeColor = System.Drawing.Color.Black;
             // 
             // btnTaboo
             // 
             this.btnTaboo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTaboo.Enabled = false;
             this.btnTaboo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnTaboo.ForeColor = System.Drawing.Color.Black;
             this.btnTaboo.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.small_tick;
             this.btnTaboo.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnTaboo.Location = new System.Drawing.Point(17, 139);
+            this.btnTaboo.Location = new System.Drawing.Point(306, 139);
             this.btnTaboo.Name = "btnTaboo";
-            this.btnTaboo.Size = new System.Drawing.Size(147, 26);
+            this.btnTaboo.Size = new System.Drawing.Size(137, 26);
             this.btnTaboo.TabIndex = 20;
-            this.btnTaboo.Text = "وضعیت تابو: غیر فعال";
+            this.btnTaboo.Text = "مکالمه تابو";
             this.btnTaboo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaboo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaboo.ThemeName = "Office2010Silver";
@@ -615,7 +667,7 @@
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnTaboo.GetChildAt(0))).TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnTaboo.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnTaboo.GetChildAt(0))).TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnTaboo.GetChildAt(0))).Text = "وضعیت تابو: غیر فعال";
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnTaboo.GetChildAt(0))).Text = "مکالمه تابو";
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnTaboo.GetChildAt(0).GetChildAt(2))).ForeColor2 = System.Drawing.Color.Black;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnTaboo.GetChildAt(0).GetChildAt(2))).ForeColor3 = System.Drawing.Color.Black;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.btnTaboo.GetChildAt(0).GetChildAt(2))).ForeColor4 = System.Drawing.Color.Black;
@@ -628,11 +680,11 @@
             // Inv_link
             // 
             this.Inv_link.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Inv_link.Location = new System.Drawing.Point(17, 110);
+            this.Inv_link.Location = new System.Drawing.Point(10, 110);
             this.Inv_link.Name = "Inv_link";
             this.Inv_link.ReadOnly = true;
             this.Inv_link.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Inv_link.Size = new System.Drawing.Size(346, 19);
+            this.Inv_link.Size = new System.Drawing.Size(363, 19);
             this.Inv_link.TabIndex = 9;
             this.Inv_link.ThemeName = "Office2010Silver";
             this.Inv_link.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inv_link_KeyDown);
@@ -652,11 +704,11 @@
             // 
             this.Remarks.AutoSize = false;
             this.Remarks.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Remarks.Location = new System.Drawing.Point(17, 36);
+            this.Remarks.Location = new System.Drawing.Point(10, 25);
             this.Remarks.Multiline = true;
             this.Remarks.Name = "Remarks";
             this.Remarks.ReadOnly = true;
-            this.Remarks.Size = new System.Drawing.Size(363, 70);
+            this.Remarks.Size = new System.Drawing.Size(376, 81);
             this.Remarks.TabIndex = 7;
             this.Remarks.ThemeName = "Office2010Silver";
             this.Remarks.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.operator_ext_PreviewKeyDown);
@@ -665,11 +717,23 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label18.Location = new System.Drawing.Point(392, 36);
+            this.label18.Location = new System.Drawing.Point(395, 25);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(51, 13);
             this.label18.TabIndex = 6;
             this.label18.Text = "توضیحات:";
+            // 
+            // taboo
+            // 
+            this.taboo.AutoSize = true;
+            this.taboo.Location = new System.Drawing.Point(108, 21);
+            this.taboo.Name = "taboo";
+            this.taboo.Size = new System.Drawing.Size(87, 17);
+            this.taboo.TabIndex = 0;
+            this.taboo.Text = "checkBox1";
+            this.taboo.UseVisualStyleBackColor = true;
+            this.taboo.Visible = false;
+            this.taboo.CheckedChanged += new System.EventHandler(this.taboo_CheckedChanged);
             // 
             // Call_Score_Final
             // 
@@ -698,6 +762,9 @@
             // radGroupBox9
             // 
             this.radGroupBox9.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox9.Controls.Add(this.Bad_Followup);
+            this.radGroupBox9.Controls.Add(this.No_Followup);
+            this.radGroupBox9.Controls.Add(this.taboo);
             this.radGroupBox9.Controls.Add(this.radButton2);
             this.radGroupBox9.Controls.Add(this.radGridView1);
             this.radGroupBox9.Controls.Add(this.btnPlay);
@@ -714,6 +781,34 @@
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox9.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox9.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox9.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
+            // 
+            // Bad_Followup
+            // 
+            this.Bad_Followup.AutoSize = true;
+            this.Bad_Followup.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.Bad_Followup.Location = new System.Drawing.Point(201, 21);
+            this.Bad_Followup.Name = "Bad_Followup";
+            this.Bad_Followup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Bad_Followup.Size = new System.Drawing.Size(68, 17);
+            this.Bad_Followup.TabIndex = 37;
+            this.Bad_Followup.Text = "BAD_FW";
+            this.Bad_Followup.UseVisualStyleBackColor = true;
+            this.Bad_Followup.Visible = false;
+            this.Bad_Followup.CheckedChanged += new System.EventHandler(this.Bad_Followup_CheckedChanged);
+            // 
+            // No_Followup
+            // 
+            this.No_Followup.AutoSize = true;
+            this.No_Followup.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.No_Followup.Location = new System.Drawing.Point(272, 21);
+            this.No_Followup.Name = "No_Followup";
+            this.No_Followup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.No_Followup.Size = new System.Drawing.Size(63, 17);
+            this.No_Followup.TabIndex = 36;
+            this.No_Followup.Text = "NO_FW";
+            this.No_Followup.UseVisualStyleBackColor = true;
+            this.No_Followup.Visible = false;
+            this.No_Followup.CheckedChanged += new System.EventHandler(this.No_Followup_CheckedChanged);
             // 
             // radButton2
             // 
@@ -1291,11 +1386,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox8)).EndInit();
             this.radGroupBox8.ResumeLayout(false);
             this.radGroupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BAD_FW_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NO_FW_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTaboo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Inv_link)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Remarks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox9)).EndInit();
             this.radGroupBox9.ResumeLayout(false);
+            this.radGroupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
@@ -1409,5 +1507,9 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label coor_cart;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox Bad_Followup;
+        private System.Windows.Forms.CheckBox No_Followup;
+        private Telerik.WinControls.UI.RadButton BAD_FW_btn;
+        private Telerik.WinControls.UI.RadButton NO_FW_btn;
     }
 }

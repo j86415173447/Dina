@@ -44,6 +44,8 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             lbl_17.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_18.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_19.TextAlignment = ContentAlignment.MiddleLeft;
+            no_fl.TextAlignment = ContentAlignment.MiddleLeft;
+            bad_fl.TextAlignment = ContentAlignment.MiddleLeft;
 
         }
 
@@ -94,7 +96,9 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                                   " ,SUM(CASE WHEN[QC_Param_2] = 0 then 1 else 0 end) 'Opening Sen/Que' , SUM(CASE WHEN[QC_Param_3] = 0 then 1 else 0 end) 'Active Listening' , SUM(CASE WHEN[QC_Param_4] = 0 then 1 else 0 end) 'Call Holding' " +
                                   " ,SUM(CASE WHEN[QC_Param_5] = 0 then 1 else 0 end) 'Interruption' , SUM(CASE WHEN[QC_Param_6] = 0 then 1 else 0 end) 'Summarizing' , SUM(CASE WHEN[QC_Param_7] = 0 then 1 else 0 end) 'Speaking Type' " +
                                   " ,SUM(CASE WHEN[QC_Param_8] = 0 then 1 else 0 end) 'Speaking Tone' , SUM(CASE WHEN[QC_Param_9] = 0 then 1 else 0 end) 'Guide/Result' , SUM(CASE WHEN[QC_Param_10] = 0 then 1 else 0 end) 'Query' " +
-                                  " ,SUM(CASE WHEN[QC_Param_11] = 0 then 1 else 0 end) 'Appreciation' , SUM(CASE WHEN[QC_Param_12] = 0 then 1 else 0 end) 'Bye' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [Final_Approval] is not null  AND [final_aprv_dt] >= N'" + yr.Text + "/" + (((mnth.SelectedIndex + 1) >= 10) ? ((mnth.SelectedIndex - 1)).ToString() : "0" + (mnth.SelectedIndex + 1).ToString()) + "/01'" + " AND [final_aprv_dt] <= N'" + yr.Text + "/" + (((mnth.SelectedIndex + 1) >= 10) ? ((mnth.SelectedIndex + 1)).ToString() : "0" + (mnth.SelectedIndex + 1).ToString()) + "/31'" + " group by [Agent_Ext]) Sel1 " +
+                                  " ,SUM(CASE WHEN[QC_Param_11] = 0 then 1 else 0 end) 'Appreciation' , SUM(CASE WHEN[QC_Param_12] = 0 then 1 else 0 end) 'Bye' " +
+                                  " ,SUM(CASE WHEN[No_Followup] = 1 then 1 else 0 end) 'No_Followup' , SUM(CASE WHEN[Bad_Followup] = 1 then 1 else 0 end) 'Bad_Followup' " +
+                                  " FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [Final_Approval] is not null  AND [final_aprv_dt] >= N'" + yr.Text + "/" + (((mnth.SelectedIndex + 1) >= 10) ? ((mnth.SelectedIndex - 1)).ToString() : "0" + (mnth.SelectedIndex + 1).ToString()) + "/01'" + " AND [final_aprv_dt] <= N'" + yr.Text + "/" + (((mnth.SelectedIndex + 1) >= 10) ? ((mnth.SelectedIndex + 1)).ToString() : "0" + (mnth.SelectedIndex + 1).ToString()) + "/31'" + " group by [Agent_Ext]) Sel1 " +
                                   " left join(SELECT [Doc_no],[System_Id],[Department],[Main_Shift],[Per_Name] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on Sel1.[Extension] = Sel2.[System_Id]) WHERE Sel2.[Doc_no] = '" + doc_number + "'";
                 adp1.SelectCommand.CommandText = lcommand1;
                 adp1.Fill(dt1);
@@ -120,6 +124,8 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_17.Text = dt1.Rows[0][17].ToString();
                     lbl_18.Text = dt1.Rows[0][18].ToString();
                     lbl_19.Text = dt1.Rows[0][19].ToString();
+                    no_fl.Text = dt1.Rows[0][20].ToString();
+                    bad_fl.Text = dt1.Rows[0][21].ToString();
                 }
                 else
                 {
@@ -143,6 +149,8 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_17.Text = "0";
                     lbl_18.Text = "0";
                     lbl_19.Text = "0";
+                    no_fl.Text = "0";
+                    bad_fl.Text = "0";
                 }
             }
             else
@@ -167,6 +175,8 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 lbl_17.Text = "";
                 lbl_18.Text = "";
                 lbl_19.Text = "";
+                no_fl.Text = "0";
+                bad_fl.Text = "0";
             }
         }
 

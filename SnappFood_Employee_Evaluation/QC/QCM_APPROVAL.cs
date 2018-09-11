@@ -31,6 +31,7 @@ namespace SnappFood_Employee_Evaluation.QC
         MemoryStream ms = new MemoryStream();
         public DataTable voice_dt = new DataTable();
         public bool coordinator;
+        public int min_score;
 
 
         public QCM_APPROVAL()
@@ -50,6 +51,25 @@ namespace SnappFood_Employee_Evaluation.QC
             //call_dt.NullableValue = null;
             //call_dt.SetToNullValue();
             QC_Agent.Text = user;
+
+            ////////////////////////////////////////////////////////// Initilizing CAP
+            DataTable dtsc4 = new DataTable();
+            OleDbDataAdapter adpsc4 = new OleDbDataAdapter();
+            adpsc4.SelectCommand = new OleDbCommand();
+            adpsc4.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommandsc4 = "SELECT [cap_0_30],[cap_30_60],[cap_60_90],[cap_ov_90],[min_suc_log] FROM [SNAPP_CC_EVALUATION].[dbo].[SYS_QC_SETTING]";
+            adpsc4.SelectCommand.CommandText = lcommandsc4;
+            adpsc4.Fill(dtsc4);
+            if (dtsc4.Rows.Count != 0)
+            {
+                min_score = int.Parse(dtsc4.Rows[0][4].ToString());
+                min_score = min_score - 1;
+            }
+            else
+            {
+                RadMessageBox.Show(this, " بروز خطا در تنظیمات کنترل کیفی! " + "\n" + " لطفا با مدیریت شرکت تماس حاصل نمائید. ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
 
             ///////////////////////////// initilize call type combo
             DataTable dt4 = new DataTable();
@@ -159,7 +179,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void calculate_score()
         {
-            if (!taboo.Checked)
+            if (!taboo.Checked & !No_Followup.Checked & !Bad_Followup.Checked)
             {
                 DataTable dt4 = new DataTable();
                 OleDbDataAdapter adp4 = new OleDbDataAdapter();
@@ -220,9 +240,17 @@ namespace SnappFood_Employee_Evaluation.QC
                 }
                 Call_Score_Final.Text = score.ToString();
             }
-            else
+            else if (taboo.Checked)
             {
                 Call_Score_Final.Text = "0";
+            }
+            else if (No_Followup.Checked)
+            {
+                Call_Score_Final.Text = "0";
+            }
+            else if (Bad_Followup.Checked)
+            {
+                Call_Score_Final.Text = "9";
             }
         }
 
@@ -251,7 +279,7 @@ namespace SnappFood_Employee_Evaluation.QC
                                             "[QC_ID] = ?, [QC_Score] = ?, [Agent_Ext] = ?, [Call_Type_Cd] = ?, [Log_Type_Cd] = ?, [Call_Tm] = ?, [Call_Dt] = ?, [QC_Param_1] = ?, [QC_Param_2] = ? " +
                                             ",[QC_Param_3] = ?, [QC_Param_4] = ?, [QC_Param_5] = ?, [QC_Param_6] = ?, [QC_Param_7] = ?, [QC_Param_8] = ?, [QC_Param_9] = ?, [QC_Param_10] = ?, [QC_Param_11] = ?, [QC_Param_12] = ? " +
                                             ",[Inv_link] = ?, [Remarks] = ?, [taboo] = ?, [QC_M_Approval] = ?, [QC_M_Aprv_Usr] = ?, [QC_M_Aprv_DT] = ?, [CC_M_Approval] = ?, [CC_M_Aprv_Usr] = ?, [CC_M_Aprv_Rmrk] = ?, [CC_M_Aprv_DT] = ? , [LD_M_Approval] = ?, [LD_M_Aprv_Usr] = ?, [LD_M_Aprv_Rmrk] = ?, [LD_M_Aprv_DT] = ? ,[MG_M_Approval] = ? ,[MG_M_Aprv_Usr] = ? ,[MG_M_Aprv_Rmrk] = ? ,[MG_M_Aprv_Dt] = ? ,[Final_Approval] = ? ,[Final_Aprv_Usr] = ? ,[Final_Aprv_Rmrk] = ? ,[Final_Aprv_DT] = ? " +
-                                            " , [No_switch] = ?, [Bad_switch] = ? where [QC_ID] = '" + QC_ID.Text + "'";
+                                            " , [No_switch] = ?, [Bad_switch] = ?, [No_Followup] = ?, [Bad_Followup] = ? where [QC_ID] = '" + QC_ID.Text + "'";
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_ID.Text);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Call_Score_Final.Text);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", operator_ext.Text);
@@ -360,7 +388,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Remarks.Text);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", taboo.Checked ? "1" : "0");
                 /////////////////////////////////////////////////////////////////////////////////////////////// Because of Taboo
-                if (int.Parse(Call_Score_Final.Text) <= 18)
+                if (int.Parse(Call_Score_Final.Text) <= min_score)
                 {
                     oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
                 }
@@ -370,7 +398,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 }
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                if (int.Parse(Call_Score_Final.Text) <= 18)
+                if (int.Parse(Call_Score_Final.Text) <= min_score)
                 {
                     if (coordinator)
                     {
@@ -435,6 +463,8 @@ namespace SnappFood_Employee_Evaluation.QC
                 ///////////////////////////////////////////////////////////////////////////////////////////////// End of Taboo
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_swt.Checked ? "1" : "0");
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_swt.Checked ? "1" : "0");
+                oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_Followup.Checked ? "1" : "0");
+                oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_Followup.Checked ? "1" : "0");
                 oleDbConnection1.Open();
                 oleDbCommand1.ExecuteNonQuery();
                 oleDbConnection1.Close();
@@ -466,7 +496,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 loading.Close();
                 //Insert_Date.Text = DT_Yr + "/" + DT_Mth + "/" + DT_Day;
                 //Insert_Time.Text = DT_TM;
-                if (int.Parse(Call_Score_Final.Text) <= 18)
+                if (int.Parse(Call_Score_Final.Text) <= min_score)
                 {
                     RadMessageBox.Show(this, "لاگ به شناسه " + QC_ID.Text + " با موفقیت تائید شد." + "\n" + " لاگ به کارتابل مسئول مربوطه در " + Department.Text + " منتقل شد. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                 }
@@ -535,7 +565,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 this.errorProvider.SetError(this.label18, "توضیحات وارد نشده است.");
                 error = true;
             }
-            if (voice_dt.Rows.Count == 0)
+            if ((voice_dt.Rows.Count == 0 || radGridView1.Rows.Count == 0) & (No_Followup.Checked == Bad_Followup.Checked))
             {
                 this.errorProvider.SetError(this.radButton1, "آرشیو فایل صوتی خالی است.");
                 error = true;
@@ -574,14 +604,12 @@ namespace SnappFood_Employee_Evaluation.QC
         {
             if (taboo.Checked)
             {
-                btnTaboo.Text = "وضعیت تابو: فعال";
                 btnTaboo.BackColor = Color.Red;
                 btnTaboo.ForeColor = Color.Yellow;
                 btnTaboo.Image = Properties.Resources.danger_icon;
             }
             else
             {
-                btnTaboo.Text = "وضعیت تابو: غیر فعال";
                 btnTaboo.BackColor = Color.WhiteSmoke;
                 btnTaboo.ForeColor = Color.Black;
                 btnTaboo.Image = Properties.Resources.small_tick;
@@ -766,7 +794,6 @@ namespace SnappFood_Employee_Evaluation.QC
             call_dt.Text = "";
             call_tm.Text = "";
 
-
             Opn1.Checked = false;
             Opn2.Checked = false;
             Spk1.Checked = false;
@@ -779,9 +806,12 @@ namespace SnappFood_Employee_Evaluation.QC
             Qry1.Checked = false;
             Cls1.Checked = false;
             Cls2.Checked = false;
+
             No_swt.Checked = false;
             Bad_swt.Checked = false;
             taboo.Checked = false;
+            No_Followup.Checked = false;
+            Bad_Followup.Checked = false;
 
             Remarks.Text = "";
             Inv_link.Text = "";
@@ -812,7 +842,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT [QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[Call_Tm],[Call_Dt],[QC_Param_1],[QC_Param_2],[QC_Param_3],[QC_Param_4],[QC_Param_5],[QC_Param_6],[QC_Param_7],[QC_Param_8],[QC_Param_9],  " +
-                              "[QC_Param_10],[QC_Param_11],[QC_Param_12],[Bad_switch],[No_switch],[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[QC_Agent]  FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [QC_ID] = '" + QC_ID.Text + "'";
+                              "[QC_Param_10],[QC_Param_11],[QC_Param_12],[Bad_switch],[No_switch],[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[QC_Agent],[No_Followup],[bad_followup]  FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [QC_ID] = '" + QC_ID.Text + "'";
             adp.SelectCommand.CommandText = lcommand;
             dt22.Clear();
             adp.Fill(dt22);
@@ -889,15 +919,22 @@ namespace SnappFood_Employee_Evaluation.QC
             if (dt22.Rows[0][23].ToString() == "True")
             {
                 taboo.Checked = true;
+            } 
+            if (dt22.Rows[0][27].ToString() == "True")
+            {
+                No_Followup.Checked = true;
             }
-
+            if (dt22.Rows[0][28].ToString() == "True")
+            {
+                Bad_Followup.Checked = true;
+            }
             //////////////////////////////////////////// Update voice_DT
             DataTable dt44 = new DataTable();
             OleDbDataAdapter adp2 = new OleDbDataAdapter();
             adp2.SelectCommand = new OleDbCommand();
             adp2.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "'";
+            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "' and [Voice] is not null";
             adp2.SelectCommand.CommandText = lcommand2;
             dt44.Clear();
             adp2.Fill(dt44);
@@ -941,6 +978,122 @@ namespace SnappFood_Employee_Evaluation.QC
             if (e.Control && e.KeyCode == Keys.A)
             {
                 Inv_link.SelectAll();
+            }
+        }
+
+        private void No_swt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (No_swt.Checked)
+            {
+                btn_no_sw.BackColor = Color.Red;
+                btn_no_sw.ForeColor = Color.Yellow;
+                btn_no_sw.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                btn_no_sw.BackColor = Color.WhiteSmoke;
+                btn_no_sw.ForeColor = Color.Black;
+                btn_no_sw.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void Bad_swt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Bad_swt.Checked)
+            {
+                btn_bad_sw.BackColor = Color.Red;
+                btn_bad_sw.ForeColor = Color.Yellow;
+                btn_bad_sw.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                btn_bad_sw.BackColor = Color.WhiteSmoke;
+                btn_bad_sw.ForeColor = Color.Black;
+                btn_bad_sw.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void Bad_Followup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Bad_Followup.Checked)
+            {
+                BAD_FW_btn.BackColor = Color.Red;
+                BAD_FW_btn.ForeColor = Color.Yellow;
+                BAD_FW_btn.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                BAD_FW_btn.BackColor = Color.WhiteSmoke;
+                BAD_FW_btn.ForeColor = Color.Black;
+                BAD_FW_btn.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void No_Followup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (No_Followup.Checked)
+            {
+                NO_FW_btn.BackColor = Color.Red;
+                NO_FW_btn.ForeColor = Color.Yellow;
+                NO_FW_btn.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                NO_FW_btn.BackColor = Color.WhiteSmoke;
+                NO_FW_btn.ForeColor = Color.Black;
+                NO_FW_btn.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void btn_bad_sw_Click(object sender, EventArgs e)
+        {
+            if (Bad_swt.Checked)
+            {
+                Bad_swt.Checked = false;
+            }
+            else
+            {
+                Bad_swt.Checked = true;
+                No_swt.Checked = false;
+            }
+        }
+
+        private void btn_no_sw_Click(object sender, EventArgs e)
+        {
+            if (No_swt.Checked)
+            {
+                No_swt.Checked = false;
+            }
+            else
+            {
+                No_swt.Checked = true;
+                Bad_swt.Checked = false;
+            }
+        }
+
+        private void BAD_FW_btn_Click(object sender, EventArgs e)
+        {
+            if (Bad_Followup.Checked)
+            {
+                Bad_Followup.Checked = false;
+            }
+            else
+            {
+                Bad_Followup.Checked = true;
+                No_Followup.Checked = false;
+            }
+        }
+
+        private void NO_FW_btn_Click(object sender, EventArgs e)
+        {
+            if (No_Followup.Checked)
+            {
+                No_Followup.Checked = false;
+            }
+            else
+            {
+                No_Followup.Checked = true;
+                Bad_Followup.Checked = false;
             }
         }
     }

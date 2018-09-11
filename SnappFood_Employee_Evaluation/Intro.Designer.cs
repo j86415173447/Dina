@@ -114,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(642, 341);
+            this.ClientSize = new System.Drawing.Size(628, 341);
             this.Controls.Add(this.radProgressBar1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

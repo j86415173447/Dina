@@ -114,6 +114,14 @@ namespace SnappFood_Employee_Evaluation.QC
             {
                 conditions.Add("SEL1.[taboo] = 1");
             }
+            if (no_fwl.Checked)
+            {
+                conditions.Add("SEL1.[No_Followup] = 1");
+            }
+            if (bad_fwl.Checked)
+            {
+                conditions.Add("SEL1.[Bad_Followup] = 1");
+            }
             if (conditions.Count != 0)
             {
                 query = query + " WHERE " + string.Join(" AND ", conditions.ToArray());
@@ -129,11 +137,11 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
             string lcommand = "SELECT ROW_NUMBER() OVER(ORDER BY SEL1.[QC_ID] ASC) AS 'ردیف', SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
-                              "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی', Sel1.[call_dt] 'تاریخ مکالمه', Sel1.[call_tm] 'ساعت مکالمه', Sel1.[bad_Switch] 'سوئیچ بد', Sel1.[No_Switch] 'عدم سوئیچ', Sel1.[QC_Agent] 'نام کارشناس کیفی', Sel1.[Status] 'وضعیت لاگ' " +
+                              "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو',SEL1.[No_Followup] 'عدم پیگیری',SEL1.[Bad_Followup] 'پیگیری ناقص', SEL1.[insrt_dt_per] 'تاریخ بررسی', Sel1.[call_dt] 'تاریخ مکالمه', Sel1.[call_tm] 'ساعت مکالمه', Sel1.[bad_Switch] 'سوئیچ بد', Sel1.[No_Switch] 'عدم سوئیچ', Sel1.[QC_Agent] 'نام کارشناس کیفی', Sel1.[Status] 'وضعیت لاگ' " +
                               "FROM ( " +
                               "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent],[call_dt],[call_tm],[bad_switch],[No_switch], " +
                               "iif([QC_M_Approval] is null,N'منتظر تائید کیفی',iif([QC_M_Approval] = 1 and [CC_M_Approval] is null, N'منتظر تائید سرگروه',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] is null, N'منتظر تائید رهبر',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] is null, N'منتظر تائید مدیر',iif([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] = 0 and [Final_Approval] is null, N'منتظر تائید برگشتی', iif([QC_M_Approval] = 0, [CC_M_Aprv_Usr],iif([Final_Approval] = 1, N'تائید نهایی', N'عدم تائید نهائی'))))))) as [Status] " +
-                              " FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) SEL1 " +
+                              " ,[No_Followup],[Bad_Followup] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) SEL1 " +
                               "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
                               "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
                               "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) ";

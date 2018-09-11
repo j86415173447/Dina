@@ -205,7 +205,6 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             report.Dictionary.Variables.Add("lbl_20", lbl_20.Text);
             report.Dictionary.Variables.Add("lbl_21", lbl_21.Text);
             report.Dictionary.Variables.Add("horofi", horofi);
-
             Stimulsoft.Report.Print.StiPrintProvider.SetPaperSource = false;
             report.Render();
             report.Show();

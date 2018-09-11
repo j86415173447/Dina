@@ -23,10 +23,11 @@ namespace SnappFood_Employee_Evaluation
         public string doc_number;
         public bool QC_GRID;
         ///////////////////////////////// Warning Caps
-        public int cap_0_30 = 5;
-        public int cap_30_60 = 33;
-        public int cap_60_90 = 37;
-        public int cap_ov_90 = 25;
+        public int cap_0_30;
+        public int cap_30_60;
+        public int cap_60_90;
+        public int cap_ov_90;
+        public int min_score;
         public int timer2_count = 0;
 
         public Main_Frm1()
@@ -1228,42 +1229,67 @@ namespace SnappFood_Employee_Evaluation
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DataTable dt22 = new DataTable();
-            OleDbDataAdapter adp = new OleDbDataAdapter();
-            adp.SelectCommand = new OleDbCommand();
-            adp.SelectCommand.Connection = oleDbConnection1;
+            ////////////////////////////////////////////////////////// Initilizing CAP
+            DataTable dtsc4 = new DataTable();
+            OleDbDataAdapter adpsc4 = new OleDbDataAdapter();
+            adpsc4.SelectCommand = new OleDbCommand();
+            adpsc4.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = " Select COUNT(sel1.[QC_ID]) 'کل لاگ ها',SUM(sel3.[LOG_QTY]) 'کل فایل ها',SUM(CASE WHEN sel1.[QC_Score]<=18 then 1 else 0 end) 'ناموفق',SUM(CASE WHEN sel1.[QC_Score] >18 then 1 else 0 end) 'موفق' ,SUM(CASE WHEN sel1.[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'رد کیفی', AVG(sel1.[Handling_tm]) 'AHT', AVG(Sel1.[Handling_tm] - Sel2.[Len]) 'AMW' " +
-                              " ,CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '0 ~ 30', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 60 and sel2.[Len] > 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '30 ~ 60', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 90 and sel2.[Len] > 60   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '60 ~ 90', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] > 90   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' 'Over 90'   from ( " +
-                              " (SELECT [QC_ID],[Handling_tm],[taboo],[QC_M_Approval],[QC_Agent],[QC_Score],[CC_M_Aprv_Usr],[insrt_dt] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) Sel1 " +
-                              " left join (SELECT [QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel2 " +
-                              " on Sel1.[QC_ID] = Sel2.[QC_ID] " +
-                              "left join (SELECT [QC_ID], count([QC_ID]) 'LOG_QTY' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel3 on Sel1.[QC_ID] = Sel3.[QC_ID] " +
-                              ") WHERE  Sel1.[QC_Agent] = N'" + username + "' and Sel1.[insrt_dt] = convert(date, getdate(), 111) group by Sel1.[QC_Agent] ";
-            adp.SelectCommand.CommandText = lcommand;
-            dt22.Clear();
-            adp.Fill(dt22);
-            if (dt22.Rows.Count != 0)
+            string lcommandsc4 = "SELECT [cap_0_30],[cap_30_60],[cap_60_90],[cap_ov_90],[min_suc_log] FROM [SNAPP_CC_EVALUATION].[dbo].[SYS_QC_SETTING]";
+            adpsc4.SelectCommand.CommandText = lcommandsc4;
+            adpsc4.Fill(dtsc4);
+            if (dtsc4.Rows.Count != 0)
             {
-                radGridView1.DataSource = dt22;
-                //radGridView1.BestFitColumns();
+                cap_0_30 = int.Parse(dtsc4.Rows[0][0].ToString());
+                cap_30_60 = int.Parse(dtsc4.Rows[0][1].ToString());
+                cap_60_90 = int.Parse(dtsc4.Rows[0][2].ToString());
+                cap_ov_90 = int.Parse(dtsc4.Rows[0][3].ToString());
+                min_score = int.Parse(dtsc4.Rows[0][4].ToString());
 
-                radGridView1.Columns[1].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[2].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[3].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[4].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[5].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[6].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[7].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[8].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[9].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[10].TextAlignment = ContentAlignment.MiddleCenter;
-                radGridView1.Columns[0].TextAlignment = ContentAlignment.MiddleCenter;
-                
-                radGridView1.TableElement.RowHeight = 25;
-                radGridView1.TableElement.TableHeaderHeight = 25;
-                //radGridView1.Columns[0].BestFit();
+                ////////////////////////////////////////////////////////////////// update board
+                DataTable dt22 = new DataTable();
+                OleDbDataAdapter adp = new OleDbDataAdapter();
+                adp.SelectCommand = new OleDbCommand();
+                adp.SelectCommand.Connection = oleDbConnection1;
+                oleDbCommand1.Parameters.Clear();
+                string lcommand = " Select COUNT(sel1.[QC_ID]) 'کل لاگ ها',SUM(sel3.[LOG_QTY]) 'کل فایل ها',SUM(CASE WHEN sel1.[QC_Score]<" + min_score.ToString() + " then 1 else 0 end) 'ناموفق',SUM(CASE WHEN sel1.[QC_Score] >=" + min_score.ToString() + " then 1 else 0 end) 'موفق' ,SUM(CASE WHEN sel1.[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'رد کیفی', AVG(sel1.[Handling_tm]) 'AHT', AVG(Sel1.[Handling_tm] - Sel2.[Len]) 'AMW' " +
+                                  " ,CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '0 ~ 30', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 60 and sel2.[Len] > 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '30 ~ 60', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 90 and sel2.[Len] > 60   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '60 ~ 90', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] > 90   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' 'Over 90'   from ( " +
+                                  " (SELECT [QC_ID],[Handling_tm],[taboo],[QC_M_Approval],[QC_Agent],[QC_Score],[CC_M_Aprv_Usr],[insrt_dt] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) Sel1 " +
+                                  " left join (SELECT [QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel2 " +
+                                  " on Sel1.[QC_ID] = Sel2.[QC_ID] " +
+                                  "left join (SELECT [QC_ID], count([QC_ID]) 'LOG_QTY' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel3 on Sel1.[QC_ID] = Sel3.[QC_ID] " +
+                                  ") WHERE  Sel1.[QC_Agent] = N'" + username + "' and Sel1.[insrt_dt] = convert(date, getdate(), 111) group by Sel1.[QC_Agent] ";
+                adp.SelectCommand.CommandText = lcommand;
+                dt22.Clear();
+                adp.Fill(dt22);
+                if (dt22.Rows.Count != 0)
+                {
+                    radGridView1.DataSource = dt22;
+                    //radGridView1.BestFitColumns();
+
+                    radGridView1.Columns[1].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[2].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[3].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[4].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[5].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[6].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[7].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[8].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[9].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[10].TextAlignment = ContentAlignment.MiddleCenter;
+                    radGridView1.Columns[0].TextAlignment = ContentAlignment.MiddleCenter;
+
+                    radGridView1.TableElement.RowHeight = 25;
+                    radGridView1.TableElement.TableHeaderHeight = 25;
+                    //radGridView1.Columns[0].BestFit();
+                }
             }
+            else
+            {
+                RadMessageBox.Show(this, " بروز خطا در تنظیمات کنترل کیفی! " + "\n" + " بُرد اطلاعات عملکرد شما بروزرسانی نمی شود. پس از رفع مشکل می بایست یکبار برنامه را بسته و مجددا باز نمائید. " + "\n" + " لطفا با مدیریت شرکت تماس حاصل نمائید. ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                timer1.Stop();
+            }
+            
         }
 
         private void radGridView1_CellFormatting(object sender, Telerik.WinControls.UI.CellFormattingEventArgs e)
@@ -1342,6 +1368,57 @@ namespace SnappFood_Employee_Evaluation
             var new_staff = new Agents_Panel.AGENT_SALARY_DETAIL();
             new_staff.constr = constr;
             new_staff.doc_number = doc_number;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement59_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(System_Managment.GEN_HCC_SETTING))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new System_Managment.GEN_HCC_SETTING();
+            new_staff.constr = constr;
+            //new_staff.doc_number = doc_number;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement60_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(System_Managment.GEN_HCC_CC))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new System_Managment.GEN_HCC_CC();
+            new_staff.constr = constr;
+            //new_staff.doc_number = doc_number;
+            new_staff.MdiParent = this;
+            new_staff.Show();
+        }
+
+        private void radButtonElement61_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(System_Managment.QC_CONTROL_PANEL))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+            var new_staff = new System_Managment.QC_CONTROL_PANEL();
+            new_staff.constr = constr;
+            //new_staff.doc_number = doc_number;
             new_staff.MdiParent = this;
             new_staff.Show();
         }

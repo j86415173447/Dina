@@ -34,10 +34,11 @@ namespace SnappFood_Employee_Evaluation.QC
         public DataTable voice_dt = new DataTable();
         public int amw_sec;
         ///////////////////////////////// Warning Caps
-        public int cap_0_30 = 5;
-        public int cap_30_60 = 33;
-        public int cap_60_90 = 37;
-        public int cap_ov_90 = 25;
+        public int cap_0_30;
+        public int cap_30_60;
+        public int cap_60_90;
+        public int cap_ov_90;
+        public int min_score;
         public DataTable dt22 = new DataTable();
         Point p = Point.Empty;
 
@@ -150,7 +151,9 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void operator_ext_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            //e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != '-');
+            if (!char.IsControl(e.KeyChar) && (!char.IsDigit(e.KeyChar)))
+                e.Handled = true;
         }
 
         private void operator_ext_TextChanged(object sender, EventArgs e)
@@ -211,7 +214,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void calculate_score()
         {
-            if (!taboo.Checked)
+            if (!taboo.Checked & !No_Followup.Checked & !Bad_Followup.Checked)
             {
                 DataTable dt4 = new DataTable();
                 OleDbDataAdapter adp4 = new OleDbDataAdapter();
@@ -272,9 +275,17 @@ namespace SnappFood_Employee_Evaluation.QC
                 }
                 Call_Score_Final.Text = score.ToString();
             }
-            else
+            else if (taboo.Checked)
             {
                 Call_Score_Final.Text = "0";
+            }
+            else if (No_Followup.Checked)
+            {
+                Call_Score_Final.Text = "0";
+            }
+            else if (Bad_Followup.Checked)
+            {
+                Call_Score_Final.Text = "9";
             }
         }
 
@@ -307,7 +318,7 @@ namespace SnappFood_Employee_Evaluation.QC
                                                     "[QC_ID],[QC_Year],[QC_Month],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[Call_Tm],[Call_Dt],[QC_Param_1],[QC_Param_2] " +
                                                     ",[QC_Param_3],[QC_Param_4],[QC_Param_5],[QC_Param_6],[QC_Param_7],[QC_Param_8],[QC_Param_9],[QC_Param_10],[QC_Param_11],[QC_Param_12] " +
                                                     ",[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[insrt_dt],[QC_M_Approval],[QC_M_Aprv_Usr],[QC_M_Aprv_DT],[CC_M_Approval],[CC_M_Aprv_Usr],[CC_M_Aprv_Rmrk],[CC_M_Aprv_DT]" +
-                                                     " ,[QC_Agent],[No_switch],[Bad_switch],[Active_Status]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?)";
+                                                     " ,[QC_Agent],[No_switch],[Bad_switch],[No_Followup],[Bad_Followup],[Active_Status]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?,?,?)";
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_ID.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Mth);
@@ -434,6 +445,8 @@ namespace SnappFood_Employee_Evaluation.QC
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_Agent.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_swt.Checked ? "1" : "0");
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_swt.Checked ? "1" : "0");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_Followup.Checked ? "1" : "0");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_Followup.Checked ? "1" : "0");
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
@@ -447,7 +460,7 @@ namespace SnappFood_Employee_Evaluation.QC
                                                     "[QC_ID],[QC_Year],[QC_Month],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[Call_Tm],[Call_Dt],[QC_Param_1],[QC_Param_2] " + //11
                                                     ",[QC_Param_3],[QC_Param_4],[QC_Param_5],[QC_Param_6],[QC_Param_7],[QC_Param_8],[QC_Param_9],[QC_Param_10],[QC_Param_11],[QC_Param_12] " + //10
                                                     ",[Inv_link],[Remarks],[Handling_tm],[taboo],[insrt_dt_per],[insrt_tm],[insrt_dt],[QC_M_Approval],[QC_M_Aprv_Usr],[QC_M_Aprv_DT],[CC_M_Approval],[CC_M_Aprv_Usr],[CC_M_Aprv_Rmrk],[CC_M_Aprv_DT],[LD_M_Approval],[LD_M_Aprv_Usr],[LD_M_Aprv_Rmrk],[LD_M_Aprv_DT],[MG_M_Approval],[MG_M_Aprv_Usr],[MG_M_Aprv_Rmrk],[MG_M_Aprv_Dt],[Final_Approval],[Final_Aprv_Usr],[Final_Aprv_Rmrk],[Final_Aprv_DT]" + //17
-                                                    " ,[QC_Agent],[No_switch],[Bad_switch],[Active_Status]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                                                    " ,[QC_Agent],[No_switch],[Bad_switch],[No_Followup],[Bad_Followup],[Active_Status]) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,getdate(),getdate(),?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_ID.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Mth);
@@ -562,7 +575,7 @@ namespace SnappFood_Employee_Evaluation.QC
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", handling_time.ToString());
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", DT_Yr + "/" + DT_Mth + "/" + DT_Day);
-                        if (int.Parse(Call_Score_Final.Text) > 18)
+                        if (int.Parse(Call_Score_Final.Text) > min_score)
                         {
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
                             oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "لاگ موفق");
@@ -623,24 +636,43 @@ namespace SnappFood_Employee_Evaluation.QC
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", QC_Agent.Text);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_swt.Checked ? "1" : "0");
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_swt.Checked ? "1" : "0");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", No_Followup.Checked ? "1" : "0");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Bad_Followup.Checked ? "1" : "0");
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "1");
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();
                     }
                     ///////////////////////////////////////////// Insert voice files
-                    for (int i = 0; i < voice_dt.Rows.Count; i++)
+                    if (voice_dt.Rows.Count != 0)
+                    {
+                        for (int i = 0; i < voice_dt.Rows.Count; i++)
+                        {
+                            oleDbCommand1.Parameters.Clear();
+                            oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] ( " +
+                                                        "[QC_ID],[File_Row],[File_Name],[Voice],[Voice_len],[Voice_size]" +
+                                                        ") values (?,?,?,?,?,?)";
+                            oleDbCommand1.Parameters.AddWithValue("@QC_ID", QC_ID.Text);
+                            oleDbCommand1.Parameters.AddWithValue("@File_Row", voice_dt.Rows[i][0].ToString());
+                            oleDbCommand1.Parameters.AddWithValue("@File_Name", voice_dt.Rows[i][1].ToString());
+                            oleDbCommand1.Parameters.AddWithValue("@Voice", voice_dt.Rows[i][5]);
+                            oleDbCommand1.Parameters.AddWithValue("@Voice_len", voice_dt.Rows[i][2].ToString());
+                            oleDbCommand1.Parameters.AddWithValue("@Voice_size", voice_dt.Rows[i][3].ToString());
+                            oleDbConnection1.Open();
+                            oleDbCommand1.ExecuteNonQuery();
+                            oleDbConnection1.Close();
+                        }
+                    }
+                    else
                     {
                         oleDbCommand1.Parameters.Clear();
                         oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] ( " +
-                                                    "[QC_ID],[File_Row],[File_Name],[Voice],[Voice_len],[Voice_size]" +
-                                                    ") values (?,?,?,?,?,?)";
+                                                    "[QC_ID],[File_Row],[File_Name],[Voice_len]" +
+                                                    ") values (?,?,?,?)";
                         oleDbCommand1.Parameters.AddWithValue("@QC_ID", QC_ID.Text);
-                        oleDbCommand1.Parameters.AddWithValue("@File_Row", voice_dt.Rows[i][0].ToString());
-                        oleDbCommand1.Parameters.AddWithValue("@File_Name", voice_dt.Rows[i][1].ToString());
-                        oleDbCommand1.Parameters.AddWithValue("@Voice", voice_dt.Rows[i][5]);
-                        oleDbCommand1.Parameters.AddWithValue("@Voice_len", voice_dt.Rows[i][2].ToString());
-                        oleDbCommand1.Parameters.AddWithValue("@Voice_size", voice_dt.Rows[i][3].ToString());
+                        oleDbCommand1.Parameters.AddWithValue("@File_Row", "1");
+                        oleDbCommand1.Parameters.AddWithValue("@File_Name", "No File");
+                        oleDbCommand1.Parameters.AddWithValue("@Voice_len", dt.AddSeconds(handling_time + amw_sec).ToString("mm:ss"));
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();
@@ -711,7 +743,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 this.errorProvider.SetError(this.label18, "توضیحات وارد نشده است.");
                 error = true;
             }
-            if (voice_dt.Rows.Count == 0 || radGridView1.Rows.Count == 0)
+            if ((voice_dt.Rows.Count == 0 || radGridView1.Rows.Count == 0) & (No_Followup.Checked == Bad_Followup.Checked))
             {
                 this.errorProvider.SetError(this.radButton1, "آرشیو فایل صوتی خالی است.");
                 error = true;
@@ -793,14 +825,12 @@ namespace SnappFood_Employee_Evaluation.QC
         {
             if (taboo.Checked)
             {
-                btnTaboo.Text = "وضعیت تابو: فعال";
                 btnTaboo.BackColor = Color.Red;
                 btnTaboo.ForeColor = Color.Yellow;
                 btnTaboo.Image = Properties.Resources.danger_icon;
             }
             else
             {
-                btnTaboo.Text = "وضعیت تابو: غیر فعال";
                 btnTaboo.BackColor = Color.WhiteSmoke;
                 btnTaboo.ForeColor = Color.Black;
                 btnTaboo.Image = Properties.Resources.small_tick;
@@ -816,6 +846,11 @@ namespace SnappFood_Employee_Evaluation.QC
             else
             {
                 taboo.Checked = true;
+            }
+            if (timer1.Enabled != true && QC_ID.Text == "")
+            {
+                timer1.Interval = 1000;
+                timer1.Start();
             }
         }
 
@@ -860,6 +895,8 @@ namespace SnappFood_Employee_Evaluation.QC
 
             No_swt.Checked = false;
             Bad_swt.Checked = false;
+            No_Followup.Checked = false; 
+            Bad_Followup.Checked = false;
             Call_Type.SelectedIndex = 0;
 
             Remarks.Text = "";
@@ -889,7 +926,7 @@ namespace SnappFood_Employee_Evaluation.QC
             timer1.Stop();
             handling_time = 0;
             handle_TM.Text = "";
-
+            Total_Vce_Duration.Text = "";
 
         }
 
@@ -1074,11 +1111,35 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            ////////////////////////////////////////////////////////// Initilizing CAP
+            DataTable dtsc4 = new DataTable();
+            OleDbDataAdapter adpsc4 = new OleDbDataAdapter();
+            adpsc4.SelectCommand = new OleDbCommand();
+            adpsc4.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommandsc4 = "SELECT [cap_0_30],[cap_30_60],[cap_60_90],[cap_ov_90],[min_suc_log] FROM [SNAPP_CC_EVALUATION].[dbo].[SYS_QC_SETTING]";
+            adpsc4.SelectCommand.CommandText = lcommandsc4;
+            adpsc4.Fill(dtsc4);
+            if (dtsc4.Rows.Count != 0)
+            {
+                cap_0_30 = int.Parse(dtsc4.Rows[0][0].ToString());
+                cap_30_60 = int.Parse(dtsc4.Rows[0][1].ToString());
+                cap_60_90 = int.Parse(dtsc4.Rows[0][2].ToString());
+                cap_ov_90 = int.Parse(dtsc4.Rows[0][3].ToString());
+                min_score = int.Parse(dtsc4.Rows[0][4].ToString());
+                min_score = min_score - 1;
+            }
+            else
+            {
+                //RadMessageBox.Show(this, " بروز خطا در تنظیمات کنترل کیفی! " + "\n" + " تا رفع مشکل امکان ثبت لاگ جدید وجود ندارد. " + "\n" + " لطفا با مدیریت شرکت تماس حاصل نمائید. ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                timer1.Stop();
+                timer2.Stop();
+            }
             OleDbDataAdapter adp = new OleDbDataAdapter();
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = " Select Sel1.[QC_Agent] 'کارشناس', COUNT(sel1.[QC_ID]) 'کل لاگ ها',SUM(sel3.[LOG_QTY]) 'کل فایل ها',SUM(CASE WHEN sel1.[QC_Score]<=18 then 1 else 0 end) 'ناموفق',SUM(CASE WHEN sel1.[QC_Score] >18 then 1 else 0 end) 'موفق' ,SUM(CASE WHEN sel1.[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'رد کیفی', AVG(sel1.[Handling_tm]) 'AHT', AVG(Sel1.[Handling_tm] - Sel2.[Len]) 'AMW' " +
+            string lcommand = " Select Sel1.[QC_Agent] 'کارشناس', COUNT(sel1.[QC_ID]) 'کل لاگ ها',SUM(sel3.[LOG_QTY]) 'کل فایل ها',SUM(CASE WHEN sel1.[QC_Score]<="+ min_score.ToString() + " then 1 else 0 end) 'ناموفق',SUM(CASE WHEN sel1.[QC_Score] >" + min_score.ToString() + " then 1 else 0 end) 'موفق' ,SUM(CASE WHEN sel1.[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'رد کیفی', AVG(sel1.[Handling_tm]) 'AHT', AVG(Sel1.[Handling_tm] - Sel2.[Len]) 'AMW' " +
                               " ,CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '0 ~ 30', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 60 and sel2.[Len] > 30   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '30 ~ 60', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] <= 90 and sel2.[Len] > 60   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' '60 ~ 90', CAST(round(convert(float,SUM(CASE WHEN sel2.[Len] > 90   then 1 else 0 end))/COUNT(sel1.[QC_ID]),4)*100 as nvarchar(5)) + '%' 'Over 90'   from ( " +
                               " (SELECT [QC_ID],[Handling_tm],[taboo],[QC_M_Approval],[QC_Agent],[QC_Score],[CC_M_Aprv_Usr],[insrt_dt] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS]) Sel1 " +
                               " left join (SELECT [QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel2 " +
@@ -1152,6 +1213,176 @@ namespace SnappFood_Employee_Evaluation.QC
                 radDesktopAlert1.Popup.LocationChanged -= Popup_LocationChanged;
                 radDesktopAlert1.Popup.Location = p;
                 radDesktopAlert1.Popup.LocationChanged += Popup_LocationChanged;
+            }
+        }
+
+        private void Only_Digit(object sender, KeyPressEventArgs e)
+        {
+            //e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != '-');
+            if (!char.IsControl(e.KeyChar) && (!char.IsDigit(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void LOG_ENTRY_Shown(object sender, EventArgs e)
+        {
+            ////////////////////////////////////////////////////////// Initilizing CAP
+            DataTable dtsc4 = new DataTable();
+            OleDbDataAdapter adpsc4 = new OleDbDataAdapter();
+            adpsc4.SelectCommand = new OleDbCommand();
+            adpsc4.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommandsc4 = "SELECT [cap_0_30],[cap_30_60],[cap_60_90],[cap_ov_90],[min_suc_log] FROM [SNAPP_CC_EVALUATION].[dbo].[SYS_QC_SETTING]";
+            adpsc4.SelectCommand.CommandText = lcommandsc4;
+            adpsc4.Fill(dtsc4);
+            if (dtsc4.Rows.Count != 0)
+            {
+                cap_0_30 = int.Parse(dtsc4.Rows[0][0].ToString());
+                cap_30_60 = int.Parse(dtsc4.Rows[0][1].ToString());
+                cap_60_90 = int.Parse(dtsc4.Rows[0][2].ToString());
+                cap_ov_90 = int.Parse(dtsc4.Rows[0][3].ToString());
+                min_score = int.Parse(dtsc4.Rows[0][4].ToString());
+                min_score = min_score - 1;
+            }
+            else
+            {
+                RadMessageBox.Show(this, " بروز خطا در تنظیمات کنترل کیفی! " + "\n" + " تا رفع مشکل امکان ثبت لاگ جدید وجود ندارد. " + "\n" + " لطفا با مدیریت شرکت تماس حاصل نمائید. ", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                this.Close();
+            }
+        }
+
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            if (No_Followup.Checked)
+            {
+                No_Followup.Checked = false;
+            }
+            else
+            {
+                No_Followup.Checked = true;
+                Bad_Followup.Checked = false;
+            }
+            if (timer1.Enabled != true && QC_ID.Text == "")
+            {
+                timer1.Interval = 1000;
+                timer1.Start();
+            }
+        }
+
+        private void No_Followup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (No_Followup.Checked)
+            {
+                NO_FW_btn.BackColor = Color.Red;
+                NO_FW_btn.ForeColor = Color.Yellow;
+                NO_FW_btn.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                NO_FW_btn.BackColor = Color.WhiteSmoke;
+                NO_FW_btn.ForeColor = Color.Black;
+                NO_FW_btn.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void radButton3_Click(object sender, EventArgs e)
+        {
+            if (Bad_Followup.Checked)
+            {
+                Bad_Followup.Checked = false;
+            }
+            else
+            {
+                Bad_Followup.Checked = true;
+                No_Followup.Checked = false;
+            }
+            if (timer1.Enabled != true && QC_ID.Text == "")
+            {
+                timer1.Interval = 1000;
+                timer1.Start();
+            }
+        }
+
+        private void Bad_Followup_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Bad_Followup.Checked)
+            {
+                BAD_FW_btn.BackColor = Color.Red;
+                BAD_FW_btn.ForeColor = Color.Yellow;
+                BAD_FW_btn.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                BAD_FW_btn.BackColor = Color.WhiteSmoke;
+                BAD_FW_btn.ForeColor = Color.Black;
+                BAD_FW_btn.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void radButton2_Click_1(object sender, EventArgs e)
+        {
+            if (Bad_swt.Checked)
+            {
+                Bad_swt.Checked = false;
+            }
+            else
+            {
+                Bad_swt.Checked = true;
+                No_swt.Checked = false;
+            }
+            if (timer1.Enabled != true && QC_ID.Text == "")
+            {
+                timer1.Interval = 1000;
+                timer1.Start();
+            }
+        }
+
+        private void Bad_swt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Bad_swt.Checked)
+            {
+                btn_bad_sw.BackColor = Color.Red;
+                btn_bad_sw.ForeColor = Color.Yellow;
+                btn_bad_sw.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                btn_bad_sw.BackColor = Color.WhiteSmoke;
+                btn_bad_sw.ForeColor = Color.Black;
+                btn_bad_sw.Image = Properties.Resources.small_tick;
+            }
+        }
+
+        private void btn_no_sw_Click(object sender, EventArgs e)
+        {
+            if (No_swt.Checked)
+            {
+                No_swt.Checked = false;
+            }
+            else
+            {
+                No_swt.Checked = true;
+                Bad_swt.Checked = false;
+            }
+            if (timer1.Enabled != true && QC_ID.Text == "")
+            {
+                timer1.Interval = 1000;
+                timer1.Start();
+            }
+        }
+
+        private void No_swt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (No_swt.Checked)
+            {
+                btn_no_sw.BackColor = Color.Red;
+                btn_no_sw.ForeColor = Color.Yellow;
+                btn_no_sw.Image = Properties.Resources.danger_icon;
+            }
+            else
+            {
+                btn_no_sw.BackColor = Color.WhiteSmoke;
+                btn_no_sw.ForeColor = Color.Black;
+                btn_no_sw.Image = Properties.Resources.small_tick;
             }
         }
     }

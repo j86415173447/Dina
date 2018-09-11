@@ -44,6 +44,7 @@ namespace SnappFood_Employee_Evaluation
             //constr = file.ReadLine();
             //constr = "Provider=SQLOLEDB;Data Source=185.140.5.93;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
             constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
+            //constr = "Provider=SQLOLEDB;Data Source=localhost;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
             oleDbConnection1.ConnectionString = constr;
         }
 

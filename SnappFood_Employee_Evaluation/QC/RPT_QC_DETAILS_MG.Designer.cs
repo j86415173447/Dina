@@ -236,7 +236,7 @@
             this.radGridView1.ShowNoDataText = false;
             this.radGridView1.Size = new System.Drawing.Size(1167, 549);
             this.radGridView1.TabIndex = 69;
-            this.radGridView1.ThemeName = "ControlDefault";
+            this.radGridView1.ThemeName = "Office2010Silver";
             this.radGridView1.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridView1_CellDoubleClick);
             // 
             // oleDbCommand1

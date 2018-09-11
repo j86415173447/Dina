@@ -34,7 +34,7 @@ namespace SnappFood_Employee_Evaluation
             stop = rnd.Next(19, 81);
 
             timer1.Interval = 30;
-            label1.Text = "ورژن:5.1.8 - متصل به پنل پیامک و ایمیل";
+            label1.Text = "ورژن:5.8.3 - متصل به پنل پیامک و ایمیل";
             label1.TextAlign = ContentAlignment.MiddleRight;
         }
 

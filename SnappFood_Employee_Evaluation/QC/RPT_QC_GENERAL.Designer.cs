@@ -34,6 +34,8 @@
             this.Print = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.Log_Status = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Taboo = new System.Windows.Forms.CheckBox();
             this.Per_Dep = new System.Windows.Forms.ComboBox();
             this.QC_Agent = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,8 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
-            this.Log_Status = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.no_fwl = new System.Windows.Forms.CheckBox();
+            this.bad_fwl = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -109,6 +111,8 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGroupBox1.Controls.Add(this.bad_fwl);
+            this.radGroupBox1.Controls.Add(this.no_fwl);
             this.radGroupBox1.Controls.Add(this.Log_Status);
             this.radGroupBox1.Controls.Add(this.label5);
             this.radGroupBox1.Controls.Add(this.Taboo);
@@ -135,16 +139,40 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
+            // Log_Status
+            // 
+            this.Log_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Log_Status.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Log_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Log_Status.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Log_Status.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Log_Status.FormattingEnabled = true;
+            this.Log_Status.Location = new System.Drawing.Point(954, 62);
+            this.Log_Status.Name = "Log_Status";
+            this.Log_Status.Size = new System.Drawing.Size(169, 21);
+            this.Log_Status.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Location = new System.Drawing.Point(1129, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "وضعیت لاگ:";
+            // 
             // Taboo
             // 
             this.Taboo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Taboo.AutoSize = true;
             this.Taboo.BackColor = System.Drawing.Color.MistyRose;
-            this.Taboo.Location = new System.Drawing.Point(25, 29);
+            this.Taboo.Location = new System.Drawing.Point(840, 64);
             this.Taboo.Name = "Taboo";
-            this.Taboo.Size = new System.Drawing.Size(99, 17);
+            this.Taboo.Size = new System.Drawing.Size(90, 17);
             this.Taboo.TabIndex = 24;
-            this.Taboo.Text = "فقط موارد تابو";
+            this.Taboo.Text = "مکالمات تابو";
             this.Taboo.UseVisualStyleBackColor = false;
             // 
             // Per_Dep
@@ -301,29 +329,29 @@
             // 
             this.oleDbCommand1.Connection = this.oleDbConnection1;
             // 
-            // Log_Status
+            // no_fwl
             // 
-            this.Log_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Log_Status.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Log_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Log_Status.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Log_Status.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Log_Status.FormattingEnabled = true;
-            this.Log_Status.Location = new System.Drawing.Point(954, 62);
-            this.Log_Status.Name = "Log_Status";
-            this.Log_Status.Size = new System.Drawing.Size(169, 21);
-            this.Log_Status.TabIndex = 32;
+            this.no_fwl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.no_fwl.AutoSize = true;
+            this.no_fwl.BackColor = System.Drawing.Color.MistyRose;
+            this.no_fwl.Location = new System.Drawing.Point(733, 64);
+            this.no_fwl.Name = "no_fwl";
+            this.no_fwl.Size = new System.Drawing.Size(85, 17);
+            this.no_fwl.TabIndex = 33;
+            this.no_fwl.Text = "عدم پیگیری";
+            this.no_fwl.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // bad_fwl
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(1129, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "وضعیت لاگ:";
+            this.bad_fwl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bad_fwl.AutoSize = true;
+            this.bad_fwl.BackColor = System.Drawing.Color.MistyRose;
+            this.bad_fwl.Location = new System.Drawing.Point(616, 64);
+            this.bad_fwl.Name = "bad_fwl";
+            this.bad_fwl.Size = new System.Drawing.Size(95, 17);
+            this.bad_fwl.TabIndex = 34;
+            this.bad_fwl.Text = "پیگیری ناقص";
+            this.bad_fwl.UseVisualStyleBackColor = false;
             // 
             // RPT_QC_GENERAL
             // 
@@ -385,5 +413,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox Log_Status;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox bad_fwl;
+        private System.Windows.Forms.CheckBox no_fwl;
     }
 }
