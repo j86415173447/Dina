@@ -170,19 +170,10 @@ namespace SnappFood_Employee_Evaluation.QC
                 lbl_tot_amw.Text = Math.Truncate(tot_amw).ToString();
 
                 ////////////////////////////////////// config gauges
-                total_gauge.Value = (tot_monitored / 350) * 100;
+                total_gauge.Value = (tot_monitored / ((dt22.Rows.Count) * 125)) * 100;
                 amw_gauge.Value = (tot_amw / 60) * 100;
                 aht_gauge.Value = (tot_aht / 250) * 100;
 
-                //total_gauge.RangeStart = 0;
-                //total_gauge.RangeEnd = 350;
-
-
-                //amw_gauge.RangeStart = 5;
-                //amw_gauge.RangeEnd = 60;
-
-                //aht_gauge.RangeStart = 100;
-                //aht_gauge.RangeEnd = 250;
                 //////////////////////////////////////////////////// Total Monitoring
                 if (total_gauge.Value <= 30)
                 {

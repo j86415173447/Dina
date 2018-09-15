@@ -96,24 +96,24 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 adp1.Fill(dt1);
                 if (dt1.Rows.Count == 1)
                 {
-                    lbl_4.Text = (dt1.Rows[0][3].ToString() != "") ? dt1.Rows[0][3].ToString() : "0";
-                    lbl_5.Text = (dt1.Rows[0][4].ToString() != "") ? dt1.Rows[0][4].ToString() : "0";
-                    lbl_6.Text = (dt1.Rows[0][5].ToString() != "") ? dt1.Rows[0][5].ToString() : "0";
-                    lbl_7.Text = (dt1.Rows[0][6].ToString() != "") ? dt1.Rows[0][6].ToString() : "0";
-                    lbl_8.Text = (dt1.Rows[0][7].ToString() != "") ? dt1.Rows[0][7].ToString() : "0";
-                    lbl_9.Text = (dt1.Rows[0][8].ToString() != "") ? dt1.Rows[0][8].ToString() : "0";
-                    lbl_10.Text = (dt1.Rows[0][9].ToString() != "") ? dt1.Rows[0][9].ToString() : "0";
-                    lbl_11.Text = (dt1.Rows[0][10].ToString() != "") ? dt1.Rows[0][10].ToString() : "0";
-                    lbl_12.Text = (dt1.Rows[0][11].ToString() != "") ? dt1.Rows[0][11].ToString() : "0";
-                    lbl_13.Text = (dt1.Rows[0][12].ToString() != "") ? dt1.Rows[0][12].ToString() : "0";
-                    lbl_14.Text = (dt1.Rows[0][13].ToString() != "") ? dt1.Rows[0][13].ToString() : "0";
-                    lbl_15.Text = (dt1.Rows[0][14].ToString() != "") ? dt1.Rows[0][14].ToString() : "0";
-                    lbl_16.Text = (dt1.Rows[0][15].ToString() != "") ? dt1.Rows[0][15].ToString() : "0";
-                    lbl_17.Text = (dt1.Rows[0][16].ToString() != "") ? dt1.Rows[0][16].ToString() : "0";
-                    lbl_18.Text = (dt1.Rows[0][17].ToString() != "") ? dt1.Rows[0][17].ToString() : "0";
-                    lbl_19.Text = (dt1.Rows[0][18].ToString() != "") ? dt1.Rows[0][18].ToString() : "0";
-                    lbl_20.Text = (dt1.Rows[0][19].ToString() != "") ? dt1.Rows[0][19].ToString() : "0";
-                    lbl_21.Text = (dt1.Rows[0][20].ToString() != "") ? dt1.Rows[0][20].ToString() : "0";
+                    lbl_4.Text = (dt1.Rows[0][3].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][3].ToString())) : "-";
+                    lbl_5.Text = (dt1.Rows[0][4].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][4].ToString())) : "-";
+                    lbl_6.Text = (dt1.Rows[0][5].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][5].ToString())) : "-";
+                    lbl_7.Text = (dt1.Rows[0][6].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][6].ToString())) : "-";
+                    lbl_8.Text = (dt1.Rows[0][7].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][7].ToString())) : "-";
+                    lbl_9.Text = (dt1.Rows[0][8].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][8].ToString())) : "-";
+                    lbl_10.Text = (dt1.Rows[0][9].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][9].ToString())) : "-";
+                    lbl_11.Text = (dt1.Rows[0][10].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][10].ToString())) : "-";
+                    lbl_12.Text = (dt1.Rows[0][11].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][11].ToString())) : "-";
+                    lbl_13.Text = (dt1.Rows[0][12].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][12].ToString())) : "-";
+                    lbl_14.Text = (dt1.Rows[0][13].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][13].ToString())) : "-";
+                    lbl_15.Text = (dt1.Rows[0][14].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][14].ToString())) : "-";
+                    lbl_16.Text = (dt1.Rows[0][15].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][15].ToString())) : "-";
+                    lbl_17.Text = (dt1.Rows[0][16].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][16].ToString())) : "-";
+                    lbl_18.Text = (dt1.Rows[0][17].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][17].ToString())) : "-";
+                    lbl_19.Text = (dt1.Rows[0][18].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][18].ToString())) : "-";
+                    lbl_20.Text = (dt1.Rows[0][19].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][19].ToString())) : "-";
+                    lbl_21.Text = (dt1.Rows[0][20].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][20].ToString())) : "-";
                     
                 }
                 else

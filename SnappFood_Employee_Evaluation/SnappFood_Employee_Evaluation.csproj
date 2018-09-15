@@ -477,6 +477,24 @@
     <Compile Include="Scores_Ops\Search_Staff_MNG.Designer.cs">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </Compile>
+    <Compile Include="System_Managment\GEN_USER_MANAGMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_USER_MANAGMENT.Designer.cs">
+      <DependentUpon>GEN_USER_MANAGMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\GEN_SALARY_UPLOAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_SALARY_UPLOAD.Designer.cs">
+      <DependentUpon>GEN_SALARY_UPLOAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\GEN_TRANSFER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_TRANSFER.Designer.cs">
+      <DependentUpon>GEN_TRANSFER.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_Managment\QC_CONTROL_PANEL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -524,6 +542,18 @@
     </Compile>
     <Compile Include="System_Managment\SRCH_GROUPING.Designer.cs">
       <DependentUpon>SRCH_GROUPING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\SRCH_USER_MANAGMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\SRCH_USER_MANAGMENT.Designer.cs">
+      <DependentUpon>SRCH_USER_MANAGMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_Managment\SRCH_TRANSFER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\SRCH_TRANSFER.Designer.cs">
+      <DependentUpon>SRCH_TRANSFER.cs</DependentUpon>
     </Compile>
     <Compile Include="System_Managment\SRCH_POSITIONING.cs">
       <SubType>Form</SubType>
@@ -831,6 +861,15 @@
     <EmbeddedResource Include="Scores_Ops\Search_Staff_MNG.resx">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_USER_MANAGMENT.resx">
+      <DependentUpon>GEN_USER_MANAGMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_SALARY_UPLOAD.resx">
+      <DependentUpon>GEN_SALARY_UPLOAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_TRANSFER.resx">
+      <DependentUpon>GEN_TRANSFER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\QC_CONTROL_PANEL.resx">
       <DependentUpon>QC_CONTROL_PANEL.cs</DependentUpon>
     </EmbeddedResource>
@@ -854,6 +893,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\SRCH_GROUPING.resx">
       <DependentUpon>SRCH_GROUPING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\SRCH_USER_MANAGMENT.resx">
+      <DependentUpon>SRCH_USER_MANAGMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\SRCH_TRANSFER.resx">
+      <DependentUpon>SRCH_TRANSFER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\SRCH_POSITIONING.resx">
       <DependentUpon>SRCH_POSITIONING.cs</DependentUpon>
@@ -971,6 +1016,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo_HQ.ico" />
+    <None Include="Resources\secrecy_icon.png" />
+    <None Include="Resources\new_user_add.png" />
+    <None Include="Resources\Upload_File_icon.png" />
+    <None Include="Resources\transfer_icon.png" />
     <None Include="Resources\QC_Setting.png" />
     <None Include="Resources\Control-Panel-icon.png" />
     <None Include="Resources\numbers-black-icon.png" />

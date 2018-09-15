@@ -184,6 +184,9 @@
   <data name="Folder-Open-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder-Open-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Control_Panel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Control_Panel_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="database-up-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database-up-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -210,6 +213,9 @@
   </data>
   <data name="logo_HQ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_HQ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gmail-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gmail-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -403,8 +409,8 @@
   <data name="new_reporting2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_reporting2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Open-folder-full-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Open-folder-full-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Upload_File_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Upload_File_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Courses-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Courses-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -466,14 +472,11 @@
   <data name="small_tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small_tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Folder-Open-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Folder-Open-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Open-folder-full-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open-folder-full-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floppy-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floppy-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Checklist-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Checklist-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Action-remove-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Action-remove-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -486,6 +489,9 @@
   </data>
   <data name="Business-Leave-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Business-Leave-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QC_Setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QC_Setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Business-Leave-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Business-Leave-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -529,8 +535,8 @@
   <data name="Gmail-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gmail-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gmail-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gmail-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Folder-Open-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder-Open-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="report-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -559,8 +565,8 @@
   <data name="ModernXP-36-Folder-Refresh-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ModernXP-36-Folder-Refresh-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Control_Panel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Control_Panel_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Checklist-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checklist-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Report_M" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report_M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -570,6 +576,9 @@
   </data>
   <data name="LOGO_TRAINING" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO_TRAINING.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table-lines-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table-lines-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -661,10 +670,13 @@
   <data name="Database-Table-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Database-Table-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="new_user_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_user_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cor_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cor_Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="QC_Setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\QC_Setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="secrecy_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\secrecy_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

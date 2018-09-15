@@ -1343,6 +1343,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_user_add {
+            get {
+                object obj = ResourceManager.GetObject("new_user_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Next_22icon {
             get {
                 object obj = ResourceManager.GetObject("Next-22icon", resourceCulture);
@@ -1713,6 +1723,16 @@ namespace SnappFood_Employee_Evaluation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap secrecy_icon {
+            get {
+                object obj = ResourceManager.GetObject("secrecy_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sign_Refresh_icon {
             get {
                 object obj = ResourceManager.GetObject("Sign-Refresh-icon", resourceCulture);
@@ -1826,6 +1846,26 @@ namespace SnappFood_Employee_Evaluation.Properties {
         internal static System.Drawing.Bitmap Time_Machine_icon {
             get {
                 object obj = ResourceManager.GetObject("Time-Machine-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transfer_icon {
+            get {
+                object obj = ResourceManager.GetObject("transfer_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Upload_File_icon {
+            get {
+                object obj = ResourceManager.GetObject("Upload_File_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

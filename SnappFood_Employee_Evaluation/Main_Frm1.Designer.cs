@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Frm1));
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.Username_box = new Telerik.WinControls.UI.RadLabelElement();
@@ -130,11 +130,15 @@
             this.radButtonElement55 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement54 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement56 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement62 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup21 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement57 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement59 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement60 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement61 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement64 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup22 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement63 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
@@ -346,7 +350,7 @@
             this.ribbonTab1.AutoSize = true;
             this.ribbonTab1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ribbonTab1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.users_icon;
-            this.ribbonTab1.IsSelected = false;
+            this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1,
             this.radRibbonBarGroup2,
@@ -765,7 +769,7 @@
             this.ribbonTab4.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ribbonTab4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonTab4.Image")));
             this.ribbonTab4.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ribbonTab4.IsSelected = true;
+            this.ribbonTab4.IsSelected = false;
             this.ribbonTab4.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup12,
             this.radRibbonBarGroup13,
@@ -1138,10 +1142,11 @@
             // 
             this.ribbonTab6.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.ribbonTab6.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Control_Panel_icon;
-            this.ribbonTab6.IsSelected = false;
+            this.ribbonTab6.IsSelected = true;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup20,
-            this.radRibbonBarGroup21});
+            this.radRibbonBarGroup21,
+            this.radRibbonBarGroup22});
             this.ribbonTab6.Name = "ribbonTab6";
             this.ribbonTab6.Text = "مدیریت سیستم";
             this.ribbonTab6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -1152,7 +1157,8 @@
             this.radRibbonBarGroup20.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radButtonElement55,
             this.radButtonElement54,
-            this.radButtonElement56});
+            this.radButtonElement56,
+            this.radButtonElement62});
             this.radRibbonBarGroup20.Name = "radRibbonBarGroup20";
             this.radRibbonBarGroup20.Text = "پنل عمومی";
             // 
@@ -1186,13 +1192,24 @@
             this.radButtonElement56.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement56.Click += new System.EventHandler(this.radButtonElement56_Click);
             // 
+            // radButtonElement62
+            // 
+            this.radButtonElement62.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement62.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.transfer_icon;
+            this.radButtonElement62.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement62.Name = "radButtonElement62";
+            this.radButtonElement62.Text = "تغییر واحد سازمانی";
+            this.radButtonElement62.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement62.Click += new System.EventHandler(this.radButtonElement62_Click);
+            // 
             // radRibbonBarGroup21
             // 
             this.radRibbonBarGroup21.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radButtonElement57,
             this.radButtonElement59,
             this.radButtonElement60,
-            this.radButtonElement61});
+            this.radButtonElement61,
+            this.radButtonElement64});
             this.radRibbonBarGroup21.Name = "radRibbonBarGroup21";
             this.radRibbonBarGroup21.Text = "پنل مدیریت";
             // 
@@ -1237,6 +1254,34 @@
             this.radButtonElement61.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement61.Click += new System.EventHandler(this.radButtonElement61_Click);
             // 
+            // radButtonElement64
+            // 
+            this.radButtonElement64.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement64.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.new_user_add;
+            this.radButtonElement64.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement64.Name = "radButtonElement64";
+            this.radButtonElement64.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.radButtonElement64.Text = "مدیریت کاربران";
+            this.radButtonElement64.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement64.Click += new System.EventHandler(this.radButtonElement64_Click);
+            // 
+            // radRibbonBarGroup22
+            // 
+            this.radRibbonBarGroup22.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement63});
+            this.radRibbonBarGroup22.Name = "radRibbonBarGroup22";
+            this.radRibbonBarGroup22.Text = "فیش حقوقی";
+            // 
+            // radButtonElement63
+            // 
+            this.radButtonElement63.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.radButtonElement63.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Upload_File_icon;
+            this.radButtonElement63.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement63.Name = "radButtonElement63";
+            this.radButtonElement63.Text = "آپلود فیش حقوقی";
+            this.radButtonElement63.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement63.Click += new System.EventHandler(this.radButtonElement63_Click);
+            // 
             // radButtonElement1
             // 
             this.radButtonElement1.BackColor = System.Drawing.Color.HotPink;
@@ -1278,7 +1323,7 @@
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.radGridView1.MasterTemplate.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect;
             this.radGridView1.MasterTemplate.ShowFilteringRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1441,5 +1486,9 @@
         private Telerik.WinControls.UI.RadButtonElement radButtonElement10;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement60;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement61;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement62;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup22;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement63;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement64;
     }
 }

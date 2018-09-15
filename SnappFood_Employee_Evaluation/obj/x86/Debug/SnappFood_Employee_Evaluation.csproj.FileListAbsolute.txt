@@ -238,3 +238,8 @@ C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\o
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\JntNum2Text.dll
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HCC_CC.resources
 C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.QC_CONTROL_PANEL.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_TRANSFER.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_TRANSFER.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_SALARY_UPLOAD.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_USER_MANAGMENT.resources
+C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_USER_MANAGMENT.resources
