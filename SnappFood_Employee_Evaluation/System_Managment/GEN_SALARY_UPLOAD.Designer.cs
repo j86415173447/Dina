@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.address = new Telerik.WinControls.UI.RadLabel();
@@ -63,6 +63,7 @@
             // 
             // radLabel1
             // 
+            this.radLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radLabel1.Location = new System.Drawing.Point(980, 78);
             this.radLabel1.Name = "radLabel1";
@@ -74,6 +75,7 @@
             // 
             // address
             // 
+            this.address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.address.AutoSize = false;
             this.address.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.address.Location = new System.Drawing.Point(559, 78);
@@ -147,7 +149,7 @@
             this.grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.grid.MasterTemplate.EnableSorting = false;
             this.grid.MasterTemplate.ShowFilteringRow = false;
-            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.grid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -160,6 +162,7 @@
             // 
             // radLabel2
             // 
+            this.radLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel2.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radLabel2.Location = new System.Drawing.Point(487, 78);
             this.radLabel2.Name = "radLabel2";
@@ -171,6 +174,7 @@
             // 
             // File_Status
             // 
+            this.File_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.File_Status.AutoSize = false;
             this.File_Status.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.File_Status.Location = new System.Drawing.Point(350, 78);
@@ -197,6 +201,7 @@
             // 
             // radButton1
             // 
+            this.radButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radButton1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radButton1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Folder_Open_icon1;
             this.radButton1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,6 +217,7 @@
             // 
             // yr
             // 
+            this.yr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.yr.BackColor = System.Drawing.Color.LavenderBlush;
             this.yr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.yr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,6 +231,7 @@
             // 
             // mnth
             // 
+            this.mnth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.mnth.BackColor = System.Drawing.Color.LavenderBlush;
             this.mnth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mnth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -252,6 +259,7 @@
             // 
             // radLabel3
             // 
+            this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel3.Location = new System.Drawing.Point(144, 77);
             this.radLabel3.Name = "radLabel3";
@@ -264,6 +272,7 @@
             // 
             // radLabel4
             // 
+            this.radLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel4.Location = new System.Drawing.Point(317, 77);
             this.radLabel4.Name = "radLabel4";

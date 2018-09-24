@@ -67,10 +67,10 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     dataSet = excelReader.AsDataSet();
                     excelReader.Close();
 
-                    if (dataSet.Tables[0].Columns.Count != 19)
+                    if (dataSet.Tables[0].Columns.Count != 27)
                     {
                         pictureBox1.Visible = false;
-                        RadMessageBox.Show(this, " تعداد ستون های فراخوانی شده در فایل انتخابی " + (dataSet.Tables[0].Columns.Count).ToString() + " می باشد. " + "\n\n" + " تعداد ستون های مجاز 19 است. ", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+                        RadMessageBox.Show(this, " تعداد ستون های فراخوانی شده در فایل انتخابی " + (dataSet.Tables[0].Columns.Count).ToString() + " می باشد. " + "\n\n" + " تعداد ستون های مجاز 27 است. ", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                     }
                     else
                     {
@@ -105,9 +105,17 @@ namespace SnappFood_Employee_Evaluation.System_Managment
             bool error = false;
             //List<string> err_list = new List<string>();
             if (dataSet.Tables[0].Columns[0].ColumnName == "System_Id" & dataSet.Tables[0].Columns[1].ColumnName == "Working_Days" & dataSet.Tables[0].Columns[2].ColumnName == "Base_Salary" & dataSet.Tables[0].Columns[3].ColumnName == "Child_Allowance" & dataSet.Tables[0].Columns[4].ColumnName == "Subsidy" &
-            dataSet.Tables[0].Columns[5].ColumnName == "House_Allowance" & dataSet.Tables[0].Columns[6].ColumnName == "Performance_Bonus" & dataSet.Tables[0].Columns[7].ColumnName == "Over_Time" & dataSet.Tables[0].Columns[8].ColumnName == "Salary_Diff" & dataSet.Tables[0].Columns[9].ColumnName == "Total_Pay"
-            & dataSet.Tables[0].Columns[10].ColumnName == "Insurance" & dataSet.Tables[0].Columns[11].ColumnName == "Taxt" & dataSet.Tables[0].Columns[12].ColumnName == "Attence_Reduction" & dataSet.Tables[0].Columns[13].ColumnName == "Penalty" & dataSet.Tables[0].Columns[14].ColumnName == "QC_Penalty"
-            & dataSet.Tables[0].Columns[15].ColumnName == "Comp_Insurance" & dataSet.Tables[0].Columns[16].ColumnName == "Advance_Payment" & dataSet.Tables[0].Columns[17].ColumnName == "Total_Reduction" & dataSet.Tables[0].Columns[18].ColumnName == "Payable")
+            dataSet.Tables[0].Columns[5].ColumnName == "House_Allowance" & dataSet.Tables[0].Columns[6].ColumnName == "Performance_Bonus" &
+            
+            dataSet.Tables[0].Columns[7].ColumnName == "Holy_Work" & dataSet.Tables[0].Columns[8].ColumnName == "Holy_Work_Amt" &
+            dataSet.Tables[0].Columns[9].ColumnName == "Low_Work" & dataSet.Tables[0].Columns[10].ColumnName == "Low_Work_Amt" &
+            dataSet.Tables[0].Columns[11].ColumnName == "X3_Over_Time" & dataSet.Tables[0].Columns[12].ColumnName == "X3_Over_Time_Amt" &
+            dataSet.Tables[0].Columns[13].ColumnName == "Normal_Over_Time" & dataSet.Tables[0].Columns[14].ColumnName == "Normal_Over_Time_Amt" &
+            
+            dataSet.Tables[0].Columns[15].ColumnName == "Over_Time" & dataSet.Tables[0].Columns[16].ColumnName == "Salary_Diff" & dataSet.Tables[0].Columns[17].ColumnName == "Total_Pay"
+            & dataSet.Tables[0].Columns[18].ColumnName == "Insurance" & dataSet.Tables[0].Columns[19].ColumnName == "Taxt" & dataSet.Tables[0].Columns[20].ColumnName == "Attence_Reduction" 
+            & dataSet.Tables[0].Columns[21].ColumnName == "Penalty" & dataSet.Tables[0].Columns[22].ColumnName == "QC_Penalty"
+            & dataSet.Tables[0].Columns[23].ColumnName == "Comp_Insurance" & dataSet.Tables[0].Columns[24].ColumnName == "Advance_Payment" & dataSet.Tables[0].Columns[25].ColumnName == "Total_Reduction" & dataSet.Tables[0].Columns[26].ColumnName == "Payable")
             {
                 error = false;
             }
@@ -150,7 +158,12 @@ namespace SnappFood_Employee_Evaluation.System_Managment
         private void grid_CellFormatting(object sender, Telerik.WinControls.UI.CellFormattingEventArgs e)
         {
             if (e.CellElement.ColumnInfo.Name == "System_Id" || e.CellElement.ColumnInfo.Name == "Working_Days" || e.CellElement.ColumnInfo.Name == "Base_Salary" || e.CellElement.ColumnInfo.Name == "Child_Allowance" || e.CellElement.ColumnInfo.Name == "Subsidy" ||
-                e.CellElement.ColumnInfo.Name == "House_Allowance" || e.CellElement.ColumnInfo.Name == "Performance_Bonus" || e.CellElement.ColumnInfo.Name == "Over_Time" || e.CellElement.ColumnInfo.Name == "Salary_Diff" || e.CellElement.ColumnInfo.Name == "Total_Pay"
+                e.CellElement.ColumnInfo.Name == "House_Allowance" || e.CellElement.ColumnInfo.Name == "Performance_Bonus" ||
+
+                e.CellElement.ColumnInfo.Name == "Holy_Work_Amt" || e.CellElement.ColumnInfo.Name == "Low_Work_Amt" ||
+                e.CellElement.ColumnInfo.Name == "X3_Over_Time_Amt" || e.CellElement.ColumnInfo.Name == "Normal_Over_Time_Amt" ||
+
+                e.CellElement.ColumnInfo.Name == "Over_Time" || e.CellElement.ColumnInfo.Name == "Salary_Diff" || e.CellElement.ColumnInfo.Name == "Total_Pay"
                 || e.CellElement.ColumnInfo.Name == "Insurance" || e.CellElement.ColumnInfo.Name == "Taxt" || e.CellElement.ColumnInfo.Name == "Attence_Reduction" || e.CellElement.ColumnInfo.Name == "Penalty" || e.CellElement.ColumnInfo.Name == "QC_Penalty"
                 || e.CellElement.ColumnInfo.Name == "Comp_Insurance" || e.CellElement.ColumnInfo.Name == "Advance_Payment" || e.CellElement.ColumnInfo.Name == "Total_Reduction" || e.CellElement.ColumnInfo.Name == "Payable")
             {
@@ -186,11 +199,15 @@ namespace SnappFood_Employee_Evaluation.System_Managment
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (File_Status.Text == "غیر قابل قبول")
+            if (address.Text == "")
+            {
+                RadMessageBox.Show(this, " فایلی جهت آپلود انتخاب نشده است. " + "\n", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
+            }
+            else if (File_Status.Text == "غیر قابل قبول")
             {
                 RadMessageBox.Show(this, " فایل انتخاب شده غیر قابل قبول است. لطفا فایل را اصلاح نمائید. " + "\n", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
             }
-            else if (mnth.SelectedIndex == 0 || yr.SelectedIndex == 0)
+            else if (mnth.SelectedIndex == -1 || yr.SelectedIndex == -1)
             {
                 RadMessageBox.Show(this, " ماه و سال انتخاب نشده است. " + "\n", "خطا", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
             }
@@ -210,9 +227,10 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                 {
                     oleDbCommand1.Parameters.Clear();
                     oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[PER_SALARY_SLIP] ([System_Id],[Mnth],[yr],[Working_Days],[Base_Salary],[Child_Allowance],[Subsidy],[House_Allowance], " +
-                                                "[Performance_Bonus],[Over_Time],[Salary_Diff],[Total_Pay],[Insurance],[Taxt],[Attence_Reduction],[Penalty],[QC_Penalty],[Comp_Insurance],[Advance_Payment], " + 
+                                                "[Performance_Bonus],[Holy_Work],[Holy_Work_Amt],[Low_Work],[Low_Work_Amt],[X3_Over_Time],[X3_Over_Time_Amt],[Normal_Over_Time],[Normal_Over_Time_Amt] " + 
+                                                ",[Over_Time],[Salary_Diff],[Total_Pay],[Insurance],[Taxt],[Attence_Reduction],[Penalty],[QC_Penalty],[Comp_Insurance],[Advance_Payment], " + 
                                                 "[Total_Reduction],[Payable]) " +
-                                                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                                                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                     oleDbCommand1.Parameters.AddWithValue("@System_Id", dataSet.Tables[0].Rows[j][0].ToString());
                     oleDbCommand1.Parameters.AddWithValue("@Mnth", mnth.SelectedIndex.ToString());
                     oleDbCommand1.Parameters.AddWithValue("@yr", yr.Text);
@@ -222,18 +240,26 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     oleDbCommand1.Parameters.AddWithValue("@Subsidy", dataSet.Tables[0].Rows[j][4].ToString());
                     oleDbCommand1.Parameters.AddWithValue("@House_Allowance", dataSet.Tables[0].Rows[j][5].ToString());
                     oleDbCommand1.Parameters.AddWithValue("@Performance_Bonus", dataSet.Tables[0].Rows[j][6].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Over_Time", dataSet.Tables[0].Rows[j][7].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Salary_Diff", dataSet.Tables[0].Rows[j][8].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Total_Pay", dataSet.Tables[0].Rows[j][9].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Insurance", dataSet.Tables[0].Rows[j][10].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Taxt", dataSet.Tables[0].Rows[j][11].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Attence_Reduction", dataSet.Tables[0].Rows[j][12].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Penalty", dataSet.Tables[0].Rows[j][13].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@QC_Penalty", dataSet.Tables[0].Rows[j][14].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Comp_Insurance", dataSet.Tables[0].Rows[j][15].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Advance_Payment", dataSet.Tables[0].Rows[j][16].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Total_Reduction", dataSet.Tables[0].Rows[j][17].ToString());
-                    oleDbCommand1.Parameters.AddWithValue("@Payable", dataSet.Tables[0].Rows[j][18].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Holy_Work", dataSet.Tables[0].Rows[j][7].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Holy_Work_Amt", dataSet.Tables[0].Rows[j][8].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Low_Work", dataSet.Tables[0].Rows[j][9].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Low_Work_Amt", dataSet.Tables[0].Rows[j][10].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@X3_Over_Time", dataSet.Tables[0].Rows[j][11].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@X3_Over_Time_Amt", dataSet.Tables[0].Rows[j][12].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Normal_Over_Time", dataSet.Tables[0].Rows[j][13].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Normal_Over_Time_Amt", dataSet.Tables[0].Rows[j][14].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Over_Time", dataSet.Tables[0].Rows[j][15].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Salary_Diff", dataSet.Tables[0].Rows[j][16].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Total_Pay", dataSet.Tables[0].Rows[j][17].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Insurance", dataSet.Tables[0].Rows[j][18].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Taxt", dataSet.Tables[0].Rows[j][19].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Attence_Reduction", dataSet.Tables[0].Rows[j][20].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Penalty", dataSet.Tables[0].Rows[j][21].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@QC_Penalty", dataSet.Tables[0].Rows[j][22].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Comp_Insurance", dataSet.Tables[0].Rows[j][23].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Advance_Payment", dataSet.Tables[0].Rows[j][24].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Total_Reduction", dataSet.Tables[0].Rows[j][25].ToString());
+                    oleDbCommand1.Parameters.AddWithValue("@Payable", dataSet.Tables[0].Rows[j][26].ToString());
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();
@@ -245,45 +271,14 @@ namespace SnappFood_Employee_Evaluation.System_Managment
 
         private void Sample_DL_Click(object sender, EventArgs e)
         {
-            DataTable dt22 = new DataTable();
-            OleDbDataAdapter adp = new OleDbDataAdapter();
-            adp.SelectCommand = new OleDbCommand();
-            adp.SelectCommand.Connection = oleDbConnection1;
-            oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[SYS_CC_HCC_DATA]";
-            adp.SelectCommand.CommandText = lcommand;
-            dt22.Clear();
-            adp.Fill(dt22);
-            if (dt22.Rows.Count != 0)
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.FileName = "Sample_Salary.xlsx";
+            saveFileDialog1.Filter = "Excel 2007(*.xlsx)|*.xlsx";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.FileName = "Sample_HCC_CC.xlsx";
-                saveFileDialog1.Filter = "Excel 2007(*.xlsx)|*.xlsx";
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    string add = saveFileDialog1.FileName;
-                    using (var doc = new SpreadsheetDocument(@add))
-                    {
-                        Worksheet sheet1 = doc.Worksheets.Add("Report");
-                        sheet1.ImportDataTable(dt22, "A1", true);
-                    }
-                    System.Diagnostics.Process.Start(@add);
-                }
-                else
-                {
+                File.Copy(Application.StartupPath + "\\Reports\\Sample_Salary.xlsx", saveFileDialog1.FileName);
+            }
 
-                }
-            }
-            else
-            {
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.FileName = "Sample_HCC_CC.xlsx";
-                saveFileDialog1.Filter = "Excel 2007(*.xlsx)|*.xlsx";
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    File.Copy(Application.StartupPath + "\\Reports\\Sample_HCC_CC.xlsx", saveFileDialog1.FileName);
-                }
-            }
             RadMessageBox.Show(this, " عملیات با موفقیت انجام شد. " + "\n", "اعلام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
         }
     }

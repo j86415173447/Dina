@@ -47,6 +47,11 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             lbl_19.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_20.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_21.TextAlignment = ContentAlignment.MiddleLeft;
+
+            lbl_22.TextAlignment = ContentAlignment.MiddleLeft;
+            lbl_23.TextAlignment = ContentAlignment.MiddleLeft;
+            lbl_24.TextAlignment = ContentAlignment.MiddleLeft;
+            lbl_25.TextAlignment = ContentAlignment.MiddleLeft;
             pictureBox1.TextAlignment = ContentAlignment.MiddleCenter;
         }
 
@@ -91,7 +96,11 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 adp1.SelectCommand.Connection = oleDbConnection1;
                 oleDbCommand1.Parameters.Clear();
                 string lcommand1;
-                lcommand1 = "SELECT * FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SALARY_SLIP] WHERE [System_Id] = '" + lbl_3.Text + "' AND [yr] = N'" + yr.Text + "' AND [mnth] = N'" + (mnth.SelectedIndex + 1).ToString() + "'";
+                lcommand1 = "SELECT [System_Id],[Mnth],[yr],[Working_Days],[Base_Salary],[Child_Allowance],[Subsidy],[House_Allowance], " +
+                    "[Performance_Bonus], " +
+                    "[Over_Time],[Salary_Diff],[Total_Pay],[Insurance],[Taxt],[Attence_Reduction],[Penalty],[QC_Penalty],[Comp_Insurance],[Advance_Payment],[Total_Reduction],[Payable] " +
+                    ",[Holy_Work],[Holy_Work_Amt],[Low_Work],[Low_Work_Amt],[X3_Over_Time],[X3_Over_Time_Amt],[Normal_Over_Time],[Normal_Over_Time_Amt]" +
+                    " FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SALARY_SLIP] WHERE [System_Id] = '" + lbl_3.Text + "' AND [yr] = N'" + yr.Text + "' AND [mnth] = N'" + (mnth.SelectedIndex + 1).ToString() + "'";
                 adp1.SelectCommand.CommandText = lcommand1;
                 adp1.Fill(dt1);
                 if (dt1.Rows.Count == 1)
@@ -114,7 +123,11 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_19.Text = (dt1.Rows[0][18].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][18].ToString())) : "-";
                     lbl_20.Text = (dt1.Rows[0][19].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][19].ToString())) : "-";
                     lbl_21.Text = (dt1.Rows[0][20].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][20].ToString())) : "-";
-                    
+                    lbl_22.Text = (dt1.Rows[0][21].ToString() != "-") ? dt1.Rows[0][21].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][22].ToString())) + "ریال" : "-";
+                    lbl_23.Text = (dt1.Rows[0][23].ToString() != "-") ? dt1.Rows[0][23].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][24].ToString())) + "ریال" : "-";
+                    lbl_24.Text = (dt1.Rows[0][25].ToString() != "-") ? dt1.Rows[0][25].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][26].ToString())) + "ریال" : "-";
+                    lbl_25.Text = (dt1.Rows[0][27].ToString() != "-") ? dt1.Rows[0][27].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][28].ToString())) + "ریال" : "-";
+
                 }
                 else
                 {
@@ -136,6 +149,11 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_19.Text = "";
                     lbl_20.Text = "";
                     lbl_21.Text = "";
+
+                    lbl_22.Text = "";
+                    lbl_23.Text = "";
+                    lbl_24.Text = "";
+                    lbl_25.Text = "";
                 }
             }
             else
@@ -158,6 +176,11 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 lbl_19.Text = "";
                 lbl_20.Text = "";
                 lbl_21.Text = "";
+
+                lbl_22.Text = "";
+                lbl_23.Text = "";
+                lbl_24.Text = "";
+                lbl_25.Text = "";
             }
         }
 
@@ -205,6 +228,10 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             report.Dictionary.Variables.Add("lbl_20", lbl_20.Text);
             report.Dictionary.Variables.Add("lbl_21", lbl_21.Text);
             report.Dictionary.Variables.Add("horofi", horofi);
+            report.Dictionary.Variables.Add("lbl_22", lbl_22.Text);
+            report.Dictionary.Variables.Add("lbl_23", lbl_23.Text);
+            report.Dictionary.Variables.Add("lbl_24", lbl_24.Text);
+            report.Dictionary.Variables.Add("lbl_25", lbl_25.Text);
             Stimulsoft.Report.Print.StiPrintProvider.SetPaperSource = false;
             report.Render();
             report.Show();

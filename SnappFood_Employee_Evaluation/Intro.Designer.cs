@@ -45,11 +45,11 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(205, 287);
+            this.label1.Location = new System.Drawing.Point(12, 275);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 17);
+            this.label1.Size = new System.Drawing.Size(500, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "ورژن: 1.1.4 - متصل به پنل پیامک";
             // 
@@ -68,7 +68,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Gmail_icon2;
-            this.pictureBox2.Location = new System.Drawing.Point(518, 274);
+            this.pictureBox2.Location = new System.Drawing.Point(518, 275);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(628, 341);
+            this.ClientSize = new System.Drawing.Size(642, 341);
             this.Controls.Add(this.radProgressBar1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

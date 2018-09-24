@@ -41,6 +41,18 @@
             this.radLabel27 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel29 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_18 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_12 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_17 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_11 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_16 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_10 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel34 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel28 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_15 = new Telerik.WinControls.UI.RadLabel();
@@ -53,18 +65,6 @@
             this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_12 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_11 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_10 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel28 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel29 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_18 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_17 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_16 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel34 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel35 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_21 = new Telerik.WinControls.UI.RadLabel();
@@ -73,6 +73,7 @@
             this.radLabel41 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel43 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel61 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel39 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_30 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_28 = new Telerik.WinControls.UI.RadLabel();
@@ -90,7 +91,6 @@
             this.radLabel62 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel63 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel64 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel61 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox5 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_38 = new Telerik.WinControls.UI.RadLabel();
@@ -99,18 +99,18 @@
             this.radLabel49 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel51 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox6 = new Telerik.WinControls.UI.RadGroupBox();
+            this.lbl_39 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_34 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel76 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_32 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel74 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel65 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel72 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_33 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_23 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_22 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel69 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel70 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_32 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel72 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_34 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel74 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_39 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel76 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox7 = new Telerik.WinControls.UI.RadGroupBox();
             this.yr = new System.Windows.Forms.ComboBox();
             this.mnth = new System.Windows.Forms.ComboBox();
@@ -139,6 +139,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_15)).BeginInit();
@@ -151,18 +163,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).BeginInit();
@@ -173,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
             this.radGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel61)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_28)).BeginInit();
@@ -190,7 +191,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel62)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel63)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel64)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel61)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).BeginInit();
             this.radGroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).BeginInit();
@@ -201,18 +201,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox6)).BeginInit();
             this.radGroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel76)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel74)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel65)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel72)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel69)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel70)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel72)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel74)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_39)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel76)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox7)).BeginInit();
             this.radGroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -401,6 +401,156 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
+            // radLabel29
+            // 
+            this.radLabel29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel29.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel29.Location = new System.Drawing.Point(110, 122);
+            this.radLabel29.Name = "radLabel29";
+            this.radLabel29.Size = new System.Drawing.Size(104, 18);
+            this.radLabel29.TabIndex = 97;
+            this.radLabel29.Text = "Area ویرایش شده:";
+            this.radLabel29.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel29.ThemeName = "Office2010Silver";
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(331, 122);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(96, 18);
+            this.radLabel5.TabIndex = 97;
+            this.radLabel5.Text = "منو ویرایش شده:";
+            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel5.ThemeName = "Office2010Silver";
+            // 
+            // lbl_18
+            // 
+            this.lbl_18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_18.AutoSize = false;
+            this.lbl_18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_18.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_18.Location = new System.Drawing.Point(8, 146);
+            this.lbl_18.Name = "lbl_18";
+            this.lbl_18.Size = new System.Drawing.Size(81, 18);
+            this.lbl_18.TabIndex = 101;
+            this.lbl_18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_18.ThemeName = "Office2010Silver";
+            // 
+            // lbl_12
+            // 
+            this.lbl_12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_12.AutoSize = false;
+            this.lbl_12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_12.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_12.Location = new System.Drawing.Point(221, 146);
+            this.lbl_12.Name = "lbl_12";
+            this.lbl_12.Size = new System.Drawing.Size(81, 18);
+            this.lbl_12.TabIndex = 101;
+            this.lbl_12.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_12.ThemeName = "Office2010Silver";
+            // 
+            // lbl_17
+            // 
+            this.lbl_17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_17.AutoSize = false;
+            this.lbl_17.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_17.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_17.Location = new System.Drawing.Point(8, 122);
+            this.lbl_17.Name = "lbl_17";
+            this.lbl_17.Size = new System.Drawing.Size(81, 18);
+            this.lbl_17.TabIndex = 100;
+            this.lbl_17.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_17.ThemeName = "Office2010Silver";
+            // 
+            // lbl_11
+            // 
+            this.lbl_11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_11.AutoSize = false;
+            this.lbl_11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_11.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_11.Location = new System.Drawing.Point(221, 122);
+            this.lbl_11.Name = "lbl_11";
+            this.lbl_11.Size = new System.Drawing.Size(81, 18);
+            this.lbl_11.TabIndex = 100;
+            this.lbl_11.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_11.ThemeName = "Office2010Silver";
+            // 
+            // lbl_16
+            // 
+            this.lbl_16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_16.AutoSize = false;
+            this.lbl_16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_16.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_16.Location = new System.Drawing.Point(8, 98);
+            this.lbl_16.Name = "lbl_16";
+            this.lbl_16.Size = new System.Drawing.Size(81, 18);
+            this.lbl_16.TabIndex = 99;
+            this.lbl_16.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_16.ThemeName = "Office2010Silver";
+            // 
+            // lbl_10
+            // 
+            this.lbl_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_10.AutoSize = false;
+            this.lbl_10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_10.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_10.Location = new System.Drawing.Point(221, 98);
+            this.lbl_10.Name = "lbl_10";
+            this.lbl_10.Size = new System.Drawing.Size(81, 18);
+            this.lbl_10.TabIndex = 99;
+            this.lbl_10.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_10.ThemeName = "Office2010Silver";
+            // 
+            // radLabel33
+            // 
+            this.radLabel33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel33.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel33.Location = new System.Drawing.Point(111, 146);
+            this.radLabel33.Name = "radLabel33";
+            this.radLabel33.Size = new System.Drawing.Size(103, 18);
+            this.radLabel33.TabIndex = 98;
+            this.radLabel33.Text = "Area ساخته شده:";
+            this.radLabel33.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel33.ThemeName = "Office2010Silver";
+            // 
+            // radLabel26
+            // 
+            this.radLabel26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel26.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel26.Location = new System.Drawing.Point(304, 146);
+            this.radLabel26.Name = "radLabel26";
+            this.radLabel26.Size = new System.Drawing.Size(123, 18);
+            this.radLabel26.TabIndex = 98;
+            this.radLabel26.Text = "توضیحات ساخته شده:";
+            this.radLabel26.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel26.ThemeName = "Office2010Silver";
+            // 
+            // radLabel34
+            // 
+            this.radLabel34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel34.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel34.Location = new System.Drawing.Point(108, 98);
+            this.radLabel34.Name = "radLabel34";
+            this.radLabel34.Size = new System.Drawing.Size(106, 18);
+            this.radLabel34.TabIndex = 96;
+            this.radLabel34.Text = "Area بررسی شده:";
+            this.radLabel34.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel34.ThemeName = "Office2010Silver";
+            // 
+            // radLabel28
+            // 
+            this.radLabel28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel28.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel28.Location = new System.Drawing.Point(315, 98);
+            this.radLabel28.Name = "radLabel28";
+            this.radLabel28.Size = new System.Drawing.Size(112, 18);
+            this.radLabel28.TabIndex = 96;
+            this.radLabel28.Text = "محصول ترجمه شده:";
+            this.radLabel28.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel28.ThemeName = "Office2010Silver";
+            // 
             // radLabel3
             // 
             this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -551,156 +701,6 @@
             this.radLabel21.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel21.ThemeName = "Office2010Silver";
             // 
-            // radLabel5
-            // 
-            this.radLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(331, 122);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(96, 18);
-            this.radLabel5.TabIndex = 97;
-            this.radLabel5.Text = "منو ویرایش شده:";
-            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel5.ThemeName = "Office2010Silver";
-            // 
-            // lbl_12
-            // 
-            this.lbl_12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_12.AutoSize = false;
-            this.lbl_12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_12.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_12.Location = new System.Drawing.Point(221, 146);
-            this.lbl_12.Name = "lbl_12";
-            this.lbl_12.Size = new System.Drawing.Size(81, 18);
-            this.lbl_12.TabIndex = 101;
-            this.lbl_12.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_12.ThemeName = "Office2010Silver";
-            // 
-            // lbl_11
-            // 
-            this.lbl_11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_11.AutoSize = false;
-            this.lbl_11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_11.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_11.Location = new System.Drawing.Point(221, 122);
-            this.lbl_11.Name = "lbl_11";
-            this.lbl_11.Size = new System.Drawing.Size(81, 18);
-            this.lbl_11.TabIndex = 100;
-            this.lbl_11.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_11.ThemeName = "Office2010Silver";
-            // 
-            // lbl_10
-            // 
-            this.lbl_10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_10.AutoSize = false;
-            this.lbl_10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_10.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_10.Location = new System.Drawing.Point(221, 98);
-            this.lbl_10.Name = "lbl_10";
-            this.lbl_10.Size = new System.Drawing.Size(81, 18);
-            this.lbl_10.TabIndex = 99;
-            this.lbl_10.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_10.ThemeName = "Office2010Silver";
-            // 
-            // radLabel26
-            // 
-            this.radLabel26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel26.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel26.Location = new System.Drawing.Point(304, 146);
-            this.radLabel26.Name = "radLabel26";
-            this.radLabel26.Size = new System.Drawing.Size(123, 18);
-            this.radLabel26.TabIndex = 98;
-            this.radLabel26.Text = "توضیحات ساخته شده:";
-            this.radLabel26.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel26.ThemeName = "Office2010Silver";
-            // 
-            // radLabel28
-            // 
-            this.radLabel28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel28.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel28.Location = new System.Drawing.Point(315, 98);
-            this.radLabel28.Name = "radLabel28";
-            this.radLabel28.Size = new System.Drawing.Size(112, 18);
-            this.radLabel28.TabIndex = 96;
-            this.radLabel28.Text = "محصول ترجمه شده:";
-            this.radLabel28.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel28.ThemeName = "Office2010Silver";
-            // 
-            // radLabel29
-            // 
-            this.radLabel29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel29.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel29.Location = new System.Drawing.Point(110, 122);
-            this.radLabel29.Name = "radLabel29";
-            this.radLabel29.Size = new System.Drawing.Size(104, 18);
-            this.radLabel29.TabIndex = 97;
-            this.radLabel29.Text = "Area ویرایش شده:";
-            this.radLabel29.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel29.ThemeName = "Office2010Silver";
-            // 
-            // lbl_18
-            // 
-            this.lbl_18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_18.AutoSize = false;
-            this.lbl_18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_18.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_18.Location = new System.Drawing.Point(8, 146);
-            this.lbl_18.Name = "lbl_18";
-            this.lbl_18.Size = new System.Drawing.Size(81, 18);
-            this.lbl_18.TabIndex = 101;
-            this.lbl_18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_18.ThemeName = "Office2010Silver";
-            // 
-            // lbl_17
-            // 
-            this.lbl_17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_17.AutoSize = false;
-            this.lbl_17.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_17.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_17.Location = new System.Drawing.Point(8, 122);
-            this.lbl_17.Name = "lbl_17";
-            this.lbl_17.Size = new System.Drawing.Size(81, 18);
-            this.lbl_17.TabIndex = 100;
-            this.lbl_17.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_17.ThemeName = "Office2010Silver";
-            // 
-            // lbl_16
-            // 
-            this.lbl_16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_16.AutoSize = false;
-            this.lbl_16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_16.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_16.Location = new System.Drawing.Point(8, 98);
-            this.lbl_16.Name = "lbl_16";
-            this.lbl_16.Size = new System.Drawing.Size(81, 18);
-            this.lbl_16.TabIndex = 99;
-            this.lbl_16.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_16.ThemeName = "Office2010Silver";
-            // 
-            // radLabel33
-            // 
-            this.radLabel33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel33.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel33.Location = new System.Drawing.Point(111, 146);
-            this.radLabel33.Name = "radLabel33";
-            this.radLabel33.Size = new System.Drawing.Size(103, 18);
-            this.radLabel33.TabIndex = 98;
-            this.radLabel33.Text = "Area ساخته شده:";
-            this.radLabel33.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel33.ThemeName = "Office2010Silver";
-            // 
-            // radLabel34
-            // 
-            this.radLabel34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel34.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel34.Location = new System.Drawing.Point(108, 98);
-            this.radLabel34.Name = "radLabel34";
-            this.radLabel34.Size = new System.Drawing.Size(106, 18);
-            this.radLabel34.TabIndex = 96;
-            this.radLabel34.Text = "Area بررسی شده:";
-            this.radLabel34.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel34.ThemeName = "Office2010Silver";
-            // 
             // radGroupBox3
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -833,6 +833,18 @@
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox4.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
+            // 
+            // radLabel61
+            // 
+            this.radLabel61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel61.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel61.Location = new System.Drawing.Point(125, 98);
+            this.radLabel61.Name = "radLabel61";
+            this.radLabel61.Size = new System.Drawing.Size(89, 18);
+            this.radLabel61.TabIndex = 102;
+            this.radLabel61.Text = "پروفایل شرکتی:";
+            this.radLabel61.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel61.ThemeName = "Office2010Silver";
             // 
             // radLabel39
             // 
@@ -1047,18 +1059,6 @@
             this.radLabel64.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel64.ThemeName = "Office2010Silver";
             // 
-            // radLabel61
-            // 
-            this.radLabel61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel61.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel61.Location = new System.Drawing.Point(125, 98);
-            this.radLabel61.Name = "radLabel61";
-            this.radLabel61.Size = new System.Drawing.Size(89, 18);
-            this.radLabel61.TabIndex = 102;
-            this.radLabel61.Text = "پروفایل شرکتی:";
-            this.radLabel61.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel61.ThemeName = "Office2010Silver";
-            // 
             // radGroupBox5
             // 
             this.radGroupBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -1186,6 +1186,69 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
             // 
+            // lbl_39
+            // 
+            this.lbl_39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_39.AutoSize = false;
+            this.lbl_39.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_39.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_39.Location = new System.Drawing.Point(8, 75);
+            this.lbl_39.Name = "lbl_39";
+            this.lbl_39.Size = new System.Drawing.Size(81, 18);
+            this.lbl_39.TabIndex = 93;
+            this.lbl_39.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_39.ThemeName = "Office2010Silver";
+            // 
+            // lbl_34
+            // 
+            this.lbl_34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_34.AutoSize = false;
+            this.lbl_34.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_34.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_34.Location = new System.Drawing.Point(8, 51);
+            this.lbl_34.Name = "lbl_34";
+            this.lbl_34.Size = new System.Drawing.Size(81, 18);
+            this.lbl_34.TabIndex = 91;
+            this.lbl_34.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_34.ThemeName = "Office2010Silver";
+            // 
+            // radLabel76
+            // 
+            this.radLabel76.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel76.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel76.Location = new System.Drawing.Point(121, 74);
+            this.radLabel76.Name = "radLabel76";
+            this.radLabel76.Size = new System.Drawing.Size(93, 18);
+            this.radLabel76.TabIndex = 92;
+            this.radLabel76.Text = "عملکرد پروژه ای:";
+            this.radLabel76.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel76.ThemeName = "Office2010Silver";
+            // 
+            // lbl_32
+            // 
+            this.lbl_32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_32.AutoSize = false;
+            this.lbl_32.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_32.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_32.Location = new System.Drawing.Point(221, 74);
+            this.lbl_32.Name = "lbl_32";
+            this.lbl_32.Size = new System.Drawing.Size(81, 18);
+            this.lbl_32.TabIndex = 91;
+            this.lbl_32.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_32.ThemeName = "Office2010Silver";
+            // 
+            // radLabel74
+            // 
+            this.radLabel74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel74.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel74.Location = new System.Drawing.Point(108, 51);
+            this.radLabel74.Name = "radLabel74";
+            this.radLabel74.Size = new System.Drawing.Size(106, 18);
+            this.radLabel74.TabIndex = 90;
+            this.radLabel74.Text = "Miss you برگشتی:";
+            this.radLabel74.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel74.ThemeName = "Office2010Silver";
+            // 
             // radLabel65
             // 
             this.radLabel65.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1197,6 +1260,18 @@
             this.radLabel65.Text = "هپی کال ناموفق:";
             this.radLabel65.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel65.ThemeName = "Office2010Silver";
+            // 
+            // radLabel72
+            // 
+            this.radLabel72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel72.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel72.Location = new System.Drawing.Point(336, 74);
+            this.radLabel72.Name = "radLabel72";
+            this.radLabel72.Size = new System.Drawing.Size(91, 18);
+            this.radLabel72.TabIndex = 90;
+            this.radLabel72.Text = "Miss You موفق:";
+            this.radLabel72.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel72.ThemeName = "Office2010Silver";
             // 
             // lbl_33
             // 
@@ -1260,81 +1335,6 @@
             this.radLabel70.Text = "هپی کال موفق:";
             this.radLabel70.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel70.ThemeName = "Office2010Silver";
-            // 
-            // lbl_32
-            // 
-            this.lbl_32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_32.AutoSize = false;
-            this.lbl_32.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_32.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_32.Location = new System.Drawing.Point(221, 74);
-            this.lbl_32.Name = "lbl_32";
-            this.lbl_32.Size = new System.Drawing.Size(81, 18);
-            this.lbl_32.TabIndex = 91;
-            this.lbl_32.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_32.ThemeName = "Office2010Silver";
-            // 
-            // radLabel72
-            // 
-            this.radLabel72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel72.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel72.Location = new System.Drawing.Point(336, 74);
-            this.radLabel72.Name = "radLabel72";
-            this.radLabel72.Size = new System.Drawing.Size(91, 18);
-            this.radLabel72.TabIndex = 90;
-            this.radLabel72.Text = "Miss You موفق:";
-            this.radLabel72.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel72.ThemeName = "Office2010Silver";
-            // 
-            // lbl_34
-            // 
-            this.lbl_34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_34.AutoSize = false;
-            this.lbl_34.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_34.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_34.Location = new System.Drawing.Point(8, 51);
-            this.lbl_34.Name = "lbl_34";
-            this.lbl_34.Size = new System.Drawing.Size(81, 18);
-            this.lbl_34.TabIndex = 91;
-            this.lbl_34.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_34.ThemeName = "Office2010Silver";
-            // 
-            // radLabel74
-            // 
-            this.radLabel74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel74.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel74.Location = new System.Drawing.Point(108, 51);
-            this.radLabel74.Name = "radLabel74";
-            this.radLabel74.Size = new System.Drawing.Size(106, 18);
-            this.radLabel74.TabIndex = 90;
-            this.radLabel74.Text = "Miss you برگشتی:";
-            this.radLabel74.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel74.ThemeName = "Office2010Silver";
-            // 
-            // lbl_39
-            // 
-            this.lbl_39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_39.AutoSize = false;
-            this.lbl_39.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_39.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_39.Location = new System.Drawing.Point(8, 75);
-            this.lbl_39.Name = "lbl_39";
-            this.lbl_39.Size = new System.Drawing.Size(81, 18);
-            this.lbl_39.TabIndex = 93;
-            this.lbl_39.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_39.ThemeName = "Office2010Silver";
-            // 
-            // radLabel76
-            // 
-            this.radLabel76.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel76.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel76.Location = new System.Drawing.Point(121, 74);
-            this.radLabel76.Name = "radLabel76";
-            this.radLabel76.Size = new System.Drawing.Size(93, 18);
-            this.radLabel76.TabIndex = 92;
-            this.radLabel76.Text = "عملکرد پروژه ای:";
-            this.radLabel76.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel76.ThemeName = "Office2010Silver";
             // 
             // radGroupBox7
             // 
@@ -1566,7 +1566,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(290, 53);
             this.pictureBox1.TabIndex = 141;
             this.pictureBox1.Text = "لطفاً چند لحظه منتظر بمانید...";
-            this.pictureBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.pictureBox1.ThemeName = "Office2010Silver";
             // 
             // MONTHLY_PERFORMANCE
@@ -1614,6 +1614,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_15)).EndInit();
@@ -1626,18 +1638,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
@@ -1650,6 +1650,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
             this.radGroupBox4.ResumeLayout(false);
             this.radGroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel61)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_28)).EndInit();
@@ -1667,7 +1668,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel62)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel63)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel64)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel61)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).EndInit();
             this.radGroupBox5.ResumeLayout(false);
             this.radGroupBox5.PerformLayout();
@@ -1680,18 +1680,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox6)).EndInit();
             this.radGroupBox6.ResumeLayout(false);
             this.radGroupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel76)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel74)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel65)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel72)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel69)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel70)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel72)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel74)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_39)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel76)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox7)).EndInit();
             this.radGroupBox7.ResumeLayout(false);
             this.radGroupBox7.PerformLayout();
