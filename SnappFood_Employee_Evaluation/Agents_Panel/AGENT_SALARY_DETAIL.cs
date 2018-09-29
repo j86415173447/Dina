@@ -52,6 +52,7 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             lbl_23.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_24.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_25.TextAlignment = ContentAlignment.MiddleLeft;
+            lbl_26.TextAlignment = ContentAlignment.MiddleLeft;
             pictureBox1.TextAlignment = ContentAlignment.MiddleCenter;
         }
 
@@ -99,35 +100,36 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 lcommand1 = "SELECT [System_Id],[Mnth],[yr],[Working_Days],[Base_Salary],[Child_Allowance],[Subsidy],[House_Allowance], " +
                     "[Performance_Bonus], " +
                     "[Over_Time],[Salary_Diff],[Total_Pay],[Insurance],[Taxt],[Attence_Reduction],[Penalty],[QC_Penalty],[Comp_Insurance],[Advance_Payment],[Total_Reduction],[Payable] " +
-                    ",[Holy_Work],[Holy_Work_Amt],[Low_Work],[Low_Work_Amt],[X3_Over_Time],[X3_Over_Time_Amt],[Normal_Over_Time],[Normal_Over_Time_Amt]" +
+                    ",[Holy_Work],[Holy_Work_Amt],[Low_Work],[Low_Work_Amt],[X3_Over_Time],[X3_Over_Time_Amt],[Normal_Over_Time],[Normal_Over_Time_Amt],[Night_Shift_Factor]" +
                     " FROM [SNAPP_CC_EVALUATION].[dbo].[PER_SALARY_SLIP] WHERE [System_Id] = '" + lbl_3.Text + "' AND [yr] = N'" + yr.Text + "' AND [mnth] = N'" + (mnth.SelectedIndex + 1).ToString() + "'";
                 adp1.SelectCommand.CommandText = lcommand1;
                 adp1.Fill(dt1);
                 if (dt1.Rows.Count == 1)
                 {
-                    lbl_4.Text = (dt1.Rows[0][3].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][3].ToString())) : "-";
-                    lbl_5.Text = (dt1.Rows[0][4].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][4].ToString())) : "-";
-                    lbl_6.Text = (dt1.Rows[0][5].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][5].ToString())) : "-";
-                    lbl_7.Text = (dt1.Rows[0][6].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][6].ToString())) : "-";
-                    lbl_8.Text = (dt1.Rows[0][7].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][7].ToString())) : "-";
-                    lbl_9.Text = (dt1.Rows[0][8].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][8].ToString())) : "-";
-                    lbl_10.Text = (dt1.Rows[0][9].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][9].ToString())) : "-";
-                    lbl_11.Text = (dt1.Rows[0][10].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][10].ToString())) : "-";
-                    lbl_12.Text = (dt1.Rows[0][11].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][11].ToString())) : "-";
-                    lbl_13.Text = (dt1.Rows[0][12].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][12].ToString())) : "-";
-                    lbl_14.Text = (dt1.Rows[0][13].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][13].ToString())) : "-";
-                    lbl_15.Text = (dt1.Rows[0][14].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][14].ToString())) : "-";
-                    lbl_16.Text = (dt1.Rows[0][15].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][15].ToString())) : "-";
-                    lbl_17.Text = (dt1.Rows[0][16].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][16].ToString())) : "-";
-                    lbl_18.Text = (dt1.Rows[0][17].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][17].ToString())) : "-";
-                    lbl_19.Text = (dt1.Rows[0][18].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][18].ToString())) : "-";
-                    lbl_20.Text = (dt1.Rows[0][19].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][19].ToString())) : "-";
-                    lbl_21.Text = (dt1.Rows[0][20].ToString() != "-") ? string.Format("{0:n0}", int.Parse(dt1.Rows[0][20].ToString())) : "-";
-                    lbl_22.Text = (dt1.Rows[0][21].ToString() != "-") ? dt1.Rows[0][21].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][22].ToString())) + "ریال" : "-";
-                    lbl_23.Text = (dt1.Rows[0][23].ToString() != "-") ? dt1.Rows[0][23].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][24].ToString())) + "ریال" : "-";
-                    lbl_24.Text = (dt1.Rows[0][25].ToString() != "-") ? dt1.Rows[0][25].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][26].ToString())) + "ریال" : "-";
-                    lbl_25.Text = (dt1.Rows[0][27].ToString() != "-") ? dt1.Rows[0][27].ToString() + "\n" + string.Format("{0:n0}", int.Parse(dt1.Rows[0][28].ToString())) + "ریال" : "-";
-
+                    
+                    lbl_4.Text = !(dt1.Rows[0][3].ToString() == "-" || dt1.Rows[0][3].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][3].ToString()))) : "-";
+                    lbl_5.Text = !(dt1.Rows[0][4].ToString() == "-" || dt1.Rows[0][4].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][4].ToString()))) : "-";
+                    lbl_6.Text = !(dt1.Rows[0][5].ToString() == "-" || dt1.Rows[0][5].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][5].ToString()))) : "-";
+                    lbl_7.Text = !(dt1.Rows[0][6].ToString() == "-" || dt1.Rows[0][6].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][6].ToString()))) : "-";
+                    lbl_8.Text = !(dt1.Rows[0][7].ToString() == "-" || dt1.Rows[0][7].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][7].ToString()))) : "-";
+                    lbl_9.Text = !(dt1.Rows[0][8].ToString() == "-" || dt1.Rows[0][8].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][8].ToString()))) : "-";
+                    lbl_10.Text = !(dt1.Rows[0][9].ToString() == "-" || dt1.Rows[0][9].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][9].ToString()))) : "-";
+                    lbl_11.Text = !(dt1.Rows[0][10].ToString() == "-" || dt1.Rows[0][10].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][10].ToString()))) : "-";
+                    lbl_12.Text = !(dt1.Rows[0][11].ToString() == "-" || dt1.Rows[0][11].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][11].ToString()))) : "-";
+                    lbl_13.Text = !(dt1.Rows[0][12].ToString() == "-" || dt1.Rows[0][12].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][12].ToString()))) : "-";
+                    lbl_14.Text = !(dt1.Rows[0][13].ToString() == "-" || dt1.Rows[0][13].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][13].ToString()))) : "-";
+                    lbl_15.Text = !(dt1.Rows[0][14].ToString() == "-" || dt1.Rows[0][14].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][14].ToString()))) : "-";
+                    lbl_16.Text = !(dt1.Rows[0][15].ToString() == "-" || dt1.Rows[0][15].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][15].ToString()))) : "-";
+                    lbl_17.Text = !(dt1.Rows[0][16].ToString() == "-" || dt1.Rows[0][16].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][16].ToString()))) : "-";
+                    lbl_18.Text = !(dt1.Rows[0][17].ToString() == "-" || dt1.Rows[0][17].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][17].ToString()))) : "-";
+                    lbl_19.Text = !(dt1.Rows[0][18].ToString() == "-" || dt1.Rows[0][18].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][18].ToString()))) : "-";
+                    lbl_20.Text = !(dt1.Rows[0][19].ToString() == "-" || dt1.Rows[0][19].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][19].ToString()))) : "-";
+                    lbl_21.Text = !(dt1.Rows[0][20].ToString() == "-" || dt1.Rows[0][20].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][20].ToString()))) : "-";
+                    lbl_22.Text = (!(dt1.Rows[0][21].ToString() == "-" || dt1.Rows[0][21].ToString() == "") ? Math.Round(double.Parse(dt1.Rows[0][21].ToString()), 2).ToString() + " ساعت" : "-") + (!(dt1.Rows[0][22].ToString() == "-" || dt1.Rows[0][22].ToString() == "") ? ("\n" + string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][22].ToString()))) + "ریال") : "");
+                    lbl_23.Text = (!(dt1.Rows[0][23].ToString() == "-" || dt1.Rows[0][23].ToString() == "") ? Math.Round(double.Parse(dt1.Rows[0][23].ToString()), 2).ToString() + " ساعت" : "-") + (!(dt1.Rows[0][24].ToString() == "-" || dt1.Rows[0][24].ToString() == "") ? ("\n" + string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][24].ToString()))) + "ریال") : "");
+                    lbl_24.Text = (!(dt1.Rows[0][25].ToString() == "-" || dt1.Rows[0][25].ToString() == "") ? Math.Round(double.Parse(dt1.Rows[0][25].ToString()), 2).ToString() + " ساعت" : "-") + (!(dt1.Rows[0][26].ToString() == "-" || dt1.Rows[0][26].ToString() == "") ? ("\n" + string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][26].ToString()))) + "ریال") : "");
+                    lbl_25.Text = (!(dt1.Rows[0][27].ToString() == "-" || dt1.Rows[0][27].ToString() == "") ? Math.Round(double.Parse(dt1.Rows[0][27].ToString()), 2).ToString() + " ساعت" : "-") + (!(dt1.Rows[0][28].ToString() == "-" || dt1.Rows[0][28].ToString() == "") ? ("\n" + string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][28].ToString()))) + "ریال") : "");
+                    lbl_26.Text = !(dt1.Rows[0][29].ToString() == "-" || dt1.Rows[0][29].ToString() == "") ? string.Format("{0:n0}", Math.Floor(double.Parse(dt1.Rows[0][29].ToString()))) : "-";
                 }
                 else
                 {
@@ -154,6 +156,7 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_23.Text = "";
                     lbl_24.Text = "";
                     lbl_25.Text = "";
+                    lbl_26.Text = "";
                 }
             }
             else
@@ -181,6 +184,7 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 lbl_23.Text = "";
                 lbl_24.Text = "";
                 lbl_25.Text = "";
+                lbl_26.Text = "";
             }
         }
 
@@ -232,6 +236,7 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             report.Dictionary.Variables.Add("lbl_23", lbl_23.Text);
             report.Dictionary.Variables.Add("lbl_24", lbl_24.Text);
             report.Dictionary.Variables.Add("lbl_25", lbl_25.Text);
+            report.Dictionary.Variables.Add("lbl_26", lbl_26.Text);
             Stimulsoft.Report.Print.StiPrintProvider.SetPaperSource = false;
             report.Render();
             report.Show();

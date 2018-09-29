@@ -33,6 +33,10 @@
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.scr_to = new Telerik.WinControls.UI.RadTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.scr_from = new Telerik.WinControls.UI.RadTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.Taboo = new System.Windows.Forms.CheckBox();
             this.Agent = new System.Windows.Forms.ComboBox();
@@ -46,19 +50,15 @@
             this.log_announcment = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.scr_from = new Telerik.WinControls.UI.RadTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.scr_to = new Telerik.WinControls.UI.RadTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scr_to)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scr_from)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_to)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_from)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scr_from)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scr_to)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,42 @@
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox1.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
+            // 
+            // scr_to
+            // 
+            this.scr_to.Location = new System.Drawing.Point(14, 28);
+            this.scr_to.Name = "scr_to";
+            this.scr_to.Size = new System.Drawing.Size(58, 20);
+            this.scr_to.TabIndex = 35;
+            this.scr_to.ThemeName = "Office2010Silver";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.Location = new System.Drawing.Point(78, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 13);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "تا:";
+            // 
+            // scr_from
+            // 
+            this.scr_from.Location = new System.Drawing.Point(112, 28);
+            this.scr_from.Name = "scr_from";
+            this.scr_from.Size = new System.Drawing.Size(58, 20);
+            this.scr_from.TabIndex = 34;
+            this.scr_from.ThemeName = "Office2010Silver";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(176, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "امتیاز لاگ  از:";
             // 
             // radButton1
             // 
@@ -255,43 +291,7 @@
             this.radGridView1.ThemeName = "Office2010Silver";
             this.radGridView1.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridView1_CellDoubleClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(176, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "امتیاز لاگ  از:";
-            // 
-            // scr_from
-            // 
-            this.scr_from.Location = new System.Drawing.Point(112, 28);
-            this.scr_from.Name = "scr_from";
-            this.scr_from.Size = new System.Drawing.Size(58, 20);
-            this.scr_from.TabIndex = 34;
-            this.scr_from.ThemeName = "Office2010Silver";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(78, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 13);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "تا:";
-            // 
-            // scr_to
-            // 
-            this.scr_to.Location = new System.Drawing.Point(14, 28);
-            this.scr_to.Name = "scr_to";
-            this.scr_to.Size = new System.Drawing.Size(58, 20);
-            this.scr_to.TabIndex = 35;
-            this.scr_to.ThemeName = "Office2010Silver";
-            // 
-            // CCM_CARTABLE
+            // FINAL_CARTABLE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +301,7 @@
             this.Controls.Add(this.log_announcment);
             this.Controls.Add(this.radGroupBox1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.Name = "CCM_CARTABLE";
+            this.Name = "FINAL_CARTABLE";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
@@ -310,19 +310,19 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "کارتابل سرگروه";
+            this.Text = "کارتابل لاگ های برگشتی به کنترل کیفی";
             this.ThemeName = "Office2010Silver";
             this.Load += new System.EventHandler(this.QCM_CARTABLE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scr_to)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scr_from)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_to)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_from)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scr_from)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scr_to)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

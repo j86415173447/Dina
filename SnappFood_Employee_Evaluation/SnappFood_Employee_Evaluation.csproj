@@ -477,6 +477,12 @@
     <Compile Include="Scores_Ops\Search_Staff_MNG.Designer.cs">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </Compile>
+    <Compile Include="System_Managment\GEN_PERFORMANCE_UPLOAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System_Managment\GEN_PERFORMANCE_UPLOAD.Designer.cs">
+      <DependentUpon>GEN_PERFORMANCE_UPLOAD.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_Managment\GEN_USER_MANAGMENT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -861,6 +867,9 @@
     <EmbeddedResource Include="Scores_Ops\Search_Staff_MNG.resx">
       <DependentUpon>Search_Staff_MNG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="System_Managment\GEN_PERFORMANCE_UPLOAD.resx">
+      <DependentUpon>GEN_PERFORMANCE_UPLOAD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System_Managment\GEN_USER_MANAGMENT.resx">
       <DependentUpon>GEN_USER_MANAGMENT.cs</DependentUpon>
     </EmbeddedResource>
@@ -950,6 +959,7 @@
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

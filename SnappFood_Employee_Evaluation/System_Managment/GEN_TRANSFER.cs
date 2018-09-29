@@ -198,7 +198,9 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                         new_sys_id = sys_id.Text;
                     }
 
-                    //////////////////////////////////////////////// 1- Per_Doc Table Update
+                    
+                        
+                    //////////////////////////////////////////////// Per_Doc Table Update
                     oleDbCommand1.Parameters.Clear();
                     oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Department] = ?, [Main_Shift] = ?, [System_Id] = ?, [Dep_Cd] = ?  WHERE [Doc_No] = '" + Doc_No.Text + "'";
                     oleDbCommand1.Parameters.AddWithValue("@Department", new_dep.Text);
@@ -226,16 +228,15 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     //    oleDbCommand1.ExecuteNonQuery();
                     //    oleDbConnection1.Close();
                     //}
-
-                    //////////////////////////////////////////////// 3- User Table Update
-                    //oleDbCommand1.Parameters.Clear();
-                    //oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[Users] SET [usr_role_cd] = ? , [usr_role] = ? , [usr_role_nm] = ?  WHERE [Doc_No] = '" + Doc_No.Text + "'";
-                    //oleDbCommand1.Parameters.AddWithValue("@usr_role_cd", new_dep.SelectedValue.ToString().Substring(0,3));
-                    //oleDbCommand1.Parameters.AddWithValue("@usr_role", new_dep.Text + " " + cur_dep.Text);
-                    //oleDbCommand1.Parameters.AddWithValue("@usr_role_nm", new_dep.Text + " " + cur_dep.Text);
-                    //oleDbConnection1.Open();
-                    //oleDbCommand1.ExecuteNonQuery();
-                    //oleDbConnection1.Close();
+                    if (new_sys_id != sys_id.Text)
+                    {
+                        //////////////////////////////////////////////// Update QC table
+                        oleDbCommand1.Parameters.Clear();
+                        oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] SET [Agent_Ext] = '" + new_sys_id + "' WHERE [Agent_Ext] = '" + sys_id.Text + "'";
+                        oleDbConnection1.Open();
+                        oleDbCommand1.ExecuteNonQuery();
+                        oleDbConnection1.Close();
+                    }
 
                     RadMessageBox.Show(this, " تغییر واحد با موفقیت ثبت شد. " + "\n" +
                         (new_sys_id == sys_id.Text ? " " : " شماره داخلی " + Per_Name.Text + " به " + new_sys_id + " تغییر یافت. ") +

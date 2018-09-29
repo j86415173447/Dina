@@ -162,20 +162,27 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT ROW_NUMBER() OVER(ORDER BY tbl.[شناسه کیفی] ASC) AS 'ردیف',* from (SELECT SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
+            //string lcommand = "SELECT ROW_NUMBER() OVER(ORDER BY tbl.[شناسه کیفی] ASC) AS 'ردیف',* from (SELECT SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
+            //                  "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی' FROM ( " +
+            //                  "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE ([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] is null)) SEL1 " +
+            //                  "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name],[Manager] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
+            //                  "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
+            //                  "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) ";
+
+            string lcommand = "SELECT ROW_NUMBER() OVER(ORDER BY Sel1.[QC_ID] ASC) AS 'ردیف', SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
                               "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی' FROM ( " +
                               "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE ([QC_M_Approval] = 1 and [CC_M_Approval] = 0 and [LD_M_Approval] = 0 and [MG_M_Approval] is null)) SEL1 " +
                               "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name],[Manager] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
                               "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
                               "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) ";
 
-            string lcommand3434 = " union SELECT SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
-                              "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی' FROM ( " +
-                              "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_M_Approval] = 1 and [CC_M_Approval] is null) SEL1 " +
-                              "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name],[Manager],[Coordinator] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] ) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
-                              "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
-                              "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) where sel2.[Coordinator] = N'نامشخص' and sel2.[Manager] = N'" + user + "' ) AS tbl";
-            adp.SelectCommand.CommandText = lcommand + search_query() + lcommand3434;
+            //string lcommand3434 = " union SELECT SEL1.[QC_ID] 'شناسه کیفی', SEL1.[QC_Score] 'امتیاز کیفی', SEL1.[Agent_Ext] 'شماره داخلی', SEL2.[Per_Name] 'نام ایجنت', SEL2.[Department] 'واحد شغلی', " +
+            //                  "SEL3.[Call_Type_nm] 'نوع تماس', SEL4.[Plan_nm] 'پلن کیفی', SEL1.[taboo] 'تابو؟', SEL1.[insrt_dt_per] 'تاریخ بررسی' FROM ( " +
+            //                  "(SELECT [QC_ID],[QC_Score],[Agent_Ext],[Call_Type_Cd],[Log_Type_Cd],[taboo],[insrt_dt_per],[QC_Agent] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_M_Approval] = 1 and [CC_M_Approval] is null) SEL1 " +
+            //                  "LEFT JOIN (SELECT [System_Id],[Department],[Per_Name],[Manager],[Coordinator] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] ) SEL2 ON SEL1.[Agent_Ext] = SEL2.[System_Id] " +
+            //                  "LEFT JOIN (SELECT [Call_Type_id],[Call_Type_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_CALL_TYPE]) SEL3 ON SEL1.[Call_Type_Cd] = SEL3.[Call_Type_id] " +
+            //                  "LEFT JOIN (SELECT [Plan_id],[Plan_nm] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_PLAN]) SEL4 ON SEL1.[Log_Type_Cd] = SEL4.[Plan_id]) where sel2.[Coordinator] = N'نامشخص' and sel2.[Manager] = N'" + user + "' ) AS tbl";
+            adp.SelectCommand.CommandText = lcommand + search_query();// + lcommand3434;
             dt22.Clear();
             adp.Fill(dt22);
             if (dt22.Rows.Count != 0)

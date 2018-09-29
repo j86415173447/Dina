@@ -682,6 +682,11 @@ namespace SnappFood_Employee_Evaluation.QC
             }
             radGridView1.Columns[4].IsVisible = false;
             radGridView1.BestFitColumns();
+
+            if (CC_m_Remark.Text == "انتقال به کارتابل رهبر")
+            {
+                CC_m_Remark.Text = "انتقال اتوماتیک به کارتابل رهبر مربوطه صورت گرفت.";
+            }
         }
 
         private void radButton2_Click(object sender, EventArgs e)

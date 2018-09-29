@@ -42,8 +42,8 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT Sel2.*,Sel1.[Failed_log] 'لاگ ناموفق' FROM ( " +
-                              "(SELECT [Agent_Ext], COUNT([Final_Approval]) AS [Failed_log] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [Final_Approval] = 1 " + (dt_from.Text == "" ? "" : (" AND [Final_Aprv_DT] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [Final_Aprv_DT] <= N'" + dt_to.Text + "'")) + "group by [Agent_Ext]) Sel1 " +
+            string lcommand = "SELECT Sel2.*,Sel1.[Failed_log] 'لاگ ناموفق', sel1.[taboo_log] 'موارد تابو' FROM ( " +
+                              "(SELECT [Agent_Ext], COUNT([Final_Approval]) AS [Failed_log], SUM(CASE WHEN taboo = 1 and [final_approval] = 1 then 1 else 0 end) AS [taboo_log] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [Final_Approval] = 1 " + (dt_from.Text == "" ? "" : (" AND [Final_Aprv_DT] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [Final_Aprv_DT] <= N'" + dt_to.Text + "'")) + "group by [Agent_Ext]) Sel1 " +
                               "left join (SELECT [Doc_No] 'شماره پرونده',[System_Id] 'داخلی',[Per_Name] 'نام کارشناس',[Department] 'واحد شغلی',[Main_Shift] 'شیفت' FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on Sel2.[داخلی] = Sel1.[Agent_Ext]) order by Sel1.[Failed_log] desc ";
             adp.SelectCommand.CommandText = lcommand;
             dt22.Clear();
@@ -56,6 +56,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 radGridView1.Columns[1].TextAlignment = ContentAlignment.MiddleCenter;
                 radGridView1.Columns[4].TextAlignment = ContentAlignment.MiddleCenter;
                 radGridView1.Columns[5].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[6].TextAlignment = ContentAlignment.MiddleCenter;
             }
             else
             {

@@ -694,6 +694,13 @@ namespace SnappFood_Employee_Evaluation.QC
                 ld_aprv_usr.Text = "-";
                 LD_m_Remark.Text = "انتقال اتوماتیک به کارتابل مدیر مربوطه صورت گرفت.";
             }
+            if (cc_aprv_dt.Text == "انتقال به کارتابل رهبر")
+            {
+                cc_aprv_dt.Text = "-";
+                cc_aprv_usr.Text = "-";
+                CC_m_Remark.Text = "انتقال اتوماتیک به کارتابل رهبر مربوطه صورت گرفت.";
+                
+            }
         }
 
         private void radButton2_Click(object sender, EventArgs e)

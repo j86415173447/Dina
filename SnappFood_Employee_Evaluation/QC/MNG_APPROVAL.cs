@@ -711,7 +711,16 @@ namespace SnappFood_Employee_Evaluation.QC
             radGridView1.Columns[4].IsVisible = false;
             radGridView1.BestFitColumns();
 
-            if (cc_aprv_dt.Text == "")
+            //if (cc_aprv_dt.Text == "")
+            //{
+            //    cc_aprv_dt.Text = "-";
+            //    cc_aprv_usr.Text = "-";
+            //    CC_m_Remark.Text = "انتقال اتوماتیک به کارتابل مدیر مربوطه صورت گرفت.";
+            //    ld_aprv_dt.Text = "-";
+            //    ld_aprv_usr.Text = "-";
+            //    LD_m_Remark.Text = "انتقال اتوماتیک به کارتابل مدیر مربوطه صورت گرفت.";
+            //}
+            if (cc_aprv_dt.Text == "انتقال به کارتابل مدیر")
             {
                 cc_aprv_dt.Text = "-";
                 cc_aprv_usr.Text = "-";
@@ -719,6 +728,13 @@ namespace SnappFood_Employee_Evaluation.QC
                 ld_aprv_dt.Text = "-";
                 ld_aprv_usr.Text = "-";
                 LD_m_Remark.Text = "انتقال اتوماتیک به کارتابل مدیر مربوطه صورت گرفت.";
+            }
+            if (cc_aprv_dt.Text == "انتقال به کارتابل رهبر")
+            {
+                cc_aprv_dt.Text = "-";
+                cc_aprv_usr.Text = "-";
+                CC_m_Remark.Text = "انتقال اتوماتیک به کارتابل رهبر مربوطه صورت گرفت.";
+
             }
         }
 
