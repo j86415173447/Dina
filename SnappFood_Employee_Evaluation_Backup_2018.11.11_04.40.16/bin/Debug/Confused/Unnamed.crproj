@@ -1,0 +1,8 @@
+<project outputDir="C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Confused" baseDir="C:\Users\snappfood\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug" xmlns="http://confuser.codeplex.com">
+  <module path="SnappFood_Employee_Evaluation.exe">
+    <rule pattern="true" inherit="false">
+      <protection id="anti ildasm" />
+      <protection id="anti tamper" />
+    </rule>
+  </module>
+</project>

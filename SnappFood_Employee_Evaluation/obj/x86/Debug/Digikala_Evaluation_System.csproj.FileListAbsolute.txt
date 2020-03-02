@@ -1,0 +1,271 @@
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe.config
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe.manifest
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.application
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\NAudio.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SmsIrRestful.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Base.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.Themes.Office2010Silver.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\TelerikCommon.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Data.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\NAudio.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Base.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Base.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Data.pdb
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Data.xml
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Interop.WMPLib.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csprojAssemblyReference.cache
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csproj.ResolveComReference.cache
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_SALARY_DETAIL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.MONTHLY_PERFORMANCE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_QC_DETAIL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Intro.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Loading.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Login.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Main_Frm1.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Pass_Change.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Birthday_Report.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Doc_Amend.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_TEL_INFO.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_TERMINATION_REPORT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_GENERAL_REPORT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Score_Detail_Report.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Invitation_SMS.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Score_SMS.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Search_Staff_Termination.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Search_Staff_Points.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Search_Staff.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Termination.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_SCORE_DTL_MAIL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_MAGAZINE_EMAIL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Properties.Resources.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.New_Staff.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LOG_FULL_DETAILS.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.FINAL_APPROVAL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.FINAL_CARTABLE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.MNG_CARTABLE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.MNG_APPROVAL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LDM_CARTABLE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LDM_APPROVAL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.CCM_APPROVAL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QCM_APPROVAL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LOG_ENTRY.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.CCM_CARTABLE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QCM_CARTABLE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QC_CALL_TYPE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_COOR_4LEADER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DETAILS_MG.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_GENERAL_MG.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_Final.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_M.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DASHBOARD.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DISPATCH.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PENALTY.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PERFORMANCE.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_MANAGER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_LEADER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_COORDINATOR.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_GENERAL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QC_PLAN_MASTER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.History_Auto_Calc.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.SCR_WRNG.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.SCR_MNG.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.SCR_PRFMC_EVL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.Search_Staff_WRNG.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.Search_Staff_PRFMC.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.Search_Staff_MNG.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_PERFORMANCE_UPLOAD.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_USER_MANAGMENT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_SALARY_UPLOAD.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_TRANSFER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.QC_CONTROL_PANEL.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HCC_CC.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HCC_SETTING.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HC_DASHBOARD.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_TASKS.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_GROUPING.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_POSITIONING.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_GROUPING.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_USER_MANAGMENT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_TRANSFER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_POSITIONING.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Classes_Report.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.CLS_PRESENT_ABSENT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.CLS_Results.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Class_Result.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Class.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Course.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Staff_TRN_Doc.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Staff_Reg.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLASSES.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLASS_DOC_ANNOUNCEMENT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLS_ANNOUNCEMENT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLS_EXAM_REPORT.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_COURSE_MASTER.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_DOC_STAFF.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_REGISTRATION.resources
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csproj.GenerateResource.cache
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe.licenses
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csproj.CoreCompileInputs.cache
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe.manifest
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.application
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csproj.CopyComplete
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe
+C:\Users\j.taghinasab\source\repos\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe.config
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe.manifest
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.application
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\NAudio.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\SmsIrRestful.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Base.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.Themes.Office2010Silver.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\TelerikCommon.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Data.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\NAudio.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Base.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Base.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Controls.Win.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Report.Win.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.GridView.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Data.pdb
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Stimulsoft.Data.xml
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\Interop.WMPLib.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csprojResolveAssemblyReference.cache
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csproj.ResolveComReference.cache
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_SALARY_DETAIL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.MONTHLY_PERFORMANCE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Agents_Panel.AGENT_QC_DETAIL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Intro.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Loading.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Login.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Main_Frm1.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Pass_Change.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Birthday_Report.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Doc_Amend.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_TEL_INFO.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_TERMINATION_REPORT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_GENERAL_REPORT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Score_Detail_Report.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Invitation_SMS.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Score_SMS.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Search_Staff_Termination.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Search_Staff_Points.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Search_Staff.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.Termination.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_SCORE_DTL_MAIL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.PER_MAGAZINE_EMAIL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Properties.Resources.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Personel.New_Staff.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LOG_FULL_DETAILS.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.FINAL_APPROVAL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.FINAL_CARTABLE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.MNG_CARTABLE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.MNG_APPROVAL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LDM_CARTABLE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LDM_APPROVAL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.CCM_APPROVAL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QCM_APPROVAL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.LOG_ENTRY.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.CCM_CARTABLE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QCM_CARTABLE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QC_CALL_TYPE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_COOR_4LEADER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DETAILS_MG.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_GENERAL_MG.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_Final.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_M.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DASHBOARD.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_DISPATCH.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PENALTY.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_PERFORMANCE.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_MANAGER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_LEADER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_COORDINATOR.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.RPT_QC_GENERAL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.QC.QC_PLAN_MASTER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.History_Auto_Calc.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.SCR_WRNG.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.SCR_MNG.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.SCR_PRFMC_EVL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.Search_Staff_WRNG.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.Search_Staff_PRFMC.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Scores_Ops.Search_Staff_MNG.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_PERFORMANCE_UPLOAD.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_USER_MANAGMENT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_SALARY_UPLOAD.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_TRANSFER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.QC_CONTROL_PANEL.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HCC_CC.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HCC_SETTING.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_HC_DASHBOARD.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_TASKS.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_GROUPING.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.GEN_POSITIONING.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_GROUPING.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_USER_MANAGMENT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_TRANSFER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.System_Managment.SRCH_POSITIONING.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Classes_Report.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.CLS_PRESENT_ABSENT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.CLS_Results.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Class_Result.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Class.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Course.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Staff_TRN_Doc.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.Search_Staff_Reg.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLASSES.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLASS_DOC_ANNOUNCEMENT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLS_ANNOUNCEMENT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_CLS_EXAM_REPORT.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_COURSE_MASTER.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_DOC_STAFF.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.Training.TRN_REGISTRATION.resources
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\Digikala_Evaluation_System.csproj.GenerateResource.Cache
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe.licenses
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe.manifest
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.application
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.pdb

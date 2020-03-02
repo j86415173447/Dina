@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,CD,CD,,System.String,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="14">
+        <Text2 Ref="3" type="Text" isKey="true">
+          <Border>Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.58,0.6,2.03,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,12,Bold</Font>
+          <Guid>a5b7008058894afc805377cf4e17be1c</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>مدل محصول:</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text2>
+        <Text1 Ref="4" type="Text" isKey="true">
+          <Border>Top, Left, Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.78,0.04,4.83,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,10,Bold</Font>
+          <Guid>41a4cd196ace4109a862ad824833f740</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>بازرگان: نوآوران فن آوازه (دیجی کالا)</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text1>
+        <Text4 Ref="5" type="Text" isKey="true">
+          <Border>Left;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.78,0.6,2.7,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Tahoma,9,Bold</Font>
+          <Guid>22810f4bb49444ecb58c487caa85a2a3</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text4</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>Y7 Prime 2019</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text4>
+        <Text3 Ref="6" type="Text" isKey="true">
+          <Border>Left, Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.78,1.14,4.83,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,9.5,Bold</Font>
+          <Guid>c3adc1542cf34d6fa3bb0fb27661e84b</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>قیمت مصرف کننده با مالیات ارزش افزوده:</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text3>
+        <Text5 Ref="7" type="Text" isKey="true">
+          <Border>Left, Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.78,1.67,4.83,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Titr,15,Bold</Font>
+          <Guid>c2f5d00f42a6448694cc011965334c4b</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text5</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>19,711,135 ریال</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text5>
+        <Text6 Ref="8" type="Text" isKey="true">
+          <Border>Right, Bottom;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>2.38,2.32,3.23,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,12,Bold</Font>
+          <Guid>221be666355d49d49edd3508836d27b4</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text6</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>محصول ثبتی سامانه</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Bottom</VertAlignment>
+        </Text6>
+        <Text7 Ref="9" type="Text" isKey="true">
+          <Border>Left, Bottom;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.78,2.32,1.7,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Tahoma,10,Bold</Font>
+          <Guid>515cd489e12c48d3a501f2b4cdba1777</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>124.ir</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text7>
+        <Text8 Ref="10" type="Text" isKey="true">
+          <Border>Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.89,0.6,2.03,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,12,Bold</Font>
+          <Guid>27075c2438424fb985e1b75f2728f03d</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>مدل محصول:</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text8>
+        <Text9 Ref="11" type="Text" isKey="true">
+          <Border>Top, Left, Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.09,0.04,4.83,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,10,Bold</Font>
+          <Guid>001d1e0db4124423a58174296b67b4fc</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>بازرگان: نوآوران فن آوازه (دیجی کالا)</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text9>
+        <Text10 Ref="12" type="Text" isKey="true">
+          <Border>Left;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.09,0.6,2.7,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Tahoma,9,Bold</Font>
+          <Guid>bf826fa680a94abe935752d1441b70bf</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>Y7 Prime 2019</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text10>
+        <Text11 Ref="13" type="Text" isKey="true">
+          <Border>Left, Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.09,1.14,4.83,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,9.5,Bold</Font>
+          <Guid>687ff577b4cf4eaeb6d48d406382017f</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text11</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>قیمت مصرف کننده با مالیات ارزش افزوده:</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text11>
+        <Text12 Ref="14" type="Text" isKey="true">
+          <Border>Left, Right;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.09,1.67,4.83,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Titr,15,Bold</Font>
+          <Guid>7b9d8b33137a4926b6f404cd33218fe0</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text12</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>19,711,135 ریال</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text12>
+        <Text13 Ref="15" type="Text" isKey="true">
+          <Border>Right, Bottom;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>7.69,2.32,3.23,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>B Nazanin,12,Bold</Font>
+          <Guid>ed1cf73df3274b79868ed763c3fbc287</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text13</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>محصول ثبتی سامانه</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Bottom</VertAlignment>
+        </Text13>
+        <Text14 Ref="16" type="Text" isKey="true">
+          <Border>Left, Bottom;[105:105:105];2;Solid;False;4;[105:105:105]</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.09,2.32,1.7,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Tahoma,10,Bold</Font>
+          <Guid>98ed7edf07134c048f683d9c817a33c0</Guid>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text14</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>124.ir</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text14>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>60e4d13da9c04b329d826eaef1c2612d</Guid>
+      <Margins>0.1,0.1,0.1,0.1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>3.4</PageHeight>
+      <PageWidth>40</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="17" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="18" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>5/25/2019 6:45:43 PM</ReportChanged>
+  <ReportCreated>7/5/2016 1:40:24 AM</ReportCreated>
+  <ReportFile>C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\SnappFood_Employee_Evaluation\bin\x64\Debug\Reports\Label_Print 2.mrt</ReportFile>
+  <ReportGuid>01232693a3804fad911384b5607c5cd2</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2017.1.10.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

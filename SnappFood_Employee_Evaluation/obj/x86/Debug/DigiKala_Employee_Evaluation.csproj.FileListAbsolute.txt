@@ -1,0 +1,6 @@
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\Snappfood_Employee_Evaluation\bin\Debug\SnappFood_Employee_Evaluation.exe.config
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\Snappfood_Employee_Evaluation\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\Snappfood_Employee_Evaluation\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\Snappfood_Employee_Evaluation\obj\x86\Debug\DigiKala_Employee_Evaluation.csproj.ResolveComReference.cache
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\Snappfood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.exe
+C:\Users\j.taghinasab\Documents\Visual Studio 2015\Projects\snappfood-employee-evaluation\Snappfood_Employee_Evaluation\obj\x86\Debug\SnappFood_Employee_Evaluation.pdb
