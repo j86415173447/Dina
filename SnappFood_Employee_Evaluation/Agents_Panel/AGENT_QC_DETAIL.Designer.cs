@@ -44,32 +44,39 @@
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_3 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
-            this.lbl_7 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_13 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_19 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_16 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_12 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_18 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_15 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_11 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_9 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_17 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_14 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_10 = new Telerik.WinControls.UI.RadLabel();
-            this.lbl_8 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel22 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox8 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_7 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox7 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_18 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_19 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox6 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_17 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox5 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_13 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_16 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_14 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_15 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel31 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel32 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_10 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_11 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_12 = new Telerik.WinControls.UI.RadLabel();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel27 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel28 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_8 = new Telerik.WinControls.UI.RadLabel();
+            this.lbl_9 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.lbl_5 = new Telerik.WinControls.UI.RadLabel();
             this.lbl_6 = new Telerik.WinControls.UI.RadLabel();
@@ -77,9 +84,11 @@
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.no_fl = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
-            this.bad_fl = new Telerik.WinControls.UI.RadLabel();
+            this.pending = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
+            this.suc_perc = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
+            this.avg_score = new Telerik.WinControls.UI.RadLabel();
             this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
             this.pictureBox1 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).BeginInit();
@@ -94,32 +103,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbl_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox8)).BeginInit();
+            this.radGroupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox7)).BeginInit();
+            this.radGroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).BeginInit();
+            this.lbl_18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox6)).BeginInit();
+            this.radGroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).BeginInit();
+            this.radGroupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
+            this.radGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_5)).BeginInit();
@@ -128,9 +151,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.no_fl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bad_fl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pending)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suc_perc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avg_score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -212,7 +237,7 @@
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(743, 50);
+            this.radLabel1.Location = new System.Drawing.Point(743, 37);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(27, 18);
             this.radLabel1.TabIndex = 66;
@@ -223,7 +248,7 @@
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel2.Location = new System.Drawing.Point(460, 50);
+            this.radLabel2.Location = new System.Drawing.Point(460, 37);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(35, 18);
             this.radLabel2.TabIndex = 67;
@@ -239,6 +264,7 @@
             this.mnth.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnth.FormattingEnabled = true;
             this.mnth.Items.AddRange(new object[] {
+            "",
             "فروردین",
             "اردیبهشت",
             "خرداد",
@@ -251,7 +277,7 @@
             "دی",
             "بهمن",
             "اسفند"});
-            this.mnth.Location = new System.Drawing.Point(611, 47);
+            this.mnth.Location = new System.Drawing.Point(611, 34);
             this.mnth.Name = "mnth";
             this.mnth.Size = new System.Drawing.Size(126, 22);
             this.mnth.TabIndex = 124;
@@ -264,7 +290,7 @@
             this.yr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yr.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yr.FormattingEnabled = true;
-            this.yr.Location = new System.Drawing.Point(328, 47);
+            this.yr.Location = new System.Drawing.Point(328, 34);
             this.yr.Name = "yr";
             this.yr.Size = new System.Drawing.Size(126, 22);
             this.yr.TabIndex = 125;
@@ -273,7 +299,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(138, 50);
+            this.radLabel4.Location = new System.Drawing.Point(138, 37);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(82, 18);
             this.radLabel4.TabIndex = 68;
@@ -286,7 +312,7 @@
             this.lbl_3.AutoSize = false;
             this.lbl_3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_3.Location = new System.Drawing.Point(16, 50);
+            this.lbl_3.Location = new System.Drawing.Point(16, 37);
             this.lbl_3.Name = "lbl_3";
             this.lbl_3.Size = new System.Drawing.Size(120, 18);
             this.lbl_3.TabIndex = 83;
@@ -296,366 +322,551 @@
             // radGroupBox3
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox3.Controls.Add(this.bad_fl);
-            this.radGroupBox3.Controls.Add(this.no_fl);
-            this.radGroupBox3.Controls.Add(this.radLabel26);
-            this.radGroupBox3.Controls.Add(this.radLabel23);
-            this.radGroupBox3.Controls.Add(this.lbl_7);
-            this.radGroupBox3.Controls.Add(this.lbl_13);
-            this.radGroupBox3.Controls.Add(this.lbl_19);
-            this.radGroupBox3.Controls.Add(this.lbl_16);
-            this.radGroupBox3.Controls.Add(this.lbl_12);
-            this.radGroupBox3.Controls.Add(this.lbl_18);
-            this.radGroupBox3.Controls.Add(this.lbl_15);
-            this.radGroupBox3.Controls.Add(this.lbl_11);
-            this.radGroupBox3.Controls.Add(this.lbl_9);
-            this.radGroupBox3.Controls.Add(this.lbl_17);
-            this.radGroupBox3.Controls.Add(this.lbl_14);
-            this.radGroupBox3.Controls.Add(this.lbl_10);
-            this.radGroupBox3.Controls.Add(this.lbl_8);
-            this.radGroupBox3.Controls.Add(this.radLabel22);
-            this.radGroupBox3.Controls.Add(this.radLabel21);
-            this.radGroupBox3.Controls.Add(this.radLabel20);
-            this.radGroupBox3.Controls.Add(this.radLabel19);
-            this.radGroupBox3.Controls.Add(this.radLabel18);
-            this.radGroupBox3.Controls.Add(this.radLabel17);
-            this.radGroupBox3.Controls.Add(this.radLabel16);
-            this.radGroupBox3.Controls.Add(this.radLabel15);
-            this.radGroupBox3.Controls.Add(this.radLabel14);
-            this.radGroupBox3.Controls.Add(this.radLabel13);
-            this.radGroupBox3.Controls.Add(this.radLabel12);
-            this.radGroupBox3.Controls.Add(this.radLabel11);
-            this.radGroupBox3.Controls.Add(this.radLabel3);
+            this.radGroupBox3.Controls.Add(this.radGroupBox8);
+            this.radGroupBox3.Controls.Add(this.radGroupBox7);
+            this.radGroupBox3.Controls.Add(this.radGroupBox6);
+            this.radGroupBox3.Controls.Add(this.radGroupBox5);
+            this.radGroupBox3.Controls.Add(this.radGroupBox4);
+            this.radGroupBox3.Controls.Add(this.radGroupBox2);
             this.radGroupBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.radGroupBox3.HeaderText = "     تعداد خطاهای کیفی     ";
-            this.radGroupBox3.Location = new System.Drawing.Point(12, 159);
+            this.radGroupBox3.Location = new System.Drawing.Point(12, 146);
             this.radGroupBox3.Name = "radGroupBox3";
             this.radGroupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGroupBox3.Size = new System.Drawing.Size(758, 167);
+            this.radGroupBox3.Size = new System.Drawing.Size(758, 263);
             this.radGroupBox3.TabIndex = 126;
             this.radGroupBox3.Text = "     تعداد خطاهای کیفی     ";
             this.radGroupBox3.ThemeName = "Office2010Silver";
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.SystemColors.Control;
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox3.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
             ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox3.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.Color.LavenderBlush;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox3.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Pink;
+            // 
+            // radGroupBox8
+            // 
+            this.radGroupBox8.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox8.Controls.Add(this.radLabel16);
+            this.radGroupBox8.Controls.Add(this.lbl_7);
+            this.radGroupBox8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radGroupBox8.ForeColor = System.Drawing.Color.Blue;
+            this.radGroupBox8.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.radGroupBox8.HeaderText = "   Taboo   ";
+            this.radGroupBox8.Location = new System.Drawing.Point(481, 21);
+            this.radGroupBox8.Name = "radGroupBox8";
+            this.radGroupBox8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGroupBox8.Size = new System.Drawing.Size(262, 52);
+            this.radGroupBox8.TabIndex = 132;
+            this.radGroupBox8.Text = "   Taboo   ";
+            this.radGroupBox8.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadGroupBoxElement)(this.radGroupBox8.GetChildAt(0))).HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor2 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor3 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor4 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox8.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox8.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.SystemColors.Control;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Transparent;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox8.GetChildAt(0).GetChildAt(1).GetChildAt(1))).BackColor = System.Drawing.Color.Transparent;
+            // 
+            // radLabel16
+            // 
+            this.radLabel16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel16.ForeColor = System.Drawing.Color.Black;
+            this.radLabel16.Location = new System.Drawing.Point(10, 24);
+            this.radLabel16.Name = "radLabel16";
+            this.radLabel16.Size = new System.Drawing.Size(80, 18);
+            this.radLabel16.TabIndex = 88;
+            this.radLabel16.Text = "Taboo Cases:";
+            this.radLabel16.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel16.ThemeName = "Office2010Silver";
             // 
             // lbl_7
             // 
             this.lbl_7.AutoSize = false;
             this.lbl_7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_7.ForeColor = System.Drawing.Color.Red;
-            this.lbl_7.Location = new System.Drawing.Point(18, 130);
+            this.lbl_7.Location = new System.Drawing.Point(96, 22);
             this.lbl_7.Name = "lbl_7";
             this.lbl_7.Size = new System.Drawing.Size(52, 23);
             this.lbl_7.TabIndex = 87;
             this.lbl_7.Text = "0";
-            this.lbl_7.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lbl_7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_7.ThemeName = "Office2010Silver";
             this.lbl_7.TextChanged += new System.EventHandler(this.lbl_7_TextChanged);
             // 
-            // lbl_13
+            // radGroupBox7
             // 
-            this.lbl_13.AutoSize = false;
-            this.lbl_13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_13.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_13.Location = new System.Drawing.Point(18, 64);
-            this.lbl_13.Name = "lbl_13";
-            this.lbl_13.Size = new System.Drawing.Size(52, 18);
-            this.lbl_13.TabIndex = 90;
-            this.lbl_13.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_13.ThemeName = "Office2010Silver";
-            // 
-            // lbl_19
-            // 
-            this.lbl_19.AutoSize = false;
-            this.lbl_19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_19.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_19.Location = new System.Drawing.Point(216, 132);
-            this.lbl_19.Name = "lbl_19";
-            this.lbl_19.Size = new System.Drawing.Size(52, 18);
-            this.lbl_19.TabIndex = 87;
-            this.lbl_19.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_19.ThemeName = "Office2010Silver";
-            // 
-            // lbl_16
-            // 
-            this.lbl_16.AutoSize = false;
-            this.lbl_16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_16.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_16.Location = new System.Drawing.Point(216, 98);
-            this.lbl_16.Name = "lbl_16";
-            this.lbl_16.Size = new System.Drawing.Size(52, 18);
-            this.lbl_16.TabIndex = 87;
-            this.lbl_16.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_16.ThemeName = "Office2010Silver";
-            // 
-            // lbl_12
-            // 
-            this.lbl_12.AutoSize = false;
-            this.lbl_12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_12.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_12.Location = new System.Drawing.Point(216, 64);
-            this.lbl_12.Name = "lbl_12";
-            this.lbl_12.Size = new System.Drawing.Size(52, 18);
-            this.lbl_12.TabIndex = 87;
-            this.lbl_12.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_12.ThemeName = "Office2010Silver";
-            // 
-            // lbl_18
-            // 
-            this.lbl_18.AutoSize = false;
-            this.lbl_18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_18.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_18.Location = new System.Drawing.Point(413, 132);
-            this.lbl_18.Name = "lbl_18";
-            this.lbl_18.Size = new System.Drawing.Size(52, 18);
-            this.lbl_18.TabIndex = 87;
-            this.lbl_18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_18.ThemeName = "Office2010Silver";
-            // 
-            // lbl_15
-            // 
-            this.lbl_15.AutoSize = false;
-            this.lbl_15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_15.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_15.Location = new System.Drawing.Point(413, 98);
-            this.lbl_15.Name = "lbl_15";
-            this.lbl_15.Size = new System.Drawing.Size(52, 18);
-            this.lbl_15.TabIndex = 89;
-            this.lbl_15.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_15.ThemeName = "Office2010Silver";
-            // 
-            // lbl_11
-            // 
-            this.lbl_11.AutoSize = false;
-            this.lbl_11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_11.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_11.Location = new System.Drawing.Point(413, 64);
-            this.lbl_11.Name = "lbl_11";
-            this.lbl_11.Size = new System.Drawing.Size(52, 18);
-            this.lbl_11.TabIndex = 88;
-            this.lbl_11.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_11.ThemeName = "Office2010Silver";
-            // 
-            // lbl_9
-            // 
-            this.lbl_9.AutoSize = false;
-            this.lbl_9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_9.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_9.Location = new System.Drawing.Point(413, 30);
-            this.lbl_9.Name = "lbl_9";
-            this.lbl_9.Size = new System.Drawing.Size(52, 18);
-            this.lbl_9.TabIndex = 87;
-            this.lbl_9.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_9.ThemeName = "Office2010Silver";
-            // 
-            // lbl_17
-            // 
-            this.lbl_17.AutoSize = false;
-            this.lbl_17.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_17.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_17.Location = new System.Drawing.Point(583, 132);
-            this.lbl_17.Name = "lbl_17";
-            this.lbl_17.Size = new System.Drawing.Size(46, 18);
-            this.lbl_17.TabIndex = 86;
-            this.lbl_17.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_17.ThemeName = "Office2010Silver";
-            // 
-            // lbl_14
-            // 
-            this.lbl_14.AutoSize = false;
-            this.lbl_14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_14.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_14.Location = new System.Drawing.Point(583, 98);
-            this.lbl_14.Name = "lbl_14";
-            this.lbl_14.Size = new System.Drawing.Size(46, 18);
-            this.lbl_14.TabIndex = 85;
-            this.lbl_14.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_14.ThemeName = "Office2010Silver";
-            // 
-            // lbl_10
-            // 
-            this.lbl_10.AutoSize = false;
-            this.lbl_10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_10.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_10.Location = new System.Drawing.Point(583, 64);
-            this.lbl_10.Name = "lbl_10";
-            this.lbl_10.Size = new System.Drawing.Size(46, 18);
-            this.lbl_10.TabIndex = 84;
-            this.lbl_10.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_10.ThemeName = "Office2010Silver";
-            // 
-            // lbl_8
-            // 
-            this.lbl_8.AutoSize = false;
-            this.lbl_8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_8.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_8.Location = new System.Drawing.Point(583, 30);
-            this.lbl_8.Name = "lbl_8";
-            this.lbl_8.Size = new System.Drawing.Size(46, 18);
-            this.lbl_8.TabIndex = 83;
-            this.lbl_8.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.lbl_8.ThemeName = "Office2010Silver";
-            // 
-            // radLabel22
-            // 
-            this.radLabel22.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel22.Location = new System.Drawing.Point(76, 132);
-            this.radLabel22.Name = "radLabel22";
-            this.radLabel22.Size = new System.Drawing.Size(143, 18);
-            this.radLabel22.TabIndex = 76;
-            this.radLabel22.Text = "استفاده از جملات ممنوعه:";
-            this.radLabel22.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel22.ThemeName = "Office2010Silver";
-            // 
-            // radLabel21
-            // 
-            this.radLabel21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel21.Location = new System.Drawing.Point(274, 132);
-            this.radLabel21.Name = "radLabel21";
-            this.radLabel21.Size = new System.Drawing.Size(92, 18);
-            this.radLabel21.TabIndex = 75;
-            this.radLabel21.Text = "عدم خداحافظی:";
-            this.radLabel21.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel21.ThemeName = "Office2010Silver";
-            // 
-            // radLabel20
-            // 
-            this.radLabel20.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel20.Location = new System.Drawing.Point(471, 132);
-            this.radLabel20.Name = "radLabel20";
-            this.radLabel20.Size = new System.Drawing.Size(64, 18);
-            this.radLabel20.TabIndex = 74;
-            this.radLabel20.Text = "عدم تشکر:";
-            this.radLabel20.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel20.ThemeName = "Office2010Silver";
-            // 
-            // radLabel19
-            // 
-            this.radLabel19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel19.Location = new System.Drawing.Point(640, 132);
-            this.radLabel19.Name = "radLabel19";
-            this.radLabel19.Size = new System.Drawing.Size(103, 18);
-            this.radLabel19.TabIndex = 73;
-            this.radLabel19.Text = "عدم رعایت Query:";
-            this.radLabel19.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel19.ThemeName = "Office2010Silver";
-            // 
-            // radLabel18
-            // 
-            this.radLabel18.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel18.Location = new System.Drawing.Point(274, 98);
-            this.radLabel18.Name = "radLabel18";
-            this.radLabel18.Size = new System.Drawing.Size(118, 18);
-            this.radLabel18.TabIndex = 74;
-            this.radLabel18.Text = "عدم راهنمائی صحیح:";
-            this.radLabel18.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel18.ThemeName = "Office2010Silver";
-            // 
-            // radLabel17
-            // 
-            this.radLabel17.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel17.Location = new System.Drawing.Point(471, 98);
-            this.radLabel17.Name = "radLabel17";
-            this.radLabel17.Size = new System.Drawing.Size(81, 18);
-            this.radLabel17.TabIndex = 73;
-            this.radLabel17.Text = "لحن نامناسب:";
-            this.radLabel17.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel17.ThemeName = "Office2010Silver";
-            // 
-            // radLabel16
-            // 
-            this.radLabel16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel16.Location = new System.Drawing.Point(649, 98);
-            this.radLabel16.Name = "radLabel16";
-            this.radLabel16.Size = new System.Drawing.Size(94, 18);
-            this.radLabel16.TabIndex = 72;
-            this.radLabel16.Text = "صحبت نامناسب:";
-            this.radLabel16.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel16.ThemeName = "Office2010Silver";
+            this.radGroupBox7.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox7.Controls.Add(this.radLabel15);
+            this.radGroupBox7.Controls.Add(this.radLabel12);
+            this.radGroupBox7.Controls.Add(this.lbl_18);
+            this.radGroupBox7.Controls.Add(this.lbl_19);
+            this.radGroupBox7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radGroupBox7.ForeColor = System.Drawing.Color.Blue;
+            this.radGroupBox7.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.radGroupBox7.HeaderText = "   Closing   ";
+            this.radGroupBox7.Location = new System.Drawing.Point(282, 195);
+            this.radGroupBox7.Name = "radGroupBox7";
+            this.radGroupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGroupBox7.Size = new System.Drawing.Size(461, 52);
+            this.radGroupBox7.TabIndex = 132;
+            this.radGroupBox7.Text = "   Closing   ";
+            this.radGroupBox7.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadGroupBoxElement)(this.radGroupBox7.GetChildAt(0))).HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor2 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor3 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor4 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox7.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox7.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.SystemColors.Control;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Transparent;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox7.GetChildAt(0).GetChildAt(1).GetChildAt(1))).BackColor = System.Drawing.Color.Transparent;
             // 
             // radLabel15
             // 
             this.radLabel15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel15.Location = new System.Drawing.Point(76, 64);
+            this.radLabel15.ForeColor = System.Drawing.Color.Black;
+            this.radLabel15.Location = new System.Drawing.Point(260, 23);
             this.radLabel15.Name = "radLabel15";
-            this.radLabel15.Size = new System.Drawing.Size(132, 18);
-            this.radLabel15.TabIndex = 73;
-            this.radLabel15.Text = "عدم بیان خلاصه مشکل:";
-            this.radLabel15.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel15.Size = new System.Drawing.Size(101, 18);
+            this.radLabel15.TabIndex = 89;
+            this.radLabel15.Text = "Fine Closing/Bye:";
+            this.radLabel15.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radLabel15.ThemeName = "Office2010Silver";
-            // 
-            // radLabel14
-            // 
-            this.radLabel14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel14.Location = new System.Drawing.Point(274, 64);
-            this.radLabel14.Name = "radLabel14";
-            this.radLabel14.Size = new System.Drawing.Size(131, 18);
-            this.radLabel14.TabIndex = 72;
-            this.radLabel14.Text = "قطع کردن حرف مخاطب:";
-            this.radLabel14.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel14.ThemeName = "Office2010Silver";
-            // 
-            // radLabel13
-            // 
-            this.radLabel13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel13.Location = new System.Drawing.Point(471, 64);
-            this.radLabel13.Name = "radLabel13";
-            this.radLabel13.Size = new System.Drawing.Size(106, 18);
-            this.radLabel13.TabIndex = 72;
-            this.radLabel13.Text = "ناصحیح Hold کردن:";
-            this.radLabel13.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel13.ThemeName = "Office2010Silver";
             // 
             // radLabel12
             // 
             this.radLabel12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel12.Location = new System.Drawing.Point(643, 64);
+            this.radLabel12.ForeColor = System.Drawing.Color.Black;
+            this.radLabel12.Location = new System.Drawing.Point(68, 23);
             this.radLabel12.Name = "radLabel12";
-            this.radLabel12.Size = new System.Drawing.Size(98, 18);
-            this.radLabel12.TabIndex = 71;
-            this.radLabel12.Text = "عدم شنیدن فعال:";
-            this.radLabel12.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel12.Size = new System.Drawing.Size(78, 18);
+            this.radLabel12.TabIndex = 88;
+            this.radLabel12.Text = "Appreciation:";
+            this.radLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radLabel12.ThemeName = "Office2010Silver";
+            // 
+            // radLabel13
+            // 
+            this.radLabel13.AutoSize = false;
+            this.radLabel13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel13.ForeColor = System.Drawing.Color.Navy;
+            this.radLabel13.Location = new System.Drawing.Point(58, 0);
+            this.radLabel13.Name = "radLabel13";
+            this.radLabel13.Size = new System.Drawing.Size(46, 18);
+            this.radLabel13.TabIndex = 86;
+            this.radLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel13.ThemeName = "Office2010Silver";
+            // 
+            // lbl_18
+            // 
+            this.lbl_18.AutoSize = false;
+            this.lbl_18.Controls.Add(this.radLabel13);
+            this.lbl_18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_18.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_18.Location = new System.Drawing.Point(152, 23);
+            this.lbl_18.Name = "lbl_18";
+            this.lbl_18.Size = new System.Drawing.Size(52, 18);
+            this.lbl_18.TabIndex = 87;
+            this.lbl_18.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_18.ThemeName = "Office2010Silver";
+            // 
+            // lbl_19
+            // 
+            this.lbl_19.AutoSize = false;
+            this.lbl_19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_19.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_19.Location = new System.Drawing.Point(367, 23);
+            this.lbl_19.Name = "lbl_19";
+            this.lbl_19.Size = new System.Drawing.Size(52, 18);
+            this.lbl_19.TabIndex = 87;
+            this.lbl_19.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_19.ThemeName = "Office2010Silver";
+            // 
+            // radGroupBox6
+            // 
+            this.radGroupBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox6.Controls.Add(this.radLabel14);
+            this.radGroupBox6.Controls.Add(this.lbl_17);
+            this.radGroupBox6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radGroupBox6.ForeColor = System.Drawing.Color.Blue;
+            this.radGroupBox6.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.radGroupBox6.HeaderText = "   Query   ";
+            this.radGroupBox6.Location = new System.Drawing.Point(14, 195);
+            this.radGroupBox6.Name = "radGroupBox6";
+            this.radGroupBox6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGroupBox6.Size = new System.Drawing.Size(262, 52);
+            this.radGroupBox6.TabIndex = 131;
+            this.radGroupBox6.Text = "   Query   ";
+            this.radGroupBox6.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadGroupBoxElement)(this.radGroupBox6.GetChildAt(0))).HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor2 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor3 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor4 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox6.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox6.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.SystemColors.Control;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Transparent;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox6.GetChildAt(0).GetChildAt(1).GetChildAt(1))).BackColor = System.Drawing.Color.Transparent;
+            // 
+            // radLabel14
+            // 
+            this.radLabel14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel14.ForeColor = System.Drawing.Color.Black;
+            this.radLabel14.Location = new System.Drawing.Point(10, 23);
+            this.radLabel14.Name = "radLabel14";
+            this.radLabel14.Size = new System.Drawing.Size(97, 18);
+            this.radLabel14.TabIndex = 88;
+            this.radLabel14.Text = "Query Sentence:";
+            this.radLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel14.ThemeName = "Office2010Silver";
+            // 
+            // lbl_17
+            // 
+            this.lbl_17.AutoSize = false;
+            this.lbl_17.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_17.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_17.Location = new System.Drawing.Point(113, 23);
+            this.lbl_17.Name = "lbl_17";
+            this.lbl_17.Size = new System.Drawing.Size(46, 18);
+            this.lbl_17.TabIndex = 86;
+            this.lbl_17.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_17.ThemeName = "Office2010Silver";
+            // 
+            // radGroupBox5
+            // 
+            this.radGroupBox5.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox5.Controls.Add(this.radLabel25);
+            this.radGroupBox5.Controls.Add(this.radLabel5);
+            this.radGroupBox5.Controls.Add(this.radLabel11);
+            this.radGroupBox5.Controls.Add(this.radLabel23);
+            this.radGroupBox5.Controls.Add(this.lbl_13);
+            this.radGroupBox5.Controls.Add(this.lbl_16);
+            this.radGroupBox5.Controls.Add(this.lbl_14);
+            this.radGroupBox5.Controls.Add(this.lbl_15);
+            this.radGroupBox5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radGroupBox5.ForeColor = System.Drawing.Color.Blue;
+            this.radGroupBox5.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.radGroupBox5.HeaderText = "   Speaking   ";
+            this.radGroupBox5.Location = new System.Drawing.Point(14, 137);
+            this.radGroupBox5.Name = "radGroupBox5";
+            this.radGroupBox5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGroupBox5.Size = new System.Drawing.Size(729, 52);
+            this.radGroupBox5.TabIndex = 130;
+            this.radGroupBox5.Text = "   Speaking   ";
+            this.radGroupBox5.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadGroupBoxElement)(this.radGroupBox5.GetChildAt(0))).HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor2 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor3 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor4 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox5.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox5.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.SystemColors.Control;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Transparent;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox5.GetChildAt(0).GetChildAt(1).GetChildAt(1))).BackColor = System.Drawing.Color.Transparent;
+            // 
+            // radLabel25
+            // 
+            this.radLabel25.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel25.ForeColor = System.Drawing.Color.Black;
+            this.radLabel25.Location = new System.Drawing.Point(526, 22);
+            this.radLabel25.Name = "radLabel25";
+            this.radLabel25.Size = new System.Drawing.Size(73, 18);
+            this.radLabel25.TabIndex = 91;
+            this.radLabel25.Text = "True Result:";
+            this.radLabel25.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel25.ThemeName = "Office2010Silver";
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.ForeColor = System.Drawing.Color.Black;
+            this.radLabel5.Location = new System.Drawing.Point(336, 22);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(81, 18);
+            this.radLabel5.TabIndex = 90;
+            this.radLabel5.Text = "True Guiding:";
+            this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel5.ThemeName = "Office2010Silver";
             // 
             // radLabel11
             // 
             this.radLabel11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel11.Location = new System.Drawing.Point(471, 30);
+            this.radLabel11.ForeColor = System.Drawing.Color.Black;
+            this.radLabel11.Location = new System.Drawing.Point(174, 22);
             this.radLabel11.Name = "radLabel11";
-            this.radLabel11.Size = new System.Drawing.Size(73, 18);
-            this.radLabel11.TabIndex = 71;
-            this.radLabel11.Text = "جمله آغازین:";
-            this.radLabel11.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel11.Size = new System.Drawing.Size(91, 18);
+            this.radLabel11.TabIndex = 89;
+            this.radLabel11.Text = "Speaking Tone:";
+            this.radLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radLabel11.ThemeName = "Office2010Silver";
+            // 
+            // radLabel23
+            // 
+            this.radLabel23.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel23.ForeColor = System.Drawing.Color.Black;
+            this.radLabel23.Location = new System.Drawing.Point(10, 22);
+            this.radLabel23.Name = "radLabel23";
+            this.radLabel23.Size = new System.Drawing.Size(91, 18);
+            this.radLabel23.TabIndex = 88;
+            this.radLabel23.Text = "Speaking Type:";
+            this.radLabel23.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel23.ThemeName = "Office2010Silver";
+            // 
+            // lbl_13
+            // 
+            this.lbl_13.AutoSize = false;
+            this.lbl_13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_13.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_13.Location = new System.Drawing.Point(107, 22);
+            this.lbl_13.Name = "lbl_13";
+            this.lbl_13.Size = new System.Drawing.Size(52, 18);
+            this.lbl_13.TabIndex = 90;
+            this.lbl_13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_13.ThemeName = "Office2010Silver";
+            // 
+            // lbl_16
+            // 
+            this.lbl_16.AutoSize = false;
+            this.lbl_16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_16.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_16.Location = new System.Drawing.Point(605, 22);
+            this.lbl_16.Name = "lbl_16";
+            this.lbl_16.Size = new System.Drawing.Size(52, 18);
+            this.lbl_16.TabIndex = 87;
+            this.lbl_16.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_16.ThemeName = "Office2010Silver";
+            // 
+            // lbl_14
+            // 
+            this.lbl_14.AutoSize = false;
+            this.lbl_14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_14.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_14.Location = new System.Drawing.Point(271, 22);
+            this.lbl_14.Name = "lbl_14";
+            this.lbl_14.Size = new System.Drawing.Size(46, 18);
+            this.lbl_14.TabIndex = 85;
+            this.lbl_14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_14.ThemeName = "Office2010Silver";
+            // 
+            // lbl_15
+            // 
+            this.lbl_15.AutoSize = false;
+            this.lbl_15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_15.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_15.Location = new System.Drawing.Point(423, 22);
+            this.lbl_15.Name = "lbl_15";
+            this.lbl_15.Size = new System.Drawing.Size(52, 18);
+            this.lbl_15.TabIndex = 89;
+            this.lbl_15.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_15.ThemeName = "Office2010Silver";
+            // 
+            // radGroupBox4
+            // 
+            this.radGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox4.Controls.Add(this.radLabel3);
+            this.radGroupBox4.Controls.Add(this.radLabel31);
+            this.radGroupBox4.Controls.Add(this.radLabel32);
+            this.radGroupBox4.Controls.Add(this.lbl_10);
+            this.radGroupBox4.Controls.Add(this.lbl_11);
+            this.radGroupBox4.Controls.Add(this.lbl_12);
+            this.radGroupBox4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radGroupBox4.ForeColor = System.Drawing.Color.Blue;
+            this.radGroupBox4.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.radGroupBox4.HeaderText = "   Listening   ";
+            this.radGroupBox4.Location = new System.Drawing.Point(14, 79);
+            this.radGroupBox4.Name = "radGroupBox4";
+            this.radGroupBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGroupBox4.Size = new System.Drawing.Size(729, 52);
+            this.radGroupBox4.TabIndex = 129;
+            this.radGroupBox4.Text = "   Listening   ";
+            this.radGroupBox4.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadGroupBoxElement)(this.radGroupBox4.GetChildAt(0))).HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor2 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor3 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor4 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox4.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox4.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.SystemColors.Control;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Transparent;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox4.GetChildAt(0).GetChildAt(1).GetChildAt(1))).BackColor = System.Drawing.Color.Transparent;
             // 
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(631, 30);
+            this.radLabel3.ForeColor = System.Drawing.Color.Black;
+            this.radLabel3.Location = new System.Drawing.Point(336, 22);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(112, 18);
-            this.radLabel3.TabIndex = 70;
-            this.radLabel3.Text = "عدم سلام و معرفی:";
-            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel3.Size = new System.Drawing.Size(181, 18);
+            this.radLabel3.TabIndex = 90;
+            this.radLabel3.Text = "Summarization/Comprehension:";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.radLabel3.ThemeName = "Office2010Silver";
+            // 
+            // radLabel31
+            // 
+            this.radLabel31.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel31.ForeColor = System.Drawing.Color.Black;
+            this.radLabel31.Location = new System.Drawing.Point(174, 22);
+            this.radLabel31.Name = "radLabel31";
+            this.radLabel31.Size = new System.Drawing.Size(81, 18);
+            this.radLabel31.TabIndex = 89;
+            this.radLabel31.Text = "True Holding:";
+            this.radLabel31.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel31.ThemeName = "Office2010Silver";
+            // 
+            // radLabel32
+            // 
+            this.radLabel32.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel32.ForeColor = System.Drawing.Color.Black;
+            this.radLabel32.Location = new System.Drawing.Point(10, 22);
+            this.radLabel32.Name = "radLabel32";
+            this.radLabel32.Size = new System.Drawing.Size(96, 18);
+            this.radLabel32.TabIndex = 88;
+            this.radLabel32.Text = "Active Listening:";
+            this.radLabel32.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel32.ThemeName = "Office2010Silver";
+            // 
+            // lbl_10
+            // 
+            this.lbl_10.AutoSize = false;
+            this.lbl_10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_10.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_10.Location = new System.Drawing.Point(112, 22);
+            this.lbl_10.Name = "lbl_10";
+            this.lbl_10.Size = new System.Drawing.Size(46, 18);
+            this.lbl_10.TabIndex = 84;
+            this.lbl_10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_10.ThemeName = "Office2010Silver";
+            // 
+            // lbl_11
+            // 
+            this.lbl_11.AutoSize = false;
+            this.lbl_11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_11.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_11.Location = new System.Drawing.Point(261, 22);
+            this.lbl_11.Name = "lbl_11";
+            this.lbl_11.Size = new System.Drawing.Size(52, 18);
+            this.lbl_11.TabIndex = 88;
+            this.lbl_11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_11.ThemeName = "Office2010Silver";
+            // 
+            // lbl_12
+            // 
+            this.lbl_12.AutoSize = false;
+            this.lbl_12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_12.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_12.Location = new System.Drawing.Point(523, 22);
+            this.lbl_12.Name = "lbl_12";
+            this.lbl_12.Size = new System.Drawing.Size(52, 18);
+            this.lbl_12.TabIndex = 87;
+            this.lbl_12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_12.ThemeName = "Office2010Silver";
+            // 
+            // radGroupBox2
+            // 
+            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.radLabel27);
+            this.radGroupBox2.Controls.Add(this.radLabel28);
+            this.radGroupBox2.Controls.Add(this.lbl_8);
+            this.radGroupBox2.Controls.Add(this.lbl_9);
+            this.radGroupBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.radGroupBox2.ForeColor = System.Drawing.Color.Blue;
+            this.radGroupBox2.HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            this.radGroupBox2.HeaderText = "   Opening   ";
+            this.radGroupBox2.Location = new System.Drawing.Point(14, 21);
+            this.radGroupBox2.Name = "radGroupBox2";
+            this.radGroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGroupBox2.Size = new System.Drawing.Size(461, 52);
+            this.radGroupBox2.TabIndex = 128;
+            this.radGroupBox2.Text = "   Opening   ";
+            this.radGroupBox2.ThemeName = "Office2010Silver";
+            ((Telerik.WinControls.UI.RadGroupBoxElement)(this.radGroupBox2.GetChildAt(0))).HeaderAlignment = Telerik.WinControls.UI.HeaderAlignment.Center;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor2 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor3 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor4 = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.LightCyan;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox2.GetChildAt(0).GetChildAt(1))).GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Standard;
+            ((Telerik.WinControls.UI.GroupBoxHeader)(this.radGroupBox2.GetChildAt(0).GetChildAt(1))).BackColor = System.Drawing.Color.Pink;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ForeColor = System.Drawing.Color.Blue;
+            ((Telerik.WinControls.Primitives.FillPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(0))).BackColor = System.Drawing.SystemColors.Control;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.Transparent;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radGroupBox2.GetChildAt(0).GetChildAt(1).GetChildAt(1))).BackColor = System.Drawing.Color.Transparent;
+            // 
+            // radLabel27
+            // 
+            this.radLabel27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel27.ForeColor = System.Drawing.Color.Black;
+            this.radLabel27.Location = new System.Drawing.Point(174, 22);
+            this.radLabel27.Name = "radLabel27";
+            this.radLabel27.Size = new System.Drawing.Size(189, 18);
+            this.radLabel27.TabIndex = 89;
+            this.radLabel27.Text = "Introduction / Opening Sentence:";
+            this.radLabel27.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel27.ThemeName = "Office2010Silver";
+            // 
+            // radLabel28
+            // 
+            this.radLabel28.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel28.ForeColor = System.Drawing.Color.Black;
+            this.radLabel28.Location = new System.Drawing.Point(10, 22);
+            this.radLabel28.Name = "radLabel28";
+            this.radLabel28.Size = new System.Drawing.Size(92, 18);
+            this.radLabel28.TabIndex = 88;
+            this.radLabel28.Text = "Initial Greeting:";
+            this.radLabel28.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radLabel28.ThemeName = "Office2010Silver";
+            // 
+            // lbl_8
+            // 
+            this.lbl_8.AutoSize = false;
+            this.lbl_8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_8.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_8.Location = new System.Drawing.Point(108, 22);
+            this.lbl_8.Name = "lbl_8";
+            this.lbl_8.Size = new System.Drawing.Size(46, 18);
+            this.lbl_8.TabIndex = 83;
+            this.lbl_8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_8.ThemeName = "Office2010Silver";
+            // 
+            // lbl_9
+            // 
+            this.lbl_9.AutoSize = false;
+            this.lbl_9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_9.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_9.Location = new System.Drawing.Point(369, 22);
+            this.lbl_9.Name = "lbl_9";
+            this.lbl_9.Size = new System.Drawing.Size(52, 18);
+            this.lbl_9.TabIndex = 87;
+            this.lbl_9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_9.ThemeName = "Office2010Silver";
             // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.avg_score);
+            this.radGroupBox1.Controls.Add(this.suc_perc);
+            this.radGroupBox1.Controls.Add(this.pending);
             this.radGroupBox1.Controls.Add(this.lbl_5);
             this.radGroupBox1.Controls.Add(this.lbl_6);
             this.radGroupBox1.Controls.Add(this.lbl_4);
+            this.radGroupBox1.Controls.Add(this.radLabel26);
+            this.radGroupBox1.Controls.Add(this.radLabel21);
+            this.radGroupBox1.Controls.Add(this.radLabel19);
             this.radGroupBox1.Controls.Add(this.radLabel10);
             this.radGroupBox1.Controls.Add(this.radLabel7);
             this.radGroupBox1.Controls.Add(this.radLabel6);
             this.radGroupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.radGroupBox1.HeaderText = "      خلاصه عملکرد     ";
-            this.radGroupBox1.Location = new System.Drawing.Point(12, 87);
+            this.radGroupBox1.Location = new System.Drawing.Point(12, 62);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(758, 66);
+            this.radGroupBox1.Size = new System.Drawing.Size(758, 78);
             this.radGroupBox1.TabIndex = 127;
             this.radGroupBox1.Text = "      خلاصه عملکرد     ";
             this.radGroupBox1.ThemeName = "Office2010Silver";
@@ -667,11 +878,11 @@
             // lbl_5
             // 
             this.lbl_5.AutoSize = false;
-            this.lbl_5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_5.ForeColor = System.Drawing.Color.Black;
-            this.lbl_5.Location = new System.Drawing.Point(12, 31);
+            this.lbl_5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_5.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_5.Location = new System.Drawing.Point(5, 22);
             this.lbl_5.Name = "lbl_5";
-            this.lbl_5.Size = new System.Drawing.Size(82, 18);
+            this.lbl_5.Size = new System.Drawing.Size(100, 20);
             this.lbl_5.TabIndex = 89;
             this.lbl_5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.lbl_5.ThemeName = "Office2010Silver";
@@ -679,11 +890,11 @@
             // lbl_6
             // 
             this.lbl_6.AutoSize = false;
-            this.lbl_6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_6.ForeColor = System.Drawing.Color.Black;
-            this.lbl_6.Location = new System.Drawing.Point(267, 31);
+            this.lbl_6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_6.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_6.Location = new System.Drawing.Point(268, 22);
             this.lbl_6.Name = "lbl_6";
-            this.lbl_6.Size = new System.Drawing.Size(82, 18);
+            this.lbl_6.Size = new System.Drawing.Size(82, 20);
             this.lbl_6.TabIndex = 88;
             this.lbl_6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.lbl_6.ThemeName = "Office2010Silver";
@@ -691,11 +902,11 @@
             // lbl_4
             // 
             this.lbl_4.AutoSize = false;
-            this.lbl_4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_4.ForeColor = System.Drawing.Color.Black;
-            this.lbl_4.Location = new System.Drawing.Point(516, 31);
+            this.lbl_4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_4.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_4.Location = new System.Drawing.Point(507, 22);
             this.lbl_4.Name = "lbl_4";
-            this.lbl_4.Size = new System.Drawing.Size(82, 18);
+            this.lbl_4.Size = new System.Drawing.Size(82, 20);
             this.lbl_4.TabIndex = 87;
             this.lbl_4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.lbl_4.ThemeName = "Office2010Silver";
@@ -703,7 +914,7 @@
             // radLabel10
             // 
             this.radLabel10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel10.Location = new System.Drawing.Point(100, 31);
+            this.radLabel10.Location = new System.Drawing.Point(112, 23);
             this.radLabel10.Name = "radLabel10";
             this.radLabel10.Size = new System.Drawing.Size(108, 18);
             this.radLabel10.TabIndex = 70;
@@ -714,7 +925,7 @@
             // radLabel7
             // 
             this.radLabel7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel7.Location = new System.Drawing.Point(355, 31);
+            this.radLabel7.Location = new System.Drawing.Point(357, 23);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.Size = new System.Drawing.Size(101, 18);
             this.radLabel7.TabIndex = 69;
@@ -725,7 +936,7 @@
             // radLabel6
             // 
             this.radLabel6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(603, 31);
+            this.radLabel6.Location = new System.Drawing.Point(604, 23);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(139, 18);
             this.radLabel6.TabIndex = 68;
@@ -733,51 +944,72 @@
             this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel6.ThemeName = "Office2010Silver";
             // 
-            // no_fl
+            // pending
             // 
-            this.no_fl.AutoSize = false;
-            this.no_fl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.no_fl.ForeColor = System.Drawing.Color.Red;
-            this.no_fl.Location = new System.Drawing.Point(216, 28);
-            this.no_fl.Name = "no_fl";
-            this.no_fl.Size = new System.Drawing.Size(52, 23);
-            this.no_fl.TabIndex = 92;
-            this.no_fl.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.no_fl.ThemeName = "Office2010Silver";
+            this.pending.AutoSize = false;
+            this.pending.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pending.ForeColor = System.Drawing.Color.DarkBlue;
+            this.pending.Location = new System.Drawing.Point(507, 46);
+            this.pending.Name = "pending";
+            this.pending.Size = new System.Drawing.Size(82, 20);
+            this.pending.TabIndex = 89;
+            this.pending.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.pending.ThemeName = "Office2010Silver";
             // 
-            // radLabel23
+            // radLabel19
             // 
-            this.radLabel23.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel23.ForeColor = System.Drawing.Color.Black;
-            this.radLabel23.Location = new System.Drawing.Point(274, 30);
-            this.radLabel23.Name = "radLabel23";
-            this.radLabel23.Size = new System.Drawing.Size(71, 18);
-            this.radLabel23.TabIndex = 91;
-            this.radLabel23.Text = "عدم پیگیری:";
-            this.radLabel23.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.radLabel23.ThemeName = "Office2010Silver";
+            this.radLabel19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel19.Location = new System.Drawing.Point(595, 47);
+            this.radLabel19.Name = "radLabel19";
+            this.radLabel19.Size = new System.Drawing.Size(148, 18);
+            this.radLabel19.TabIndex = 88;
+            this.radLabel19.Text = "تعداد تماس در حال بررسی:";
+            this.radLabel19.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel19.ThemeName = "Office2010Silver";
             // 
-            // bad_fl
+            // suc_perc
             // 
-            this.bad_fl.AutoSize = false;
-            this.bad_fl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bad_fl.ForeColor = System.Drawing.Color.Red;
-            this.bad_fl.Location = new System.Drawing.Point(18, 28);
-            this.bad_fl.Name = "bad_fl";
-            this.bad_fl.Size = new System.Drawing.Size(52, 23);
-            this.bad_fl.TabIndex = 94;
-            this.bad_fl.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            this.bad_fl.ThemeName = "Office2010Silver";
+            this.suc_perc.AutoSize = false;
+            this.suc_perc.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suc_perc.ForeColor = System.Drawing.Color.DarkBlue;
+            this.suc_perc.Location = new System.Drawing.Point(268, 46);
+            this.suc_perc.Name = "suc_perc";
+            this.suc_perc.Size = new System.Drawing.Size(82, 20);
+            this.suc_perc.TabIndex = 91;
+            this.suc_perc.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.suc_perc.ThemeName = "Office2010Silver";
+            // 
+            // radLabel21
+            // 
+            this.radLabel21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel21.Location = new System.Drawing.Point(356, 47);
+            this.radLabel21.Name = "radLabel21";
+            this.radLabel21.Size = new System.Drawing.Size(102, 18);
+            this.radLabel21.TabIndex = 90;
+            this.radLabel21.Text = "درصد تماس موفق:";
+            this.radLabel21.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.radLabel21.ThemeName = "Office2010Silver";
+            // 
+            // avg_score
+            // 
+            this.avg_score.AutoSize = false;
+            this.avg_score.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avg_score.ForeColor = System.Drawing.Color.DarkBlue;
+            this.avg_score.Location = new System.Drawing.Point(5, 46);
+            this.avg_score.Name = "avg_score";
+            this.avg_score.Size = new System.Drawing.Size(100, 20);
+            this.avg_score.TabIndex = 93;
+            this.avg_score.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.avg_score.ThemeName = "Office2010Silver";
             // 
             // radLabel26
             // 
             this.radLabel26.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel26.ForeColor = System.Drawing.Color.Black;
-            this.radLabel26.Location = new System.Drawing.Point(76, 30);
+            this.radLabel26.Location = new System.Drawing.Point(112, 47);
             this.radLabel26.Name = "radLabel26";
-            this.radLabel26.Size = new System.Drawing.Size(76, 18);
-            this.radLabel26.TabIndex = 93;
-            this.radLabel26.Text = "پیگیری ناقص:";
+            this.radLabel26.Size = new System.Drawing.Size(111, 18);
+            this.radLabel26.TabIndex = 92;
+            this.radLabel26.Text = "میانگین امتیاز کیفی:";
             this.radLabel26.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel26.ThemeName = "Office2010Silver";
             // 
@@ -787,7 +1019,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Pink;
             this.pictureBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pictureBox1.ForeColor = System.Drawing.Color.Navy;
-            this.pictureBox1.Location = new System.Drawing.Point(246, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(258, 179);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 53);
             this.pictureBox1.TabIndex = 133;
@@ -799,7 +1031,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 339);
+            this.ClientSize = new System.Drawing.Size(782, 421);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.radGroupBox3);
@@ -841,33 +1073,52 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbl_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
-            this.radGroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox8)).EndInit();
+            this.radGroupBox8.ResumeLayout(false);
+            this.radGroupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox7)).EndInit();
+            this.radGroupBox7.ResumeLayout(false);
+            this.radGroupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_18)).EndInit();
+            this.lbl_18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox6)).EndInit();
+            this.radGroupBox6.ResumeLayout(false);
+            this.radGroupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox5)).EndInit();
+            this.radGroupBox5.ResumeLayout(false);
+            this.radGroupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
+            this.radGroupBox4.ResumeLayout(false);
+            this.radGroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
@@ -877,9 +1128,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.no_fl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bad_fl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pending)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suc_perc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avg_score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -907,19 +1160,6 @@
         private Telerik.WinControls.UI.RadLabel lbl_3;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox3;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadLabel radLabel22;
-        private Telerik.WinControls.UI.RadLabel radLabel21;
-        private Telerik.WinControls.UI.RadLabel radLabel20;
-        private Telerik.WinControls.UI.RadLabel radLabel19;
-        private Telerik.WinControls.UI.RadLabel radLabel18;
-        private Telerik.WinControls.UI.RadLabel radLabel17;
-        private Telerik.WinControls.UI.RadLabel radLabel16;
-        private Telerik.WinControls.UI.RadLabel radLabel15;
-        private Telerik.WinControls.UI.RadLabel radLabel14;
-        private Telerik.WinControls.UI.RadLabel radLabel13;
-        private Telerik.WinControls.UI.RadLabel radLabel12;
-        private Telerik.WinControls.UI.RadLabel radLabel11;
-        private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadLabel radLabel6;
@@ -939,10 +1179,32 @@
         private Telerik.WinControls.UI.RadLabel lbl_5;
         private Telerik.WinControls.UI.RadLabel lbl_6;
         private Telerik.WinControls.UI.RadLabel lbl_4;
-        private Telerik.WinControls.UI.RadLabel bad_fl;
-        private Telerik.WinControls.UI.RadLabel no_fl;
-        private Telerik.WinControls.UI.RadLabel radLabel26;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
+        private Telerik.WinControls.UI.RadLabel radLabel27;
+        private Telerik.WinControls.UI.RadLabel radLabel28;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox5;
+        private Telerik.WinControls.UI.RadLabel radLabel5;
+        private Telerik.WinControls.UI.RadLabel radLabel11;
         private Telerik.WinControls.UI.RadLabel radLabel23;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox4;
+        private Telerik.WinControls.UI.RadLabel radLabel3;
+        private Telerik.WinControls.UI.RadLabel radLabel31;
+        private Telerik.WinControls.UI.RadLabel radLabel32;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox8;
+        private Telerik.WinControls.UI.RadLabel radLabel16;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox7;
+        private Telerik.WinControls.UI.RadLabel radLabel15;
+        private Telerik.WinControls.UI.RadLabel radLabel12;
+        private Telerik.WinControls.UI.RadLabel radLabel13;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox6;
+        private Telerik.WinControls.UI.RadLabel radLabel14;
+        private Telerik.WinControls.UI.RadLabel radLabel25;
+        private Telerik.WinControls.UI.RadLabel avg_score;
+        private Telerik.WinControls.UI.RadLabel suc_perc;
+        private Telerik.WinControls.UI.RadLabel radLabel26;
+        private Telerik.WinControls.UI.RadLabel radLabel21;
+        private Telerik.WinControls.UI.RadLabel pending;
+        private Telerik.WinControls.UI.RadLabel radLabel19;
         private Telerik.WinControls.UI.RadLabel pictureBox1;
     }
 }

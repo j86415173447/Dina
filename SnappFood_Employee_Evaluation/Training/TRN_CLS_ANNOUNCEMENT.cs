@@ -98,7 +98,7 @@ namespace SnappFood_Employee_Evaluation.Training
                                 "محل برگزاری: <b>" + dt2.Rows[i][6].ToString() + "</b><br>" +
                                 "مدرس: <b>" + dt2.Rows[i][7].ToString() + "</b>" +
                                 "</font>" +
-                                "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل اسنپ فود - SFES" + "</b>" + "</font>" +
+                                "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل دیجی کالا - SFES" + "</b>" + "</font>" +
                                 "<br><br><br><font color='Red'>" + "این ایمیل به صورت اتوماتیک ارسال شده است. لطفا به آن پاسخ ندهید." + "</font>" +
                                 "</font></p></td></tr></table>";
 

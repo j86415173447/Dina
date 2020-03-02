@@ -420,7 +420,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     loading.label1.Text = "در حال تبدیل فایل. شکیبا باشید...";
                     loading.Show();
 
-                    Mp3FileReader wf = new Mp3FileReader(sound_add);
+                    WaveFileReader wf = new WaveFileReader(sound_add);
                     string call_duration = wf.TotalTime.ToString(@"mm\:ss");
 
                     /////////////////////////////////////////////////////////// Get File Size
@@ -470,7 +470,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     ////////////////////////////////////// End Reset
                     ms.Write((byte[]) voice_dt.Rows[radGridView1.SelectedRows[0].Index][4], 0, ((byte[])voice_dt.Rows[radGridView1.SelectedRows[0].Index][4]).Length);
                     ms.Position = 0;
-                    Mp3FileReader mp3_rdr = new Mp3FileReader(ms);
+                    WaveFileReader mp3_rdr = new WaveFileReader(ms);
                     WaveOut.Dispose();
                     WaveOut.Init(mp3_rdr);
                 }
@@ -668,7 +668,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp2.SelectCommand = new OleDbCommand();
             adp2.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "' and [Voice] is not null";
+            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "'";
             adp2.SelectCommand.CommandText = lcommand2;
             dt44.Clear();
             adp2.Fill(dt44);

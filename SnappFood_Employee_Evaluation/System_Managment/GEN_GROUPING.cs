@@ -135,7 +135,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     oleDbCommand1.Parameters.AddWithValue("@Group_Shift", shift.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Coordinator", coordinator.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Leader", leader.Text);
-                    oleDbCommand1.Parameters.AddWithValue("@Supervisor", supervisor.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@Supervisor", "نامشخص");
                     oleDbCommand1.Parameters.AddWithValue("@Manager", manager.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Group_ACTV", (Grp_ACTV.Checked == true ? "1" : "0"));
                     oleDbConnection1.Open();
@@ -147,7 +147,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Coordinator] = ?, [Leader] = ?, [Supervisor] = ?, [Manager] = ?  WHERE [Team_Group] = N'" + Grp_Nm.Text + "'";
                     oleDbCommand1.Parameters.AddWithValue("@Coordinator", coordinator.Text);
                     oleDbCommand1.Parameters.AddWithValue("@Leader", leader.Text);
-                    oleDbCommand1.Parameters.AddWithValue("@Supervisor", supervisor.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@Supervisor", "نامشخص");
                     oleDbCommand1.Parameters.AddWithValue("@Manager", manager.Text);
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
@@ -204,7 +204,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                         oleDbCommand1.Parameters.AddWithValue("@Group_Shift", shift.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Group_Coor", coordinator.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Group_LD", leader.Text);
-                        oleDbCommand1.Parameters.AddWithValue("@Group_SP", supervisor.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Group_SP", "نامشخص");
                         oleDbCommand1.Parameters.AddWithValue("@Group_MG", manager.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Group_ACTV", (Grp_ACTV.Checked == true ? "1" : "0"));
                         oleDbCommand1.Parameters.AddWithValue("@Insrt_User", user);
@@ -217,7 +217,7 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                         oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Coordinator] = ?, [Leader] = ?, [Supervisor] = ?, [Manager] = ?  WHERE [Team_Group] = N'" + Grp_Nm.Text + "'";
                         oleDbCommand1.Parameters.AddWithValue("@Coordinator", coordinator.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Leader", leader.Text);
-                        oleDbCommand1.Parameters.AddWithValue("@Supervisor", supervisor.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@Supervisor", "نامشخص");
                         oleDbCommand1.Parameters.AddWithValue("@Manager", manager.Text);
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
@@ -250,23 +250,23 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                 adp4.SelectCommand = new OleDbCommand();
                 adp4.SelectCommand.Connection = oleDbConnection1;
                 oleDbCommand1.Parameters.Clear();
-                string lcommand4 = "SELECT '1' 'row', '' 'Per_Name' union SELECT '2' 'row' , N'نامشخص' 'Per_Name' union SELECT '3' 'row', [Per_Name] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [Position] = N'رهبر' and [Main_Shift] = N'" + shift.Text + "' and [Termination] = 0 ";
+                string lcommand4 = "SELECT '1' 'row', '' 'Per_Name' union SELECT '2' 'row' , N'نامشخص' 'Per_Name' union SELECT '3' 'row', [Per_Name] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [Position] = N'سرپرست' and [Main_Shift] = N'" + shift.Text + "' and [Termination] = 0 ";
                 adp4.SelectCommand.CommandText = lcommand4;
                 adp4.Fill(dt4);
                 leader.DataSource = dt4;
                 leader.DisplayMember = "Per_Name";
 
-                ///////////////////////////////////////////////////////// initializing Supervisor item
-                DataTable dt3 = new DataTable();
-                OleDbDataAdapter adp3 = new OleDbDataAdapter();
-                adp3.SelectCommand = new OleDbCommand();
-                adp3.SelectCommand.Connection = oleDbConnection1;
-                oleDbCommand1.Parameters.Clear();
-                string lcommand3 = "SELECT '1' 'row', '' 'Per_Name' union SELECT '2' 'row' , N'نامشخص' 'Per_Name' union SELECT '3' 'row', [Per_Name] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [Position] = N'سرپرست' and [Main_Shift] = N'" + shift.Text + "' and [Termination] = 0 ";
-                adp3.SelectCommand.CommandText = lcommand3;
-                adp3.Fill(dt3);
-                supervisor.DataSource = dt3;
-                supervisor.DisplayMember = "Per_Name";
+                /////////////////////////////////////////////////////////// initializing Supervisor item
+                //DataTable dt3 = new DataTable();
+                //OleDbDataAdapter adp3 = new OleDbDataAdapter();
+                //adp3.SelectCommand = new OleDbCommand();
+                //adp3.SelectCommand.Connection = oleDbConnection1;
+                //oleDbCommand1.Parameters.Clear();
+                //string lcommand3 = "SELECT '1' 'row', '' 'Per_Name' union SELECT '2' 'row' , N'نامشخص' 'Per_Name' union SELECT '3' 'row', [Per_Name] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] WHERE [Position] = N'سرپرست' and [Main_Shift] = N'" + shift.Text + "' and [Termination] = 0 ";
+                //adp3.SelectCommand.CommandText = lcommand3;
+                //adp3.Fill(dt3);
+                //supervisor.DataSource = dt3;
+                //supervisor.DisplayMember = "Per_Name";
 
                 ///////////////////////////////////////////////////////// initializing Manager item
                 DataTable dt2 = new DataTable();
@@ -323,14 +323,14 @@ namespace SnappFood_Employee_Evaluation.System_Managment
             }
             if (leader.SelectedIndex == 0)
             {
-                this.errorProvider.SetError(this.leader, "رهبر انتخاب نشده است");
+                this.errorProvider.SetError(this.leader, "سرپرست انتخاب نشده است");
                 data_error = true;
             }
-            if (supervisor.SelectedIndex == 0)
-            {
-                this.errorProvider.SetError(this.supervisor, "سرپرست انتخاب نشده است");
-                data_error = true;
-            }
+            //if (supervisor.SelectedIndex == 0)
+            //{
+            //    this.errorProvider.SetError(this.supervisor, "سرپرست انتخاب نشده است");
+            //    data_error = true;
+            //}
             if (manager.SelectedIndex == 0)
             {
                 this.errorProvider.SetError(this.manager, "مدیر انتخاب نشده است");

@@ -46,8 +46,8 @@
             this.Save = new Telerik.WinControls.UI.RadMenuItem();
             this.Print = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
-            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
+            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
@@ -142,7 +142,7 @@
             // 
             this.must_chng.CheckState = System.Windows.Forms.CheckState.Checked;
             this.must_chng.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.must_chng.Location = new System.Drawing.Point(127, 160);
+            this.must_chng.Location = new System.Drawing.Point(16, 160);
             this.must_chng.Name = "must_chng";
             this.must_chng.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.must_chng.Size = new System.Drawing.Size(162, 19);
@@ -184,7 +184,7 @@
             // 
             this.actv.CheckState = System.Windows.Forms.CheckState.Checked;
             this.actv.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.actv.Location = new System.Drawing.Point(492, 160);
+            this.actv.Location = new System.Drawing.Point(206, 160);
             this.actv.Name = "actv";
             this.actv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.actv.Size = new System.Drawing.Size(80, 19);
@@ -249,6 +249,15 @@
             this.radMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radMenuItem1.Click += new System.EventHandler(this.radMenuItem1_Click);
             // 
+            // radMenuItem2
+            // 
+            this.radMenuItem2.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.plusplus;
+            this.radMenuItem2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMenuItem2.Name = "radMenuItem2";
+            this.radMenuItem2.Text = "ورودی جدید";
+            this.radMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
+            // 
             // Exit
             // 
             this.Exit.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.power;
@@ -259,20 +268,11 @@
             this.Exit.UseCompatibleTextRendering = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // radMenuItem2
-            // 
-            this.radMenuItem2.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.plusplus;
-            this.radMenuItem2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radMenuItem2.Name = "radMenuItem2";
-            this.radMenuItem2.Text = "ورودی جدید";
-            this.radMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
-            // 
             // GEN_USER_MANAGMENT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 192);
+            this.ClientSize = new System.Drawing.Size(582, 195);
             this.Controls.Add(this.actv);
             this.Controls.Add(this.org_role);
             this.Controls.Add(this.usr_id);

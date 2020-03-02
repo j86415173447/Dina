@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SnappFood_Employee_Evaluation")]
-[assembly: AssemblyDescription("SFES")]
+[assembly: AssemblyTitle("DigiKala_Employee_Evaluation")]
+[assembly: AssemblyDescription("DKES")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ava Negar Atlas Tejarat")]
-[assembly: AssemblyProduct("SnappFood_Employee_Evaluation")]
-[assembly: AssemblyCopyright("Copyright ©  2017~2018")]
+[assembly: AssemblyCompany("Noavaran Fan Avazeh")]
+[assembly: AssemblyProduct("DigiKala_Employee_Evaluation")]
+[assembly: AssemblyCopyright("Copyright ©  2017~2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

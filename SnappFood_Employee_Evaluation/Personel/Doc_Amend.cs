@@ -592,7 +592,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                     //var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
                     //{
                     //    MobileNumbers = new List<string>() { Per_mob.Text }.ToArray(),
-                    //    Messages = new List<string>() { Sex.Text + " " + Per_Name.Text + " عزیز \n" + "مشخصات شما در سامانه متمرکز اطلاعات پرسنلی با شماره پرونده " + Doc_Cd.Text + " ثبت شد. \n" + "امتیاز شغلی شما: " + Score_Total.Text + "\n" + "به خانواده بزرگ اسنپ فود خوش آمدید" }.ToArray(),
+                    //    Messages = new List<string>() { Sex.Text + " " + Per_Name.Text + " عزیز \n" + "مشخصات شما در سامانه متمرکز اطلاعات پرسنلی با شماره پرونده " + Doc_Cd.Text + " ثبت شد. \n" + "امتیاز شغلی شما: " + Score_Total.Text + "\n" + "به خانواده بزرگ دیجی کالا خوش آمدید" }.ToArray(),
                     //    LineNumber = sms_line,
                     //    SendDateTime = null,
                     //    CanContinueInCaseOfError = false
@@ -635,9 +635,9 @@ namespace SnappFood_Employee_Evaluation.Personel
             bool tab3 = false;
             bool tab4 = false;
 
-            if (Per_Ntl_ID.Text.Length < 10)
+            if (!national_id_check())
             {
-                this.errorProvider.SetError(this.Per_Ntl_ID, "کد ملی صحیح وارد نشده است");
+                this.errorProvider.SetError(this.Per_Ntl_ID, "کد ملی از طرف سامانه ثبت احوال تائید نشد.");
                 data_error = true; tab1 = true;
             }
             if (Main_Shift.SelectedIndex == 0)
@@ -680,21 +680,21 @@ namespace SnappFood_Employee_Evaluation.Personel
                 this.errorProvider.SetError(this.Per_Add, "آدرس وارد نشده است");
                 data_error = true; tab1 = true;
             }
-            if (Station.Text == "")
-            {
-                this.errorProvider.SetError(this.Station, "استیشن وارد نشده است");
-                data_error = true; tab4 = true;
-            }
-            if (Main_tsk.SelectedIndex == 0)
-            {
-                this.errorProvider.SetError(this.Main_tsk, "تسک انتخاب نشده است");
-                data_error = true; tab4 = true;
-            }
-            if (Scnd_tsk.SelectedIndex == 0)
-            {
-                this.errorProvider.SetError(this.Scnd_tsk, "تسک فرعی انتخاب نشده است");
-                data_error = true; tab4 = true;
-            }
+            //if (Station.Text == "")
+            //{
+            //    this.errorProvider.SetError(this.Station, "استیشن وارد نشده است");
+            //    data_error = true; tab4 = true;
+            //}
+            //if (Main_tsk.SelectedIndex == 0)
+            //{
+            //    this.errorProvider.SetError(this.Main_tsk, "تسک انتخاب نشده است");
+            //    data_error = true; tab4 = true;
+            //}
+            //if (Scnd_tsk.SelectedIndex == 0)
+            //{
+            //    this.errorProvider.SetError(this.Scnd_tsk, "تسک فرعی انتخاب نشده است");
+            //    data_error = true; tab4 = true;
+            //}
             if (job_Groups.SelectedIndex == 0)
             {
                 this.errorProvider.SetError(this.job_Groups, "گروه شغلی انتخاب نشده است");
@@ -1452,6 +1452,52 @@ namespace SnappFood_Employee_Evaluation.Personel
                 Leader.Text = "";
                 Supervisor.Text = "";
                 Manager.Text = "";
+            }
+        }
+
+        private void radMenuItem1_Click(object sender, EventArgs e)
+        {
+            //string startPath = @"C:\Per_pic";
+            //string[] oDirectories = Directory.GetDirectories(startPath, "");
+            //MessageBox.Show(oDirectories.Length.ToString());
+            string[] files = Directory.GetFiles(@"C:\Per_pic", "*.jpg");
+            foreach (string file in files)
+            {
+                byte[] imageData = ReadFile(file);
+                ////////////////////////////////////////////// INSERT INTO PER_DOCUMENTS TBL
+                oleDbCommand1.Parameters.Clear();
+                oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[Table_1] ([id],[picture]) values (?,?)";
+                oleDbCommand1.Parameters.AddWithValue("@Doc_No", file.Replace("C:\\Per_pic\\", "").Replace(".jpg", ""));
+                oleDbCommand1.Parameters.AddWithValue("@Per_Pic", (object)imageData);
+
+                oleDbConnection1.Open();
+                oleDbCommand1.ExecuteNonQuery();
+                oleDbConnection1.Close();
+
+            }
+            MessageBox.Show("done!");
+
+        }
+
+        private bool national_id_check()
+        {
+            if (Per_Ntl_ID.Text != "" || Per_Ntl_ID.Text.Length == 10)
+            {
+                int i = int.Parse(Per_Ntl_ID.Text);
+                int[] digits = Per_Ntl_ID.Text.Select(t => int.Parse(t.ToString())).ToArray();
+                int key = digits[0] * 10 + digits[1] * 9 + digits[2] * 8 + digits[3] * 7 + digits[4] * 6 + digits[5] * 5 + digits[6] * 4 + digits[7] * 3 + digits[8] * 2;
+                if ((11 - (key % 11)) == digits[9])
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
             }
         }
     }

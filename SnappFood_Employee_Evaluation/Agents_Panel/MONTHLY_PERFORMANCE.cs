@@ -173,7 +173,7 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lb_43.Text = (dt1.Rows[0][43].ToString() != "") ? dt1.Rows[0][43].ToString() : "0";
                     lb_44.Text = (dt1.Rows[0][44].ToString() != "") ? dt1.Rows[0][44].ToString() : "0";
                     lb_45.Text = Convert.ToInt32(Math.Floor(float.Parse(dt1.Rows[0][45].ToString()) / 3600)).ToString() + ":" + TimeSpan.FromSeconds(float.Parse(dt1.Rows[0][45].ToString())).ToString(@"mm\:ss");
-                    lb_46.Text = Convert.ToInt32(Math.Floor(float.Parse(dt1.Rows[0][45].ToString()) / 3600)).ToString() + ":" + TimeSpan.FromSeconds(float.Parse(dt1.Rows[0][46].ToString())).ToString(@"mm\:ss");
+                    lb_46.Text = Convert.ToInt32(Math.Floor(float.Parse(dt1.Rows[0][46].ToString()) / 3600)).ToString() + ":" + TimeSpan.FromSeconds(float.Parse(dt1.Rows[0][46].ToString())).ToString(@"mm\:ss");
                     lb_47.Text = Convert.ToInt32(Math.Floor(float.Parse(dt1.Rows[0][47].ToString()) / 3600)).ToString() + ":" + TimeSpan.FromSeconds(float.Parse(dt1.Rows[0][47].ToString())).ToString(@"mm\:ss");
                 }
                 else

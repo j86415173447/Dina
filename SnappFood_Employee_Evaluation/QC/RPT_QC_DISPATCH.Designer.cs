@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
-            this.Save = new Telerik.WinControls.UI.RadMenuItem();
-            this.Print = new Telerik.WinControls.UI.RadMenuItem();
-            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.dt_to = new Telerik.WinControls.UI.RadDateTimePicker();
             this.dt_from = new Telerik.WinControls.UI.RadDateTimePicker();
@@ -42,6 +39,9 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
+            this.Save = new Telerik.WinControls.UI.RadMenuItem();
+            this.Print = new Telerik.WinControls.UI.RadMenuItem();
+            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -62,39 +62,9 @@
             this.Exit});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(731, 59);
+            this.radMenu1.Size = new System.Drawing.Size(731, 55);
             this.radMenu1.TabIndex = 67;
             this.radMenu1.ThemeName = "Office2010Silver";
-            // 
-            // Save
-            // 
-            this.Save.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.search_icon;
-            this.Save.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Save.Name = "Save";
-            this.Save.Text = "  جستجو  ";
-            this.Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Save.UseCompatibleTextRendering = false;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
-            // 
-            // Print
-            // 
-            this.Print.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Excel_icon1;
-            this.Print.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Print.Name = "Print";
-            this.Print.Text = "خروجی اکسل";
-            this.Print.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Print.UseCompatibleTextRendering = false;
-            this.Print.Click += new System.EventHandler(this.Print_Click);
-            // 
-            // Exit
-            // 
-            this.Exit.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.power;
-            this.Exit.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Exit.Name = "Exit";
-            this.Exit.Text = "   خروج   ";
-            this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Exit.UseCompatibleTextRendering = false;
             // 
             // radGroupBox1
             // 
@@ -199,7 +169,7 @@
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
             this.radGridView1.MasterTemplate.AllowColumnReorder = false;
             this.radGridView1.MasterTemplate.ShowFilteringRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.ShowGroupPanel = false;
@@ -213,7 +183,38 @@
             // 
             this.oleDbCommand1.Connection = this.oleDbConnection1;
             // 
-            // RPT_QC_PERFORMANCE
+            // Save
+            // 
+            this.Save.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.search_icon;
+            this.Save.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Save.Name = "Save";
+            this.Save.Text = "  جستجو  ";
+            this.Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Save.UseCompatibleTextRendering = false;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // Print
+            // 
+            this.Print.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Excel_icon1;
+            this.Print.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Print.Name = "Print";
+            this.Print.Text = "خروجی اکسل";
+            this.Print.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Print.UseCompatibleTextRendering = false;
+            this.Print.Click += new System.EventHandler(this.Print_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.power;
+            this.Exit.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Exit.Name = "Exit";
+            this.Exit.Text = "   خروج   ";
+            this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Exit.UseCompatibleTextRendering = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // RPT_QC_DISPATCH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +224,7 @@
             this.Controls.Add(this.radMenu1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.KeyPreview = true;
-            this.Name = "RPT_QC_PERFORMANCE";
+            this.Name = "RPT_QC_DISPATCH";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
             // 
@@ -232,7 +233,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "گزارش عملکرد کارشناسان کیفی";
+            this.Text = "گزارش نحوه ی توزیع شنود کیفی";
             this.ThemeName = "Office2010Silver";
             this.Load += new System.EventHandler(this.QC_GENERAL_REPORT_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QC_GENERAL_REPORT_KeyDown);

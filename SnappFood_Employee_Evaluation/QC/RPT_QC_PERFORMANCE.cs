@@ -16,6 +16,7 @@ namespace SnappFood_Employee_Evaluation.QC
         public string constr;
         public string user;
         public DataTable dt22 = new DataTable();
+        public int min_score;
 
         public RPT_QC_PERFORMANCE()
         {
@@ -33,7 +34,21 @@ namespace SnappFood_Employee_Evaluation.QC
             dt_to.NullableValue = null;
             dt_to.SetToNullValue();
 
-            
+            ////////////////////////////////////////////////////////// Initilizing CAP
+            DataTable dtsc4 = new DataTable();
+            OleDbDataAdapter adpsc4 = new OleDbDataAdapter();
+            adpsc4.SelectCommand = new OleDbCommand();
+            adpsc4.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommandsc4 = "SELECT [cap_0_30],[cap_30_60],[cap_60_90],[cap_ov_90],[min_suc_log] FROM [SNAPP_CC_EVALUATION].[dbo].[SYS_QC_SETTING]";
+            adpsc4.SelectCommand.CommandText = lcommandsc4;
+            adpsc4.Fill(dtsc4);
+            if (dtsc4.Rows.Count != 0)
+            {
+                min_score = int.Parse(dtsc4.Rows[0][4].ToString());
+            }
+
+
         }
 
         public void update_grid()
@@ -42,8 +57,8 @@ namespace SnappFood_Employee_Evaluation.QC
             adp.SelectCommand = new OleDbCommand();
             adp.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand = "SELECT BSEL1.*,BSEL2.[AMW] from ((SELECT [QC_Agent] 'نام کارشناس',COUNT([QC_ID]) 'لاگ مانیتور شده',SUM(CASE WHEN [QC_Score]<=17 then 1 else 0 end) 'لاگ ناموفق',SUM(CASE WHEN [QC_Score]>17 then 1 else 0 end) 'لاگ موفق' " +
-                              ",SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'تابو',SUM(CASE WHEN [QC_M_Approval] != [Final_Approval] and[Final_Approval] is not null then 1 else 0 end) 'تغییر تائید',AVG([Handling_tm]) 'AHT' " +
+            string lcommand = "SELECT BSEL1.*,BSEL2.[AMW] from ((SELECT [QC_Agent] 'نام کارشناس',COUNT([QC_ID]) 'لاگ مانیتور شده',SUM(CASE WHEN [QC_Score]< " + min_score.ToString() + " then 1 else 0 end) 'لاگ ناموفق',SUM(CASE WHEN [QC_Score] >=" + min_score.ToString() + " then 1 else 0 end) 'لاگ موفق' " +
+                              ",SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'تابو',SUM(CASE WHEN [QC_M_Approval] != [Final_Approval] and [Final_Approval] is not null then 1 else 0 end) 'تغییر تائید',AVG([Handling_tm]) 'AHT' " +
                               ",SUM(CASE WHEN[CC_M_Aprv_Usr] = N'عدم تائید کیفی' then 1 else 0 end) 'عدم تائید کیفی',SUM([Handling_tm]) 'SHT' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + "  group by[QC_Agent]) BSEL1 " +
                               "left join(select Sel10.[QC_Agent], AVG(ABS(Sel10.[Handling_tm] - Sel20.[Len])) 'AMW' from((SELECT[QC_ID],[Handling_tm],[QC_Agent] FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] WHERE [QC_ID] != 1  " + (dt_from.Text == "" ? "" : (" AND [insrt_dt_per] >= N'" + dt_from.Text + "'")) + (dt_to.Text == "" ? "" : (" AND [insrt_dt_per] <= N'" + dt_to.Text + "'")) + " ) Sel10 " +
                               "left join(SELECT[QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by[QC_ID]) Sel20 " +

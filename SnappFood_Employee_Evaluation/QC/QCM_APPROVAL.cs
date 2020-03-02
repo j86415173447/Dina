@@ -34,6 +34,9 @@ namespace SnappFood_Employee_Evaluation.QC
         public int min_score;
         public bool no_coord;
 
+        Point p = Point.Empty;
+        public WaveFileReader mp3_rdr;
+
 
         public QCM_APPROVAL()
         {
@@ -48,9 +51,7 @@ namespace SnappFood_Employee_Evaluation.QC
         private void LOG_ENTRY_Load(object sender, EventArgs e)
         {
             oleDbConnection1.ConnectionString = constr;
-            //call_dt.Culture = new System.Globalization.CultureInfo("fa-IR");
-            //call_dt.NullableValue = null;
-            //call_dt.SetToNullValue();
+
             QC_Agent.Text = user;
 
             ////////////////////////////////////////////////////////// Initilizing CAP
@@ -161,8 +162,6 @@ namespace SnappFood_Employee_Evaluation.QC
                             no_coord = false;
                         }
                     }
-
-                   
                 }
                 else
                 {
@@ -235,15 +234,15 @@ namespace SnappFood_Employee_Evaluation.QC
                 {
                     score = score - int.Parse(dt4.Rows[0][9].ToString());
                 }
-                if (Qry1.Checked)
+                if (Spk4.Checked)
                 {
                     score = score - int.Parse(dt4.Rows[0][10].ToString());
                 }
-                if (Cls1.Checked)
+                if (Qry1.Checked)
                 {
                     score = score - int.Parse(dt4.Rows[0][11].ToString());
                 }
-                if (Cls2.Checked)
+                if (Cls1.Checked)
                 {
                     score = score - int.Parse(dt4.Rows[0][12].ToString());
                 }
@@ -265,7 +264,6 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void radMenuItem1_Click(object sender, EventArgs e)
         {
-
             if (required_field_check())
             {
                 if (WaveOut.PlaybackState != PlaybackState.Stopped)
@@ -368,6 +366,14 @@ namespace SnappFood_Employee_Evaluation.QC
                 {
                     oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
                 }
+                if (Spk4.Checked)
+                {
+                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
+                }
+                else
+                {
+                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
+                }
                 if (Qry1.Checked)
                 {
                     oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
@@ -384,15 +390,6 @@ namespace SnappFood_Employee_Evaluation.QC
                 {
                     oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
                 }
-                if (Cls2.Checked)
-                {
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
-                }
-                else
-                {
-                    oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 1);
-                }
-
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Inv_link.Text);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", Remarks.Text);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", taboo.Checked ? "1" : "0");
@@ -412,13 +409,13 @@ namespace SnappFood_Employee_Evaluation.QC
                     if (coordinator)
                     {
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", 0);
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
-                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل مدیر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل رهبر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل رهبر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "انتقال به کارتابل رهبر");
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
+                        oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
                         oleDbCommand1.Parameters.AddWithValue("@CLS_CD", null);
@@ -522,8 +519,6 @@ namespace SnappFood_Employee_Evaluation.QC
                     oleDbConnection1.Close();
                 }
                 loading.Close();
-                //Insert_Date.Text = DT_Yr + "/" + DT_Mth + "/" + DT_Day;
-                //Insert_Time.Text = DT_TM;
                 if (int.Parse(Call_Score_Final.Text) <= min_score)
                 {
                     RadMessageBox.Show(this, "لاگ به شناسه " + QC_ID.Text + " با موفقیت تائید شد." + "\n" + " لاگ به کارتابل مسئول مربوطه در " + Department.Text + " منتقل شد. " + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
@@ -575,14 +570,8 @@ namespace SnappFood_Employee_Evaluation.QC
             }
             if (QC_ID.Text == "")
             {
-                //this.errorProvider.SetError(this.label1, "توضیحات وارد نشده است.");
                 error = true;
             }
-            //if (call_dt.Text == "" || !call_tm.MaskFull)
-            //{
-            //    this.errorProvider.SetError(this.label6, "ساعت/تاریخ مکالمه بررسی شود.");
-            //    error = true;
-            //}
             if (Inv_link.Text == "")
             {
                 this.errorProvider.SetError(this.label14, "لینک فاکتور وارد نشده است.");
@@ -696,18 +685,16 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if (voice_dt.Rows.Count != 0)
+            if (WaveOut.PlaybackState == PlaybackState.Playing)
             {
-                if (WaveOut.PlaybackState == PlaybackState.Playing)
-                {
-                    btnPlay.Image = Properties.Resources.Media_Controls_Play_icon;
-                    WaveOut.Pause();
-                }
-                else if (WaveOut.PlaybackState == PlaybackState.Paused || WaveOut.PlaybackState == PlaybackState.Stopped)
-                {
-                    btnPlay.Image = Properties.Resources.Media_Controls_Pause_icon;
-                    WaveOut.Play();
-                }
+                btnPlay.Image = Properties.Resources.Media_Controls_Play_icon;
+                WaveOut.Pause();
+            }
+            else if (WaveOut.PlaybackState == PlaybackState.Paused || WaveOut.PlaybackState == PlaybackState.Stopped)
+            {
+                btnPlay.Image = Properties.Resources.Media_Controls_Pause_icon;
+                WaveOut.Play();
+                timer3.Start();
             }
         }
 
@@ -725,7 +712,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     loading.label1.Text = "در حال تبدیل فایل. شکیبا باشید...";
                     loading.Show();
 
-                    Mp3FileReader wf = new Mp3FileReader(sound_add);
+                    WaveFileReader wf = new WaveFileReader(sound_add);
                     string call_duration = wf.TotalTime.ToString(@"mm\:ss");
 
                     /////////////////////////////////////////////////////////// Get File Size
@@ -762,7 +749,7 @@ namespace SnappFood_Employee_Evaluation.QC
             btnPlay.Image = Properties.Resources.Media_Controls_Play_icon;
         }
 
-        private void radGridView1_SelectionChanged(object sender, EventArgs e)
+        private void radGridView1_SelectionChanged(object sender, EventArgs e) /////////////////////////////////////
         {
             try
             {
@@ -774,16 +761,16 @@ namespace SnappFood_Employee_Evaluation.QC
                     ms.SetLength(0);
                     ////////////////////////////////////// End Reset
 
-                    ms.Write((byte[]) voice_dt.Rows[radGridView1.SelectedRows[0].Index][4], 0, ((byte[])voice_dt.Rows[radGridView1.SelectedRows[0].Index][4]).Length);
+                    ms.Write((byte[])voice_dt.Rows[radGridView1.SelectedRows[0].Index][4], 0, ((byte[])voice_dt.Rows[radGridView1.SelectedRows[0].Index][4]).Length);
                     ms.Position = 0;
-                    Mp3FileReader mp3_rdr = new Mp3FileReader(ms);
+                    this.mp3_rdr = new WaveFileReader(ms);
                     WaveOut.Dispose();
                     WaveOut.Init(mp3_rdr);
                 }
             }
-            catch
+            catch (Exception exc)
             {
-
+                MessageBox.Show(exc.ToString());
             }
         }
 
@@ -833,7 +820,7 @@ namespace SnappFood_Employee_Evaluation.QC
             Lsn4.Checked = false;
             Qry1.Checked = false;
             Cls1.Checked = false;
-            Cls2.Checked = false;
+            Spk4.Checked = false;
 
             No_swt.Checked = false;
             Bad_swt.Checked = false;
@@ -923,15 +910,15 @@ namespace SnappFood_Employee_Evaluation.QC
             }
             if (dt22.Rows[0][15].ToString() != "True")
             {
-                Qry1.Checked = true;
+                Spk4.Checked = true;
             }
             if (dt22.Rows[0][16].ToString() != "True")
             {
-                Cls1.Checked = true;
+                Qry1.Checked = true;
             }
             if (dt22.Rows[0][17].ToString() != "True")
             {
-                Cls2.Checked = true;
+                Cls1.Checked = true;
             }
             Remarks.Text = dt22.Rows[0][21].ToString();
             Inv_link.Text = dt22.Rows[0][20].ToString();
@@ -962,7 +949,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp2.SelectCommand = new OleDbCommand();
             adp2.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "' and [Voice] is not null";
+            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "'";
             adp2.SelectCommand.CommandText = lcommand2;
             dt44.Clear();
             adp2.Fill(dt44);
@@ -1011,66 +998,66 @@ namespace SnappFood_Employee_Evaluation.QC
 
         private void No_swt_CheckedChanged(object sender, EventArgs e)
         {
-            if (No_swt.Checked)
-            {
-                btn_no_sw.BackColor = Color.Red;
-                btn_no_sw.ForeColor = Color.Yellow;
-                btn_no_sw.Image = Properties.Resources.danger_icon;
-            }
-            else
-            {
-                btn_no_sw.BackColor = Color.WhiteSmoke;
-                btn_no_sw.ForeColor = Color.Black;
-                btn_no_sw.Image = Properties.Resources.small_tick;
-            }
+            //if (No_swt.Checked)
+            //{
+            //    btn_no_sw.BackColor = Color.Red;
+            //    btn_no_sw.ForeColor = Color.Yellow;
+            //    btn_no_sw.Image = Properties.Resources.danger_icon;
+            //}
+            //else
+            //{
+            //    btn_no_sw.BackColor = Color.WhiteSmoke;
+            //    btn_no_sw.ForeColor = Color.Black;
+            //    btn_no_sw.Image = Properties.Resources.small_tick;
+            //}
         }
 
         private void Bad_swt_CheckedChanged(object sender, EventArgs e)
         {
-            if (Bad_swt.Checked)
-            {
-                btn_bad_sw.BackColor = Color.Red;
-                btn_bad_sw.ForeColor = Color.Yellow;
-                btn_bad_sw.Image = Properties.Resources.danger_icon;
-            }
-            else
-            {
-                btn_bad_sw.BackColor = Color.WhiteSmoke;
-                btn_bad_sw.ForeColor = Color.Black;
-                btn_bad_sw.Image = Properties.Resources.small_tick;
-            }
+            //if (Bad_swt.Checked)
+            //{
+            //    btn_bad_sw.BackColor = Color.Red;
+            //    btn_bad_sw.ForeColor = Color.Yellow;
+            //    btn_bad_sw.Image = Properties.Resources.danger_icon;
+            //}
+            //else
+            //{
+            //    btn_bad_sw.BackColor = Color.WhiteSmoke;
+            //    btn_bad_sw.ForeColor = Color.Black;
+            //    btn_bad_sw.Image = Properties.Resources.small_tick;
+            //}
         }
 
         private void Bad_Followup_CheckedChanged(object sender, EventArgs e)
         {
-            if (Bad_Followup.Checked)
-            {
-                BAD_FW_btn.BackColor = Color.Red;
-                BAD_FW_btn.ForeColor = Color.Yellow;
-                BAD_FW_btn.Image = Properties.Resources.danger_icon;
-            }
-            else
-            {
-                BAD_FW_btn.BackColor = Color.WhiteSmoke;
-                BAD_FW_btn.ForeColor = Color.Black;
-                BAD_FW_btn.Image = Properties.Resources.small_tick;
-            }
+            //if (Bad_Followup.Checked)
+            //{
+            //    BAD_FW_btn.BackColor = Color.Red;
+            //    BAD_FW_btn.ForeColor = Color.Yellow;
+            //    BAD_FW_btn.Image = Properties.Resources.danger_icon;
+            //}
+            //else
+            //{
+            //    BAD_FW_btn.BackColor = Color.WhiteSmoke;
+            //    BAD_FW_btn.ForeColor = Color.Black;
+            //    BAD_FW_btn.Image = Properties.Resources.small_tick;
+            //}
         }
 
         private void No_Followup_CheckedChanged(object sender, EventArgs e)
         {
-            if (No_Followup.Checked)
-            {
-                NO_FW_btn.BackColor = Color.Red;
-                NO_FW_btn.ForeColor = Color.Yellow;
-                NO_FW_btn.Image = Properties.Resources.danger_icon;
-            }
-            else
-            {
-                NO_FW_btn.BackColor = Color.WhiteSmoke;
-                NO_FW_btn.ForeColor = Color.Black;
-                NO_FW_btn.Image = Properties.Resources.small_tick;
-            }
+            //if (No_Followup.Checked)
+            //{
+            //    NO_FW_btn.BackColor = Color.Red;
+            //    NO_FW_btn.ForeColor = Color.Yellow;
+            //    NO_FW_btn.Image = Properties.Resources.danger_icon;
+            //}
+            //else
+            //{
+            //    NO_FW_btn.BackColor = Color.WhiteSmoke;
+            //    NO_FW_btn.ForeColor = Color.Black;
+            //    NO_FW_btn.Image = Properties.Resources.small_tick;
+            //}
         }
 
         private void btn_bad_sw_Click(object sender, EventArgs e)
@@ -1123,6 +1110,54 @@ namespace SnappFood_Employee_Evaluation.QC
                 No_Followup.Checked = true;
                 Bad_Followup.Checked = false;
             }
+        }
+
+        private void btnTaboo_Click_1(object sender, EventArgs e)
+        {
+            if (taboo.Checked)
+            {
+                taboo.Checked = false;
+            }
+            else
+            {
+                taboo.Checked = true;
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (WaveOut != null && mp3_rdr != null)
+            {
+                TimeSpan currentTime = (WaveOut.PlaybackState == PlaybackState.Stopped) ? TimeSpan.Zero : mp3_rdr.CurrentTime;
+                trackbar1.Value = Math.Min(trackbar1.Maximum, (int)(100 * currentTime.TotalSeconds / mp3_rdr.TotalTime.TotalSeconds));
+                //labelCurrentTime.Text = String.Format("{0:00}:{1:00}", (int)currentTime.TotalMinutes,
+                //    currentTime.Seconds);
+            }
+            else
+            {
+                trackbar1.Value = 0;
+            }
+        }
+
+        private void trackbar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (mp3_rdr != null)
+            {
+                //MessageBox.Show(WaveOut.GetPosition().ToString());
+                //MessageBox.Show(wf.Length.ToString());
+                //ms.Position = ms.Length / (100/trackBar1.Value);
+                mp3_rdr.CurrentTime = TimeSpan.FromSeconds(mp3_rdr.TotalTime.TotalSeconds * trackbar1.Value / 100.0);
+            }
+        }
+
+        private void radGridView1_CurrentRowChanged(object sender, Telerik.WinControls.UI.CurrentRowChangedEventArgs e)
+        {
+
+        }
+
+        private void radGridView1_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+
         }
     }
 }

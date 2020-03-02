@@ -4,6 +4,23 @@
         <name>Stimulsoft.Report.Win</name>
     </assembly>
     <members>
+        <member name="F:Stimulsoft.Report.Win.Dashboard.StiDashboardNotSupportedForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Stimulsoft.Report.Win.Dashboard.StiDashboardNotSupportedForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Stimulsoft.Report.Win.Dashboard.StiDashboardNotSupportedForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="F:Stimulsoft.Report.Win.StiXmlExportSetupControl.components">
             <summary> 
             Required designer variable.
@@ -106,362 +123,378 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="T:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueBoolItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueBoolItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueBoolItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.BigClose">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueCharItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.BigDotMatrix">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueCharItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.BigPageSize">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueCharItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Bookmarks">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueDoubleItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Editor">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueDoubleItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Find">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueDoubleItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.FullScreen">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueGuidItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Open">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueGuidItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.PageDelete">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueGuidItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.PageDesign">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueLongItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.PageNew">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueLongItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.PageWidth">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueLongItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Parameters">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueDateTimeItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.ReportPrint">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueDateTimeItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Save">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueDateTimeItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.SaveDocumentFile">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueImageItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.SendEMail">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueImageItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.Thumbnails">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueImageItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.ZoomMultiplePages">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Value.StiValueStringItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.ZoomOnePage">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueStringItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.StiRibbonViewerUserControlOffice2013Resource.ZoomTwoPages">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Value.StiValueStringItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="T:Stimulsoft.Report.Win.Images.ToolTipResource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListBoolItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.ToolTipResource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListBoolItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.ToolTipResource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListBoolItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.ToolTipResource.tpContinuous">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListButtonXControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.ToolTipResource.tpMultiplePages">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListButtonXControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Images.ToolTipResource.tpSinglePage">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListButtonXControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="T:Stimulsoft.Report.Win.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListCharItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListCharItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListCharItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Bookmarks">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListDateTimeItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.CollapseAll">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListDateTimeItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Delete">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListDateTimeItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.DotMatrix">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListDoubleItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Editor">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListDoubleItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ExpandAll">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListDoubleItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Find">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListGuidItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.FindClose">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListGuidItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.FindCloseHover">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListGuidItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.FindNext">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListStringItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.FindPrevious">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListStringItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.FullScreen">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListStringItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Help">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.List.StiListLongItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.IcoReportOpen">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListLongItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.IcoReportPrint">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        <member name="M:Stimulsoft.Report.Win.Parameters.List.StiListLongItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.IcoReportSave">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        <member name="F:Stimulsoft.Report.Win.Parameters.Range.StiRangeCharItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageDelete">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeCharItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageDesign">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeCharItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageFirst">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Range.StiRangeDateTimeItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageLast">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeDateTimeItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageNew">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeDateTimeItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageNext">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Range.StiRangeDoubleItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PagePrevious">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeDoubleItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.PageSize">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeDoubleItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Parameters">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Range.StiRangeGuidItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ReportOpen">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeGuidItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ReportPrint">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeGuidItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ReportSave">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Range.StiRangeLongItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.SaveDocumentFile">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeLongItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.SendEMail">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeLongItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.Thumbs">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="F:Stimulsoft.Report.Win.Parameters.Range.StiRangeStringItemControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ViewModeContinuous">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeStringItemControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
             </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ViewModeMultiplePages">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ViewModeSinglePage">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ZoomMultiplePages">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ZoomOnePage">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ZoomPageWidth">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Stimulsoft.Report.Win.Properties.Resources.ZoomTwoPages">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+        <member name="M:Stimulsoft.Report.Win.Parameters.Range.StiRangeStringItemControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="F:Stimulsoft.Report.Win.Ribbon.StiRibbonDotMatrixViewUserControl.components">
@@ -539,380 +572,6 @@
         <member name="M:Stimulsoft.Report.Win.StiProgressRibbonForm.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueBoolItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueBoolItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueBoolItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueCharItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueCharItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueCharItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueDoubleItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueDoubleItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueDoubleItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueGuidItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueGuidItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueGuidItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueLongItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueLongItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueLongItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueDateTimeItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueDateTimeItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueDateTimeItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueImageItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueImageItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueImageItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueStringItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueStringItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Value.StiValueStringItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListBoolItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListBoolItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListBoolItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListButtonXControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListButtonXControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListButtonXControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListCharItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListCharItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListCharItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListDateTimeItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListDateTimeItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListDateTimeItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListDoubleItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListDoubleItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListDoubleItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListGuidItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListGuidItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListGuidItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListStringItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListStringItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListStringItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.List.StiListLongItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListLongItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.List.StiListLongItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeCharItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeCharItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeCharItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeDateTimeItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeDateTimeItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeDateTimeItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeDoubleItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeDoubleItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeDoubleItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeGuidItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeGuidItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeGuidItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeLongItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeLongItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeLongItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeStringItemControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeStringItemControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Stimulsoft.Report.Win.RequestFromUser.Range.StiRangeStringItemControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
             the contents of this method with the code editor.
             </summary>
         </member>
@@ -1389,6 +1048,11 @@
             If field equal true then viewer require horizontal scrollbar to show report.
             </summary>
         </member>
+        <member name="F:Stimulsoft.Report.Viewer.StiViewerControl.refreshReportTimer">
+            <summary>
+            This timer is used for the Report.RefreshTime property.
+            </summary>
+        </member>
         <member name="P:Stimulsoft.Report.Viewer.StiViewerControl.Report">
             <summary>
             Gets or sets viewed report.
@@ -1457,6 +1121,16 @@
         <member name="P:Stimulsoft.Report.Viewer.StiViewerControl.ShowBookmarksPanel">
             <summary>
             Gets or sets value indicates show bookmarks panel or no.
+            </summary>
+        </member>
+        <member name="P:Stimulsoft.Report.Viewer.StiViewerControl.ShowParametersButton">
+            <summary>
+            Gets or sets value indicates show parameters panel or no.
+            </summary>
+        </member>
+        <member name="P:Stimulsoft.Report.Viewer.StiViewerControl.ShowResourcesButton">
+            <summary>
+            Gets or sets value indicates show resources panel or no.
             </summary>
         </member>
         <member name="P:Stimulsoft.Report.Viewer.StiViewerControl.ShowThumbsPanel">

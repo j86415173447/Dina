@@ -177,7 +177,7 @@ namespace SnappFood_Employee_Evaluation.Scores_Ops
                         load.Refresh();
                         ////////////////////////////////////////////////////////// Send SMS
                         var customerClubSend = new CustomerClubSend();
-                        customerClubSend.Messages = new List<string>() { name + " عزیز \n" + Result.SelectedValue.ToString() + " امتیاز بابت " + Result.Text + " در ارزیابی عملکرد دوره " + Period.Text + " برای شما ثبت گردید. " + "\n" + "مجموع امتیاز شغلی شما: " + Score_Total + "\n" + "(اسنپ فود)" }.ToArray();
+                        customerClubSend.Messages = new List<string>() { name + " عزیز \n" + Result.SelectedValue.ToString() + " امتیاز بابت " + Result.Text + " در ارزیابی عملکرد دوره " + Period.Text + " برای شما ثبت گردید. " + "\n" + "مجموع امتیاز شغلی شما: " + Score_Total + "\n" + "(دیجی کالا)" }.ToArray();
                         customerClubSend.MobileNumbers = new List<string>() { mobile }.ToArray();
                         customerClubSend.SendDateTime = null;
                         customerClubSend.CanContinueInCaseOfError = false;

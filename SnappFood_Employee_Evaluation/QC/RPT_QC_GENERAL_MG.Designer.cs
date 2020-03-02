@@ -52,8 +52,6 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
-            this.bad_fwl = new System.Windows.Forms.CheckBox();
-            this.no_fwl = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
@@ -113,8 +111,6 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radGroupBox1.Controls.Add(this.bad_fwl);
-            this.radGroupBox1.Controls.Add(this.no_fwl);
             this.radGroupBox1.Controls.Add(this.Log_Status);
             this.radGroupBox1.Controls.Add(this.label6);
             this.radGroupBox1.Controls.Add(this.label5);
@@ -172,7 +168,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(542, 58);
+            this.label5.Location = new System.Drawing.Point(897, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 32;
@@ -199,9 +195,9 @@
             "منتظر تائید رهبر مربوطه",
             "تائید شده توسط رهبر مربوطه",
             "رد شده توسط رهبر مربوطه"});
-            this.comboBox1.Location = new System.Drawing.Point(305, 55);
+            this.comboBox1.Location = new System.Drawing.Point(662, 62);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 21);
+            this.comboBox1.Size = new System.Drawing.Size(218, 21);
             this.comboBox1.TabIndex = 31;
             this.comboBox1.Visible = false;
             // 
@@ -238,7 +234,7 @@
             this.QC_Agent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QC_Agent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.QC_Agent.FormattingEnabled = true;
-            this.QC_Agent.Location = new System.Drawing.Point(25, 54);
+            this.QC_Agent.Location = new System.Drawing.Point(343, 61);
             this.QC_Agent.Name = "QC_Agent";
             this.QC_Agent.Size = new System.Drawing.Size(169, 21);
             this.QC_Agent.TabIndex = 29;
@@ -327,7 +323,7 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label22.Location = new System.Drawing.Point(200, 58);
+            this.label22.Location = new System.Drawing.Point(518, 65);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(99, 13);
             this.label22.TabIndex = 12;
@@ -372,30 +368,6 @@
             // oleDbCommand1
             // 
             this.oleDbCommand1.Connection = this.oleDbConnection1;
-            // 
-            // bad_fwl
-            // 
-            this.bad_fwl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bad_fwl.AutoSize = true;
-            this.bad_fwl.BackColor = System.Drawing.Color.MistyRose;
-            this.bad_fwl.Location = new System.Drawing.Point(796, 64);
-            this.bad_fwl.Name = "bad_fwl";
-            this.bad_fwl.Size = new System.Drawing.Size(95, 17);
-            this.bad_fwl.TabIndex = 36;
-            this.bad_fwl.Text = "پیگیری ناقص";
-            this.bad_fwl.UseVisualStyleBackColor = false;
-            // 
-            // no_fwl
-            // 
-            this.no_fwl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.no_fwl.AutoSize = true;
-            this.no_fwl.BackColor = System.Drawing.Color.MistyRose;
-            this.no_fwl.Location = new System.Drawing.Point(929, 64);
-            this.no_fwl.Name = "no_fwl";
-            this.no_fwl.Size = new System.Drawing.Size(85, 17);
-            this.no_fwl.TabIndex = 35;
-            this.no_fwl.Text = "عدم پیگیری";
-            this.no_fwl.UseVisualStyleBackColor = false;
             // 
             // RPT_QC_GENERAL_MG
             // 
@@ -459,7 +431,5 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox Log_Status;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox bad_fwl;
-        private System.Windows.Forms.CheckBox no_fwl;
     }
 }

@@ -257,7 +257,7 @@ namespace SnappFood_Employee_Evaluation.Training
 
                         ////////////////////////////////////////////////////////// Send SMS
                         var customerClubSend = new CustomerClubSend();
-                        customerClubSend.Messages = new List<string>() { name + " عزیز \n" + (int.Parse(CLS_Period.Text) * per_hour_score).ToString() + " امتیاز بابت حضور در دوره آموزشی " + CRS_NM.Text + " برای شما ثبت شد. \n" + "مجموع امتیاز شغلی شما: " + Score_Total + "\n" + "(اسنپ فود)" }.ToArray();
+                        customerClubSend.Messages = new List<string>() { name + " عزیز \n" + (int.Parse(CLS_Period.Text) * per_hour_score).ToString() + " امتیاز بابت حضور در دوره آموزشی " + CRS_NM.Text + " برای شما ثبت شد. \n" + "مجموع امتیاز شغلی شما: " + Score_Total + "\n" + "(دیجی کالا)" }.ToArray();
                         customerClubSend.MobileNumbers = new List<string>() { mobile }.ToArray();
                         customerClubSend.SendDateTime = null;
                         customerClubSend.CanContinueInCaseOfError = false;
@@ -266,7 +266,7 @@ namespace SnappFood_Employee_Evaluation.Training
                         //var res = customerClubSend.Send(token, new SmsIrRestful.MessageSendObject()
                         //{
                         //    MobileNumbers = new List<string>() { mobile }.ToArray(),
-                        //    Messages = new List<string>() { name + " عزیز \n" + (int.Parse(CLS_Period.Text) * per_hour_score).ToString() + " امتیاز بابت حضور در دوره آموزشی " + CRS_NM.Text + " برای شما ثبت شد. \n" + "مجموع امتیاز شغلی شما: " + Score_Total + "(اسنپ فود)" }.ToArray(),
+                        //    Messages = new List<string>() { name + " عزیز \n" + (int.Parse(CLS_Period.Text) * per_hour_score).ToString() + " امتیاز بابت حضور در دوره آموزشی " + CRS_NM.Text + " برای شما ثبت شد. \n" + "مجموع امتیاز شغلی شما: " + Score_Total + "(دیجی کالا)" }.ToArray(),
                         //    LineNumber = sms_line,
                         //    SendDateTime = null,
                         //    CanContinueInCaseOfError = false

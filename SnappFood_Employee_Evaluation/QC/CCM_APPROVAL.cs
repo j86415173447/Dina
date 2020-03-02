@@ -430,7 +430,7 @@ namespace SnappFood_Employee_Evaluation.QC
                     loading.label1.Text = "در حال تبدیل فایل. شکیبا باشید...";
                     loading.Show();
 
-                    Mp3FileReader wf = new Mp3FileReader(sound_add);
+                    WaveFileReader wf = new WaveFileReader(sound_add);
                     string call_duration = wf.TotalTime.ToString(@"mm\:ss");
 
                     /////////////////////////////////////////////////////////// Get File Size
@@ -481,7 +481,7 @@ namespace SnappFood_Employee_Evaluation.QC
 
                     ms.Write((byte[]) voice_dt.Rows[radGridView1.SelectedRows[0].Index][4], 0, ((byte[])voice_dt.Rows[radGridView1.SelectedRows[0].Index][4]).Length);
                     ms.Position = 0;
-                    Mp3FileReader mp3_rdr = new Mp3FileReader(ms);
+                    WaveFileReader mp3_rdr = new WaveFileReader(ms);
                     WaveOut.Dispose();
                     WaveOut.Init(mp3_rdr);
                 }
@@ -539,7 +539,7 @@ namespace SnappFood_Employee_Evaluation.QC
             Lsn4.Checked = false;
             Qry1.Checked = false;
             Cls1.Checked = false;
-            Cls2.Checked = false;
+            Spk4.Checked = false;
             //No_swt.Checked = false;
             //Bad_swt.Checked = false;
             taboo.Checked = false;
@@ -629,15 +629,15 @@ namespace SnappFood_Employee_Evaluation.QC
             }
             if (dt22.Rows[0][15].ToString() != "True")
             {
-                Qry1.Checked = true;
+                Spk4.Checked = true;
             }
             if (dt22.Rows[0][16].ToString() != "True")
             {
-                Cls1.Checked = true;
+                Qry1.Checked = true;
             }
             if (dt22.Rows[0][17].ToString() != "True")
             {
-                Cls2.Checked = true;
+                Cls1.Checked = true;
             }
             Remarks.Text = dt22.Rows[0][21].ToString();
             Inv_link.Text = dt22.Rows[0][20].ToString();
@@ -669,7 +669,7 @@ namespace SnappFood_Employee_Evaluation.QC
             adp2.SelectCommand = new OleDbCommand();
             adp2.SelectCommand.Connection = oleDbConnection1;
             oleDbCommand1.Parameters.Clear();
-            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "' and [Voice] is not null";
+            string lcommand2 = "SELECT [Voice],[File_Row],[File_Name],[Voice_len],[Voice_size] FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] where [QC_ID] = '" + QC_ID.Text + "'";
             adp2.SelectCommand.CommandText = lcommand2;
             dt44.Clear();
             adp2.Fill(dt44);
@@ -727,7 +727,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 ///////////////////////////////////////////////////// UPDATE DB
                 oleDbCommand1.Parameters.Clear();
                 oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] Set " +
-                                            "[CC_M_Approval] = ?,[CC_M_Aprv_Usr] = ?,[CC_M_Aprv_Rmrk] = ?,[CC_M_Aprv_Dt] = ? where [QC_ID] = '" + QC_ID.Text + "' and [CC_M_Approval] is null";
+                                            "[CC_M_Approval] = ?,[CC_M_Aprv_Usr] = ?,[CC_M_Aprv_Rmrk] = ?,[CC_M_Aprv_Dt] = ?  where [QC_ID] = '" + QC_ID.Text + "' and [CC_M_Approval] is null";
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", "0");
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", user);
                 oleDbCommand1.Parameters.AddWithValue("@CLS_CD", CC_m_Remark.Text);
@@ -831,6 +831,11 @@ namespace SnappFood_Employee_Evaluation.QC
                 NO_FW_btn.ForeColor = Color.Black;
                 NO_FW_btn.Image = Properties.Resources.small_tick;
             }
+        }
+
+        private void radGridView1_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+
         }
     }
 }

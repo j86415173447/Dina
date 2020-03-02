@@ -30,6 +30,7 @@
         {
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TRN_DOC_STAFF));
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -58,6 +59,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Per_Pic = new System.Windows.Forms.PictureBox();
+            this.assessment = new Telerik.WinControls.UI.RadGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Grade_Point)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.total_hour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
@@ -76,9 +78,12 @@
             this.radPageViewPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid.MasterTemplate)).BeginInit();
+            this.radPageViewPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Per_Pic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessment.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -283,7 +288,7 @@
             this.radPageView1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.radPageView1.Location = new System.Drawing.Point(153, 128);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage1;
+            this.radPageView1.SelectedPage = this.radPageViewPage2;
             this.radPageView1.Size = new System.Drawing.Size(808, 367);
             this.radPageView1.TabIndex = 104;
             this.radPageView1.ThemeName = "Office2010Silver";
@@ -336,6 +341,7 @@
             // 
             // radPageViewPage2
             // 
+            this.radPageViewPage2.Controls.Add(this.assessment);
             this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(107F, 29F);
             this.radPageViewPage2.Location = new System.Drawing.Point(12, 39);
             this.radPageViewPage2.Name = "radPageViewPage2";
@@ -354,8 +360,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.logo_HQ;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 357);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 349);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(135, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,6 +378,30 @@
             this.Per_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Per_Pic.TabIndex = 95;
             this.Per_Pic.TabStop = false;
+            // 
+            // assessment
+            // 
+            this.assessment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.assessment.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.assessment.Location = new System.Drawing.Point(3, 0);
+            // 
+            // 
+            // 
+            this.assessment.MasterTemplate.AllowAddNewRow = false;
+            this.assessment.MasterTemplate.AllowColumnReorder = false;
+            this.assessment.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.assessment.MasterTemplate.EnableSorting = false;
+            this.assessment.MasterTemplate.ShowFilteringRow = false;
+            this.assessment.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.assessment.Name = "assessment";
+            this.assessment.ReadOnly = true;
+            this.assessment.ShowGroupPanel = false;
+            this.assessment.ShowNoDataText = false;
+            this.assessment.Size = new System.Drawing.Size(778, 316);
+            this.assessment.TabIndex = 105;
+            this.assessment.ThemeName = "Office2010Silver";
             // 
             // TRN_DOC_STAFF
             // 
@@ -426,9 +456,12 @@
             this.radPageViewPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            this.radPageViewPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Per_Pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessment.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assessment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -465,5 +498,6 @@
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage1;
         private Telerik.WinControls.UI.RadGridView grid;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage2;
+        private Telerik.WinControls.UI.RadGridView assessment;
     }
 }

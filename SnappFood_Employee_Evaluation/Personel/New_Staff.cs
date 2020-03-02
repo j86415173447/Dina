@@ -242,11 +242,18 @@ namespace SnappFood_Employee_Evaluation.Personel
                 oleDbCommand1.Parameters.AddWithValue("@Per_Tel", Per_tel.Text == "" ? "-" : Per_tel.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Per_Mob", Per_mob.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Per_Add", Per_Add.Text);
-                oleDbCommand1.Parameters.AddWithValue("@Per_Pic", (object)imageData);
+                if (imageData == null || pic_address == "")
+                {
+                    oleDbCommand1.Parameters.AddWithValue("@Per_Pic", "NULL");
+                }
+                else
+                {
+                    oleDbCommand1.Parameters.AddWithValue("@Per_Pic", (object)imageData);
+                }
                 oleDbCommand1.Parameters.AddWithValue("@History", History.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Employment_Dt", DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Birth_Dt", Br_Yr.Text + "/" + Br_Mth.Text + "/" + Br_Day.Text);
-                oleDbCommand1.Parameters.AddWithValue("@Email", (per_email.Text == "" ? "-" : per_email.Text)+"@zoodfood.com");
+                oleDbCommand1.Parameters.AddWithValue("@Email", (per_email.Text == "" ? "-" : per_email.Text) + "@digikala.com");
                 oleDbCommand1.Parameters.AddWithValue("@Degree", Degree.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Major", Major.Text);
                 oleDbCommand1.Parameters.AddWithValue("@Major_Status", Related_Mjr.Text);
@@ -284,20 +291,23 @@ namespace SnappFood_Employee_Evaluation.Personel
                     oleDbConnection1.Close();
                 }
                 ////////////////////////////////////////////// INSERT INTO PER_PRE_EVALUATION TBL
-                oleDbCommand1.Parameters.Clear();
-                oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[PER_PRE_EVALUATION] ([Doc_No],[Attention],[Q_App],[Q_Factor],[SW_Factor],[Reg_Factor_FE],[Q_FE],[Reg_Factor],[Speech]) VALUES (?,?,?,?,?,?,?,?,?)";
-                oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
-                oleDbCommand1.Parameters.AddWithValue("@Attention", s1);
-                oleDbCommand1.Parameters.AddWithValue("@Q_App", s2);
-                oleDbCommand1.Parameters.AddWithValue("@Q_Factor", s3);
-                oleDbCommand1.Parameters.AddWithValue("@SW_Factor", s4);
-                oleDbCommand1.Parameters.AddWithValue("@Reg_Factor_FE", s5);
-                oleDbCommand1.Parameters.AddWithValue("@Q_FE", s6);
-                oleDbCommand1.Parameters.AddWithValue("@Reg_Factor", s7);
-                oleDbCommand1.Parameters.AddWithValue("@Speech", s8);
-                oleDbConnection1.Open();
-                oleDbCommand1.ExecuteNonQuery();
-                oleDbConnection1.Close();
+                if (s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == "" || s8 == "")
+                {
+                    oleDbCommand1.Parameters.Clear();
+                    oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[PER_PRE_EVALUATION] ([Doc_No],[Attention],[Q_App],[Q_Factor],[SW_Factor],[Reg_Factor_FE],[Q_FE],[Reg_Factor],[Speech]) VALUES (?,?,?,?,?,?,?,?,?)";
+                    oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
+                    oleDbCommand1.Parameters.AddWithValue("@Attention", s1);
+                    oleDbCommand1.Parameters.AddWithValue("@Q_App", s2);
+                    oleDbCommand1.Parameters.AddWithValue("@Q_Factor", s3);
+                    oleDbCommand1.Parameters.AddWithValue("@SW_Factor", s4);
+                    oleDbCommand1.Parameters.AddWithValue("@Reg_Factor_FE", s5);
+                    oleDbCommand1.Parameters.AddWithValue("@Q_FE", s6);
+                    oleDbCommand1.Parameters.AddWithValue("@Reg_Factor", s7);
+                    oleDbCommand1.Parameters.AddWithValue("@Speech", s8);
+                    oleDbConnection1.Open();
+                    oleDbCommand1.ExecuteNonQuery();
+                    oleDbConnection1.Close();
+                }
                 //////////////////////////////////////////// SCORE CALCULATION AND SCORE TABLE UPDATE
                 int score1 = 0;
                 int score2 = 0;
@@ -333,7 +343,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                 }
                 ////////////////////////// English SCORE - SC2
 
-                if (int.Parse(english_score.Text) != 0)
+                if (int.Parse(english_score.Text) != 0 || english_score.Text != "")
                 {
                     //score2 = int.Parse(english_score.Text);
                     /////////////////////////////////////////// get ENG score
@@ -363,7 +373,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                     oleDbConnection1.Close();
                 }
                 /////////////////////////////////////////////// BACK GROUND SCORE - SC3
-                if (int.Parse(History.Text) > 0)
+                if (int.Parse(History.Text) > 0 || History.Text != "")
                 {
                     DataTable dtsc3 = new DataTable();
                     OleDbDataAdapter adpsc3 = new OleDbDataAdapter();
@@ -436,7 +446,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                 //////////////////////////////////////////////// Update station table
                 oleDbCommand1.Parameters.Clear();
                 oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_STATIONS] SET [Doc_No] = ?  where [main_shift] = N'" + Main_Shift.Text + "' and [station_no] = '" + Station.Text + "'";
-                oleDbCommand1.Parameters.AddWithValue("@Doc_No", Doc_Cd.Text);
+                oleDbCommand1.Parameters.AddWithValue("@main_shift", Doc_Cd.Text);
                 oleDbConnection1.Open();
                 oleDbCommand1.ExecuteNonQuery();
                 oleDbConnection1.Close();
@@ -450,31 +460,31 @@ namespace SnappFood_Employee_Evaluation.Personel
                 adpsc333.SelectCommand.CommandText = lcommandsc333;
                 adpsc333.Fill(dtsc333);
                 Job_Level.Text = dtsc333.Rows[0][2].ToString();
-                ////////////////////////////////////////////////////////// Send SMS
-                SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
-                var token = token_instance.GetToken(token_key,token_security);
+                //////////////////////////////////////////////////////////// Send SMS
+                //SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
+                //var token = token_instance.GetToken(token_key,token_security);
 
-                SmsIrRestful.MessageSend message_instance = new SmsIrRestful.MessageSend();
-                var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
-                {
-                    MobileNumbers = new List<string>() { Per_mob.Text }.ToArray(),
-                    Messages = new List<string>() { Sex.Text + " " + Per_Name.Text + " عزیز \n" + "مشخصات شما در سامانه متمرکز اطلاعات پرسنلی با شماره پرونده " + Doc_Cd.Text + " ثبت شد. \n" + "امتیاز شغلی شما: " + Score_Total.Text + "\n" + "به خانواده بزرگ اسنپ فود خوش آمدید" }.ToArray(),
-                    LineNumber = sms_line,
-                    SendDateTime = null,
-                    CanContinueInCaseOfError = false
-                });
+                //SmsIrRestful.MessageSend message_instance = new SmsIrRestful.MessageSend();
+                //var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
+                //{
+                //    MobileNumbers = new List<string>() { Per_mob.Text }.ToArray(),
+                //    Messages = new List<string>() { Sex.Text + " " + Per_Name.Text + " عزیز \n" + "مشخصات شما در سامانه متمرکز اطلاعات پرسنلی با شماره پرونده " + Doc_Cd.Text + " ثبت شد. \n" + "امتیاز شغلی شما: " + Score_Total.Text + "\n" + "به خانواده بزرگ دیجی کالا خوش آمدید" }.ToArray(),
+                //    LineNumber = sms_line,
+                //    SendDateTime = null,
+                //    CanContinueInCaseOfError = false
+                //});
 
-                ////////////////////////////////////////////////////////// add to customer club
-                var customerClubContactObject = new CustomerClubContactObject()
-                {
-                    Prefix = Sex.Text,
-                    FirstName = "-",
-                    LastName = Per_Name.Text,
-                    Mobile = Per_mob.Text,
-                    BirthDay = null,
-                    CategoryId = null
-                };
-                var customerClubContactResponse = new CustomerClubContact().Create(token, customerClubContactObject);
+                //////////////////////////////////////////////////////////// add to customer club
+                //var customerClubContactObject = new CustomerClubContactObject()
+                //{
+                //    Prefix = Sex.Text,
+                //    FirstName = "-",
+                //    LastName = Per_Name.Text,
+                //    Mobile = Per_mob.Text,
+                //    BirthDay = null,
+                //    CategoryId = null
+                //};
+                //var customerClubContactResponse = new CustomerClubContact().Create(token, customerClubContactObject);
 
                 mailing();
 
@@ -518,9 +528,9 @@ namespace SnappFood_Employee_Evaluation.Personel
             bool tab2 = false;
             bool tab3 = false;
             bool tab4 = false;
-            if (Per_Ntl_ID.Text.Length < 10)
+            if (!national_id_check())
             {
-                this.errorProvider.SetError(this.Per_Ntl_ID, "کد ملی صحیح وارد نشده است");
+                this.errorProvider.SetError(this.Per_Ntl_ID, "کد ملی از طرف سامانه ثبت احوال تائید نشد.");
                 data_error = true; tab1 = true;
             }
             if (Main_Shift.SelectedIndex == 0)
@@ -593,46 +603,46 @@ namespace SnappFood_Employee_Evaluation.Personel
                 this.errorProvider.SetError(this.Related_Mjr, "نوع رشته انتخاب نشده است");
                 data_error = true; tab1 = true;
             }
-            if (Training_list.Rows.Count == 0)
-            {
-                this.errorProvider.SetError(this.Training_Item, "آموزش اولیه وارد نشده است");
-                data_error = true; tab2 = true;
-            }
-            if (s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == "" || s8 == "")
-            {
-                this.errorProvider.SetError(this.Attention, "ارزیابی اولیه تکمیل نشده است");
-                data_error = true; tab3 = true;
-            }
-            if (english_score.Text == "" || int.Parse(english_score.Text) >= 101)
-            {
-                this.errorProvider.SetError(this.english_score, "نمره آزمون زبان صحیح وارد نشده است");
-                data_error = true; tab1 = true;
-            }
-            if (Per_Pic == null || Per_Pic.Image == null)
-            {
-                this.errorProvider.SetError(this.Per_Pic, "عکس پرسنلی آپلود نشده است");
-                data_error = true; tab1 = true;
-            }
-            if (Station.Text == "")
-            {
-                this.errorProvider.SetError(this.Station, "استیشن وارد نشده است");
-                data_error = true; tab4 = true;
-            }
-            if (Mentor.Text == "")
-            {
-                this.errorProvider.SetError(this.Mentor, "نام مربی وارد نشده است");
-                data_error = true; tab4 = true;
-            }
-            if (Main_tsk.SelectedIndex == 0)
-            {
-                this.errorProvider.SetError(this.Main_tsk, "تسک انتخاب نشده است");
-                data_error = true; tab4 = true;
-            }
-            if (Scnd_tsk.SelectedIndex == 0)
-            {
-                this.errorProvider.SetError(this.Scnd_tsk, "تسک فرعی انتخاب نشده است");
-                data_error = true; tab4 = true;
-            }
+            //if (Training_list.Rows.Count == 0)
+            //{
+            //    this.errorProvider.SetError(this.Training_Item, "آموزش اولیه وارد نشده است");
+            //    data_error = true; tab2 = true;
+            //}
+            //if (s1 == "" || s2 == "" || s3 == "" || s4 == "" || s5 == "" || s6 == "" || s7 == "" || s8 == "")
+            //{
+            //    this.errorProvider.SetError(this.Attention, "ارزیابی اولیه تکمیل نشده است");
+            //    data_error = true; tab3 = true;
+            //}
+            //if (english_score.Text == "" || int.Parse(english_score.Text) >= 101)
+            //{
+            //    this.errorProvider.SetError(this.english_score, "نمره آزمون زبان صحیح وارد نشده است");
+            //    data_error = true; tab1 = true;
+            //}
+            //if (Per_Pic == null || Per_Pic.Image == null)
+            //{
+            //    this.errorProvider.SetError(this.Per_Pic, "عکس پرسنلی آپلود نشده است");
+            //    data_error = true; tab1 = true;
+            //}
+            //if (Station.Text == "")
+            //{
+            //    this.errorProvider.SetError(this.Station, "استیشن وارد نشده است");
+            //    data_error = true; tab4 = true;
+            //}
+            //if (Mentor.Text == "")
+            //{
+            //    this.errorProvider.SetError(this.Mentor, "نام مربی وارد نشده است");
+            //    data_error = true; tab4 = true;
+            //}
+            //if (Main_tsk.SelectedIndex == 0)
+            //{
+            //    this.errorProvider.SetError(this.Main_tsk, "تسک انتخاب نشده است");
+            //    data_error = true; tab4 = true;
+            //}
+            //if (Scnd_tsk.SelectedIndex == 0)
+            //{
+            //    this.errorProvider.SetError(this.Scnd_tsk, "تسک فرعی انتخاب نشده است");
+            //    data_error = true; tab4 = true;
+            //}
             if (job_Groups.SelectedIndex == 0)
             {
                 this.errorProvider.SetError(this.job_Groups, "گروه شغلی انتخاب نشده است");
@@ -656,29 +666,29 @@ namespace SnappFood_Employee_Evaluation.Personel
             }
             if (Main_Shift.SelectedIndex != 0 && Station.Text != "")
             {
-                ////////////////////////////////////////////////// check duplicate station
-                DataTable dt2 = new DataTable();
-                OleDbDataAdapter adp2 = new OleDbDataAdapter();
-                adp2.SelectCommand = new OleDbCommand();
-                adp2.SelectCommand.Connection = oleDbConnection1;
-                oleDbCommand1.Parameters.Clear();
-                string lcommand2 = "Select sel1.Doc_No, Sel2.Per_Name from ((SELECT [Station_No],[Main_Shift],[Doc_No] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_STATIONS]) Sel1 " +
-                                   "left join (select[Doc_No],[per_name] from[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on sel1.Doc_No = Sel2.Doc_No) where Sel1.[main_shift] = N'" + Main_Shift.Text + "' and sel1.[station_no] = '" + Station.Text + "'";
-                adp2.SelectCommand.CommandText = lcommand2;
-                adp2.Fill(dt2);
-                if (dt2.Rows.Count != 0)
-                {
-                    if (dt2.Rows[0][0].ToString() != "")
-                    {
-                        this.errorProvider.SetError(this.Station, "استیشن وارد شده متعلق به " + dt2.Rows[0][1].ToString() + " می باشد");
-                        data_error = true; tab1 = true;
-                    }
-                }
-                else
-                {
-                    this.errorProvider.SetError(this.Station, "استیشن وارد شده، تعریف شده نیست");
-                    data_error = true; tab1 = true;
-                }
+                //////////////////////////////////////////////////// check duplicate station
+                //DataTable dt2 = new DataTable();
+                //OleDbDataAdapter adp2 = new OleDbDataAdapter();
+                //adp2.SelectCommand = new OleDbCommand();
+                //adp2.SelectCommand.Connection = oleDbConnection1;
+                //oleDbCommand1.Parameters.Clear();
+                //string lcommand2 = "Select sel1.Doc_No, Sel2.Per_Name from ((SELECT [Station_No],[Main_Shift],[Doc_No] FROM [SNAPP_CC_EVALUATION].[dbo].[PER_STATIONS]) Sel1 " +
+                //                   "left join (select[Doc_No],[per_name] from[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on sel1.Doc_No = Sel2.Doc_No) where Sel1.[main_shift] = N'" + Main_Shift.Text + "' and sel1.[station_no] = '" + Station.Text + "'";
+                //adp2.SelectCommand.CommandText = lcommand2;
+                //adp2.Fill(dt2);
+                //if (dt2.Rows.Count != 0)
+                //{
+                //    if (dt2.Rows[0][0].ToString() != "")
+                //    {
+                //        this.errorProvider.SetError(this.Station, "استیشن وارد شده متعلق به " + dt2.Rows[0][1].ToString() + " می باشد");
+                //        data_error = true; tab1 = true;
+                //    }
+                //}
+                //else
+                //{
+                //    this.errorProvider.SetError(this.Station, "استیشن وارد شده، تعریف شده نیست");
+                //    data_error = true; tab1 = true;
+                //}
             }
             if (data_error == false)
             {
@@ -882,8 +892,8 @@ namespace SnappFood_Employee_Evaluation.Personel
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("postman.sfes@gmail.com");
-                mail.To.Add("ali.hassanein@zoodfood.com,javad.taghinasab@zoodfood.com,saeed.lotfi@zoodfood.com");
+                mail.From = new MailAddress("postman.dkes@gmail.com");
+                mail.To.Add("j.taghinasab@digikala.com,L.maharati@digikala.com,S.Khodabandeh@digikala.com"); //
                 mail.Subject = "استخدام - " + Sex.Text + " " + Per_Name.Text;
                 mail.IsBodyHtml = true;
                 mail.Body = "<table width = '100%'><tr><td align='right'><p dir='rtl'>" +
@@ -897,13 +907,13 @@ namespace SnappFood_Employee_Evaluation.Personel
                             "تسک فرعی: <b>" + Scnd_tsk.Text + "</b><br>" +
                             "گروه کاری: <b>" + job_Groups.Text + "</b><br>" +
                             "تاریخ استخدام: <b>" + DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text + "</b>" + "</font>" +
-                            "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل اسنپ فود - SFES" + "</b></font>" +
+                            "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل دیجی کالا - DKES" + "</b></font>" +
                             "<br><br><br><font color='Red'>" + "این ایمیل به صورت اتوماتیک ارسال شده است. لطفا به آن پاسخ ندهید." + "</font>" +
                             "</font></p></td></tr></table>";
 
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("postman.sfes@gmail.com", "j86415173447");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("postman.dkes@gmail.com", "j86415173447");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
             }
@@ -989,6 +999,28 @@ namespace SnappFood_Employee_Evaluation.Personel
                 Leader.Text = "";
                 Supervisor.Text = "";
                 Manager.Text = "";
+            }
+        }
+
+        private bool national_id_check()
+        {
+            if (Per_Ntl_ID.Text != "" || Per_Ntl_ID.Text.Length == 10)
+            {
+                int i = int.Parse(Per_Ntl_ID.Text);
+                int[] digits = Per_Ntl_ID.Text.Select(t => int.Parse(t.ToString())).ToArray();
+                int key = digits[0] * 10 + digits[1] * 9 + digits[2] * 8 + digits[3] * 7 + digits[4] * 6 + digits[5] * 5 + digits[6] * 4 + digits[7] * 3 + digits[8] * 2;
+                if ((11 - (key % 11)) == digits[9])
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
             }
         }
     }

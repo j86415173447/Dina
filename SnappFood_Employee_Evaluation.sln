@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappFood_Employee_Evaluation", "SnappFood_Employee_Evaluation\SnappFood_Employee_Evaluation.csproj", "{DE3D9B8E-D3B1-4927-A4BF-08F461028EA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiKala_Employee_Evaluation", "Snappfood_Employee_Evaluation\DigiKala_Employee_Evaluation.csproj", "{DE3D9B8E-D3B1-4927-A4BF-08F461028EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F74D8BA2-A53A-4B67-9E86-C7EC14A8A2EC}
 	EndGlobalSection
 EndGlobal

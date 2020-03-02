@@ -190,8 +190,21 @@ namespace SnappFood_Employee_Evaluation.Training
             {
                 Score_Total2 = "0";
             }
-            total_hour.Text = Score_Total2 + " ساعت "; 
+            total_hour.Text = Score_Total2 + " ساعت ";
 
+            ///////////////////////////////////////////// Assessment (For Sahar) - Fake
+            DataTable dtsc989 = new DataTable();
+            OleDbDataAdapter adpsc989 = new OleDbDataAdapter();
+            adpsc989.SelectCommand = new OleDbCommand();
+            adpsc989.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommandsc989 = "Select 'Introduction and Opening' 'مرجع نیاز', 'Soft Skill' 'نوع نیاز', N'مهارت آغاز مکالمه فوق العاده' 'دوره مرتبط', N'4 ساعت' 'مدت دوره' union "
+                                   + "Select 'Query Sentence' 'مرجع نیاز', 'Soft Skill' 'نوع نیاز', N'آشنایی با نیازهای مشتری' 'دوره مرتبط', N'6 ساعت' 'مدت دوره' union "
+                                   + "Select 'System Updation' 'مرجع نیاز', 'System Skill' 'نوع نیاز', N'نحوه ارجاع تیکت در CRM' 'دوره مرتبط', N'2 ساعت' 'مدت دوره'";
+            adpsc989.SelectCommand.CommandText = lcommandsc989;
+            adpsc989.Fill(dtsc989);
+            assessment.DataSource = dtsc989;
+            assessment.BestFitColumns();
         }
 
         private void Exit_Click(object sender, EventArgs e)

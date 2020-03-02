@@ -118,5 +118,10 @@ namespace SnappFood_Employee_Evaluation.QC
                 update_grid();
             }
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

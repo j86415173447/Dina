@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
   <asmv1:assemblyIdentity name="SnappFood_Employee_Evaluation.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="logo_HQ.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:iconFile="digikala-logo-F8AF056E6D-seeklogo.com.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="SnappFood_Employee_Evaluation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bpokdk5wqm09K8AGLfLjQc87bf/mZBOdHhkYD6/KOqc=</dsig:DigestValue>
+        <dsig:DigestValue>9gP1Ykh+fUUBbi4v0J5vlGDk6mB0VFwqmMozeWWfhDI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -67,18 +67,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ICSharpCode.SharpZipLib.dll" size="192512">
-      <assemblyIdentity name="ICSharpCode.SharpZipLib" version="0.85.5.452" publicKeyToken="1B03E6ACF1164F73" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>z8KoOFaaSNFqFSabtwHeh7gbPSvDA7t8TDckzDu6DFA=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.WMPLib.dll" size="330752">
       <assemblyIdentity name="Interop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -86,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZQvbDgJ81pHyoVljmkfeplFgzjdOV2KOvu9gS2W9z0o=</dsig:DigestValue>
+        <dsig:DigestValue>VPwOLskRmkgniLe72G6i5XtTKz8S5we5tV1WsVZ/1C0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -128,85 +116,97 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SmsIrRestful.dll" size="36864">
-      <assemblyIdentity name="SmsIrRestful" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="SmsIrRestful" version="1.1.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>57QRreG+EeTznmXneZ0/BrtkLuQVTBj5VGfjK5zRJaY=</dsig:DigestValue>
+        <dsig:DigestValue>B9rqjEU2S07Py+F8SdTIWWyNx5gnpTTKVtbWcJolRuc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="3224064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SnappFood_Employee_Evaluation.exe" size="3342848">
       <assemblyIdentity name="SnappFood_Employee_Evaluation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yWYCZNq7HmDkF7tnBoLcVuQkE6YJadaSGuGbKk/xTWY=</dsig:DigestValue>
+        <dsig:DigestValue>Rs1TvdM1LSqiM32omZx8UJ3mN4S5f5O/BOkaE4bRQmQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Base.dll" size="1560576">
-      <assemblyIdentity name="Stimulsoft.Base" version="2017.1.10.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Base.dll" size="1619560">
+      <assemblyIdentity name="Stimulsoft.Base" version="2018.3.3.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uw9XLGcsWERF3ZP2NfCQeXqD8Q0qnIPGTUye0xV8xu8=</dsig:DigestValue>
+        <dsig:DigestValue>42KqVnJpGpEpGpNm8jnpq9cvAJqCpTU/fKD5D8MQnqs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Controls.dll" size="271976">
-      <assemblyIdentity name="Stimulsoft.Controls" version="2017.1.10.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Controls.dll" size="333416">
+      <assemblyIdentity name="Stimulsoft.Controls" version="2018.3.3.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>21/0n0a3ZQwhLeDF13ELVNEucQ8+V9lo9fMXmznDT34=</dsig:DigestValue>
+        <dsig:DigestValue>j/zaqDyY4K/VEgnaOsnISZxOkCexgwvB8DkHUG0t2fk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Controls.Win.dll" size="4150888">
-      <assemblyIdentity name="Stimulsoft.Controls.Win" version="2017.1.10.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Controls.Win.dll" size="4171368">
+      <assemblyIdentity name="Stimulsoft.Controls.Win" version="2018.3.3.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ChQSJtZjUzYa7DDLCflhHiM/YZKuPaTzI1YtwNskPHA=</dsig:DigestValue>
+        <dsig:DigestValue>AhTj31gi0rs1Ob6ScZSs0tRJiamLYWQEp5iqQGyFjvE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Report.dll" size="7665256">
-      <assemblyIdentity name="Stimulsoft.Report" version="2017.1.10.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Data.dll" size="345704">
+      <assemblyIdentity name="Stimulsoft.Data" version="2018.3.3.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8yIBqUnvP8LdQOjvqSmeK9IDTxdGY1rC6ElAnV/o8qc=</dsig:DigestValue>
+        <dsig:DigestValue>quXmngrjEZziSxPaG8ewjE0qMmncet8r1PszRXTnCWE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Report.Win.dll" size="1021544">
-      <assemblyIdentity name="Stimulsoft.Report.Win" version="2017.1.10.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Report.dll" size="7902824">
+      <assemblyIdentity name="Stimulsoft.Report" version="2018.3.3.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HUFUuRVJ2FYcxKxnKDAfxvZxfYcBiQzaWUZdS18yNOY=</dsig:DigestValue>
+        <dsig:DigestValue>2ckdm4v7xK2v5oBdDX6ixEFBRYw6mu8BX+mfytstE1I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Stimulsoft.Report.Win.dll" size="1267304">
+      <assemblyIdentity name="Stimulsoft.Report.Win" version="2018.3.3.0" publicKeyToken="EBE6666CBA19647A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>t5mpnv2DIOfDXXLONpv7euJq8Fxus01cdPfpmcsKYY0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,6 +270,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="digikala-logo-F8AF056E6D-seeklogo.com.ico" size="113498">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mJO5BMF2tHwImsAjPPDoaDICFddgBpNLMd9RQhrcUWc=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="logo_HQ.ico" size="16238">
     <hash>
       <dsig:Transforms>

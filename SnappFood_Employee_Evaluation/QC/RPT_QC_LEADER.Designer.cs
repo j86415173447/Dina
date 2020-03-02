@@ -62,7 +62,7 @@
             this.Exit});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(731, 56);
+            this.radMenu1.Size = new System.Drawing.Size(731, 59);
             this.radMenu1.TabIndex = 67;
             this.radMenu1.ThemeName = "Office2010Silver";
             // 
@@ -232,7 +232,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "گزارش عملکرد رهبرها";
+            this.Text = "گزارش عملکرد سرپرست ها";
             this.ThemeName = "Office2010Silver";
             this.Load += new System.EventHandler(this.QC_GENERAL_REPORT_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QC_GENERAL_REPORT_KeyDown);

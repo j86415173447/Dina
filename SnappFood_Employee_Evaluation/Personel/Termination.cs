@@ -195,11 +195,12 @@ namespace SnappFood_Employee_Evaluation.Personel
                     {
                         ////////////////////////////////////////////// UPDATE PER_DOCUMENTS TBL
                         oleDbCommand1.Parameters.Clear();
-                        oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Termination_Reason] = ?, [Termination] = ?,[Termination_DT] = ?,[Termination_Insrt_DT] = getdate(),[Termination_Insrt_TM] = getdate(),[Termination_User] = ?  WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
+                        oleDbCommand1.CommandText = "UPDATE [SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS] SET [Termination_Reason] = ?, [Termination] = ?,[Termination_DT] = ?,[Termination_Insrt_DT] = getdate(),[Termination_Insrt_TM] = getdate(),[Termination_User] = ?, [Termination_Type] = ? WHERE [Doc_No] = '" + Doc_Cd.Text + "'";
                         oleDbCommand1.Parameters.AddWithValue("@Reason", Reason.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Doc_No", 1);
                         oleDbCommand1.Parameters.AddWithValue("@System_Id", DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text);
                         oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", user);
+                        oleDbCommand1.Parameters.AddWithValue("@Chargoon_Id", Termination_Type.Text);
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();
@@ -209,7 +210,6 @@ namespace SnappFood_Employee_Evaluation.Personel
                         oleDbConnection1.Open();
                         oleDbCommand1.ExecuteNonQuery();
                         oleDbConnection1.Close();
-                        mailing();
                         mailing2();
                         RadMessageBox.Show(this, " پرونده پرسنلی " + "\n" + " به شماره: " + Doc_Cd.Text + "\n" + " به نام " + Per_Name.Text + "\n" + " با موفقیت بسته شده و قطع همکاری ثبت گردید." + "\n\n تاریخ قطع همکاری: " + DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text + "\n" + "استیشن مربوطه تخلیه گردید." + "\n", "پیغام", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
                     }
@@ -221,48 +221,14 @@ namespace SnappFood_Employee_Evaluation.Personel
             }
         }
 
-        public void mailing()
-        {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("postman.sfes@gmail.com");
-                mail.To.Add("ali.hassanein@zoodfood.com,abedi@tirojnet.com,azami@tirojnet.com,a.rostami@tirojnet.com,abedi@zoodfood.com");
-                mail.Subject = "قطع همکاری - " + Per_Name.Text;
-                mail.IsBodyHtml = true;
-                mail.Body = "<table width = '100%'><tr><td align='right'><p dir='rtl'>" +
-                            "<font face='Tahoma'><font size='5px'> <b>" + "اعلام قطع همکاری پرسنل" + "</b></font>" + "<br>" + "<br>" + "<font size='3px'>" +
-                            "شماره پرونده: <b>" + Doc_Cd.Text + "</b><br>" +
-                            "نام همکار: <b>" + Per_Name.Text + "</b><br>" +
-                            "واحد سازمانی: <b>" + Per_Dep.Text + "</b><br>" +
-                            "شیفت کاری: <b>" + Main_Shift.Text + "</b><br>" +
-                            "شماره داخلی: <b>" + System_Id.Text + "</b><br>" +
-                            "تاریخ قطع همکاری: <b>" + DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text + "</b>" + "</font>" +
-                            "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل اسنپ فود - SFES" + "</b></font>" +
-                            "<br><br><br><font color='Red'>" + "این ایمیل به صورت اتوماتیک ارسال شده است. لطفا به آن پاسخ ندهید." + "</font>" +
-                            "</font></p></td></tr></table>";
-
-
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("postman.sfes@gmail.com", "j86415173447");
-                SmtpServer.EnableSsl = true;
-                SmtpServer.Send(mail);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         public void mailing2()
         {
             try
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("postman.sfes@gmail.com");
-                mail.To.Add("javad.taghinasab@zoodfood.com,saeed.lotfi@zoodfood.com");
+                mail.From = new MailAddress("postman.dkes@gmail.com");
+                mail.To.Add("j.taghinasab@digikala.com,L.maharati@digikala.com,S.Khodabandeh@digikala.com"); //
                 mail.Subject = "قطع همکاری - " + Per_Name.Text;
                 mail.IsBodyHtml = true;
                 mail.Body = "<table width = '100%'><tr><td align='right'><p dir='rtl'>" +
@@ -272,15 +238,16 @@ namespace SnappFood_Employee_Evaluation.Personel
                             "واحد سازمانی: <b>" + Per_Dep.Text + "</b><br>" +
                             "شیفت کاری: <b>" + Main_Shift.Text + "</b><br>" +
                             "شماره داخلی: <b>" + System_Id.Text + "</b><br>" +
+                            "نوع قطع همکاری: <b>" + Termination_Type.Text + "</b><br>" +
                             "علت قطع همکاری: <b>" + Reason.Text + "</b><br>" +
                             "تاریخ قطع همکاری: <b>" + DT_Yr.Text + "/" + DT_Mth.Text + "/" + DT_Day.Text + "</b>" + "</font>" +
-                            "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل اسنپ فود - SFES" + "</b></font>" +
+                            "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "<b>" + "سامانه متمرکز اطلاعات و پایش عملکرد پرسنل دیجی کالا - DKES" + "</b></font>" +
                             "<br><br><br><font color='Red'>" + "این ایمیل به صورت اتوماتیک ارسال شده است. لطفا به آن پاسخ ندهید." + "</font>" +
                             "</font></p></td></tr></table>";
 
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("postman.sfes@gmail.com", "j86415173447");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("postman.dkes@gmail.com", "j86415173447");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
             }

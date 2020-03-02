@@ -43,6 +43,7 @@
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.Save = new Telerik.WinControls.UI.RadMenuItem();
             this.Print = new Telerik.WinControls.UI.RadMenuItem();
+            this.New = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.manager = new System.Windows.Forms.ComboBox();
@@ -52,7 +53,6 @@
             this.shift = new System.Windows.Forms.ComboBox();
             this.Grp_Nm = new Telerik.WinControls.UI.RadTextBox();
             this.Grp_ACTV = new Telerik.WinControls.UI.RadCheckBox();
-            this.New = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
@@ -75,22 +75,24 @@
             this.supervisor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supervisor.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supervisor.FormattingEnabled = true;
-            this.supervisor.Location = new System.Drawing.Point(246, 191);
+            this.supervisor.Location = new System.Drawing.Point(156, 232);
             this.supervisor.Name = "supervisor";
             this.supervisor.Size = new System.Drawing.Size(175, 22);
             this.supervisor.TabIndex = 95;
+            this.supervisor.Visible = false;
             this.supervisor.Click += new System.EventHandler(this.coordinator_Click);
             // 
             // radLabel21
             // 
             this.radLabel21.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel21.Location = new System.Drawing.Point(453, 194);
+            this.radLabel21.Location = new System.Drawing.Point(363, 235);
             this.radLabel21.Name = "radLabel21";
             this.radLabel21.Size = new System.Drawing.Size(58, 18);
             this.radLabel21.TabIndex = 96;
             this.radLabel21.Text = "سوپروایزر:";
             this.radLabel21.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel21.ThemeName = "Office2010Silver";
+            this.radLabel21.Visible = false;
             // 
             // radLabel4
             // 
@@ -128,11 +130,11 @@
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel2.Location = new System.Drawing.Point(207, 152);
+            this.radLabel2.Location = new System.Drawing.Point(180, 152);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(33, 18);
+            this.radLabel2.Size = new System.Drawing.Size(60, 18);
             this.radLabel2.TabIndex = 93;
-            this.radLabel2.Text = "رهبر:";
+            this.radLabel2.Text = "سرپرست:";
             this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel2.ThemeName = "Office2010Silver";
             // 
@@ -210,6 +212,15 @@
             this.Print.UseCompatibleTextRendering = false;
             this.Print.Click += new System.EventHandler(this.Print_Click);
             // 
+            // New
+            // 
+            this.New.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.plusplus;
+            this.New.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.New.Name = "New";
+            this.New.Text = "ورودی جدید";
+            this.New.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.New.Click += new System.EventHandler(this.New_Click);
+            // 
             // Exit
             // 
             this.Exit.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.power;
@@ -223,7 +234,7 @@
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(207, 194);
+            this.radLabel1.Location = new System.Drawing.Point(476, 193);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(33, 18);
             this.radLabel1.TabIndex = 97;
@@ -238,9 +249,9 @@
             this.manager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.manager.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manager.FormattingEnabled = true;
-            this.manager.Location = new System.Drawing.Point(12, 190);
+            this.manager.Location = new System.Drawing.Point(246, 190);
             this.manager.Name = "manager";
-            this.manager.Size = new System.Drawing.Size(171, 22);
+            this.manager.Size = new System.Drawing.Size(175, 22);
             this.manager.TabIndex = 98;
             this.manager.Click += new System.EventHandler(this.coordinator_Click);
             // 
@@ -279,7 +290,7 @@
             this.leader.FormattingEnabled = true;
             this.leader.Location = new System.Drawing.Point(12, 149);
             this.leader.Name = "leader";
-            this.leader.Size = new System.Drawing.Size(171, 22);
+            this.leader.Size = new System.Drawing.Size(162, 22);
             this.leader.TabIndex = 101;
             this.leader.Click += new System.EventHandler(this.coordinator_Click);
             // 
@@ -292,11 +303,12 @@
             this.shift.FormattingEnabled = true;
             this.shift.Items.AddRange(new object[] {
             "",
-            "روز",
+            "صبح",
+            "عصر",
             "شب"});
             this.shift.Location = new System.Drawing.Point(12, 107);
             this.shift.Name = "shift";
-            this.shift.Size = new System.Drawing.Size(171, 22);
+            this.shift.Size = new System.Drawing.Size(162, 22);
             this.shift.TabIndex = 102;
             this.shift.SelectedIndexChanged += new System.EventHandler(this.dep_SelectedIndexChanged);
             // 
@@ -318,15 +330,6 @@
             this.Grp_ACTV.Size = new System.Drawing.Size(69, 17);
             this.Grp_ACTV.TabIndex = 104;
             this.Grp_ACTV.Text = ":گروه فعال";
-            // 
-            // New
-            // 
-            this.New.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.plusplus;
-            this.New.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.New.Name = "New";
-            this.New.Text = "ورودی جدید";
-            this.New.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // GEN_GROUPING
             // 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Score_Detail_Report));
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
@@ -45,11 +46,11 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.Grade_Point = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Per_Pic = new System.Windows.Forms.PictureBox();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             this.Search = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
@@ -64,9 +65,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grade_Point)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Per_Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +189,6 @@
             this.grid.ShowNoDataText = false;
             this.grid.Size = new System.Drawing.Size(608, 335);
             this.grid.TabIndex = 84;
-            this.grid.Text = "radGridView1";
             this.grid.ThemeName = "Office2010Silver";
             // 
             // Salary
@@ -237,16 +237,6 @@
             this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel4.ThemeName = "Office2010Silver";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.logo_HQ;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 328);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 136);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 83;
-            this.pictureBox1.TabStop = false;
-            // 
             // Per_Pic
             // 
             this.Per_Pic.BackColor = System.Drawing.Color.LavenderBlush;
@@ -269,7 +259,6 @@
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(782, 53);
             this.radMenu1.TabIndex = 68;
-            this.radMenu1.Text = "radMenu1";
             this.radMenu1.ThemeName = "Office2010Silver";
             // 
             // Search
@@ -292,6 +281,16 @@
             this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exit.UseCompatibleTextRendering = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 328);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 136);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 83;
+            this.pictureBox1.TabStop = false;
             // 
             // Score_Detail_Report
             // 
@@ -342,9 +341,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Grade_Point)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Per_Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -368,11 +367,11 @@
         private Telerik.WinControls.UI.RadLabel Per_Dep;
         private System.Windows.Forms.PictureBox Per_Pic;
         private Telerik.WinControls.UI.RadLabel Main_Shift;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Telerik.WinControls.UI.RadGridView grid;
         private Telerik.WinControls.UI.RadLabel Salary;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel Grade_Point;
         private Telerik.WinControls.UI.RadLabel radLabel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

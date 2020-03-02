@@ -29,16 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
-            this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
-            this.Save = new Telerik.WinControls.UI.RadMenuItem();
-            this.Print = new Telerik.WinControls.UI.RadMenuItem();
-            this.Exit = new Telerik.WinControls.UI.RadMenuItem();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.oleDbCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.Header = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.amw_gauge = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
             this.lbl_tot_amw = new System.Windows.Forms.Label();
@@ -61,10 +56,10 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.test_label = new Telerik.WinControls.UI.RadLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amw_gauge)).BeginInit();
             this.amw_gauge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aht_gauge)).BeginInit();
@@ -72,61 +67,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.total_gauge)).BeginInit();
             this.total_gauge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.test_label)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            this.radLabel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // radMenu1
-            // 
-            this.radMenu1.AutoSize = false;
-            this.radMenu1.BackColor = System.Drawing.Color.Pink;
-            this.radMenu1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.Save,
-            this.Print,
-            this.Exit});
-            this.radMenu1.Location = new System.Drawing.Point(0, 0);
-            this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1411, 10);
-            this.radMenu1.TabIndex = 67;
-            this.radMenu1.ThemeName = "Office2010Silver";
-            this.radMenu1.Visible = false;
-            // 
-            // Save
-            // 
-            this.Save.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.search_icon;
-            this.Save.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Save.Name = "Save";
-            this.Save.Text = "  جستجو  ";
-            this.Save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Save.UseCompatibleTextRendering = false;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
-            // 
-            // Print
-            // 
-            this.Print.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.Excel_icon1;
-            this.Print.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Print.Name = "Print";
-            this.Print.Text = "خروجی اکسل";
-            this.Print.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Print.UseCompatibleTextRendering = false;
-            this.Print.Click += new System.EventHandler(this.Print_Click);
-            // 
-            // Exit
-            // 
-            this.Exit.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.power;
-            this.Exit.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Exit.Name = "Exit";
-            this.Exit.Text = "   خروج   ";
-            this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Exit.UseCompatibleTextRendering = false;
-            // 
             // radGridView1
             // 
-            this.radGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radGridView1.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Bold);
-            this.radGridView1.Location = new System.Drawing.Point(0, 173);
+            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radGridView1.Font = new System.Drawing.Font("IRANSansWeb", 15.5F, System.Drawing.FontStyle.Bold);
+            this.radGridView1.Location = new System.Drawing.Point(0, 66);
             // 
             // 
             // 
@@ -135,13 +85,13 @@
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.radGridView1.MasterTemplate.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect;
             this.radGridView1.MasterTemplate.ShowFilteringRow = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition9;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.ShowGroupPanel = false;
             this.radGridView1.ShowGroupPanelScrollbars = false;
             this.radGridView1.ShowNoDataText = false;
-            this.radGridView1.Size = new System.Drawing.Size(1408, 480);
+            this.radGridView1.Size = new System.Drawing.Size(1378, 359);
             this.radGridView1.TabIndex = 69;
             this.radGridView1.ThemeName = "Office2010Silver";
             this.radGridView1.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridView1_CellFormatting);
@@ -152,28 +102,15 @@
             // 
             // Header
             // 
-            this.Header.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Header.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Header.Font = new System.Drawing.Font("IRANSansWeb", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Header.ForeColor = System.Drawing.Color.Navy;
-            this.Header.Location = new System.Drawing.Point(119, 122);
+            this.Header.Location = new System.Drawing.Point(3, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1289, 38);
-            this.Header.TabIndex = 70;
-            this.Header.Text = "تاریخ: ";
-            this.Header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::SnappFood_Employee_Evaluation.Properties.Resources.QC_Dashboard_2;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1405, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
+            this.Header.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Header.Size = new System.Drawing.Size(278, 66);
+            this.Header.TabIndex = 3;
+            this.Header.Text = "تاریخ:";
+            this.Header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // timer1
             // 
@@ -190,9 +127,9 @@
             this.radialGaugeArc1,
             this.radialGaugeArc2,
             this.radialGaugeNeedle1});
-            this.amw_gauge.Location = new System.Drawing.Point(980, 747);
+            this.amw_gauge.Location = new System.Drawing.Point(626, 465);
             this.amw_gauge.Name = "amw_gauge";
-            this.amw_gauge.Size = new System.Drawing.Size(301, 267);
+            this.amw_gauge.Size = new System.Drawing.Size(301, 277);
             this.amw_gauge.StartAngle = 180D;
             this.amw_gauge.SweepAngle = 180D;
             this.amw_gauge.TabIndex = 6;
@@ -202,14 +139,16 @@
             // 
             // lbl_tot_amw
             // 
+            this.lbl_tot_amw.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_tot_amw.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tot_amw.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot_amw.Location = new System.Drawing.Point(0, 175);
+            this.lbl_tot_amw.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_tot_amw.Location = new System.Drawing.Point(0, 139);
             this.lbl_tot_amw.Name = "lbl_tot_amw";
             this.lbl_tot_amw.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_tot_amw.Size = new System.Drawing.Size(301, 58);
+            this.lbl_tot_amw.Size = new System.Drawing.Size(301, 138);
             this.lbl_tot_amw.TabIndex = 79;
-            this.lbl_tot_amw.Text = "No Data!";
+            this.lbl_tot_amw.Text = "--";
             this.lbl_tot_amw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radialGaugeArc1
@@ -244,9 +183,9 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(980, 692);
+            this.label1.Location = new System.Drawing.Point(632, 428);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 52);
             this.label1.TabIndex = 72;
@@ -255,9 +194,9 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(496, 692);
+            this.label3.Location = new System.Drawing.Point(327, 428);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(301, 52);
             this.label3.TabIndex = 74;
@@ -275,9 +214,9 @@
             this.radialGaugeArc3,
             this.radialGaugeArc4,
             this.radialGaugeNeedle2});
-            this.aht_gauge.Location = new System.Drawing.Point(496, 747);
+            this.aht_gauge.Location = new System.Drawing.Point(319, 465);
             this.aht_gauge.Name = "aht_gauge";
-            this.aht_gauge.Size = new System.Drawing.Size(301, 267);
+            this.aht_gauge.Size = new System.Drawing.Size(301, 277);
             this.aht_gauge.StartAngle = 180D;
             this.aht_gauge.SweepAngle = 180D;
             this.aht_gauge.TabIndex = 73;
@@ -287,16 +226,17 @@
             // 
             // lbl_tot_aht
             // 
-            this.lbl_tot_aht.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbl_tot_aht.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_tot_aht.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tot_aht.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot_aht.Location = new System.Drawing.Point(0, 175);
+            this.lbl_tot_aht.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_tot_aht.Location = new System.Drawing.Point(0, 139);
             this.lbl_tot_aht.Name = "lbl_tot_aht";
             this.lbl_tot_aht.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_tot_aht.Size = new System.Drawing.Size(301, 58);
+            this.lbl_tot_aht.Size = new System.Drawing.Size(301, 138);
             this.lbl_tot_aht.TabIndex = 78;
-            this.lbl_tot_aht.Text = "No Data!";
+            this.lbl_tot_aht.Text = "--";
             this.lbl_tot_aht.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radialGaugeArc3
@@ -340,9 +280,9 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(12, 692);
+            this.label5.Location = new System.Drawing.Point(10, 428);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(301, 52);
             this.label5.TabIndex = 76;
@@ -360,9 +300,9 @@
             this.radialGaugeArc5,
             this.radialGaugeArc6,
             this.radialGaugeNeedle3});
-            this.total_gauge.Location = new System.Drawing.Point(12, 747);
+            this.total_gauge.Location = new System.Drawing.Point(12, 465);
             this.total_gauge.Name = "total_gauge";
-            this.total_gauge.Size = new System.Drawing.Size(301, 267);
+            this.total_gauge.Size = new System.Drawing.Size(301, 277);
             this.total_gauge.StartAngle = 180D;
             this.total_gauge.SweepAngle = 180D;
             this.total_gauge.TabIndex = 75;
@@ -372,14 +312,16 @@
             // 
             // lbl_tot_monitored
             // 
+            this.lbl_tot_monitored.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_tot_monitored.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tot_monitored.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tot_monitored.Location = new System.Drawing.Point(0, 175);
+            this.lbl_tot_monitored.ForeColor = System.Drawing.Color.Navy;
+            this.lbl_tot_monitored.Location = new System.Drawing.Point(-8, 139);
             this.lbl_tot_monitored.Name = "lbl_tot_monitored";
             this.lbl_tot_monitored.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_tot_monitored.Size = new System.Drawing.Size(301, 58);
+            this.lbl_tot_monitored.Size = new System.Drawing.Size(301, 138);
             this.lbl_tot_monitored.TabIndex = 77;
-            this.lbl_tot_monitored.Text = "No Data!";
+            this.lbl_tot_monitored.Text = "--";
             this.lbl_tot_monitored.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radialGaugeArc5
@@ -430,36 +372,55 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(1287, 656);
+            this.label2.Font = new System.Drawing.Font("IRANSansWeb", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(933, 439);
             this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(112, 33);
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(433, 33);
             this.label2.TabIndex = 80;
-            this.label2.Text = "پیام سامانه هوشمند هدایت مانیتورینگ:";
+            this.label2.Text = "سامانه هوشمند هدایت کارشناسان کیفی";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // test_label
             // 
-            this.test_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.test_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.test_label.AutoSize = false;
-            this.test_label.BackColor = System.Drawing.Color.LavenderBlush;
+            this.test_label.BackColor = System.Drawing.Color.LightCyan;
             this.test_label.BorderVisible = true;
-            this.test_label.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
-            this.test_label.Location = new System.Drawing.Point(1287, 692);
+            this.test_label.Font = new System.Drawing.Font("IRANSansWeb", 20F, System.Drawing.FontStyle.Bold);
+            this.test_label.Location = new System.Drawing.Point(933, 483);
             this.test_label.Name = "test_label";
             this.test_label.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.test_label.Size = new System.Drawing.Size(116, 306);
+            this.test_label.Size = new System.Drawing.Size(433, 259);
             this.test_label.TabIndex = 82;
             this.test_label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.test_label.ThemeName = "Office2010Silver";
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.AutoSize = false;
+            this.radLabel1.Controls.Add(this.Header);
+            this.radLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radLabel1.Font = new System.Drawing.Font("IRANSansWeb", 29F, System.Drawing.FontStyle.Bold);
+            this.radLabel1.ForeColor = System.Drawing.Color.Red;
+            this.radLabel1.Location = new System.Drawing.Point(0, 0);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radLabel1.Size = new System.Drawing.Size(1378, 66);
+            this.radLabel1.TabIndex = 1;
+            this.radLabel1.Text = "داشبورد عملکرد کارشناسان مانیتورینگ";
             // 
             // RPT_QC_DASHBOARD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1411, 972);
+            this.ClientSize = new System.Drawing.Size(1378, 754);
+            this.Controls.Add(this.radGridView1);
+            this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.test_label);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
@@ -468,10 +429,6 @@
             this.Controls.Add(this.aht_gauge);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.amw_gauge);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Header);
-            this.Controls.Add(this.radGridView1);
-            this.Controls.Add(this.radMenu1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.KeyPreview = true;
             this.Name = "RPT_QC_DASHBOARD";
@@ -484,12 +441,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "داشبورد مانیتورینگ کیفی";
             this.ThemeName = "Office2010Silver";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QC_GENERAL_REPORT_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QC_GENERAL_REPORT_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amw_gauge)).EndInit();
             this.amw_gauge.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.aht_gauge)).EndInit();
@@ -497,22 +453,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.total_gauge)).EndInit();
             this.total_gauge.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.test_label)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            this.radLabel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Telerik.WinControls.UI.RadMenu radMenu1;
-        private Telerik.WinControls.UI.RadMenuItem Save;
-        private Telerik.WinControls.UI.RadMenuItem Print;
-        private Telerik.WinControls.UI.RadMenuItem Exit;
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private System.Data.OleDb.OleDbCommand oleDbCommand1;
         private System.Data.OleDb.OleDbConnection oleDbConnection1;
         private System.Windows.Forms.Label Header;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private Telerik.WinControls.UI.Gauges.RadRadialGauge amw_gauge;
         private Telerik.WinControls.UI.Gauges.RadialGaugeArc radialGaugeArc1;
@@ -535,5 +487,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label2;
         private Telerik.WinControls.UI.RadLabel test_label;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.Themes.Office2010SilverTheme office2010SilverTheme1;
     }
 }

@@ -69,7 +69,7 @@ namespace SnappFood_Employee_Evaluation.Personel
             {
                 ////////////////////////////////////////////////////////// Send SMS
                 var customerClubSend = new CustomerClubSend();
-                customerClubSend.Messages = new List<string>() { dt1.Rows[i][2].ToString() + "، وقت بخیر" + "\n" + "شماره پرونده: " + dt1.Rows[i][1].ToString() + "\n" + "امتیاز شغلی شما: " + dt1.Rows[i][3].ToString() + "\n" + "رتبه شغلی شما: " + dt1.Rows[i][4].ToString() + "\n" + "طبقه شغلی شما: " + dt1.Rows[i][5].ToString() + "\n\n" + "سامانه متمرکز اطلاعات شغلی اسنپ فود" }.ToArray();
+                customerClubSend.Messages = new List<string>() { dt1.Rows[i][2].ToString() + "، وقت بخیر" + "\n" + "شماره پرونده: " + dt1.Rows[i][1].ToString() + "\n" + "امتیاز شغلی شما: " + dt1.Rows[i][3].ToString() + "\n" + "رتبه شغلی شما: " + dt1.Rows[i][4].ToString() + "\n" + "طبقه شغلی شما: " + dt1.Rows[i][5].ToString() + "\n\n" + "سامانه متمرکز اطلاعات شغلی دیجی کالا" }.ToArray();
                 customerClubSend.MobileNumbers = new List<string>() { dt1.Rows[i][0].ToString() }.ToArray();
                 customerClubSend.SendDateTime = null;
                 customerClubSend.CanContinueInCaseOfError = false;

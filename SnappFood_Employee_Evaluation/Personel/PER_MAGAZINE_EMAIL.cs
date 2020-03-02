@@ -133,12 +133,12 @@ namespace SnappFood_Employee_Evaluation.Personel
                         SmtpServer.Credentials = new System.Net.NetworkCredential("postman.sfes@gmail.com", "j86415173447");
                         SmtpServer.EnableSsl = true;
                         mail.To.Add(dt2.Rows[i][2].ToString());
-                        mail.Subject = "ماهنامه سازمانی اسنپ فود - شماره " + sel_series + " (" + sel_month + " " + sel_year + ")";
+                        mail.Subject = "ماهنامه سازمانی دیجی کالا - شماره " + sel_series + " (" + sel_month + " " + sel_year + ")";
                         mail.Body = "<table width = '100%'><tr><td align='right'><p dir='rtl'>" +
                                     "<font face='Tahoma'><font size='4px'> <b>" + dt2.Rows[i][0].ToString() + " عزیز " + "</b></font>" + "<br>" + "<br>" + "<font size='3px'>" +
-                                    "ماهنامه سازمانی اسنپ فود - شماره " + sel_series + " (" + sel_month + " " + sel_year + ")" + " به پیوست این ایمیل تقدیم می گردد. امیدواریم از آن لذت ببرید." + "</b><br><br>" +
+                                    "ماهنامه سازمانی دیجی کالا - شماره " + sel_series + " (" + sel_month + " " + sel_year + ")" + " به پیوست این ایمیل تقدیم می گردد. امیدواریم از آن لذت ببرید." + "</b><br><br>" +
                                     "</font>" +
-                                    "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "تیم تحریریه ماهنامه سازمانی اسنپ فود" + "<br><br>" + "<b>" + "ارسال شده توسط سامانه متمرکز اطلاعات و پایش عملکرد پرسنل اسنپ فود - SFES" + "</b>" + "</font>" +
+                                    "<br><br><font size='3px'>" + "با تشکر" + "<br>" + "تیم تحریریه ماهنامه سازمانی دیجی کالا" + "<br><br>" + "<b>" + "ارسال شده توسط سامانه متمرکز اطلاعات و پایش عملکرد پرسنل دیجی کالا - SFES" + "</b>" + "</font>" +
                                     "<br><br><font color='Red'>" + "این ایمیل به صورت اتوماتیک ارسال شده است. لطفا به آن پاسخ ندهید." + "</font>" +
                                     "</font></p></td></tr></table>";
 

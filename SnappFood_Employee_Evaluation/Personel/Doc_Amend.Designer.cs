@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.office2010SilverTheme1 = new Telerik.WinControls.Themes.Office2010SilverTheme();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.Doc_Cd = new Telerik.WinControls.UI.RadLabel();
@@ -165,6 +165,7 @@
             this.Phone = new Telerik.WinControls.UI.RadMenuItem();
             this.Password = new Telerik.WinControls.UI.RadMenuItem();
             this.Exit = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Doc_Cd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.System_Id)).BeginInit();
@@ -629,18 +630,18 @@
             this.per_email.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.per_email.Location = new System.Drawing.Point(166, 180);
             this.per_email.Name = "per_email";
-            this.per_email.Size = new System.Drawing.Size(169, 20);
+            this.per_email.Size = new System.Drawing.Size(176, 20);
             this.per_email.TabIndex = 122;
             this.per_email.ThemeName = "Office2010Silver";
             // 
             // radLabel30
             // 
             this.radLabel30.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel30.Location = new System.Drawing.Point(341, 181);
+            this.radLabel30.Location = new System.Drawing.Point(348, 181);
             this.radLabel30.Name = "radLabel30";
-            this.radLabel30.Size = new System.Drawing.Size(130, 18);
+            this.radLabel30.Size = new System.Drawing.Size(123, 18);
             this.radLabel30.TabIndex = 141;
-            this.radLabel30.Text = "ایمیل: zoodfood.com@";
+            this.radLabel30.Text = "ایمیل: Digikala.com@";
             this.radLabel30.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel30.ThemeName = "Office2010Silver";
             // 
@@ -707,7 +708,8 @@
             this.Main_Shift.FormattingEnabled = true;
             this.Main_Shift.Items.AddRange(new object[] {
             "",
-            "روز",
+            "صبح",
+            "عصر",
             "شب"});
             this.Main_Shift.Location = new System.Drawing.Point(639, 50);
             this.Main_Shift.Name = "Main_Shift";
@@ -997,7 +999,7 @@
             this.Training_grid.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             this.Training_grid.MasterTemplate.EnableSorting = false;
             this.Training_grid.MasterTemplate.ShowFilteringRow = false;
-            this.Training_grid.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.Training_grid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.Training_grid.Name = "Training_grid";
             this.Training_grid.ReadOnly = true;
             this.Training_grid.ShowGroupPanel = false;
@@ -1713,7 +1715,7 @@
             this.Manager.AutoSize = false;
             this.Manager.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Manager.ForeColor = System.Drawing.Color.Black;
-            this.Manager.Location = new System.Drawing.Point(534, 251);
+            this.Manager.Location = new System.Drawing.Point(534, 215);
             this.Manager.Name = "Manager";
             this.Manager.Size = new System.Drawing.Size(163, 18);
             this.Manager.TabIndex = 162;
@@ -1737,12 +1739,13 @@
             this.Supervisor.AutoSize = false;
             this.Supervisor.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Supervisor.ForeColor = System.Drawing.Color.Black;
-            this.Supervisor.Location = new System.Drawing.Point(534, 215);
+            this.Supervisor.Location = new System.Drawing.Point(120, 215);
             this.Supervisor.Name = "Supervisor";
             this.Supervisor.Size = new System.Drawing.Size(163, 18);
             this.Supervisor.TabIndex = 161;
             this.Supervisor.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.Supervisor.ThemeName = "Office2010Silver";
+            this.Supervisor.Visible = false;
             // 
             // Coordinator
             // 
@@ -1759,7 +1762,7 @@
             // radLabel46
             // 
             this.radLabel46.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel46.Location = new System.Drawing.Point(734, 251);
+            this.radLabel46.Location = new System.Drawing.Point(734, 215);
             this.radLabel46.Name = "radLabel46";
             this.radLabel46.Size = new System.Drawing.Size(72, 18);
             this.radLabel46.TabIndex = 159;
@@ -1770,22 +1773,23 @@
             // radLabel43
             // 
             this.radLabel43.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel43.Location = new System.Drawing.Point(706, 215);
+            this.radLabel43.Location = new System.Drawing.Point(289, 215);
             this.radLabel43.Name = "radLabel43";
             this.radLabel43.Size = new System.Drawing.Size(100, 18);
             this.radLabel43.TabIndex = 158;
             this.radLabel43.Text = "سرپرست مربوطه:";
             this.radLabel43.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel43.ThemeName = "Office2010Silver";
+            this.radLabel43.Visible = false;
             // 
             // radLabel44
             // 
             this.radLabel44.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel44.Location = new System.Drawing.Point(733, 179);
+            this.radLabel44.Location = new System.Drawing.Point(706, 179);
             this.radLabel44.Name = "radLabel44";
-            this.radLabel44.Size = new System.Drawing.Size(73, 18);
+            this.radLabel44.Size = new System.Drawing.Size(100, 18);
             this.radLabel44.TabIndex = 157;
-            this.radLabel44.Text = "رهبر مربوطه:";
+            this.radLabel44.Text = "سرپرست مربوطه:";
             this.radLabel44.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel44.ThemeName = "Office2010Silver";
             // 
@@ -1922,6 +1926,7 @@
             this.Station.Size = new System.Drawing.Size(131, 20);
             this.Station.TabIndex = 119;
             this.Station.ThemeName = "Office2010Silver";
+            this.Station.Visible = false;
             // 
             // radLabel41
             // 
@@ -1933,6 +1938,7 @@
             this.radLabel41.Text = "استیشن:";
             this.radLabel41.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.radLabel41.ThemeName = "Office2010Silver";
+            this.radLabel41.Visible = false;
             // 
             // Mentor
             // 
@@ -1963,7 +1969,8 @@
             this.Print,
             this.Phone,
             this.Password,
-            this.Exit});
+            this.Exit,
+            this.radMenuItem1});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(846, 55);
@@ -2016,6 +2023,12 @@
             this.Exit.Text = "   خروج   ";
             this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "pic_upload";
+            this.radMenuItem1.Click += new System.EventHandler(this.radMenuItem1_Click);
             // 
             // Doc_Amend
             // 
@@ -2324,5 +2337,6 @@
         private System.Windows.Forms.ComboBox Main_tsk;
         private Telerik.WinControls.UI.RadLabel radLabel48;
         private Telerik.WinControls.UI.RadLabel radLabel47;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
     }
 }

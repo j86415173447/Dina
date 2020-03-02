@@ -6,6 +6,7 @@ using Telerik.WinControls;
 using System.Data.OleDb;
 using System.IO;
 using SmsIrRestful;
+using System.Drawing;
 
 namespace SnappFood_Employee_Evaluation
 {
@@ -36,6 +37,8 @@ namespace SnappFood_Employee_Evaluation
 
         private void Login_Load(object sender, EventArgs e)
         {
+            this.Size = new Size(450, 250);
+            radTextBox1.TextAlign = HorizontalAlignment.Left;// System.Drawing.ContentAlignment.MiddleLeft;
             this.user.Select();
             //forget.Visible = false;
             //////////////////////////////////////////////////// Check .ini file
@@ -43,9 +46,12 @@ namespace SnappFood_Employee_Evaluation
             ////System.IO.StreamReader file = new System.IO.StreamReader(Application.StartupPath + "\\CONSTR.ini");
             //constr = file.ReadLine();
             //constr = "Provider=SQLOLEDB;Data Source=185.140.5.93;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
-            constr = "Provider=SQLOLEDB;Data Source=192.168.20.18;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
-            //constr = "Provider=SQLOLEDB;Data Source=localhost;Persist Security Info=True;Password=P@$$W0rD_DBdoofppans;User ID=sa;Initial Catalog=master";
+            //constr = "Provider=SQLOLEDB;Data Source=172.16.101.82;Persist Security Info=True;Password=j@2050057997;User ID=sa;Initial Catalog=master";
+            constr = "Provider=SQLOLEDB;Data Source=localhost;Persist Security Info=True;Password=j@2050057997;User ID=sa;Initial Catalog=master";
+            //constr = "Provider=SQLOLEDB;Data Source=192.168.88.231;Persist Security Info=True;Password=j@2050057997;User ID=sa;Initial Catalog=master";
             oleDbConnection1.ConnectionString = constr;
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,6 +109,10 @@ namespace SnappFood_Employee_Evaluation
                         if (ds.Tables[0].Rows[0][4].ToString().Substring(0, 2) != "QC")
                         {
                             mainfrm.radGridView1.Visible = false;
+                        }
+                        if (ds.Tables[0].Rows[0][4].ToString() != "ASRC")
+                        {
+                            mainfrm.radGroupBox4.Visible = false;
                         }
                         //Thread.Sleep(3000);
                         //////////////////////////////////////////////////////// Login Log table updation
@@ -247,7 +257,7 @@ namespace SnappFood_Employee_Evaluation
                         load.Refresh();
                         ////////////////////////////////////////////////////////// Send SMS
                         var customerClubSend = new CustomerClubSend();
-                        customerClubSend.Messages = new List<string>() { dt222.Rows[0][0].ToString() + " عزیز " + "\n" + "رمز عبور موقت شما: " + otp.ToString() + "\n" + "(اسنپ فود)" }.ToArray();
+                        customerClubSend.Messages = new List<string>() { dt222.Rows[0][0].ToString() + " عزیز " + "\n" + "رمز عبور موقت شما: " + otp.ToString() + "\n" + "(دیجی کالا)" }.ToArray();
                         customerClubSend.MobileNumbers = new List<string>() { dt222.Rows[0][1].ToString() }.ToArray();
                         customerClubSend.SendDateTime = null;
                         customerClubSend.CanContinueInCaseOfError = false;

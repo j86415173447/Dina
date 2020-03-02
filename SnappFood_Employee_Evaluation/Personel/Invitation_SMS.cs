@@ -46,7 +46,7 @@ namespace SnappFood_Employee_Evaluation.Personel
                 var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
                 {
                     MobileNumbers = new List<string>() { Per_Ntl_ID.Text }.ToArray(),
-                    Messages = new List<string>() { radTextBox1.Text + " عزیز \n" + "وقت مصاحبه شما در شرکت اسنپ فود مورخ  " + Invw_Date.Text + " و ساعت " + from_tm.Text + " می باشد. لطفا راس ساعت مقرر در شرکت به آدرس اتوبان اشرفی اصفهانی، بالاتر از مرزداران، کوچه بی نظیر، ساختمان امین، طبقه اول حضور به عمل آورید." + "\n" + "مسئول هماهنگی شما خانم شهروان می باشد." + "\n" + "اسنپ فود" }.ToArray(),
+                    Messages = new List<string>() { radTextBox1.Text + " عزیز \n" + "وقت مصاحبه شما در شرکت دیجی کالا مورخ  " + Invw_Date.Text + " و ساعت " + from_tm.Text + " می باشد. لطفا راس ساعت مقرر در شرکت به آدرس اتوبان اشرفی اصفهانی، بالاتر از مرزداران، کوچه بی نظیر، ساختمان امین، طبقه اول حضور به عمل آورید." + "\n" + "مسئول هماهنگی شما خانم شهروان می باشد." + "\n" + "دیجی کالا" }.ToArray(),
                     LineNumber = sms_line,
                     SendDateTime = null,
                     CanContinueInCaseOfError = false

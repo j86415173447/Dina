@@ -113,7 +113,7 @@ namespace SnappFood_Employee_Evaluation.QC
                               " left join (SELECT [QC_ID], sum((SUBSTRING([Voice_len], 1, 2) * 60) + SUBSTRING([Voice_len], 4, 2)) AS 'Len' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel2 " +
                               " on Sel1.[QC_ID] = Sel2.[QC_ID] " +
                               "left join (SELECT [QC_ID], count([QC_ID]) 'LOG_QTY' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_VOICES] group by [QC_ID]) Sel3 on Sel1.[QC_ID] = Sel3.[QC_ID] " +
-                              ") WHERE Sel1.[insrt_dt] = convert(date, getdate(), 111) group by Sel1.[QC_Agent] ";
+                              ") WHERE Sel1.[insrt_dt] = convert(date, getdate(), 111) group by Sel1.[QC_Agent]  order by SUM(sel3.[LOG_QTY]) desc";
             adp.SelectCommand.CommandText = lcommand;
             dt22.Clear();
             adp.Fill(dt22);
@@ -133,10 +133,10 @@ namespace SnappFood_Employee_Evaluation.QC
                 radGridView1.Columns[9].TextAlignment = ContentAlignment.MiddleCenter;
                 radGridView1.Columns[10].TextAlignment = ContentAlignment.MiddleCenter;
                 radGridView1.Columns[11].TextAlignment = ContentAlignment.MiddleCenter;
+                radGridView1.Columns[2].IsVisible = false;
 
-
-                radGridView1.TableElement.RowHeight = 60;
-                radGridView1.TableElement.TableHeaderHeight = 70;
+                radGridView1.TableElement.RowHeight = 40;
+                radGridView1.TableElement.TableHeaderHeight = 50;
                 radGridView1.Columns[0].BestFit();
 
                 /////////////////////////////////////////////////////////// Highlighting
@@ -170,9 +170,9 @@ namespace SnappFood_Employee_Evaluation.QC
                 lbl_tot_amw.Text = Math.Truncate(tot_amw).ToString();
 
                 ////////////////////////////////////// config gauges
-                total_gauge.Value = (tot_monitored / ((dt22.Rows.Count) * 125)) * 100;
-                amw_gauge.Value = (tot_amw / 60) * 100;
-                aht_gauge.Value = (tot_aht / 250) * 100;
+                total_gauge.Value = (tot_monitored / ((dt22.Rows.Count) * 30)) * 100;
+                amw_gauge.Value = (tot_amw / 180) * 100;
+                aht_gauge.Value = (tot_aht / 450) * 100;
 
                 //////////////////////////////////////////////////// Total Monitoring
                 if (total_gauge.Value <= 30)
@@ -234,37 +234,11 @@ namespace SnappFood_Employee_Evaluation.QC
             }
         }
 
-        private void Save_Click(object sender, EventArgs e)
-        {
-            update_grid();
-        }
+        //private void Save_Click(object sender, EventArgs e)
+        //{
+        //    update_grid();
+        //}
 
-        private void Print_Click(object sender, EventArgs e)
-        {
-            if (radGridView1.Rows.Count != 0)
-            {
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    string add = saveFileDialog1.FileName;
-                    add = add + ".xlsx";
-                    using (var doc = new SpreadsheetDocument(@add))
-                    {
-                        Worksheet sheet1 = doc.Worksheets.Add("Report");
-                        sheet1.ImportDataTable(dt22, "A1", true);
-                    }
-                    System.Diagnostics.Process.Start(@add);
-                }
-                else
-                {
-
-                }
-            }
-            else
-            {
-                RadMessageBox.Show(this, "اطلاعاتی جهت ارسال به اکسل وجود ندارد", "اخطار", MessageBoxButtons.OK, RadMessageIcon.Error, MessageBoxDefaultButton.Button1, RightToLeft.Yes);
-            }
-        }
 
         private void QC_GENERAL_REPORT_KeyDown(object sender, KeyEventArgs e)
         {
@@ -349,13 +323,13 @@ namespace SnappFood_Employee_Evaluation.QC
             List<string> conditions = new List<string>();
             for (int i = 0; i < dt22.Rows.Count; i++)
             {
-                if (int.Parse(dt22.Rows[i][1].ToString()) > 30)
+                if (int.Parse(dt22.Rows[i][1].ToString()) > 20)
                 {
                     if (float.Parse(dt22.Rows[i][8].ToString().Replace("%","")) > cap_0_30 + 1)
                     {
                         float[] set = {cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")) , cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
                         int max_index = Array.IndexOf(set, set.Max());
-                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "30~60" : (max_index == 1 ? "60~90" : ">90")));
+                        conditions.Add(dt22.Rows[i][0].ToString() + "   -->   " + (max_index == 0 ? "30~60" : (max_index == 1 ? "60~90" : ">90")));
                         continue;
                         
                     }
@@ -363,21 +337,21 @@ namespace SnappFood_Employee_Evaluation.QC
                     {
                         float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
                         int max_index = Array.IndexOf(set, set.Max());
-                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "60~90" : ">90")));
+                        conditions.Add(dt22.Rows[i][0].ToString() + "   -->   " + (max_index == 0 ? "0~30" : (max_index == 1 ? "60~90" : ">90")));
                         continue;
                     }
                     if (float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) > cap_60_90 + 1)
                     {
                         float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_ov_90 - float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) };
                         int max_index = Array.IndexOf(set, set.Max());
-                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : ">90")));
+                        conditions.Add(dt22.Rows[i][0].ToString() + "   -->   " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : ">90")));
                         continue;
                     }
                     if (float.Parse(dt22.Rows[i][11].ToString().Replace("%", "")) > cap_ov_90 + 1)
                     {
                         float[] set = { cap_0_30 - float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")), cap_30_60 - float.Parse(dt22.Rows[i][9].ToString().Replace("%", "")), cap_60_90 - float.Parse(dt22.Rows[i][10].ToString().Replace("%", "")) };
                         int max_index = Array.IndexOf(set, set.Max());
-                        conditions.Add(dt22.Rows[i][0].ToString() + "     -->     " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : "60~90")));
+                        conditions.Add(dt22.Rows[i][0].ToString() + "   -->   " + (max_index == 0 ? "0~30" : (max_index == 1 ? "30~60" : "60~90")));
                         continue;
                     }
                 }
@@ -388,17 +362,17 @@ namespace SnappFood_Employee_Evaluation.QC
                 if (conditions.Count <= 3)
                 {
                     test_label.Text = "* " + string.Join("\n\n* ", conditions.ToArray());
-                    test_label.Font = new System.Drawing.Font("Tahoma", 23, FontStyle.Bold);
+                    test_label.Font = new System.Drawing.Font("IRANSansWeb", 17, FontStyle.Bold);
                 }
                 else if (conditions.Count > 3 && conditions.Count <= 5)
                 {
                     test_label.Text = "* " + string.Join("\n* ", conditions.ToArray());
-                    test_label.Font = new System.Drawing.Font("Tahoma", 20, FontStyle.Bold);
+                    test_label.Font = new System.Drawing.Font("IRANSansWeb", 14, FontStyle.Bold);
                 }
                 else
                 {
                     test_label.Text = "* " + string.Join("\n* ", conditions.ToArray());
-                    test_label.Font = new System.Drawing.Font("Tahoma", 17, FontStyle.Bold);
+                    test_label.Font = new System.Drawing.Font("IRANSansWeb", 11, FontStyle.Bold);
                 }
             }
 
@@ -409,7 +383,7 @@ namespace SnappFood_Employee_Evaluation.QC
                 List<string> conditions2 = new List<string>();
                 for (int i = 0; i < dt22.Rows.Count; i++)
                 {
-                    if (int.Parse(dt22.Rows[i][1].ToString()) > 30)
+                    if (int.Parse(dt22.Rows[i][1].ToString()) > 20)
                     {
                         if (float.Parse(dt22.Rows[i][8].ToString().Replace("%", "")) > cap_0_30 + 5)
                         {
@@ -429,22 +403,22 @@ namespace SnappFood_Employee_Evaluation.QC
                         }
                     }
                 }
-                if (conditions2.Count != 0)
-                {
-                    ////////////////////////////////////////////////////////// Send SMS
-                    SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
-                    var token = token_instance.GetToken(token_key, token_security);
+                //if (conditions2.Count != 0)
+                //{
+                //    ////////////////////////////////////////////////////////// Send SMS
+                //    SmsIrRestful.Token token_instance = new SmsIrRestful.Token();
+                //    var token = token_instance.GetToken(token_key, token_security);
 
-                    SmsIrRestful.MessageSend message_instance = new SmsIrRestful.MessageSend();
-                    var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
-                    {
-                        MobileNumbers = new List<string>() { "09122144498" }.ToArray(),
-                        Messages = new List<string>() { string.Join(" \n ", conditions2.ToArray()) }.ToArray(),
-                        LineNumber = sms_line,
-                        SendDateTime = null,
-                        CanContinueInCaseOfError = false
-                    });
-                }
+                //    SmsIrRestful.MessageSend message_instance = new SmsIrRestful.MessageSend();
+                //    var res = message_instance.Send(token, new SmsIrRestful.MessageSendObject()
+                //    {
+                //        MobileNumbers = new List<string>() { "09122144498" }.ToArray(),
+                //        Messages = new List<string>() { string.Join(" \n ", conditions2.ToArray()) }.ToArray(),
+                //        LineNumber = sms_line,
+                //        SendDateTime = null,
+                //        CanContinueInCaseOfError = false
+                //    });
+                //}
             }
         }
     }

@@ -44,14 +44,37 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             lbl_17.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_18.TextAlignment = ContentAlignment.MiddleLeft;
             lbl_19.TextAlignment = ContentAlignment.MiddleLeft;
-            no_fl.TextAlignment = ContentAlignment.MiddleLeft;
-            bad_fl.TextAlignment = ContentAlignment.MiddleLeft;
+            avg_score.TextAlignment = ContentAlignment.MiddleLeft;
+            pending.TextAlignment = ContentAlignment.MiddleLeft;
+            suc_perc.TextAlignment = ContentAlignment.MiddleLeft;
 
         }
 
         private void Points_Detail_Report_Load(object sender, EventArgs e)
         {
             oleDbConnection1.ConnectionString = constr;
+
+            ///////////////////////////////// Get pending cases
+            DataTable dt2 = new DataTable();
+            OleDbDataAdapter adp2 = new OleDbDataAdapter();
+            adp2.SelectCommand = new OleDbCommand();
+            adp2.SelectCommand.Connection = oleDbConnection1;
+            oleDbCommand1.Parameters.Clear();
+            string lcommand2;
+            lcommand2 = "SELECT Sel1.* from ( " +
+                        " (SELECT [Agent_Ext] 'Extension', count([QC_ID]) 'Total Logs' FROM [SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [Final_Approval] is null group by [Agent_Ext]) Sel1 " +
+                        " left join (SELECT [Doc_no],[System_Id] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on Sel1.[Extension] = Sel2.[System_Id]) WHERE Sel2.[Doc_no] = '" + doc_number + "'";
+            adp2.SelectCommand.CommandText = lcommand2;
+            adp2.Fill(dt2);
+            if (dt2.Rows.Count == 0)
+            {
+                pending.Text = "0";
+            }
+            else
+            {
+                pending.Text = dt2.Rows[0][1].ToString();
+            }
+
             /////////////////////////////////////// Get Date
             DataTable dt1 = new DataTable();
             OleDbDataAdapter adp1 = new OleDbDataAdapter();
@@ -77,7 +100,7 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
             lbl_2.Text = dt1.Rows[0][5].ToString();
             lbl_3.Text = dt1.Rows[0][6].ToString();
 
-            //searching();
+            
         }
 
         public void searching()
@@ -92,12 +115,12 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 oleDbCommand1.Parameters.Clear();
                 string lcommand1;
                 lcommand1 = "SELECT Sel2.[Per_Name] 'Agent Name', Sel2.[Department] 'Department',Sel2.[Main_Shift] 'Shift', Sel1.* from ( " +
-                                  " (SELECT[Agent_Ext] 'Extension', count([QC_ID]) 'Total Logs' , SUM(CASE WHEN[QC_Score] <= 17 then 1 else 0 end) 'Failed Logs' , count([QC_ID]) - SUM(CASE WHEN[QC_Score] <= 17 then 1 else 0 end) 'OK Logs' , SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'Taboo Count' , SUM(CASE WHEN[QC_Param_1] = 0 then 1 else 0 end) 'Greeting' " +
+                                  " (SELECT[Agent_Ext] 'Extension', count([QC_ID]) 'Total Logs' , SUM(CASE WHEN[QC_Score] <= 19 then 1 else 0 end) 'Failed Logs' , count([QC_ID]) - SUM(CASE WHEN[QC_Score] <= 19 then 1 else 0 end) 'OK Logs' , SUM(CASE WHEN[taboo] = 1 then 1 else 0 end) 'Taboo Count' , SUM(CASE WHEN[QC_Param_1] = 0 then 1 else 0 end) 'Greeting' " +
                                   " ,SUM(CASE WHEN[QC_Param_2] = 0 then 1 else 0 end) 'Opening Sen/Que' , SUM(CASE WHEN[QC_Param_3] = 0 then 1 else 0 end) 'Active Listening' , SUM(CASE WHEN[QC_Param_4] = 0 then 1 else 0 end) 'Call Holding' " +
                                   " ,SUM(CASE WHEN[QC_Param_5] = 0 then 1 else 0 end) 'Interruption' , SUM(CASE WHEN[QC_Param_6] = 0 then 1 else 0 end) 'Summarizing' , SUM(CASE WHEN[QC_Param_7] = 0 then 1 else 0 end) 'Speaking Type' " +
                                   " ,SUM(CASE WHEN[QC_Param_8] = 0 then 1 else 0 end) 'Speaking Tone' , SUM(CASE WHEN[QC_Param_9] = 0 then 1 else 0 end) 'Guide/Result' , SUM(CASE WHEN[QC_Param_10] = 0 then 1 else 0 end) 'Query' " +
                                   " ,SUM(CASE WHEN[QC_Param_11] = 0 then 1 else 0 end) 'Appreciation' , SUM(CASE WHEN[QC_Param_12] = 0 then 1 else 0 end) 'Bye' " +
-                                  " ,SUM(CASE WHEN[No_Followup] = 1 then 1 else 0 end) 'No_Followup' , SUM(CASE WHEN[Bad_Followup] = 1 then 1 else 0 end) 'Bad_Followup' " +
+                                  " ,convert(DECIMAL(10,2),avg(convert(float,[qc_score]))) 'AVG' , SUM(CASE WHEN[Bad_Followup] = 1 then 1 else 0 end) 'Bad_Followup' " +
                                   " FROM[SNAPP_CC_EVALUATION].[dbo].[QC_LOG_DOCUMENTS] where [Final_Approval] is not null  AND [final_aprv_dt] >= N'" + yr.Text + "/" + (((mnth.SelectedIndex + 1) >= 10) ? ((mnth.SelectedIndex - 1)).ToString() : "0" + (mnth.SelectedIndex + 1).ToString()) + "/01'" + " AND [final_aprv_dt] <= N'" + yr.Text + "/" + (((mnth.SelectedIndex + 1) >= 10) ? ((mnth.SelectedIndex + 1)).ToString() : "0" + (mnth.SelectedIndex + 1).ToString()) + "/31'" + " group by [Agent_Ext]) Sel1 " +
                                   " left join(SELECT [Doc_no],[System_Id],[Department],[Main_Shift],[Per_Name] FROM[SNAPP_CC_EVALUATION].[dbo].[PER_DOCUMENTS]) Sel2 on Sel1.[Extension] = Sel2.[System_Id]) WHERE Sel2.[Doc_no] = '" + doc_number + "'";
                 adp1.SelectCommand.CommandText = lcommand1;
@@ -124,8 +147,30 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_17.Text = dt1.Rows[0][17].ToString();
                     lbl_18.Text = dt1.Rows[0][18].ToString();
                     lbl_19.Text = dt1.Rows[0][19].ToString();
-                    no_fl.Text = dt1.Rows[0][20].ToString();
-                    bad_fl.Text = dt1.Rows[0][21].ToString();
+                    avg_score.Text = dt1.Rows[0][20].ToString();
+                    //bad_fl.Text = dt1.Rows[0][21].ToString();
+
+                    if (lbl_6.Text != "" && lbl_6.Text != "0" && lbl_4.Text != "" && lbl_4.Text != "0")
+                    suc_perc.Text = Math.Round(((double.Parse(lbl_6.Text) / (double.Parse(lbl_4.Text) + double.Parse(pending.Text)))*100),2).ToString() + "%";
+
+                    if (avg_score.Text != "")
+                    {
+                        double avgscr = double.Parse(avg_score.Text);
+                        if (avgscr <= 19)
+                        {
+                            avg_score.ForeColor = Color.Red;
+                        }
+                        else if (avgscr > 19 && avgscr < 23)
+                        {
+                            avg_score.ForeColor = Color.Orange;
+                        }
+                        else
+                        {
+                            avg_score.ForeColor = Color.Green;
+                        }
+                        avg_score.Text = avg_score.Text + " از 25";
+                    }
+                
                 }
                 else
                 {
@@ -149,8 +194,8 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                     lbl_17.Text = "0";
                     lbl_18.Text = "0";
                     lbl_19.Text = "0";
-                    no_fl.Text = "0";
-                    bad_fl.Text = "0";
+                    avg_score.Text = "0";
+                    //bad_fl.Text = "0";
                 }
             }
             else
@@ -175,8 +220,43 @@ namespace SnappFood_Employee_Evaluation.Agents_Panel
                 lbl_17.Text = "";
                 lbl_18.Text = "";
                 lbl_19.Text = "";
-                no_fl.Text = "0";
-                bad_fl.Text = "0";
+                avg_score.Text = "0";
+                //bad_fl.Text = "0";
+            }
+
+            foreach (Control control in this.Controls)
+            {
+                if (control.Name == "radGroupBox3")
+                {
+                    Change_shape(control);
+                    foreach (Control Child1 in control.Controls)
+                    {
+                        Change_shape(Child1);
+                        foreach (Control Child2 in Child1.Controls)
+                        {
+                            Change_shape(Child2);
+                            foreach (Control Child3 in Child2.Controls)
+                            {
+                                Change_shape(Child3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void Change_shape (Control control)
+        {
+            if (control.Name.ToString().Contains("lbl"))
+            {
+                if (control.Text == "0")
+                {
+                    control.ForeColor = Color.DarkGreen;
+                }
+                else
+                {
+                    control.ForeColor = Color.Red;
+                }
             }
         }
 

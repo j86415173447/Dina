@@ -126,6 +126,19 @@ namespace SnappFood_Employee_Evaluation.System_Managment
                     oleDbConnection1.Open();
                     oleDbCommand1.ExecuteNonQuery();
                     oleDbConnection1.Close();
+
+                    if (combo_roles.SelectedValue.ToString().Substring(0,2) == "AS")
+                    {
+                        oleDbCommand1.Parameters.Clear();
+                        oleDbCommand1.CommandText = "INSERT INTO [SNAPP_CC_EVALUATION].[dbo].[AS_AGENT_ROLE] ([AS_AGENT_NM],[AS_Role_NM],[AS_Role_DEF]) VALUES (?,?,?)";
+                        oleDbCommand1.Parameters.AddWithValue("@AS_AGENT_NM", usr_per_name.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@AS_Role_NM", org_role.Text);
+                        oleDbCommand1.Parameters.AddWithValue("@AS_Role_DEF", org_role.Text);
+
+                        oleDbConnection1.Open();
+                        oleDbCommand1.ExecuteNonQuery();
+                        oleDbConnection1.Close();
+                    }
                     
                     radMenuItem1_Click(null, null);
                     RadMessageBox.Show(this, " کاربر جدید با موفقیت ساخته شد. " + "\n", "اعلان سیستم", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1, RightToLeft.Yes);

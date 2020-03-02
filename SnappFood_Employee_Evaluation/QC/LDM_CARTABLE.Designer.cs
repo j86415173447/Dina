@@ -310,7 +310,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "کارتابل رهبر";
+            this.Text = "کارتابل سرپرست";
             this.ThemeName = "Office2010Silver";
             this.Load += new System.EventHandler(this.QCM_CARTABLE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
